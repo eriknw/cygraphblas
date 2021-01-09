@@ -4,7 +4,6 @@ from cygraphblas_ss cimport _clib as clib
 AxB_DOT = clib.AxB_DOT
 AxB_GUSTAVSON = clib.AxB_GUSTAVSON
 AxB_HASH = clib.AxB_HASH
-AxB_HEAP = clib.AxB_HEAP
 AxB_SAXPY = clib.AxB_SAXPY
 DEFAULT = clib.DEFAULT
 GPU_ALWAYS = clib.GPU_ALWAYS

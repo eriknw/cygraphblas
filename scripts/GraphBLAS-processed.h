@@ -5,11 +5,11 @@
 # 1 "<command line>" 1
 # 1 "<built-in>" 2
 # 1 "scripts/GraphBLAS.h" 2
-# 201 "scripts/GraphBLAS.h"
-# 1 "/Users/ewelch/miniconda3/envs/grblas/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/stdio.h" 1
-# 1 "/Users/ewelch/miniconda3/envs/grblas/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/_fake_defines.h" 1
-# 2 "/Users/ewelch/miniconda3/envs/grblas/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/stdio.h" 2
-# 1 "/Users/ewelch/miniconda3/envs/grblas/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/_fake_typedefs.h" 1
+# 43 "scripts/GraphBLAS.h"
+# 1 "/Users/ewelch/miniconda3/envs/grblas4/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/stdio.h" 1
+# 1 "/Users/ewelch/miniconda3/envs/grblas4/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/_fake_defines.h" 1
+# 2 "/Users/ewelch/miniconda3/envs/grblas4/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/stdio.h" 2
+# 1 "/Users/ewelch/miniconda3/envs/grblas4/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/_fake_typedefs.h" 1
 
 
 
@@ -180,67 +180,69 @@ typedef struct MirDisplayConfig MirDisplayConfig;
 typedef struct xcb_connection_t xcb_connection_t;
 typedef uint32_t xcb_window_t;
 typedef uint32_t xcb_visualid_t;
-# 3 "/Users/ewelch/miniconda3/envs/grblas/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/stdio.h" 2
-# 202 "scripts/GraphBLAS.h" 2
-# 1 "/Users/ewelch/miniconda3/envs/grblas/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/errno.h" 1
-# 1 "/Users/ewelch/miniconda3/envs/grblas/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/_fake_defines.h" 1
-# 2 "/Users/ewelch/miniconda3/envs/grblas/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/errno.h" 2
-# 203 "scripts/GraphBLAS.h" 2
-# 1 "/Users/ewelch/miniconda3/envs/grblas/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/string.h" 1
-# 1 "/Users/ewelch/miniconda3/envs/grblas/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/_fake_defines.h" 1
-# 2 "/Users/ewelch/miniconda3/envs/grblas/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/string.h" 2
-# 204 "scripts/GraphBLAS.h" 2
-# 1 "/Users/ewelch/miniconda3/envs/grblas/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/stdlib.h" 1
-# 1 "/Users/ewelch/miniconda3/envs/grblas/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/_fake_defines.h" 1
-# 2 "/Users/ewelch/miniconda3/envs/grblas/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/stdlib.h" 2
-# 205 "scripts/GraphBLAS.h" 2
-# 1 "/Users/ewelch/miniconda3/envs/grblas/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/stdbool.h" 1
-# 1 "/Users/ewelch/miniconda3/envs/grblas/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/_fake_defines.h" 1
-# 2 "/Users/ewelch/miniconda3/envs/grblas/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/stdbool.h" 2
-# 206 "scripts/GraphBLAS.h" 2
-# 1 "/Users/ewelch/miniconda3/envs/grblas/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/stdint.h" 1
-# 1 "/Users/ewelch/miniconda3/envs/grblas/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/_fake_defines.h" 1
-# 2 "/Users/ewelch/miniconda3/envs/grblas/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/stdint.h" 2
-# 207 "scripts/GraphBLAS.h" 2
-# 1 "/Users/ewelch/miniconda3/envs/grblas/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/inttypes.h" 1
-# 1 "/Users/ewelch/miniconda3/envs/grblas/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/_fake_defines.h" 1
-# 2 "/Users/ewelch/miniconda3/envs/grblas/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/inttypes.h" 2
-# 208 "scripts/GraphBLAS.h" 2
-# 1 "/Users/ewelch/miniconda3/envs/grblas/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/stddef.h" 1
-# 1 "/Users/ewelch/miniconda3/envs/grblas/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/_fake_defines.h" 1
-# 2 "/Users/ewelch/miniconda3/envs/grblas/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/stddef.h" 2
-# 209 "scripts/GraphBLAS.h" 2
-# 1 "/Users/ewelch/miniconda3/envs/grblas/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/limits.h" 1
-# 1 "/Users/ewelch/miniconda3/envs/grblas/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/_fake_defines.h" 1
-# 2 "/Users/ewelch/miniconda3/envs/grblas/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/limits.h" 2
-# 210 "scripts/GraphBLAS.h" 2
-# 1 "/Users/ewelch/miniconda3/envs/grblas/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/math.h" 1
-# 1 "/Users/ewelch/miniconda3/envs/grblas/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/_fake_defines.h" 1
-# 2 "/Users/ewelch/miniconda3/envs/grblas/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/math.h" 2
-# 211 "scripts/GraphBLAS.h" 2
-# 1 "/Users/ewelch/miniconda3/envs/grblas/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/stdarg.h" 1
-# 1 "/Users/ewelch/miniconda3/envs/grblas/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/_fake_defines.h" 1
-# 2 "/Users/ewelch/miniconda3/envs/grblas/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/stdarg.h" 2
-# 212 "scripts/GraphBLAS.h" 2
-# 248 "scripts/GraphBLAS.h"
-# 1 "/Users/ewelch/miniconda3/envs/grblas/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/complex.h" 1
-# 1 "/Users/ewelch/miniconda3/envs/grblas/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/_fake_defines.h" 1
-# 2 "/Users/ewelch/miniconda3/envs/grblas/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/complex.h" 2
-# 249 "scripts/GraphBLAS.h" 2
+# 3 "/Users/ewelch/miniconda3/envs/grblas4/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/stdio.h" 2
+# 44 "scripts/GraphBLAS.h" 2
+# 1 "/Users/ewelch/miniconda3/envs/grblas4/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/errno.h" 1
+# 1 "/Users/ewelch/miniconda3/envs/grblas4/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/_fake_defines.h" 1
+# 2 "/Users/ewelch/miniconda3/envs/grblas4/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/errno.h" 2
+# 45 "scripts/GraphBLAS.h" 2
+# 1 "/Users/ewelch/miniconda3/envs/grblas4/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/string.h" 1
+# 1 "/Users/ewelch/miniconda3/envs/grblas4/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/_fake_defines.h" 1
+# 2 "/Users/ewelch/miniconda3/envs/grblas4/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/string.h" 2
+# 46 "scripts/GraphBLAS.h" 2
+# 1 "/Users/ewelch/miniconda3/envs/grblas4/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/stdlib.h" 1
+# 1 "/Users/ewelch/miniconda3/envs/grblas4/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/_fake_defines.h" 1
+# 2 "/Users/ewelch/miniconda3/envs/grblas4/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/stdlib.h" 2
+# 47 "scripts/GraphBLAS.h" 2
+# 1 "/Users/ewelch/miniconda3/envs/grblas4/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/stdbool.h" 1
+# 1 "/Users/ewelch/miniconda3/envs/grblas4/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/_fake_defines.h" 1
+# 2 "/Users/ewelch/miniconda3/envs/grblas4/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/stdbool.h" 2
+# 48 "scripts/GraphBLAS.h" 2
+# 1 "/Users/ewelch/miniconda3/envs/grblas4/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/stdint.h" 1
+# 1 "/Users/ewelch/miniconda3/envs/grblas4/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/_fake_defines.h" 1
+# 2 "/Users/ewelch/miniconda3/envs/grblas4/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/stdint.h" 2
+# 49 "scripts/GraphBLAS.h" 2
+# 1 "/Users/ewelch/miniconda3/envs/grblas4/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/inttypes.h" 1
+# 1 "/Users/ewelch/miniconda3/envs/grblas4/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/_fake_defines.h" 1
+# 2 "/Users/ewelch/miniconda3/envs/grblas4/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/inttypes.h" 2
+# 50 "scripts/GraphBLAS.h" 2
+# 1 "/Users/ewelch/miniconda3/envs/grblas4/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/stddef.h" 1
+# 1 "/Users/ewelch/miniconda3/envs/grblas4/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/_fake_defines.h" 1
+# 2 "/Users/ewelch/miniconda3/envs/grblas4/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/stddef.h" 2
+# 51 "scripts/GraphBLAS.h" 2
+# 1 "/Users/ewelch/miniconda3/envs/grblas4/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/limits.h" 1
+# 1 "/Users/ewelch/miniconda3/envs/grblas4/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/_fake_defines.h" 1
+# 2 "/Users/ewelch/miniconda3/envs/grblas4/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/limits.h" 2
+# 52 "scripts/GraphBLAS.h" 2
+# 1 "/Users/ewelch/miniconda3/envs/grblas4/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/math.h" 1
+# 1 "/Users/ewelch/miniconda3/envs/grblas4/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/_fake_defines.h" 1
+# 2 "/Users/ewelch/miniconda3/envs/grblas4/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/math.h" 2
+# 53 "scripts/GraphBLAS.h" 2
+# 1 "/Users/ewelch/miniconda3/envs/grblas4/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/stdarg.h" 1
+# 1 "/Users/ewelch/miniconda3/envs/grblas4/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/_fake_defines.h" 1
+# 2 "/Users/ewelch/miniconda3/envs/grblas4/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/stdarg.h" 2
+# 54 "scripts/GraphBLAS.h" 2
+# 126 "scripts/GraphBLAS.h"
+# 1 "/Users/ewelch/miniconda3/envs/grblas4/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/complex.h" 1
+# 1 "/Users/ewelch/miniconda3/envs/grblas4/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/_fake_defines.h" 1
+# 2 "/Users/ewelch/miniconda3/envs/grblas4/lib/python3.8/site-packages/pycparser/utils/fake_libc_include/complex.h" 2
+# 127 "scripts/GraphBLAS.h" 2
 
     typedef float _Complex GxB_FC32_t ;
     typedef double _Complex GxB_FC64_t ;
-# 296 "scripts/GraphBLAS.h"
+# 231 "scripts/GraphBLAS.h"
 typedef uint64_t GrB_Index ;
-# 322 "scripts/GraphBLAS.h"
+# 245 "scripts/GraphBLAS.h"
 typedef enum
 {
 
     GrB_SUCCESS = 0,
-# 348 "scripts/GraphBLAS.h"
+
+
+
+
+
     GrB_NO_VALUE = 1,
-
-
 
 
 
@@ -251,8 +253,6 @@ typedef enum
     GrB_NULL_POINTER = 4,
     GrB_INVALID_VALUE = 5,
     GrB_INVALID_INDEX = 6,
-
-
     GrB_DOMAIN_MISMATCH = 7,
     GrB_DIMENSION_MISMATCH = 8,
     GrB_OUTPUT_NOT_EMPTY = 9,
@@ -261,18 +261,13 @@ typedef enum
 
 
 
-
-
     GrB_OUT_OF_MEMORY = 10,
     GrB_INSUFFICIENT_SPACE = 11,
     GrB_INDEX_OUT_OF_BOUNDS = 12,
-
     GrB_PANIC = 13
-
-
 }
 GrB_Info ;
-# 398 "scripts/GraphBLAS.h"
+# 295 "scripts/GraphBLAS.h"
 typedef enum
 {
     GrB_NONBLOCKING = 0,
@@ -285,12 +280,11 @@ GrB_Info GrB_init
 (
     GrB_Mode mode
 ) ;
-# 427 "scripts/GraphBLAS.h"
+
 extern
 GrB_Info GxB_init
 (
     GrB_Mode mode,
-
 
     void * (* user_malloc_function ) (size_t),
     void * (* user_calloc_function ) (size_t, size_t),
@@ -308,17 +302,18 @@ GrB_Info GxB_cuda_init
 
 extern
 GrB_Info GrB_finalize (void) ;
-# 457 "scripts/GraphBLAS.h"
+# 339 "scripts/GraphBLAS.h"
 extern
 GrB_Info GrB_getVersion
 (
     unsigned int *version,
     unsigned int *subversion
 ) ;
-# 473 "scripts/GraphBLAS.h"
-extern
-const char *GrB_error (void) ;
-# 492 "scripts/GraphBLAS.h"
+
+
+
+
+
 typedef struct GB_Type_opaque *GrB_Type ;
 
 
@@ -336,14 +331,14 @@ extern GrB_Type
     GrB_FP64 ,
     GxB_FC32 ,
     GxB_FC64 ;
-# 575 "scripts/GraphBLAS.h"
+# 420 "scripts/GraphBLAS.h"
 extern
 GrB_Info GrB_Type_new
 (
     GrB_Type *type,
     size_t sizeof_ctype
 ) ;
-# 594 "scripts/GraphBLAS.h"
+# 439 "scripts/GraphBLAS.h"
 extern
 GrB_Info GB_Type_new
 (
@@ -351,8 +346,6 @@ GrB_Info GB_Type_new
     size_t sizeof_ctype,
     const char *name
 ) ;
-
-
 
 extern
 GrB_Info GxB_Type_size
@@ -366,7 +359,7 @@ GrB_Info GrB_Type_free
 (
     GrB_Type *type
 ) ;
-# 640 "scripts/GraphBLAS.h"
+# 472 "scripts/GraphBLAS.h"
 typedef struct GB_UnaryOp_opaque *GrB_UnaryOp ;
 
 
@@ -415,7 +408,8 @@ extern GrB_UnaryOp
 
 
     GrB_LNOT ;
-# 696 "scripts/GraphBLAS.h"
+
+
 extern GrB_UnaryOp
 
 
@@ -430,7 +424,7 @@ extern GrB_UnaryOp
     GxB_ABS_UINT64,
     GxB_ABS_FP32,
     GxB_ABS_FP64 ;
-# 718 "scripts/GraphBLAS.h"
+# 544 "scripts/GraphBLAS.h"
 extern GrB_UnaryOp
 
 
@@ -532,7 +526,11 @@ extern GrB_UnaryOp
     GxB_ISFINITE_FP64,
     GxB_ISFINITE_FC32,
     GxB_ISFINITE_FC64 ;
-# 829 "scripts/GraphBLAS.h"
+
+
+
+
+
 typedef void (*GxB_unary_function) (void *, const void *) ;
 
 
@@ -560,16 +558,12 @@ GrB_Info GB_UnaryOp_new
     const char *name
 ) ;
 
-
-
 extern
 GrB_Info GxB_UnaryOp_ztype
 (
     GrB_Type *ztype,
     GrB_UnaryOp unaryop
 ) ;
-
-
 
 extern
 GrB_Info GxB_UnaryOp_xtype
@@ -583,7 +577,7 @@ GrB_Info GrB_UnaryOp_free
 (
     GrB_UnaryOp *unaryop
 ) ;
-# 891 "scripts/GraphBLAS.h"
+# 708 "scripts/GraphBLAS.h"
 typedef struct GB_BinaryOp_opaque *GrB_BinaryOp ;
 
 
@@ -641,7 +635,13 @@ extern GrB_BinaryOp
 
     GxB_RMINUS_FC32, GxB_RDIV_FC32, GxB_PAIR_FC32, GxB_ANY_FC32,
     GxB_RMINUS_FC64, GxB_RDIV_FC64, GxB_PAIR_FC64, GxB_ANY_FC64,
-# 960 "scripts/GraphBLAS.h"
+
+
+
+
+
+
+
     GxB_ISEQ_BOOL, GxB_ISNE_BOOL,
     GxB_ISEQ_INT8, GxB_ISNE_INT8,
     GxB_ISEQ_INT16, GxB_ISNE_INT16,
@@ -656,8 +656,6 @@ extern GrB_BinaryOp
 
     GxB_ISEQ_FC32, GxB_ISNE_FC32,
     GxB_ISEQ_FC64, GxB_ISNE_FC64,
-
-
 
 
     GxB_ISGT_BOOL, GxB_ISLT_BOOL, GxB_ISGE_BOOL, GxB_ISLE_BOOL,
@@ -684,7 +682,7 @@ extern GrB_BinaryOp
     GrB_MIN_UINT64, GrB_MAX_UINT64,
     GrB_MIN_FP32, GrB_MAX_FP32,
     GrB_MIN_FP64, GrB_MAX_FP64,
-# 1012 "scripts/GraphBLAS.h"
+# 822 "scripts/GraphBLAS.h"
     GxB_LOR_BOOL, GxB_LAND_BOOL, GxB_LXOR_BOOL,
     GxB_LOR_INT8, GxB_LAND_INT8, GxB_LXOR_INT8,
     GxB_LOR_INT16, GxB_LAND_INT16, GxB_LXOR_INT16,
@@ -738,7 +736,7 @@ extern GrB_BinaryOp
     GxB_BGET_UINT16, GxB_BSET_UINT16, GxB_BCLR_UINT16,
     GxB_BGET_UINT32, GxB_BSET_UINT32, GxB_BCLR_UINT32,
     GxB_BGET_UINT64, GxB_BSET_UINT64, GxB_BCLR_UINT64 ;
-# 1078 "scripts/GraphBLAS.h"
+# 888 "scripts/GraphBLAS.h"
 extern GrB_BinaryOp
 
 
@@ -756,7 +754,7 @@ extern GrB_BinaryOp
 
 
 extern GrB_BinaryOp
-# 1104 "scripts/GraphBLAS.h"
+# 914 "scripts/GraphBLAS.h"
     GrB_EQ_BOOL, GrB_NE_BOOL, GrB_GT_BOOL, GrB_LT_BOOL,
     GrB_EQ_INT8, GrB_NE_INT8, GrB_GT_INT8, GrB_LT_INT8,
     GrB_EQ_INT16, GrB_NE_INT16, GrB_GT_INT16, GrB_LT_INT16,
@@ -794,7 +792,25 @@ extern GrB_BinaryOp
 
     GxB_CMPLX_FP32,
     GxB_CMPLX_FP64 ;
-# 1232 "scripts/GraphBLAS.h"
+# 986 "scripts/GraphBLAS.h"
+extern GrB_BinaryOp
+
+    GxB_FIRSTI_INT32, GxB_FIRSTI_INT64,
+    GxB_FIRSTI1_INT32, GxB_FIRSTI1_INT64,
+    GxB_FIRSTJ_INT32, GxB_FIRSTJ_INT64,
+    GxB_FIRSTJ1_INT32, GxB_FIRSTJ1_INT64,
+    GxB_SECONDI_INT32, GxB_SECONDI_INT64,
+    GxB_SECONDI1_INT32, GxB_SECONDI1_INT64,
+    GxB_SECONDJ_INT32, GxB_SECONDJ_INT64,
+    GxB_SECONDJ1_INT32, GxB_SECONDJ1_INT64 ;
+
+extern GrB_UnaryOp
+
+    GxB_POSITIONI_INT32, GxB_POSITIONI_INT64,
+    GxB_POSITIONI1_INT32, GxB_POSITIONI1_INT64,
+    GxB_POSITIONJ_INT32, GxB_POSITIONJ_INT64,
+    GxB_POSITIONJ1_INT32, GxB_POSITIONJ1_INT64 ;
+# 1087 "scripts/GraphBLAS.h"
 typedef void (*GxB_binary_function) (void *, const void *, const void *) ;
 
 
@@ -824,8 +840,6 @@ GrB_Info GB_BinaryOp_new
     const char *name
 ) ;
 
-
-
 extern
 GrB_Info GxB_BinaryOp_ztype
 (
@@ -833,16 +847,12 @@ GrB_Info GxB_BinaryOp_ztype
     GrB_BinaryOp binaryop
 ) ;
 
-
-
 extern
 GrB_Info GxB_BinaryOp_xtype
 (
     GrB_Type *xtype,
     GrB_BinaryOp binaryop
 ) ;
-
-
 
 extern
 GrB_Info GxB_BinaryOp_ytype
@@ -856,9 +866,9 @@ GrB_Info GrB_BinaryOp_free
 (
     GrB_BinaryOp *binaryop
 ) ;
-# 1339 "scripts/GraphBLAS.h"
+# 1180 "scripts/GraphBLAS.h"
 typedef struct GB_SelectOp_opaque *GxB_SelectOp ;
-# 1348 "scripts/GraphBLAS.h"
+# 1189 "scripts/GraphBLAS.h"
 extern GxB_SelectOp
 
     GxB_TRIL,
@@ -879,13 +889,11 @@ extern GxB_SelectOp
     GxB_GE_THUNK,
     GxB_LT_THUNK,
     GxB_LE_THUNK ;
-# 1394 "scripts/GraphBLAS.h"
+# 1230 "scripts/GraphBLAS.h"
 typedef bool (*GxB_select_function)
 (
     GrB_Index i,
     GrB_Index j,
-    GrB_Index nrows,
-    GrB_Index ncols,
     const void *x,
     const void *thunk
 ) ;
@@ -934,11 +942,8 @@ GrB_Info GxB_SelectOp_free
 (
     GxB_SelectOp *selectop
 ) ;
-# 1457 "scripts/GraphBLAS.h"
+# 1291 "scripts/GraphBLAS.h"
 typedef struct GB_Monoid_opaque *GrB_Monoid ;
-
-
-
 
 extern
 GrB_Info GrB_Monoid_new_BOOL
@@ -1051,7 +1056,7 @@ GrB_Info GrB_Monoid_new_UDT
     GrB_BinaryOp op,
     void *identity
 ) ;
-# 1598 "scripts/GraphBLAS.h"
+# 1429 "scripts/GraphBLAS.h"
 extern
 GrB_Info GxB_Monoid_terminal_new_BOOL
 (
@@ -1177,7 +1182,7 @@ GrB_Info GxB_Monoid_terminal_new_UDT
     void *identity,
     void *terminal
 ) ;
-# 1748 "scripts/GraphBLAS.h"
+# 1576 "scripts/GraphBLAS.h"
 extern
 GrB_Info GxB_Monoid_operator
 (
@@ -1185,14 +1190,12 @@ GrB_Info GxB_Monoid_operator
     GrB_Monoid monoid
 ) ;
 
-
 extern
 GrB_Info GxB_Monoid_identity
 (
     void *identity,
     GrB_Monoid monoid
 ) ;
-
 
 extern
 GrB_Info GxB_Monoid_terminal
@@ -1208,7 +1211,11 @@ GrB_Info GrB_Monoid_free
 (
     GrB_Monoid *monoid
 ) ;
-# 1789 "scripts/GraphBLAS.h"
+
+
+
+
+
 typedef struct GB_Semiring_opaque *GrB_Semiring ;
 
 extern
@@ -1219,16 +1226,12 @@ GrB_Info GrB_Semiring_new
     GrB_BinaryOp multiply
 ) ;
 
-
-
 extern
 GrB_Info GxB_Semiring_add
 (
     GrB_Monoid *add,
     GrB_Semiring semiring
 ) ;
-
-
 
 extern
 GrB_Info GxB_Semiring_multiply
@@ -1242,11 +1245,16 @@ GrB_Info GrB_Semiring_free
 (
     GrB_Semiring *semiring
 ) ;
-# 1841 "scripts/GraphBLAS.h"
-typedef struct GB_Matrix_opaque *GrB_Matrix ;
-typedef struct GB_Vector_opaque *GrB_Vector ;
+
+
+
+
+
 typedef struct GB_Scalar_opaque *GxB_Scalar ;
-# 1856 "scripts/GraphBLAS.h"
+
+
+
+
 extern
 GrB_Info GxB_Scalar_new
 (
@@ -1286,7 +1294,7 @@ GrB_Info GxB_Scalar_free
 (
     GxB_Scalar *s
 ) ;
-# 1903 "scripts/GraphBLAS.h"
+# 1695 "scripts/GraphBLAS.h"
 extern
 GrB_Info GxB_Scalar_setElement_BOOL
 (
@@ -1384,7 +1392,7 @@ GrB_Info GxB_Scalar_setElement_UDT
     GxB_Scalar s,
     void *x
 ) ;
-# 2030 "scripts/GraphBLAS.h"
+# 1819 "scripts/GraphBLAS.h"
 extern
 GrB_Info GxB_Scalar_extractElement_BOOL
 (
@@ -1482,7 +1490,12 @@ GrB_Info GxB_Scalar_extractElement_UDT
     void *x,
     const GxB_Scalar s
 ) ;
-# 2154 "scripts/GraphBLAS.h"
+# 1940 "scripts/GraphBLAS.h"
+typedef struct GB_Vector_opaque *GrB_Vector ;
+
+
+
+
 extern
 GrB_Info GrB_Vector_new
 (
@@ -1518,8 +1531,6 @@ GrB_Info GrB_Vector_nvals
     const GrB_Vector v
 ) ;
 
-
-
 extern
 GrB_Info GxB_Vector_type
 (
@@ -1532,7 +1543,7 @@ GrB_Info GrB_Vector_free
 (
     GrB_Vector *v
 ) ;
-# 2235 "scripts/GraphBLAS.h"
+# 2000 "scripts/GraphBLAS.h"
 extern
 GrB_Info GrB_Vector_build_BOOL
 (
@@ -1672,7 +1683,7 @@ GrB_Info GrB_Vector_build_UDT
     GrB_Index nvals,
     const GrB_BinaryOp dup
 ) ;
-# 2405 "scripts/GraphBLAS.h"
+# 2170 "scripts/GraphBLAS.h"
 extern
 GrB_Info GrB_Vector_setElement_BOOL
 (
@@ -1784,7 +1795,7 @@ GrB_Info GrB_Vector_setElement_UDT
     void *x,
     GrB_Index i
 ) ;
-# 2547 "scripts/GraphBLAS.h"
+# 2309 "scripts/GraphBLAS.h"
 extern
 GrB_Info GrB_Vector_extractElement_BOOL
 (
@@ -1896,14 +1907,14 @@ GrB_Info GrB_Vector_extractElement_UDT
     const GrB_Vector v,
     GrB_Index i
 ) ;
-# 2685 "scripts/GraphBLAS.h"
+# 2447 "scripts/GraphBLAS.h"
 extern
 GrB_Info GrB_Vector_removeElement
 (
     GrB_Vector v,
     GrB_Index i
 ) ;
-# 2707 "scripts/GraphBLAS.h"
+# 2463 "scripts/GraphBLAS.h"
 extern
 GrB_Info GrB_Vector_extractTuples_BOOL
 (
@@ -2029,7 +2040,12 @@ GrB_Info GrB_Vector_extractTuples_UDT
     GrB_Index *nvals,
     const GrB_Vector v
 ) ;
-# 2861 "scripts/GraphBLAS.h"
+# 2614 "scripts/GraphBLAS.h"
+typedef struct GB_Matrix_opaque *GrB_Matrix ;
+
+
+
+
 extern
 GrB_Info GrB_Matrix_new
 (
@@ -2073,8 +2089,6 @@ GrB_Info GrB_Matrix_nvals
     const GrB_Matrix A
 ) ;
 
-
-
 extern
 GrB_Info GxB_Matrix_type
 (
@@ -2087,7 +2101,7 @@ GrB_Info GrB_Matrix_free
 (
     GrB_Matrix *A
 ) ;
-# 2944 "scripts/GraphBLAS.h"
+# 2682 "scripts/GraphBLAS.h"
 extern
 GrB_Info GrB_Matrix_build_BOOL
 (
@@ -2241,7 +2255,7 @@ GrB_Info GrB_Matrix_build_UDT
     GrB_Index nvals,
     const GrB_BinaryOp dup
 ) ;
-# 3129 "scripts/GraphBLAS.h"
+# 2867 "scripts/GraphBLAS.h"
 extern
 GrB_Info GrB_Matrix_setElement_BOOL
 (
@@ -2367,7 +2381,7 @@ GrB_Info GrB_Matrix_setElement_UDT
     GrB_Index i,
     GrB_Index j
 ) ;
-# 3286 "scripts/GraphBLAS.h"
+# 3021 "scripts/GraphBLAS.h"
 extern
 GrB_Info GrB_Matrix_extractElement_BOOL
 (
@@ -2493,7 +2507,7 @@ GrB_Info GrB_Matrix_extractElement_UDT
     GrB_Index i,
     GrB_Index j
 ) ;
-# 3439 "scripts/GraphBLAS.h"
+# 3174 "scripts/GraphBLAS.h"
 extern
 GrB_Info GrB_Matrix_removeElement
 (
@@ -2501,7 +2515,7 @@ GrB_Info GrB_Matrix_removeElement
     GrB_Index i,
     GrB_Index j
 ) ;
-# 3462 "scripts/GraphBLAS.h"
+# 3191 "scripts/GraphBLAS.h"
 extern
 GrB_Info GrB_Matrix_extractTuples_BOOL
 (
@@ -2641,7 +2655,7 @@ GrB_Info GrB_Matrix_extractTuples_UDT
     GrB_Index *nvals,
     const GrB_Matrix A
 ) ;
-# 3744 "scripts/GraphBLAS.h"
+# 3440 "scripts/GraphBLAS.h"
 typedef enum
 {
     GrB_OUTP = 0,
@@ -2660,20 +2674,10 @@ typedef enum
     GxB_DESCRIPTOR_GPU_CONTROL = 21,
     GxB_DESCRIPTOR_GPU_CHUNK = 22,
 
-
-
-    GxB_DESCRIPTOR_MKL = 31,
-
-
-
-    GxB_AxB_METHOD = 1000
+    GxB_AxB_METHOD = 1000,
+    GxB_SORT = 35
 }
 GrB_Desc_Field ;
-
-
-
-
-
 
 typedef enum
 {
@@ -2697,7 +2701,6 @@ typedef enum
 
 
     GxB_AxB_GUSTAVSON = 1001,
-    GxB_AxB_HEAP = 1002,
     GxB_AxB_DOT = 1003,
     GxB_AxB_HASH = 1004,
     GxB_AxB_SAXPY = 1005
@@ -2727,7 +2730,7 @@ GrB_Info GxB_Descriptor_get
     GrB_Descriptor desc,
     GrB_Desc_Field field
 ) ;
-# 3854 "scripts/GraphBLAS.h"
+
 extern
 GrB_Info GxB_Desc_set
 (
@@ -2796,33 +2799,23 @@ GrB_DESC_RSC ,
 GrB_DESC_RSCT1 ,
 GrB_DESC_RSCT0 ,
 GrB_DESC_RSCT0T1 ;
-# 3961 "scripts/GraphBLAS.h"
+# 3615 "scripts/GraphBLAS.h"
 typedef enum
 {
 
-    GxB_HYPER = 0,
+
+
+
+
+    GxB_HYPER_SWITCH = 0,
+    GxB_BITMAP_SWITCH = 34,
     GxB_FORMAT = 1,
 
 
+
+
+
     GxB_MODE = 2,
-
-    GxB_THREAD_SAFETY = 3,
-
-
-    GxB_THREADING = 4,
-
-
-    GxB_GLOBAL_NTHREADS = 5,
-
-
-
-    GxB_GLOBAL_CHUNK = 7,
-
-
-
-    GxB_IS_HYPER = 6,
-
-
     GxB_LIBRARY_NAME = 8,
     GxB_LIBRARY_VERSION = 9,
     GxB_LIBRARY_DATE = 10,
@@ -2837,15 +2830,37 @@ typedef enum
     GxB_API_URL = 19,
 
 
-    GxB_GPU_COUNT = 20,
+
+
+
+    GxB_GLOBAL_NTHREADS = 5,
+
+
+
+    GxB_GLOBAL_CHUNK = 7,
+
+
+    GxB_BURBLE = 99,
+
+
+
+
+
+    GxB_SPARSITY_STATUS = 33,
+    GxB_IS_HYPER = 6,
+
+
+
+
+
+    GxB_SPARSITY_CONTROL = 32,
+
+
+
+
+
     GxB_GLOBAL_GPU_CONTROL = 21,
     GxB_GLOBAL_GPU_CHUNK = 22,
-
-
-
-    GxB_GLOBAL_MKL = 31,
-
-    GxB_BURBLE = 99
 
 } GxB_Option_Field ;
 
@@ -2859,17 +2874,6 @@ typedef enum
 GxB_Format_Value ;
 
 
-typedef enum
-{
-    GxB_THREAD_NONE = 0,
-    GxB_THREAD_OPENMP = 1,
-    GxB_THREAD_POSIX = 2,
-    GxB_THREAD_WINDOWS = 3,
-    GxB_THREAD_ANSI = 4
-}
-GxB_Thread_Model ;
-
-
 
 
 
@@ -2877,7 +2881,7 @@ extern const GxB_Format_Value GxB_FORMAT_DEFAULT ;
 
 
 extern const double GxB_HYPER_DEFAULT ;
-# 4058 "scripts/GraphBLAS.h"
+# 3768 "scripts/GraphBLAS.h"
 extern const double GxB_ALWAYS_HYPER, GxB_NEVER_HYPER ;
 
 extern
@@ -2895,7 +2899,23 @@ GrB_Info GxB_Matrix_Option_get
     GxB_Option_Field field,
     ...
 ) ;
-# 4090 "scripts/GraphBLAS.h"
+
+extern
+GrB_Info GxB_Vector_Option_set
+(
+    GrB_Vector A,
+    GxB_Option_Field field,
+    ...
+) ;
+
+extern
+GrB_Info GxB_Vector_Option_get
+(
+    GrB_Vector A,
+    GxB_Option_Field field,
+    ...
+) ;
+# 3817 "scripts/GraphBLAS.h"
 extern
 GrB_Info GxB_Global_Option_set
 (
@@ -2909,7 +2929,7 @@ GrB_Info GxB_Global_Option_get
     GxB_Option_Field field,
     ...
 ) ;
-# 4295 "scripts/GraphBLAS.h"
+# 4010 "scripts/GraphBLAS.h"
 extern GrB_Info GrB_Type_wait (GrB_Type *type ) ;
 extern GrB_Info GrB_UnaryOp_wait (GrB_UnaryOp *op ) ;
 extern GrB_Info GrB_BinaryOp_wait (GrB_BinaryOp *op ) ;
@@ -2920,14 +2940,18 @@ extern GrB_Info GrB_Descriptor_wait (GrB_Descriptor *desc ) ;
 extern GrB_Info GxB_Scalar_wait (GxB_Scalar *s ) ;
 extern GrB_Info GrB_Vector_wait (GrB_Vector *v ) ;
 extern GrB_Info GrB_Matrix_wait (GrB_Matrix *A ) ;
-
-
-
-
-
-
-extern GrB_Info GrB_wait (void) ;
-# 4371 "scripts/GraphBLAS.h"
+# 4050 "scripts/GraphBLAS.h"
+extern GrB_Info GrB_Type_error (const char **error, const GrB_Type type) ;
+extern GrB_Info GrB_UnaryOp_error (const char **error, const GrB_UnaryOp op) ;
+extern GrB_Info GrB_BinaryOp_error (const char **error, const GrB_BinaryOp op) ;
+extern GrB_Info GxB_SelectOp_error (const char **error, const GxB_SelectOp op) ;
+extern GrB_Info GrB_Monoid_error (const char **error, const GrB_Monoid monoid) ;
+extern GrB_Info GrB_Semiring_error (const char **error, const GrB_Semiring semiring) ;
+extern GrB_Info GxB_Scalar_error (const char **error, const GxB_Scalar s) ;
+extern GrB_Info GrB_Vector_error (const char **error, const GrB_Vector v) ;
+extern GrB_Info GrB_Matrix_error (const char **error, const GrB_Matrix A) ;
+extern GrB_Info GrB_Descriptor_error (const char **error, const GrB_Descriptor d) ;
+# 4095 "scripts/GraphBLAS.h"
 extern
 GrB_Info GrB_mxm
 (
@@ -2963,7 +2987,7 @@ GrB_Info GrB_mxv
     const GrB_Vector u,
     const GrB_Descriptor desc
 ) ;
-# 4427 "scripts/GraphBLAS.h"
+# 4139 "scripts/GraphBLAS.h"
 extern
 GrB_Info GrB_Vector_eWiseMult_Semiring
 (
@@ -3035,36 +3059,7 @@ GrB_Info GrB_Matrix_eWiseMult_BinaryOp
     const GrB_Matrix B,
     const GrB_Descriptor desc
 ) ;
-
-
-
-
-
-
-extern GrB_Info GrB_eWiseMult_Vector_Semiring (GrB_Vector,
-    const GrB_Vector, const GrB_BinaryOp, const GrB_Semiring,
-    const GrB_Vector, const GrB_Vector, const GrB_Descriptor) ;
-
-extern GrB_Info GrB_eWiseMult_Vector_Monoid (GrB_Vector,
-    const GrB_Vector, const GrB_BinaryOp, const GrB_Monoid,
-    const GrB_Vector, const GrB_Vector, const GrB_Descriptor desc) ;
-
-extern GrB_Info GrB_eWiseMult_Vector_BinaryOp (GrB_Vector,
-    const GrB_Vector, const GrB_BinaryOp, const GrB_BinaryOp,
-    const GrB_Vector, const GrB_Vector, const GrB_Descriptor desc) ;
-
-extern GrB_Info GrB_eWiseMult_Matrix_Semiring (GrB_Matrix,
-    const GrB_Matrix, const GrB_BinaryOp, const GrB_Semiring,
-    const GrB_Matrix, const GrB_Matrix, const GrB_Descriptor desc) ;
-
-extern GrB_Info GrB_eWiseMult_Matrix_Monoid (GrB_Matrix,
-    const GrB_Matrix, const GrB_BinaryOp, const GrB_Monoid,
-    const GrB_Matrix, const GrB_Matrix, const GrB_Descriptor) ;
-
-extern GrB_Info GrB_eWiseMult_Matrix_BinaryOp (GrB_Matrix,
-    const GrB_Matrix, const GrB_BinaryOp, const GrB_BinaryOp,
-    const GrB_Matrix, const GrB_Matrix, const GrB_Descriptor desc) ;
-# 4586 "scripts/GraphBLAS.h"
+# 4252 "scripts/GraphBLAS.h"
 extern
 GrB_Info GrB_Vector_eWiseAdd_Semiring
 (
@@ -3136,38 +3131,9 @@ GrB_Info GrB_Matrix_eWiseAdd_BinaryOp
     const GrB_Matrix B,
     const GrB_Descriptor desc
 ) ;
-
-
-
-
-
-
-extern GrB_Info GrB_eWiseAdd_Vector_Semiring (GrB_Vector,
-    const GrB_Vector, const GrB_BinaryOp, const GrB_Semiring,
-    const GrB_Vector, const GrB_Vector, const GrB_Descriptor desc) ;
-
-extern GrB_Info GrB_eWiseAdd_Vector_Monoid (GrB_Vector,
-    const GrB_Vector, const GrB_BinaryOp, const GrB_Monoid,
-    const GrB_Vector, const GrB_Vector, const GrB_Descriptor desc) ;
-
-extern GrB_Info GrB_eWiseAdd_Vector_BinaryOp (GrB_Vector,
-    const GrB_Vector, const GrB_BinaryOp, const GrB_BinaryOp,
-    const GrB_Vector, const GrB_Vector, const GrB_Descriptor) ;
-
-extern GrB_Info GrB_eWiseAdd_Matrix_Semiring (GrB_Matrix,
-    const GrB_Matrix, const GrB_BinaryOp, const GrB_Semiring,
-    const GrB_Matrix, const GrB_Matrix, const GrB_Descriptor) ;
-
-extern GrB_Info GrB_eWiseAdd_Matrix_Monoid (GrB_Matrix,
-    const GrB_Matrix, const GrB_BinaryOp, const GrB_Monoid,
-    const GrB_Matrix, const GrB_Matrix, const GrB_Descriptor) ;
-
-extern GrB_Info GrB_eWiseAdd_Matrix_BinaryOp (GrB_Matrix,
-    const GrB_Matrix, const GrB_BinaryOp, const GrB_BinaryOp,
-    const GrB_Matrix, const GrB_Matrix, const GrB_Descriptor) ;
-# 4734 "scripts/GraphBLAS.h"
+# 4366 "scripts/GraphBLAS.h"
 extern const uint64_t *GrB_ALL ;
-# 4774 "scripts/GraphBLAS.h"
+# 4400 "scripts/GraphBLAS.h"
 extern
 GrB_Info GrB_Vector_extract
 (
@@ -3206,7 +3172,7 @@ GrB_Info GrB_Col_extract
     GrB_Index j,
     const GrB_Descriptor desc
 ) ;
-# 4955 "scripts/GraphBLAS.h"
+# 4515 "scripts/GraphBLAS.h"
 extern
 GrB_Info GxB_Vector_subassign
 (
@@ -3258,7 +3224,7 @@ GrB_Info GxB_Row_subassign
     GrB_Index nj,
     const GrB_Descriptor desc
 ) ;
-# 5017 "scripts/GraphBLAS.h"
+# 4575 "scripts/GraphBLAS.h"
 extern
 GrB_Info GxB_Vector_subassign_BOOL
 (
@@ -3426,7 +3392,7 @@ GrB_Info GxB_Vector_subassign_UDT
     GrB_Index ni,
     const GrB_Descriptor desc
 ) ;
-# 5195 "scripts/GraphBLAS.h"
+# 4751 "scripts/GraphBLAS.h"
 extern
 GrB_Info GxB_Matrix_subassign_BOOL
 (
@@ -3622,7 +3588,7 @@ GrB_Info GxB_Matrix_subassign_UDT
     GrB_Index nj,
     const GrB_Descriptor desc
 ) ;
-# 5451 "scripts/GraphBLAS.h"
+# 5007 "scripts/GraphBLAS.h"
 extern
 GrB_Info GrB_Vector_assign
 (
@@ -3674,7 +3640,7 @@ GrB_Info GrB_Row_assign
     GrB_Index nj,
     const GrB_Descriptor desc
 ) ;
-# 5513 "scripts/GraphBLAS.h"
+# 5067 "scripts/GraphBLAS.h"
 extern
 GrB_Info GrB_Vector_assign_BOOL
 (
@@ -3842,7 +3808,7 @@ GrB_Info GrB_Vector_assign_UDT
     GrB_Index ni,
     const GrB_Descriptor desc
 ) ;
-# 5691 "scripts/GraphBLAS.h"
+# 5243 "scripts/GraphBLAS.h"
 extern
 GrB_Info GrB_Matrix_assign_BOOL
 (
@@ -4038,7 +4004,7 @@ GrB_Info GrB_Matrix_assign_UDT
     GrB_Index nj,
     const GrB_Descriptor desc
 ) ;
-# 5949 "scripts/GraphBLAS.h"
+# 5499 "scripts/GraphBLAS.h"
 extern
 GrB_Info GrB_Vector_apply
 (
@@ -4060,7 +4026,7 @@ GrB_Info GrB_Matrix_apply
     const GrB_Matrix A,
     const GrB_Descriptor desc
 ) ;
-# 5978 "scripts/GraphBLAS.h"
+# 5528 "scripts/GraphBLAS.h"
 extern
 GrB_Info GxB_Vector_apply_BinaryOp1st
 (
@@ -4240,7 +4206,7 @@ GrB_Info GrB_Vector_apply_BinaryOp1st_UDT
     const GrB_Vector u,
     const GrB_Descriptor desc
 ) ;
-# 6165 "scripts/GraphBLAS.h"
+# 5715 "scripts/GraphBLAS.h"
 extern
 GrB_Info GxB_Vector_apply_BinaryOp2nd
 (
@@ -4420,7 +4386,7 @@ GrB_Info GrB_Vector_apply_BinaryOp2nd_UDT
     const void *y,
     const GrB_Descriptor desc
 ) ;
-# 6352 "scripts/GraphBLAS.h"
+# 5902 "scripts/GraphBLAS.h"
 extern
 GrB_Info GxB_Matrix_apply_BinaryOp1st
 (
@@ -4600,7 +4566,7 @@ GrB_Info GrB_Matrix_apply_BinaryOp1st_UDT
     const GrB_Matrix A,
     const GrB_Descriptor desc
 ) ;
-# 6539 "scripts/GraphBLAS.h"
+# 6089 "scripts/GraphBLAS.h"
 extern
 GrB_Info GxB_Matrix_apply_BinaryOp2nd
 (
@@ -4780,7 +4746,7 @@ GrB_Info GrB_Matrix_apply_BinaryOp2nd_UDT
     const void *y,
     const GrB_Descriptor desc
 ) ;
-# 6795 "scripts/GraphBLAS.h"
+# 6338 "scripts/GraphBLAS.h"
 extern
 GrB_Info GxB_Vector_select
 (
@@ -4804,7 +4770,7 @@ GrB_Info GxB_Matrix_select
     const GxB_Scalar Thunk,
     const GrB_Descriptor desc
 ) ;
-# 6851 "scripts/GraphBLAS.h"
+# 6398 "scripts/GraphBLAS.h"
 extern
 GrB_Info GrB_Matrix_reduce_Monoid
 (
@@ -4826,7 +4792,13 @@ GrB_Info GrB_Matrix_reduce_BinaryOp
     const GrB_Matrix A,
     const GrB_Descriptor desc
 ) ;
-# 6891 "scripts/GraphBLAS.h"
+
+
+
+
+
+
+
 extern
 GrB_Info GrB_Vector_reduce_BOOL
 (
@@ -4966,7 +4938,13 @@ GrB_Info GrB_Vector_reduce_UDT
     const GrB_Vector u,
     const GrB_Descriptor desc
 ) ;
-# 7045 "scripts/GraphBLAS.h"
+
+
+
+
+
+
+
 extern
 GrB_Info GrB_Matrix_reduce_BOOL
 (
@@ -5106,7 +5084,7 @@ GrB_Info GrB_Matrix_reduce_UDT
     const GrB_Matrix A,
     const GrB_Descriptor desc
 ) ;
-# 7234 "scripts/GraphBLAS.h"
+# 6755 "scripts/GraphBLAS.h"
 extern
 GrB_Info GrB_transpose
 (
@@ -5116,8 +5094,62 @@ GrB_Info GrB_transpose
     const GrB_Matrix A,
     const GrB_Descriptor desc
 ) ;
-# 7271 "scripts/GraphBLAS.h"
+
+
+
+
+
+
+extern
+GrB_Info GxB_kron
+(
+    GrB_Matrix C,
+    const GrB_Matrix Mask,
+    const GrB_BinaryOp accum,
+    const GrB_BinaryOp op,
+    const GrB_Matrix A,
+    const GrB_Matrix B,
+    const GrB_Descriptor desc
+) ;
+
+extern
+GrB_Info GrB_Matrix_kronecker_BinaryOp
+(
+    GrB_Matrix C,
+    const GrB_Matrix M,
+    const GrB_BinaryOp accum,
+    const GrB_BinaryOp op,
+    const GrB_Matrix A,
+    const GrB_Matrix B,
+    const GrB_Descriptor desc
+) ;
+
+extern
+GrB_Info GrB_Matrix_kronecker_Monoid
+(
+    GrB_Matrix C,
+    const GrB_Matrix M,
+    const GrB_BinaryOp accum,
+    const GrB_Monoid monoid,
+    const GrB_Matrix A,
+    const GrB_Matrix B,
+    const GrB_Descriptor desc
+) ;
+
+extern
+GrB_Info GrB_Matrix_kronecker_Semiring
+(
+    GrB_Matrix C,
+    const GrB_Matrix M,
+    const GrB_BinaryOp accum,
+    const GrB_Semiring semiring,
+    const GrB_Matrix A,
+    const GrB_Matrix B,
+    const GrB_Descriptor desc
+) ;
+# 6838 "scripts/GraphBLAS.h"
 extern GrB_Monoid
+
 
 
 
@@ -5135,7 +5167,6 @@ extern GrB_Monoid
     GxB_MIN_FP64_MONOID,
 
 
-
     GrB_MIN_MONOID_INT8,
     GrB_MIN_MONOID_INT16,
     GrB_MIN_MONOID_INT32,
@@ -5146,6 +5177,7 @@ extern GrB_Monoid
     GrB_MIN_MONOID_UINT64,
     GrB_MIN_MONOID_FP32,
     GrB_MIN_MONOID_FP64,
+
 
 
 
@@ -5178,6 +5210,7 @@ extern GrB_Monoid
 
 
 
+
     GxB_PLUS_INT8_MONOID,
     GxB_PLUS_INT16_MONOID,
     GxB_PLUS_INT32_MONOID,
@@ -5188,10 +5221,6 @@ extern GrB_Monoid
     GxB_PLUS_UINT64_MONOID,
     GxB_PLUS_FP32_MONOID,
     GxB_PLUS_FP64_MONOID,
-    GxB_PLUS_FC32_MONOID,
-    GxB_PLUS_FC64_MONOID,
-
-
 
 
     GrB_PLUS_MONOID_INT8,
@@ -5204,6 +5233,11 @@ extern GrB_Monoid
     GrB_PLUS_MONOID_UINT64,
     GrB_PLUS_MONOID_FP32,
     GrB_PLUS_MONOID_FP64,
+
+
+    GxB_PLUS_FC32_MONOID,
+    GxB_PLUS_FC64_MONOID,
+
 
 
 
@@ -5219,10 +5253,6 @@ extern GrB_Monoid
     GxB_TIMES_UINT64_MONOID,
     GxB_TIMES_FP32_MONOID,
     GxB_TIMES_FP64_MONOID,
-    GxB_TIMES_FC32_MONOID,
-    GxB_TIMES_FC64_MONOID,
-
-
 
 
     GrB_TIMES_MONOID_INT8,
@@ -5235,7 +5265,16 @@ extern GrB_Monoid
     GrB_TIMES_MONOID_UINT64,
     GrB_TIMES_MONOID_FP32,
     GrB_TIMES_MONOID_FP64,
-# 7397 "scripts/GraphBLAS.h"
+
+
+    GxB_TIMES_FC32_MONOID,
+    GxB_TIMES_FC64_MONOID,
+
+
+
+
+
+    GxB_ANY_BOOL_MONOID,
     GxB_ANY_INT8_MONOID,
     GxB_ANY_INT16_MONOID,
     GxB_ANY_INT32_MONOID,
@@ -5253,7 +5292,7 @@ extern GrB_Monoid
 
 
 
-    GxB_ANY_BOOL_MONOID,
+
     GxB_LOR_BOOL_MONOID,
     GxB_LAND_BOOL_MONOID,
     GxB_LXOR_BOOL_MONOID,
@@ -5265,7 +5304,12 @@ extern GrB_Monoid
     GrB_LAND_MONOID_BOOL,
     GrB_LXOR_MONOID_BOOL,
     GrB_LXNOR_MONOID_BOOL,
-# 7435 "scripts/GraphBLAS.h"
+
+
+
+
+
+
     GxB_BOR_UINT8_MONOID,
     GxB_BOR_UINT16_MONOID,
     GxB_BOR_UINT32_MONOID,
@@ -5288,7 +5332,7 @@ extern GrB_Monoid
     GxB_BXNOR_UINT16_MONOID,
     GxB_BXNOR_UINT32_MONOID,
     GxB_BXNOR_UINT64_MONOID ;
-# 7539 "scripts/GraphBLAS.h"
+# 7113 "scripts/GraphBLAS.h"
 extern GrB_Semiring
 
 
@@ -5535,12 +5579,7 @@ extern GrB_Semiring
     GxB_MIN_LXOR_UINT64 , GxB_MAX_LXOR_UINT64 , GxB_PLUS_LXOR_UINT64 , GxB_TIMES_LXOR_UINT64 , GxB_ANY_LXOR_UINT64 ,
     GxB_MIN_LXOR_FP32 , GxB_MAX_LXOR_FP32 , GxB_PLUS_LXOR_FP32 , GxB_TIMES_LXOR_FP32 , GxB_ANY_LXOR_FP32 ,
     GxB_MIN_LXOR_FP64 , GxB_MAX_LXOR_FP64 , GxB_PLUS_LXOR_FP64 , GxB_TIMES_LXOR_FP64 , GxB_ANY_LXOR_FP64 ,
-
-
-
-
-
-
+# 7369 "scripts/GraphBLAS.h"
     GxB_LOR_EQ_INT8 , GxB_LAND_EQ_INT8 , GxB_LXOR_EQ_INT8 , GxB_EQ_EQ_INT8 , GxB_ANY_EQ_INT8 ,
     GxB_LOR_EQ_INT16 , GxB_LAND_EQ_INT16 , GxB_LXOR_EQ_INT16 , GxB_EQ_EQ_INT16 , GxB_ANY_EQ_INT16 ,
     GxB_LOR_EQ_INT32 , GxB_LAND_EQ_INT32 , GxB_LXOR_EQ_INT32 , GxB_EQ_EQ_INT32 , GxB_ANY_EQ_INT32 ,
@@ -5611,7 +5650,7 @@ extern GrB_Semiring
     GxB_LOR_LE_UINT64 , GxB_LAND_LE_UINT64 , GxB_LXOR_LE_UINT64 , GxB_EQ_LE_UINT64 , GxB_ANY_LE_UINT64 ,
     GxB_LOR_LE_FP32 , GxB_LAND_LE_FP32 , GxB_LXOR_LE_FP32 , GxB_EQ_LE_FP32 , GxB_ANY_LE_FP32 ,
     GxB_LOR_LE_FP64 , GxB_LAND_LE_FP64 , GxB_LXOR_LE_FP64 , GxB_EQ_LE_FP64 , GxB_ANY_LE_FP64 ,
-# 7870 "scripts/GraphBLAS.h"
+# 7450 "scripts/GraphBLAS.h"
     GxB_LOR_FIRST_BOOL , GxB_LAND_FIRST_BOOL , GxB_LXOR_FIRST_BOOL , GxB_EQ_FIRST_BOOL , GxB_ANY_FIRST_BOOL ,
     GxB_LOR_SECOND_BOOL , GxB_LAND_SECOND_BOOL , GxB_LXOR_SECOND_BOOL , GxB_EQ_SECOND_BOOL , GxB_ANY_SECOND_BOOL ,
     GxB_LOR_PAIR_BOOL , GxB_LAND_PAIR_BOOL , GxB_LXOR_PAIR_BOOL , GxB_EQ_PAIR_BOOL , GxB_ANY_PAIR_BOOL ,
@@ -5623,7 +5662,7 @@ extern GrB_Semiring
     GxB_LOR_LT_BOOL , GxB_LAND_LT_BOOL , GxB_LXOR_LT_BOOL , GxB_EQ_LT_BOOL , GxB_ANY_LT_BOOL ,
     GxB_LOR_GE_BOOL , GxB_LAND_GE_BOOL , GxB_LXOR_GE_BOOL , GxB_EQ_GE_BOOL , GxB_ANY_GE_BOOL ,
     GxB_LOR_LE_BOOL , GxB_LAND_LE_BOOL , GxB_LXOR_LE_BOOL , GxB_EQ_LE_BOOL , GxB_ANY_LE_BOOL ,
-# 7894 "scripts/GraphBLAS.h"
+# 7472 "scripts/GraphBLAS.h"
     GxB_PLUS_FIRST_FC32 , GxB_TIMES_FIRST_FC32 , GxB_ANY_FIRST_FC32 ,
     GxB_PLUS_FIRST_FC64 , GxB_TIMES_FIRST_FC64 , GxB_ANY_FIRST_FC64 ,
 
@@ -5650,7 +5689,7 @@ extern GrB_Semiring
 
     GxB_PLUS_RMINUS_FC32 , GxB_TIMES_RMINUS_FC32 , GxB_ANY_RMINUS_FC32 ,
     GxB_PLUS_RMINUS_FC64 , GxB_TIMES_RMINUS_FC64 , GxB_ANY_RMINUS_FC64 ,
-# 7936 "scripts/GraphBLAS.h"
+# 7507 "scripts/GraphBLAS.h"
     GxB_BOR_BOR_UINT8 , GxB_BOR_BOR_UINT16 , GxB_BOR_BOR_UINT32 , GxB_BOR_BOR_UINT64 ,
     GxB_BOR_BAND_UINT8 , GxB_BOR_BAND_UINT16 , GxB_BOR_BAND_UINT32 , GxB_BOR_BAND_UINT64 ,
     GxB_BOR_BXOR_UINT8 , GxB_BOR_BXOR_UINT16 , GxB_BOR_BXOR_UINT32 , GxB_BOR_BXOR_UINT64 ,
@@ -5669,8 +5708,56 @@ extern GrB_Semiring
     GxB_BXNOR_BOR_UINT8 , GxB_BXNOR_BOR_UINT16 , GxB_BXNOR_BOR_UINT32 , GxB_BXNOR_BOR_UINT64 ,
     GxB_BXNOR_BAND_UINT8 , GxB_BXNOR_BAND_UINT16 , GxB_BXNOR_BAND_UINT32 , GxB_BXNOR_BAND_UINT64 ,
     GxB_BXNOR_BXOR_UINT8 , GxB_BXNOR_BXOR_UINT16 , GxB_BXNOR_BXOR_UINT32 , GxB_BXNOR_BXOR_UINT64 ,
-    GxB_BXNOR_BXNOR_UINT8 , GxB_BXNOR_BXNOR_UINT16 , GxB_BXNOR_BXNOR_UINT32 , GxB_BXNOR_BXNOR_UINT64 ;
-# 7976 "scripts/GraphBLAS.h"
+    GxB_BXNOR_BXNOR_UINT8 , GxB_BXNOR_BXNOR_UINT16 , GxB_BXNOR_BXNOR_UINT32 , GxB_BXNOR_BXNOR_UINT64 ,
+# 7535 "scripts/GraphBLAS.h"
+    GxB_MIN_FIRSTI_INT32, GxB_MIN_FIRSTI_INT64,
+    GxB_MAX_FIRSTI_INT32, GxB_MAX_FIRSTI_INT64,
+    GxB_ANY_FIRSTI_INT32, GxB_ANY_FIRSTI_INT64,
+    GxB_PLUS_FIRSTI_INT32, GxB_PLUS_FIRSTI_INT64,
+    GxB_TIMES_FIRSTI_INT32, GxB_TIMES_FIRSTI_INT64,
+
+    GxB_MIN_FIRSTI1_INT32, GxB_MIN_FIRSTI1_INT64,
+    GxB_MAX_FIRSTI1_INT32, GxB_MAX_FIRSTI1_INT64,
+    GxB_ANY_FIRSTI1_INT32, GxB_ANY_FIRSTI1_INT64,
+    GxB_PLUS_FIRSTI1_INT32, GxB_PLUS_FIRSTI1_INT64,
+    GxB_TIMES_FIRSTI1_INT32, GxB_TIMES_FIRSTI1_INT64,
+
+    GxB_MIN_FIRSTJ_INT32, GxB_MIN_FIRSTJ_INT64,
+    GxB_MAX_FIRSTJ_INT32, GxB_MAX_FIRSTJ_INT64,
+    GxB_ANY_FIRSTJ_INT32, GxB_ANY_FIRSTJ_INT64,
+    GxB_PLUS_FIRSTJ_INT32, GxB_PLUS_FIRSTJ_INT64,
+    GxB_TIMES_FIRSTJ_INT32, GxB_TIMES_FIRSTJ_INT64,
+
+    GxB_MIN_FIRSTJ1_INT32, GxB_MIN_FIRSTJ1_INT64,
+    GxB_MAX_FIRSTJ1_INT32, GxB_MAX_FIRSTJ1_INT64,
+    GxB_ANY_FIRSTJ1_INT32, GxB_ANY_FIRSTJ1_INT64,
+    GxB_PLUS_FIRSTJ1_INT32, GxB_PLUS_FIRSTJ1_INT64,
+    GxB_TIMES_FIRSTJ1_INT32, GxB_TIMES_FIRSTJ1_INT64,
+
+    GxB_MIN_SECONDI_INT32, GxB_MIN_SECONDI_INT64,
+    GxB_MAX_SECONDI_INT32, GxB_MAX_SECONDI_INT64,
+    GxB_ANY_SECONDI_INT32, GxB_ANY_SECONDI_INT64,
+    GxB_PLUS_SECONDI_INT32, GxB_PLUS_SECONDI_INT64,
+    GxB_TIMES_SECONDI_INT32, GxB_TIMES_SECONDI_INT64,
+
+    GxB_MIN_SECONDI1_INT32, GxB_MIN_SECONDI1_INT64,
+    GxB_MAX_SECONDI1_INT32, GxB_MAX_SECONDI1_INT64,
+    GxB_ANY_SECONDI1_INT32, GxB_ANY_SECONDI1_INT64,
+    GxB_PLUS_SECONDI1_INT32, GxB_PLUS_SECONDI1_INT64,
+    GxB_TIMES_SECONDI1_INT32, GxB_TIMES_SECONDI1_INT64,
+
+    GxB_MIN_SECONDJ_INT32, GxB_MIN_SECONDJ_INT64,
+    GxB_MAX_SECONDJ_INT32, GxB_MAX_SECONDJ_INT64,
+    GxB_ANY_SECONDJ_INT32, GxB_ANY_SECONDJ_INT64,
+    GxB_PLUS_SECONDJ_INT32, GxB_PLUS_SECONDJ_INT64,
+    GxB_TIMES_SECONDJ_INT32, GxB_TIMES_SECONDJ_INT64,
+
+    GxB_MIN_SECONDJ1_INT32, GxB_MIN_SECONDJ1_INT64,
+    GxB_MAX_SECONDJ1_INT32, GxB_MAX_SECONDJ1_INT64,
+    GxB_ANY_SECONDJ1_INT32, GxB_ANY_SECONDJ1_INT64,
+    GxB_PLUS_SECONDJ1_INT32, GxB_PLUS_SECONDJ1_INT64,
+    GxB_TIMES_SECONDJ1_INT32, GxB_TIMES_SECONDJ1_INT64 ;
+# 7605 "scripts/GraphBLAS.h"
 extern GrB_Semiring
 
 
@@ -5837,11 +5924,11 @@ extern GrB_Semiring
     GrB_LAND_LOR_SEMIRING_BOOL,
     GrB_LXOR_LAND_SEMIRING_BOOL,
     GrB_LXNOR_LOR_SEMIRING_BOOL ;
-# 8154 "scripts/GraphBLAS.h"
+# 7779 "scripts/GraphBLAS.h"
 extern
 GrB_Info GrB_Matrix_resize
 (
-    GrB_Matrix A,
+    GrB_Matrix C,
     GrB_Index nrows_new,
     GrB_Index ncols_new
 ) ;
@@ -5849,14 +5936,15 @@ GrB_Info GrB_Matrix_resize
 extern
 GrB_Info GrB_Vector_resize
 (
-    GrB_Vector u,
+    GrB_Vector w,
     GrB_Index nrows_new
 ) ;
+
 
 extern
 GrB_Info GxB_Matrix_resize
 (
-    GrB_Matrix A,
+    GrB_Matrix C,
     GrB_Index nrows_new,
     GrB_Index ncols_new
 ) ;
@@ -5864,58 +5952,10 @@ GrB_Info GxB_Matrix_resize
 extern
 GrB_Info GxB_Vector_resize
 (
-    GrB_Vector u,
+    GrB_Vector w,
     GrB_Index nrows_new
 ) ;
-# 8209 "scripts/GraphBLAS.h"
-extern
-GrB_Info GxB_kron
-(
-    GrB_Matrix C,
-    const GrB_Matrix Mask,
-    const GrB_BinaryOp accum,
-    const GrB_BinaryOp op,
-    const GrB_Matrix A,
-    const GrB_Matrix B,
-    const GrB_Descriptor desc
-) ;
-
-extern
-GrB_Info GrB_Matrix_kronecker_BinaryOp
-(
-    GrB_Matrix C,
-    const GrB_Matrix M,
-    const GrB_BinaryOp accum,
-    const GrB_BinaryOp op,
-    const GrB_Matrix A,
-    const GrB_Matrix B,
-    const GrB_Descriptor desc
-) ;
-
-extern
-GrB_Info GrB_Matrix_kronecker_Monoid
-(
-    GrB_Matrix C,
-    const GrB_Matrix M,
-    const GrB_BinaryOp accum,
-    const GrB_Monoid monoid,
-    const GrB_Matrix A,
-    const GrB_Matrix B,
-    const GrB_Descriptor desc
-) ;
-
-extern
-GrB_Info GrB_Matrix_kronecker_Semiring
-(
-    GrB_Matrix C,
-    const GrB_Matrix M,
-    const GrB_BinaryOp accum,
-    const GrB_Semiring semiring,
-    const GrB_Matrix A,
-    const GrB_Matrix B,
-    const GrB_Descriptor desc
-) ;
-# 8317 "scripts/GraphBLAS.h"
+# 7871 "scripts/GraphBLAS.h"
 typedef enum
 {
     GxB_SILENT = 0,
@@ -6016,7 +6056,7 @@ GrB_Info GxB_Scalar_fprint
     GxB_Print_Level pr,
     FILE *f
 ) ;
-# 8495 "scripts/GraphBLAS.h"
+# 8083 "scripts/GraphBLAS.h"
 extern
 GrB_Info GxB_Matrix_import_CSR
 (
@@ -6024,16 +6064,16 @@ GrB_Info GxB_Matrix_import_CSR
     GrB_Type type,
     GrB_Index nrows,
     GrB_Index ncols,
-    GrB_Index nvals,
-
-    int64_t nonempty,
-
     GrB_Index **Ap,
     GrB_Index **Aj,
     void **Ax,
+    GrB_Index Ap_size,
+    GrB_Index Aj_size,
+    GrB_Index Ax_size,
+    bool jumbled,
     const GrB_Descriptor desc
 ) ;
-# 8533 "scripts/GraphBLAS.h"
+# 8120 "scripts/GraphBLAS.h"
 extern
 GrB_Info GxB_Matrix_import_CSC
 (
@@ -6041,16 +6081,16 @@ GrB_Info GxB_Matrix_import_CSC
     GrB_Type type,
     GrB_Index nrows,
     GrB_Index ncols,
-    GrB_Index nvals,
-
-    int64_t nonempty,
-
     GrB_Index **Ap,
     GrB_Index **Ai,
     void **Ax,
+    GrB_Index Ap_size,
+    GrB_Index Ai_size,
+    GrB_Index Ax_size,
+    bool jumbled,
     const GrB_Descriptor desc
 ) ;
-# 8571 "scripts/GraphBLAS.h"
+# 8157 "scripts/GraphBLAS.h"
 extern
 GrB_Info GxB_Matrix_import_HyperCSR
 (
@@ -6058,18 +6098,19 @@ GrB_Info GxB_Matrix_import_HyperCSR
     GrB_Type type,
     GrB_Index nrows,
     GrB_Index ncols,
-    GrB_Index nvals,
-
-    int64_t nonempty,
-
-    GrB_Index nvec,
-    GrB_Index **Ah,
     GrB_Index **Ap,
+    GrB_Index **Ah,
     GrB_Index **Aj,
     void **Ax,
+    GrB_Index Ap_size,
+    GrB_Index Ah_size,
+    GrB_Index Aj_size,
+    GrB_Index Ax_size,
+    GrB_Index nvec,
+    bool jumbled,
     const GrB_Descriptor desc
 ) ;
-# 8620 "scripts/GraphBLAS.h"
+# 8204 "scripts/GraphBLAS.h"
 extern
 GrB_Info GxB_Matrix_import_HyperCSC
 (
@@ -6077,31 +6118,113 @@ GrB_Info GxB_Matrix_import_HyperCSC
     GrB_Type type,
     GrB_Index nrows,
     GrB_Index ncols,
-    GrB_Index nvals,
-
-    int64_t nonempty,
-
-    GrB_Index nvec,
-    GrB_Index **Ah,
     GrB_Index **Ap,
+    GrB_Index **Ah,
     GrB_Index **Ai,
     void **Ax,
+    GrB_Index Ap_size,
+    GrB_Index Ah_size,
+    GrB_Index Ai_size,
+    GrB_Index Ax_size,
+    GrB_Index nvec,
+    bool jumbled,
     const GrB_Descriptor desc
 ) ;
-# 8704 "scripts/GraphBLAS.h"
+# 8252 "scripts/GraphBLAS.h"
 extern
-GrB_Info GxB_Vector_import
+GrB_Info GxB_Matrix_import_BitmapR
 (
-    GrB_Vector *vhandle,
+    GrB_Matrix *A,
+    GrB_Type type,
+    GrB_Index nrows,
+    GrB_Index ncols,
+    int8_t **Ab,
+    void **Ax,
+    GrB_Index Ab_size,
+    GrB_Index Ax_size,
+    GrB_Index nvals,
+    const GrB_Descriptor desc
+) ;
+# 8281 "scripts/GraphBLAS.h"
+extern
+GrB_Info GxB_Matrix_import_BitmapC
+(
+    GrB_Matrix *A,
+    GrB_Type type,
+    GrB_Index nrows,
+    GrB_Index ncols,
+    int8_t **Ab,
+    void **Ax,
+    GrB_Index Ab_size,
+    GrB_Index Ax_size,
+    GrB_Index nvals,
+    const GrB_Descriptor desc
+) ;
+# 8310 "scripts/GraphBLAS.h"
+extern
+GrB_Info GxB_Matrix_import_FullR
+(
+    GrB_Matrix *A,
+    GrB_Type type,
+    GrB_Index nrows,
+    GrB_Index ncols,
+    void **Ax,
+    GrB_Index Ax_size,
+    const GrB_Descriptor desc
+) ;
+# 8333 "scripts/GraphBLAS.h"
+extern
+GrB_Info GxB_Matrix_import_FullC
+(
+    GrB_Matrix *A,
+    GrB_Type type,
+    GrB_Index nrows,
+    GrB_Index ncols,
+    void **Ax,
+    GrB_Index Ax_size,
+    const GrB_Descriptor desc
+) ;
+# 8356 "scripts/GraphBLAS.h"
+extern
+GrB_Info GxB_Vector_import_CSC
+(
+    GrB_Vector *v,
     GrB_Type type,
     GrB_Index n,
-    GrB_Index nvals,
-
     GrB_Index **vi,
     void **vx,
+    GrB_Index vi_size,
+    GrB_Index vx_size,
+    GrB_Index nvals,
+    bool jumbled,
     const GrB_Descriptor desc
 ) ;
-# 8744 "scripts/GraphBLAS.h"
+# 8379 "scripts/GraphBLAS.h"
+extern
+GrB_Info GxB_Vector_import_Bitmap
+(
+    GrB_Vector *v,
+    GrB_Type type,
+    GrB_Index n,
+    int8_t **vb,
+    void **vx,
+    GrB_Index vb_size,
+    GrB_Index vx_size,
+    GrB_Index nvals,
+    const GrB_Descriptor desc
+) ;
+# 8400 "scripts/GraphBLAS.h"
+extern
+GrB_Info GxB_Vector_import_Full
+(
+    GrB_Vector *v,
+    GrB_Type type,
+    GrB_Index n,
+    void **vx,
+    GrB_Index vx_size,
+    const GrB_Descriptor desc
+) ;
+# 8437 "scripts/GraphBLAS.h"
 extern
 GrB_Info GxB_Matrix_export_CSR
 (
@@ -6109,12 +6232,13 @@ GrB_Info GxB_Matrix_export_CSR
     GrB_Type *type,
     GrB_Index *nrows,
     GrB_Index *ncols,
-    GrB_Index *nvals,
-
-    int64_t *nonempty,
     GrB_Index **Ap,
     GrB_Index **Aj,
     void **Ax,
+    GrB_Index *Ap_size,
+    GrB_Index *Aj_size,
+    GrB_Index *Ax_size,
+    bool *jumbled,
     const GrB_Descriptor desc
 ) ;
 
@@ -6125,12 +6249,13 @@ GrB_Info GxB_Matrix_export_CSC
     GrB_Type *type,
     GrB_Index *nrows,
     GrB_Index *ncols,
-    GrB_Index *nvals,
-
-    int64_t *nonempty,
     GrB_Index **Ap,
     GrB_Index **Ai,
     void **Ax,
+    GrB_Index *Ap_size,
+    GrB_Index *Ai_size,
+    GrB_Index *Ax_size,
+    bool *jumbled,
     const GrB_Descriptor desc
 ) ;
 
@@ -6141,14 +6266,16 @@ GrB_Info GxB_Matrix_export_HyperCSR
     GrB_Type *type,
     GrB_Index *nrows,
     GrB_Index *ncols,
-    GrB_Index *nvals,
-
-    int64_t *nonempty,
-    GrB_Index *nvec,
-    GrB_Index **Ah,
     GrB_Index **Ap,
+    GrB_Index **Ah,
     GrB_Index **Aj,
     void **Ax,
+    GrB_Index *Ap_size,
+    GrB_Index *Ah_size,
+    GrB_Index *Aj_size,
+    GrB_Index *Ax_size,
+    GrB_Index *nvec,
+    bool *jumbled,
     const GrB_Descriptor desc
 ) ;
 
@@ -6159,14 +6286,70 @@ GrB_Info GxB_Matrix_export_HyperCSC
     GrB_Type *type,
     GrB_Index *nrows,
     GrB_Index *ncols,
-    GrB_Index *nvals,
-
-    int64_t *nonempty,
-    GrB_Index *nvec,
-    GrB_Index **Ah,
     GrB_Index **Ap,
+    GrB_Index **Ah,
     GrB_Index **Ai,
     void **Ax,
+    GrB_Index *Ap_size,
+    GrB_Index *Ah_size,
+    GrB_Index *Ai_size,
+    GrB_Index *Ax_size,
+    GrB_Index *nvec,
+    bool *jumbled,
+    const GrB_Descriptor desc
+) ;
+
+extern
+GrB_Info GxB_Matrix_export_BitmapR
+(
+    GrB_Matrix *A,
+    GrB_Type *type,
+    GrB_Index *nrows,
+    GrB_Index *ncols,
+    int8_t **Ab,
+    void **Ax,
+    GrB_Index *Ab_size,
+    GrB_Index *Ax_size,
+    GrB_Index *nvals,
+    const GrB_Descriptor desc
+) ;
+
+extern
+GrB_Info GxB_Matrix_export_BitmapC
+(
+    GrB_Matrix *A,
+    GrB_Type *type,
+    GrB_Index *nrows,
+    GrB_Index *ncols,
+    int8_t **Ab,
+    void **Ax,
+    GrB_Index *Ab_size,
+    GrB_Index *Ax_size,
+    GrB_Index *nvals,
+    const GrB_Descriptor desc
+) ;
+
+extern
+GrB_Info GxB_Matrix_export_FullR
+(
+    GrB_Matrix *A,
+    GrB_Type *type,
+    GrB_Index *nrows,
+    GrB_Index *ncols,
+    void **Ax,
+    GrB_Index *Ax_size,
+    const GrB_Descriptor desc
+) ;
+
+extern
+GrB_Info GxB_Matrix_export_FullC
+(
+    GrB_Matrix *A,
+    GrB_Type *type,
+    GrB_Index *nrows,
+    GrB_Index *ncols,
+    void **Ax,
+    GrB_Index *Ax_size,
     const GrB_Descriptor desc
 ) ;
 
@@ -6176,34 +6359,45 @@ GrB_Info GxB_Matrix_export_HyperCSC
 
 
 extern
-GrB_Info GxB_Vector_export
+GrB_Info GxB_Vector_export_CSC
 (
-    GrB_Vector *vhandle,
+    GrB_Vector *v,
     GrB_Type *type,
     GrB_Index *n,
-    GrB_Index *nvals,
-
     GrB_Index **vi,
     void **vx,
+    GrB_Index *vi_size,
+    GrB_Index *vx_size,
+    GrB_Index *nvals,
+    bool *jumbled,
     const GrB_Descriptor desc
 ) ;
-# 8862 "scripts/GraphBLAS.h"
+
+extern
+GrB_Info GxB_Vector_export_Bitmap
+(
+    GrB_Vector *v,
+    GrB_Type *type,
+    GrB_Index *n,
+    int8_t **vb,
+    void **vx,
+    GrB_Index *vb_size,
+    GrB_Index *vx_size,
+    GrB_Index *nvals,
+    const GrB_Descriptor desc
+) ;
+
+extern
+GrB_Info GxB_Vector_export_Full
+(
+    GrB_Vector *v,
+    GrB_Type *type,
+    GrB_Index *n,
+    void **vx,
+    GrB_Index *vx_size,
+    const GrB_Descriptor desc
+) ;
+# 8634 "scripts/GraphBLAS.h"
 void *GxB_cuda_malloc (size_t size) ;
 void *GxB_cuda_calloc (size_t n, size_t size) ;
 void GxB_cuda_free (void *p) ;
-
-
-
-
-
-GrB_Info GxB_mxv_optimize
-(
-    GrB_Matrix A,
-    int64_t ncalls,
-    const GrB_Descriptor desc
-) ;
-
-GrB_Info GxB_mxv_optimize_free
-(
-    GrB_Matrix A
-) ;

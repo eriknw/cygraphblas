@@ -177,6 +177,9 @@ def get_groups(ast):
     vals = {x for x in lines if 'typedef' in x and 'GrB' in x} - seen
     assert not vals
     groups['not seen'] = sorted(set(lines) - seen)
+    print('Not seen')
+    print('\n'.join(groups['not seen']))
+    print()
     return groups
 
 

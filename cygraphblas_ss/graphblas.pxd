@@ -71,7 +71,7 @@ cdef extern from "GraphBLAS.h" nogil:
     ctypedef GB_SelectOp_opaque *GxB_SelectOp
 
     # GxB typedefs (functions)
-    ctypedef bint (*GxB_select_function)(GrB_Index i, GrB_Index j, GrB_Index nrows, GrB_Index ncols, const void *x, const void *thunk)
+    ctypedef bint (*GxB_select_function)(GrB_Index i, GrB_Index j, const void *x, const void *thunk)
     ctypedef void (*GxB_binary_function)(void *, const void *, const void *)
     ctypedef void (*GxB_unary_function)(void *, const void *)
 
@@ -85,8 +85,8 @@ cdef extern from "GraphBLAS.h" nogil:
         GxB_DESCRIPTOR_CHUNK
         GxB_DESCRIPTOR_GPU_CONTROL
         GxB_DESCRIPTOR_GPU_CHUNK
-        GxB_DESCRIPTOR_MKL
         GxB_AxB_METHOD
+        GxB_SORT
     ctypedef enum GrB_Desc_Value:
         GxB_DEFAULT
         GrB_REPLACE
@@ -96,7 +96,6 @@ cdef extern from "GraphBLAS.h" nogil:
         GxB_GPU_ALWAYS
         GxB_GPU_NEVER
         GxB_AxB_GUSTAVSON
-        GxB_AxB_HEAP
         GxB_AxB_DOT
         GxB_AxB_HASH
         GxB_AxB_SAXPY
@@ -125,14 +124,10 @@ cdef extern from "GraphBLAS.h" nogil:
         GxB_BY_COL
         GxB_NO_FORMAT
     ctypedef enum GxB_Option_Field:
-        GxB_HYPER
+        GxB_HYPER_SWITCH
+        GxB_BITMAP_SWITCH
         GxB_FORMAT
         GxB_MODE
-        GxB_THREAD_SAFETY
-        GxB_THREADING
-        GxB_GLOBAL_NTHREADS
-        GxB_GLOBAL_CHUNK
-        GxB_IS_HYPER
         GxB_LIBRARY_NAME
         GxB_LIBRARY_VERSION
         GxB_LIBRARY_DATE
@@ -145,11 +140,14 @@ cdef extern from "GraphBLAS.h" nogil:
         GxB_API_DATE
         GxB_API_ABOUT
         GxB_API_URL
-        GxB_GPU_COUNT
+        GxB_GLOBAL_NTHREADS
+        GxB_GLOBAL_CHUNK
+        GxB_BURBLE
+        GxB_SPARSITY_STATUS
+        GxB_IS_HYPER
+        GxB_SPARSITY_CONTROL
         GxB_GLOBAL_GPU_CONTROL
         GxB_GLOBAL_GPU_CHUNK
-        GxB_GLOBAL_MKL
-        GxB_BURBLE
     ctypedef enum GxB_Print_Level:
         GxB_SILENT
         GxB_SUMMARY
@@ -157,15 +155,8 @@ cdef extern from "GraphBLAS.h" nogil:
         GxB_COMPLETE
         GxB_SHORT_VERBOSE
         GxB_COMPLETE_VERBOSE
-    ctypedef enum GxB_Thread_Model:
-        GxB_THREAD_NONE
-        GxB_THREAD_OPENMP
-        GxB_THREAD_POSIX
-        GxB_THREAD_WINDOWS
-        GxB_THREAD_ANSI
 
     # GrB consts
-    const char *GrB_error()
     const uint64_t *GrB_ALL
 
     # GxB consts
@@ -685,6 +676,14 @@ cdef extern from "GraphBLAS.h" nogil:
     GrB_BinaryOp GxB_DIV_FC64
     GrB_BinaryOp GxB_EQ_FC32
     GrB_BinaryOp GxB_EQ_FC64
+    GrB_BinaryOp GxB_FIRSTI1_INT32
+    GrB_BinaryOp GxB_FIRSTI1_INT64
+    GrB_BinaryOp GxB_FIRSTI_INT32
+    GrB_BinaryOp GxB_FIRSTI_INT64
+    GrB_BinaryOp GxB_FIRSTJ1_INT32
+    GrB_BinaryOp GxB_FIRSTJ1_INT64
+    GrB_BinaryOp GxB_FIRSTJ_INT32
+    GrB_BinaryOp GxB_FIRSTJ_INT64
     GrB_BinaryOp GxB_FIRST_FC32
     GrB_BinaryOp GxB_FIRST_FC64
     GrB_BinaryOp GxB_FMOD_FP32
@@ -856,6 +855,14 @@ cdef extern from "GraphBLAS.h" nogil:
     GrB_BinaryOp GxB_RMINUS_UINT32
     GrB_BinaryOp GxB_RMINUS_UINT64
     GrB_BinaryOp GxB_RMINUS_UINT8
+    GrB_BinaryOp GxB_SECONDI1_INT32
+    GrB_BinaryOp GxB_SECONDI1_INT64
+    GrB_BinaryOp GxB_SECONDI_INT32
+    GrB_BinaryOp GxB_SECONDI_INT64
+    GrB_BinaryOp GxB_SECONDJ1_INT32
+    GrB_BinaryOp GxB_SECONDJ1_INT64
+    GrB_BinaryOp GxB_SECONDJ_INT32
+    GrB_BinaryOp GxB_SECONDJ_INT64
     GrB_BinaryOp GxB_SECOND_FC32
     GrB_BinaryOp GxB_SECOND_FC64
     GrB_BinaryOp GxB_TIMES_FC32
@@ -961,6 +968,14 @@ cdef extern from "GraphBLAS.h" nogil:
     GrB_Semiring GxB_ANY_EQ_UINT32
     GrB_Semiring GxB_ANY_EQ_UINT64
     GrB_Semiring GxB_ANY_EQ_UINT8
+    GrB_Semiring GxB_ANY_FIRSTI1_INT32
+    GrB_Semiring GxB_ANY_FIRSTI1_INT64
+    GrB_Semiring GxB_ANY_FIRSTI_INT32
+    GrB_Semiring GxB_ANY_FIRSTI_INT64
+    GrB_Semiring GxB_ANY_FIRSTJ1_INT32
+    GrB_Semiring GxB_ANY_FIRSTJ1_INT64
+    GrB_Semiring GxB_ANY_FIRSTJ_INT32
+    GrB_Semiring GxB_ANY_FIRSTJ_INT64
     GrB_Semiring GxB_ANY_FIRST_BOOL
     GrB_Semiring GxB_ANY_FIRST_FC32
     GrB_Semiring GxB_ANY_FIRST_FC64
@@ -1202,6 +1217,14 @@ cdef extern from "GraphBLAS.h" nogil:
     GrB_Semiring GxB_ANY_RMINUS_UINT32
     GrB_Semiring GxB_ANY_RMINUS_UINT64
     GrB_Semiring GxB_ANY_RMINUS_UINT8
+    GrB_Semiring GxB_ANY_SECONDI1_INT32
+    GrB_Semiring GxB_ANY_SECONDI1_INT64
+    GrB_Semiring GxB_ANY_SECONDI_INT32
+    GrB_Semiring GxB_ANY_SECONDI_INT64
+    GrB_Semiring GxB_ANY_SECONDJ1_INT32
+    GrB_Semiring GxB_ANY_SECONDJ1_INT64
+    GrB_Semiring GxB_ANY_SECONDJ_INT32
+    GrB_Semiring GxB_ANY_SECONDJ_INT64
     GrB_Semiring GxB_ANY_SECOND_BOOL
     GrB_Semiring GxB_ANY_SECOND_FC32
     GrB_Semiring GxB_ANY_SECOND_FC64
@@ -1585,6 +1608,14 @@ cdef extern from "GraphBLAS.h" nogil:
     GrB_Semiring GxB_MAX_DIV_UINT32
     GrB_Semiring GxB_MAX_DIV_UINT64
     GrB_Semiring GxB_MAX_DIV_UINT8
+    GrB_Semiring GxB_MAX_FIRSTI1_INT32
+    GrB_Semiring GxB_MAX_FIRSTI1_INT64
+    GrB_Semiring GxB_MAX_FIRSTI_INT32
+    GrB_Semiring GxB_MAX_FIRSTI_INT64
+    GrB_Semiring GxB_MAX_FIRSTJ1_INT32
+    GrB_Semiring GxB_MAX_FIRSTJ1_INT64
+    GrB_Semiring GxB_MAX_FIRSTJ_INT32
+    GrB_Semiring GxB_MAX_FIRSTJ_INT64
     GrB_Semiring GxB_MAX_FIRST_FP32
     GrB_Semiring GxB_MAX_FIRST_FP64
     GrB_Semiring GxB_MAX_FIRST_INT16
@@ -1755,6 +1786,14 @@ cdef extern from "GraphBLAS.h" nogil:
     GrB_Semiring GxB_MAX_RMINUS_UINT32
     GrB_Semiring GxB_MAX_RMINUS_UINT64
     GrB_Semiring GxB_MAX_RMINUS_UINT8
+    GrB_Semiring GxB_MAX_SECONDI1_INT32
+    GrB_Semiring GxB_MAX_SECONDI1_INT64
+    GrB_Semiring GxB_MAX_SECONDI_INT32
+    GrB_Semiring GxB_MAX_SECONDI_INT64
+    GrB_Semiring GxB_MAX_SECONDJ1_INT32
+    GrB_Semiring GxB_MAX_SECONDJ1_INT64
+    GrB_Semiring GxB_MAX_SECONDJ_INT32
+    GrB_Semiring GxB_MAX_SECONDJ_INT64
     GrB_Semiring GxB_MAX_SECOND_FP32
     GrB_Semiring GxB_MAX_SECOND_FP64
     GrB_Semiring GxB_MAX_SECOND_INT16
@@ -1785,6 +1824,14 @@ cdef extern from "GraphBLAS.h" nogil:
     GrB_Semiring GxB_MIN_DIV_UINT32
     GrB_Semiring GxB_MIN_DIV_UINT64
     GrB_Semiring GxB_MIN_DIV_UINT8
+    GrB_Semiring GxB_MIN_FIRSTI1_INT32
+    GrB_Semiring GxB_MIN_FIRSTI1_INT64
+    GrB_Semiring GxB_MIN_FIRSTI_INT32
+    GrB_Semiring GxB_MIN_FIRSTI_INT64
+    GrB_Semiring GxB_MIN_FIRSTJ1_INT32
+    GrB_Semiring GxB_MIN_FIRSTJ1_INT64
+    GrB_Semiring GxB_MIN_FIRSTJ_INT32
+    GrB_Semiring GxB_MIN_FIRSTJ_INT64
     GrB_Semiring GxB_MIN_FIRST_FP32
     GrB_Semiring GxB_MIN_FIRST_FP64
     GrB_Semiring GxB_MIN_FIRST_INT16
@@ -1955,6 +2002,14 @@ cdef extern from "GraphBLAS.h" nogil:
     GrB_Semiring GxB_MIN_RMINUS_UINT32
     GrB_Semiring GxB_MIN_RMINUS_UINT64
     GrB_Semiring GxB_MIN_RMINUS_UINT8
+    GrB_Semiring GxB_MIN_SECONDI1_INT32
+    GrB_Semiring GxB_MIN_SECONDI1_INT64
+    GrB_Semiring GxB_MIN_SECONDI_INT32
+    GrB_Semiring GxB_MIN_SECONDI_INT64
+    GrB_Semiring GxB_MIN_SECONDJ1_INT32
+    GrB_Semiring GxB_MIN_SECONDJ1_INT64
+    GrB_Semiring GxB_MIN_SECONDJ_INT32
+    GrB_Semiring GxB_MIN_SECONDJ_INT64
     GrB_Semiring GxB_MIN_SECOND_FP32
     GrB_Semiring GxB_MIN_SECOND_FP64
     GrB_Semiring GxB_MIN_SECOND_INT16
@@ -1987,6 +2042,14 @@ cdef extern from "GraphBLAS.h" nogil:
     GrB_Semiring GxB_PLUS_DIV_UINT32
     GrB_Semiring GxB_PLUS_DIV_UINT64
     GrB_Semiring GxB_PLUS_DIV_UINT8
+    GrB_Semiring GxB_PLUS_FIRSTI1_INT32
+    GrB_Semiring GxB_PLUS_FIRSTI1_INT64
+    GrB_Semiring GxB_PLUS_FIRSTI_INT32
+    GrB_Semiring GxB_PLUS_FIRSTI_INT64
+    GrB_Semiring GxB_PLUS_FIRSTJ1_INT32
+    GrB_Semiring GxB_PLUS_FIRSTJ1_INT64
+    GrB_Semiring GxB_PLUS_FIRSTJ_INT32
+    GrB_Semiring GxB_PLUS_FIRSTJ_INT64
     GrB_Semiring GxB_PLUS_FIRST_FC32
     GrB_Semiring GxB_PLUS_FIRST_FC64
     GrB_Semiring GxB_PLUS_FIRST_FP32
@@ -2169,6 +2232,14 @@ cdef extern from "GraphBLAS.h" nogil:
     GrB_Semiring GxB_PLUS_RMINUS_UINT32
     GrB_Semiring GxB_PLUS_RMINUS_UINT64
     GrB_Semiring GxB_PLUS_RMINUS_UINT8
+    GrB_Semiring GxB_PLUS_SECONDI1_INT32
+    GrB_Semiring GxB_PLUS_SECONDI1_INT64
+    GrB_Semiring GxB_PLUS_SECONDI_INT32
+    GrB_Semiring GxB_PLUS_SECONDI_INT64
+    GrB_Semiring GxB_PLUS_SECONDJ1_INT32
+    GrB_Semiring GxB_PLUS_SECONDJ1_INT64
+    GrB_Semiring GxB_PLUS_SECONDJ_INT32
+    GrB_Semiring GxB_PLUS_SECONDJ_INT64
     GrB_Semiring GxB_PLUS_SECOND_FC32
     GrB_Semiring GxB_PLUS_SECOND_FC64
     GrB_Semiring GxB_PLUS_SECOND_FP32
@@ -2205,6 +2276,14 @@ cdef extern from "GraphBLAS.h" nogil:
     GrB_Semiring GxB_TIMES_DIV_UINT32
     GrB_Semiring GxB_TIMES_DIV_UINT64
     GrB_Semiring GxB_TIMES_DIV_UINT8
+    GrB_Semiring GxB_TIMES_FIRSTI1_INT32
+    GrB_Semiring GxB_TIMES_FIRSTI1_INT64
+    GrB_Semiring GxB_TIMES_FIRSTI_INT32
+    GrB_Semiring GxB_TIMES_FIRSTI_INT64
+    GrB_Semiring GxB_TIMES_FIRSTJ1_INT32
+    GrB_Semiring GxB_TIMES_FIRSTJ1_INT64
+    GrB_Semiring GxB_TIMES_FIRSTJ_INT32
+    GrB_Semiring GxB_TIMES_FIRSTJ_INT64
     GrB_Semiring GxB_TIMES_FIRST_FC32
     GrB_Semiring GxB_TIMES_FIRST_FC64
     GrB_Semiring GxB_TIMES_FIRST_FP32
@@ -2387,6 +2466,14 @@ cdef extern from "GraphBLAS.h" nogil:
     GrB_Semiring GxB_TIMES_RMINUS_UINT32
     GrB_Semiring GxB_TIMES_RMINUS_UINT64
     GrB_Semiring GxB_TIMES_RMINUS_UINT8
+    GrB_Semiring GxB_TIMES_SECONDI1_INT32
+    GrB_Semiring GxB_TIMES_SECONDI1_INT64
+    GrB_Semiring GxB_TIMES_SECONDI_INT32
+    GrB_Semiring GxB_TIMES_SECONDI_INT64
+    GrB_Semiring GxB_TIMES_SECONDJ1_INT32
+    GrB_Semiring GxB_TIMES_SECONDJ1_INT64
+    GrB_Semiring GxB_TIMES_SECONDJ_INT32
+    GrB_Semiring GxB_TIMES_SECONDJ_INT64
     GrB_Semiring GxB_TIMES_SECOND_FC32
     GrB_Semiring GxB_TIMES_SECOND_FC64
     GrB_Semiring GxB_TIMES_SECOND_FP32
@@ -2554,6 +2641,14 @@ cdef extern from "GraphBLAS.h" nogil:
     GrB_UnaryOp GxB_ONE_UINT32
     GrB_UnaryOp GxB_ONE_UINT64
     GrB_UnaryOp GxB_ONE_UINT8
+    GrB_UnaryOp GxB_POSITIONI1_INT32
+    GrB_UnaryOp GxB_POSITIONI1_INT64
+    GrB_UnaryOp GxB_POSITIONI_INT32
+    GrB_UnaryOp GxB_POSITIONI_INT64
+    GrB_UnaryOp GxB_POSITIONJ1_INT32
+    GrB_UnaryOp GxB_POSITIONJ1_INT64
+    GrB_UnaryOp GxB_POSITIONJ_INT32
+    GrB_UnaryOp GxB_POSITIONJ_INT64
     GrB_UnaryOp GxB_ROUND_FC32
     GrB_UnaryOp GxB_ROUND_FC64
     GrB_UnaryOp GxB_ROUND_FP32
@@ -2612,6 +2707,7 @@ cdef extern from "GraphBLAS.h" nogil:
     #################
 
     # binary
+    GrB_Info GrB_BinaryOp_error(char **, GrB_BinaryOp)
     GrB_Info GrB_BinaryOp_free(GrB_BinaryOp *)
     GrB_Info GrB_BinaryOp_new(GrB_BinaryOp *, GxB_binary_function, GrB_Type, GrB_Type, GrB_Type)
     GrB_Info GrB_BinaryOp_wait(GrB_BinaryOp *)
@@ -2620,15 +2716,16 @@ cdef extern from "GraphBLAS.h" nogil:
     GrB_Info GrB_finalize()
     GrB_Info GrB_getVersion(unsigned int *, unsigned int *)
     GrB_Info GrB_init(GrB_Mode)
-    GrB_Info GrB_wait()
 
     # descriptor
+    GrB_Info GrB_Descriptor_error(char **, GrB_Descriptor)
     GrB_Info GrB_Descriptor_free(GrB_Descriptor *)
     GrB_Info GrB_Descriptor_new(GrB_Descriptor *)
     GrB_Info GrB_Descriptor_set(GrB_Descriptor, GrB_Desc_Field, GrB_Desc_Value)
     GrB_Info GrB_Descriptor_wait(GrB_Descriptor *)
 
     # dtype
+    GrB_Info GrB_Type_error(char **, GrB_Type)
     GrB_Info GrB_Type_free(GrB_Type *)
     GrB_Info GrB_Type_new(GrB_Type *, size_t)
     GrB_Info GrB_Type_wait(GrB_Type *)
@@ -2694,6 +2791,7 @@ cdef extern from "GraphBLAS.h" nogil:
     GrB_Info GrB_Matrix_eWiseMult_BinaryOp(GrB_Matrix, GrB_Matrix, GrB_BinaryOp, GrB_BinaryOp, GrB_Matrix, GrB_Matrix, GrB_Descriptor)
     GrB_Info GrB_Matrix_eWiseMult_Monoid(GrB_Matrix, GrB_Matrix, GrB_BinaryOp, GrB_Monoid, GrB_Matrix, GrB_Matrix, GrB_Descriptor)
     GrB_Info GrB_Matrix_eWiseMult_Semiring(GrB_Matrix, GrB_Matrix, GrB_BinaryOp, GrB_Semiring, GrB_Matrix, GrB_Matrix, GrB_Descriptor)
+    GrB_Info GrB_Matrix_error(char **, GrB_Matrix)
     GrB_Info GrB_Matrix_extract(GrB_Matrix, GrB_Matrix, GrB_BinaryOp, GrB_Matrix, GrB_Index *, GrB_Index, GrB_Index *, GrB_Index, GrB_Descriptor)
     GrB_Info GrB_Matrix_extractElement_BOOL(bint *, GrB_Matrix, GrB_Index, GrB_Index)
     GrB_Info GrB_Matrix_extractElement_FP32(float *, GrB_Matrix, GrB_Index, GrB_Index)
@@ -2763,6 +2861,7 @@ cdef extern from "GraphBLAS.h" nogil:
     GrB_Info GrB_vxm(GrB_Vector, GrB_Vector, GrB_BinaryOp, GrB_Semiring, GrB_Vector, GrB_Matrix, GrB_Descriptor)
 
     # monoid
+    GrB_Info GrB_Monoid_error(char **, GrB_Monoid)
     GrB_Info GrB_Monoid_free(GrB_Monoid *)
     GrB_Info GrB_Monoid_new_BOOL(GrB_Monoid *, GrB_BinaryOp, bint)
     GrB_Info GrB_Monoid_new_FP32(GrB_Monoid *, GrB_BinaryOp, float)
@@ -2779,11 +2878,13 @@ cdef extern from "GraphBLAS.h" nogil:
     GrB_Info GrB_Monoid_wait(GrB_Monoid *)
 
     # semiring
+    GrB_Info GrB_Semiring_error(char **, GrB_Semiring)
     GrB_Info GrB_Semiring_free(GrB_Semiring *)
     GrB_Info GrB_Semiring_new(GrB_Semiring *, GrB_Monoid, GrB_BinaryOp)
     GrB_Info GrB_Semiring_wait(GrB_Semiring *)
 
     # unary
+    GrB_Info GrB_UnaryOp_error(char **, GrB_UnaryOp)
     GrB_Info GrB_UnaryOp_free(GrB_UnaryOp *)
     GrB_Info GrB_UnaryOp_new(GrB_UnaryOp *, GxB_unary_function, GrB_Type, GrB_Type)
     GrB_Info GrB_UnaryOp_wait(GrB_UnaryOp *)
@@ -2847,6 +2948,7 @@ cdef extern from "GraphBLAS.h" nogil:
     GrB_Info GrB_Vector_eWiseMult_BinaryOp(GrB_Vector, GrB_Vector, GrB_BinaryOp, GrB_BinaryOp, GrB_Vector, GrB_Vector, GrB_Descriptor)
     GrB_Info GrB_Vector_eWiseMult_Monoid(GrB_Vector, GrB_Vector, GrB_BinaryOp, GrB_Monoid, GrB_Vector, GrB_Vector, GrB_Descriptor)
     GrB_Info GrB_Vector_eWiseMult_Semiring(GrB_Vector, GrB_Vector, GrB_BinaryOp, GrB_Semiring, GrB_Vector, GrB_Vector, GrB_Descriptor)
+    GrB_Info GrB_Vector_error(char **, GrB_Vector)
     GrB_Info GrB_Vector_extract(GrB_Vector, GrB_Vector, GrB_BinaryOp, GrB_Vector, GrB_Index *, GrB_Index, GrB_Descriptor)
     GrB_Info GrB_Vector_extractElement_BOOL(bint *, GrB_Vector, GrB_Index)
     GrB_Info GrB_Vector_extractElement_FP32(float *, GrB_Vector, GrB_Index)
@@ -2960,19 +3062,27 @@ cdef extern from "GraphBLAS.h" nogil:
     GrB_Info GxB_Matrix_assign_FC64(GrB_Matrix, GrB_Matrix, GrB_BinaryOp, double complex, GrB_Index *, GrB_Index, GrB_Index *, GrB_Index, GrB_Descriptor)
     GrB_Info GxB_Matrix_build_FC32(GrB_Matrix, GrB_Index *, GrB_Index *, float complex *, GrB_Index, GrB_BinaryOp)
     GrB_Info GxB_Matrix_build_FC64(GrB_Matrix, GrB_Index *, GrB_Index *, double complex *, GrB_Index, GrB_BinaryOp)
-    GrB_Info GxB_Matrix_export_CSC(GrB_Matrix *, GrB_Type *, GrB_Index *, GrB_Index *, GrB_Index *, int64_t *, GrB_Index **, GrB_Index **, void **, GrB_Descriptor)
-    GrB_Info GxB_Matrix_export_CSR(GrB_Matrix *, GrB_Type *, GrB_Index *, GrB_Index *, GrB_Index *, int64_t *, GrB_Index **, GrB_Index **, void **, GrB_Descriptor)
-    GrB_Info GxB_Matrix_export_HyperCSC(GrB_Matrix *, GrB_Type *, GrB_Index *, GrB_Index *, GrB_Index *, int64_t *, GrB_Index *, GrB_Index **, GrB_Index **, GrB_Index **, void **, GrB_Descriptor)
-    GrB_Info GxB_Matrix_export_HyperCSR(GrB_Matrix *, GrB_Type *, GrB_Index *, GrB_Index *, GrB_Index *, int64_t *, GrB_Index *, GrB_Index **, GrB_Index **, GrB_Index **, void **, GrB_Descriptor)
+    GrB_Info GxB_Matrix_export_BitmapC(GrB_Matrix *, GrB_Type *, GrB_Index *, GrB_Index *, int8_t **, void **, GrB_Index *, GrB_Index *, GrB_Index *, GrB_Descriptor)
+    GrB_Info GxB_Matrix_export_BitmapR(GrB_Matrix *, GrB_Type *, GrB_Index *, GrB_Index *, int8_t **, void **, GrB_Index *, GrB_Index *, GrB_Index *, GrB_Descriptor)
+    GrB_Info GxB_Matrix_export_CSC(GrB_Matrix *, GrB_Type *, GrB_Index *, GrB_Index *, GrB_Index **, GrB_Index **, void **, GrB_Index *, GrB_Index *, GrB_Index *, bint *, GrB_Descriptor)
+    GrB_Info GxB_Matrix_export_CSR(GrB_Matrix *, GrB_Type *, GrB_Index *, GrB_Index *, GrB_Index **, GrB_Index **, void **, GrB_Index *, GrB_Index *, GrB_Index *, bint *, GrB_Descriptor)
+    GrB_Info GxB_Matrix_export_FullC(GrB_Matrix *, GrB_Type *, GrB_Index *, GrB_Index *, void **, GrB_Index *, GrB_Descriptor)
+    GrB_Info GxB_Matrix_export_FullR(GrB_Matrix *, GrB_Type *, GrB_Index *, GrB_Index *, void **, GrB_Index *, GrB_Descriptor)
+    GrB_Info GxB_Matrix_export_HyperCSC(GrB_Matrix *, GrB_Type *, GrB_Index *, GrB_Index *, GrB_Index **, GrB_Index **, GrB_Index **, void **, GrB_Index *, GrB_Index *, GrB_Index *, GrB_Index *, GrB_Index *, bint *, GrB_Descriptor)
+    GrB_Info GxB_Matrix_export_HyperCSR(GrB_Matrix *, GrB_Type *, GrB_Index *, GrB_Index *, GrB_Index **, GrB_Index **, GrB_Index **, void **, GrB_Index *, GrB_Index *, GrB_Index *, GrB_Index *, GrB_Index *, bint *, GrB_Descriptor)
     GrB_Info GxB_Matrix_extractElement_FC32(float complex *, GrB_Matrix, GrB_Index, GrB_Index)
     GrB_Info GxB_Matrix_extractElement_FC64(double complex *, GrB_Matrix, GrB_Index, GrB_Index)
     GrB_Info GxB_Matrix_extractTuples_FC32(GrB_Index *, GrB_Index *, float complex *, GrB_Index *, GrB_Matrix)
     GrB_Info GxB_Matrix_extractTuples_FC64(GrB_Index *, GrB_Index *, double complex *, GrB_Index *, GrB_Matrix)
     GrB_Info GxB_Matrix_fprint(GrB_Matrix, char *, GxB_Print_Level, FILE *)
-    GrB_Info GxB_Matrix_import_CSC(GrB_Matrix *, GrB_Type, GrB_Index, GrB_Index, GrB_Index, int64_t, GrB_Index **, GrB_Index **, void **, GrB_Descriptor)
-    GrB_Info GxB_Matrix_import_CSR(GrB_Matrix *, GrB_Type, GrB_Index, GrB_Index, GrB_Index, int64_t, GrB_Index **, GrB_Index **, void **, GrB_Descriptor)
-    GrB_Info GxB_Matrix_import_HyperCSC(GrB_Matrix *, GrB_Type, GrB_Index, GrB_Index, GrB_Index, int64_t, GrB_Index, GrB_Index **, GrB_Index **, GrB_Index **, void **, GrB_Descriptor)
-    GrB_Info GxB_Matrix_import_HyperCSR(GrB_Matrix *, GrB_Type, GrB_Index, GrB_Index, GrB_Index, int64_t, GrB_Index, GrB_Index **, GrB_Index **, GrB_Index **, void **, GrB_Descriptor)
+    GrB_Info GxB_Matrix_import_BitmapC(GrB_Matrix *, GrB_Type, GrB_Index, GrB_Index, int8_t **, void **, GrB_Index, GrB_Index, GrB_Index, GrB_Descriptor)
+    GrB_Info GxB_Matrix_import_BitmapR(GrB_Matrix *, GrB_Type, GrB_Index, GrB_Index, int8_t **, void **, GrB_Index, GrB_Index, GrB_Index, GrB_Descriptor)
+    GrB_Info GxB_Matrix_import_CSC(GrB_Matrix *, GrB_Type, GrB_Index, GrB_Index, GrB_Index **, GrB_Index **, void **, GrB_Index, GrB_Index, GrB_Index, bint, GrB_Descriptor)
+    GrB_Info GxB_Matrix_import_CSR(GrB_Matrix *, GrB_Type, GrB_Index, GrB_Index, GrB_Index **, GrB_Index **, void **, GrB_Index, GrB_Index, GrB_Index, bint, GrB_Descriptor)
+    GrB_Info GxB_Matrix_import_FullC(GrB_Matrix *, GrB_Type, GrB_Index, GrB_Index, void **, GrB_Index, GrB_Descriptor)
+    GrB_Info GxB_Matrix_import_FullR(GrB_Matrix *, GrB_Type, GrB_Index, GrB_Index, void **, GrB_Index, GrB_Descriptor)
+    GrB_Info GxB_Matrix_import_HyperCSC(GrB_Matrix *, GrB_Type, GrB_Index, GrB_Index, GrB_Index **, GrB_Index **, GrB_Index **, void **, GrB_Index, GrB_Index, GrB_Index, GrB_Index, GrB_Index, bint, GrB_Descriptor)
+    GrB_Info GxB_Matrix_import_HyperCSR(GrB_Matrix *, GrB_Type, GrB_Index, GrB_Index, GrB_Index **, GrB_Index **, GrB_Index **, void **, GrB_Index, GrB_Index, GrB_Index, GrB_Index, GrB_Index, bint, GrB_Descriptor)
     GrB_Info GxB_Matrix_reduce_FC32(float complex *, GrB_BinaryOp, GrB_Monoid, GrB_Matrix, GrB_Descriptor)
     GrB_Info GxB_Matrix_reduce_FC64(double complex *, GrB_BinaryOp, GrB_Monoid, GrB_Matrix, GrB_Descriptor)
     GrB_Info GxB_Matrix_resize(GrB_Matrix, GrB_Index, GrB_Index)
@@ -3023,6 +3133,7 @@ cdef extern from "GraphBLAS.h" nogil:
     # scalar
     GrB_Info GxB_Scalar_clear(GxB_Scalar)
     GrB_Info GxB_Scalar_dup(GxB_Scalar *, GxB_Scalar)
+    GrB_Info GxB_Scalar_error(char **, GxB_Scalar)
     GrB_Info GxB_Scalar_extractElement_BOOL(bint *, GxB_Scalar)
     GrB_Info GxB_Scalar_extractElement_FC32(float complex *, GxB_Scalar)
     GrB_Info GxB_Scalar_extractElement_FC64(double complex *, GxB_Scalar)
@@ -3059,6 +3170,7 @@ cdef extern from "GraphBLAS.h" nogil:
     GrB_Info GxB_Scalar_wait(GxB_Scalar *)
 
     # selectop
+    GrB_Info GxB_SelectOp_error(char **, GxB_SelectOp)
     GrB_Info GxB_SelectOp_fprint(GxB_SelectOp, char *, GxB_Print_Level, FILE *)
     GrB_Info GxB_SelectOp_free(GxB_SelectOp *)
     GrB_Info GxB_SelectOp_new(GxB_SelectOp *, GxB_select_function, GrB_Type, GrB_Type)
@@ -3077,6 +3189,8 @@ cdef extern from "GraphBLAS.h" nogil:
     GrB_Info GxB_UnaryOp_ztype(GrB_Type *, GrB_UnaryOp)
 
     # vector
+    GrB_Info GxB_Vector_Option_get(GrB_Vector, GxB_Option_Field, ...)
+    GrB_Info GxB_Vector_Option_set(GrB_Vector, GxB_Option_Field, ...)
     GrB_Info GxB_Vector_apply_BinaryOp1st(GrB_Vector, GrB_Vector, GrB_BinaryOp, GrB_BinaryOp, GxB_Scalar, GrB_Vector, GrB_Descriptor)
     GrB_Info GxB_Vector_apply_BinaryOp1st_FC32(GrB_Vector, GrB_Vector, GrB_BinaryOp, GrB_BinaryOp, float complex, GrB_Vector, GrB_Descriptor)
     GrB_Info GxB_Vector_apply_BinaryOp1st_FC64(GrB_Vector, GrB_Vector, GrB_BinaryOp, GrB_BinaryOp, double complex, GrB_Vector, GrB_Descriptor)
@@ -3087,13 +3201,17 @@ cdef extern from "GraphBLAS.h" nogil:
     GrB_Info GxB_Vector_assign_FC64(GrB_Vector, GrB_Vector, GrB_BinaryOp, double complex, GrB_Index *, GrB_Index, GrB_Descriptor)
     GrB_Info GxB_Vector_build_FC32(GrB_Vector, GrB_Index *, float complex *, GrB_Index, GrB_BinaryOp)
     GrB_Info GxB_Vector_build_FC64(GrB_Vector, GrB_Index *, double complex *, GrB_Index, GrB_BinaryOp)
-    GrB_Info GxB_Vector_export(GrB_Vector *, GrB_Type *, GrB_Index *, GrB_Index *, GrB_Index **, void **, GrB_Descriptor)
+    GrB_Info GxB_Vector_export_Bitmap(GrB_Vector *, GrB_Type *, GrB_Index *, int8_t **, void **, GrB_Index *, GrB_Index *, GrB_Index *, GrB_Descriptor)
+    GrB_Info GxB_Vector_export_CSC(GrB_Vector *, GrB_Type *, GrB_Index *, GrB_Index **, void **, GrB_Index *, GrB_Index *, GrB_Index *, bint *, GrB_Descriptor)
+    GrB_Info GxB_Vector_export_Full(GrB_Vector *, GrB_Type *, GrB_Index *, void **, GrB_Index *, GrB_Descriptor)
     GrB_Info GxB_Vector_extractElement_FC32(float complex *, GrB_Vector, GrB_Index)
     GrB_Info GxB_Vector_extractElement_FC64(double complex *, GrB_Vector, GrB_Index)
     GrB_Info GxB_Vector_extractTuples_FC32(GrB_Index *, float complex *, GrB_Index *, GrB_Vector)
     GrB_Info GxB_Vector_extractTuples_FC64(GrB_Index *, double complex *, GrB_Index *, GrB_Vector)
     GrB_Info GxB_Vector_fprint(GrB_Vector, char *, GxB_Print_Level, FILE *)
-    GrB_Info GxB_Vector_import(GrB_Vector *, GrB_Type, GrB_Index, GrB_Index, GrB_Index **, void **, GrB_Descriptor)
+    GrB_Info GxB_Vector_import_Bitmap(GrB_Vector *, GrB_Type, GrB_Index, int8_t **, void **, GrB_Index, GrB_Index, GrB_Index, GrB_Descriptor)
+    GrB_Info GxB_Vector_import_CSC(GrB_Vector *, GrB_Type, GrB_Index, GrB_Index **, void **, GrB_Index, GrB_Index, GrB_Index, bint, GrB_Descriptor)
+    GrB_Info GxB_Vector_import_Full(GrB_Vector *, GrB_Type, GrB_Index, void **, GrB_Index, GrB_Descriptor)
     GrB_Info GxB_Vector_reduce_FC32(float complex *, GrB_BinaryOp, GrB_Monoid, GrB_Vector, GrB_Descriptor)
     GrB_Info GxB_Vector_reduce_FC64(double complex *, GrB_BinaryOp, GrB_Monoid, GrB_Vector, GrB_Descriptor)
     GrB_Info GxB_Vector_resize(GrB_Vector, GrB_Index)
