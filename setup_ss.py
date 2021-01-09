@@ -2,13 +2,16 @@ from setuptools import Extension, setup, find_packages
 from glob import glob
 from Cython.Build import cythonize
 from Cython.Compiler.Options import get_directive_defaults
+from cygraphblas.lib.constants import COMPILE_TIME_ENV
 
 directive_defaults = get_directive_defaults()
 # directive_defaults['embedsignature'] = True
 directive_defaults['binding'] = True
 directive_defaults['language_level'] = 3
 
-support_ss = True
+if not COMPILE_TIME_ENV['CYGB_SS']:
+    raise ValueError('cygraphblas was not compiled to support SS backend!')
+
 use_cython = True
 if use_cython:
     suffix = '.pyx'
@@ -24,8 +27,7 @@ ext_modules = [
     for name in glob(f'cygraphblas_ss/**/*{suffix}', recursive=True)
 ]
 if use_cython:
-    # TODO: get `compile_time_env` from cygraphblas
-    ext_modules = cythonize(ext_modules, compile_time_env={'CYGB_SS': support_ss})
+    ext_modules = cythonize(ext_modules, compile_time_env=COMPILE_TIME_ENV)
 
 setup(
     name='cygraphblas_ss',

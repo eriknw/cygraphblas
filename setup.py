@@ -9,6 +9,9 @@ directive_defaults['binding'] = True
 directive_defaults['language_level'] = 3
 
 support_ss = True
+support_gbtl = False
+num_backends = support_ss + support_gbtl
+
 use_cython = True
 if use_cython:
     suffix = '.pyx'
@@ -23,7 +26,14 @@ ext_modules = [
     for name in glob(f'cygraphblas/**/*{suffix}', recursive=True)
 ]
 if use_cython:
-    ext_modules = cythonize(ext_modules, compile_time_env={'CYGB_SS': support_ss})
+    ext_modules = cythonize(
+        ext_modules,
+        compile_time_env={
+            'CYGB_SS': support_ss,
+            'CYGB_GBTL': support_gbtl,
+            'CYGB_NBACKENDS': num_backends,
+        },
+    )
 
 setup(
     name='cygraphblas',
