@@ -2,11 +2,11 @@ cimport cygraphblas._clib
 from cygraphblas.lib.constants import BACKEND_NAMES
 
 
-print('NBACKENDS', cygraphblas._clib.NBACKENDS)
-print('BACKEND_SS', cygraphblas._clib.BACKEND_SS)
-print('BACKEND_GBTL', cygraphblas._clib.BACKEND_GBTL)
+#print('NBACKENDS', cygraphblas._clib.NBACKENDS)
+#print('BACKEND_SS', cygraphblas._clib.BACKEND_SS)
+#print('BACKEND_GBTL', cygraphblas._clib.BACKEND_GBTL)
 
-print(cygraphblas._clib.BACKEND_NAMES[0])
+#print(cygraphblas._clib.BACKEND_NAMES[0])
 # print(cygraphblas._clib.BACKEND_NAMES[1])
 
 cdef class Matrix:
@@ -21,10 +21,10 @@ cdef class Matrix:
         return rv
 
 
-M = Matrix._new(0)
-print(M.backend)
-
-cdef backend_id_t func(Matrix m):
-    return m.backend_id
-
-print(func(M))
+#M = Matrix._new(0)
+#print(M.backend)
+#
+#cdef backend_id_t func(Matrix m):
+#    return m.backend_id
+#
+#print(func(M))

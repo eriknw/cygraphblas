@@ -14,4 +14,3 @@ from .constants.info import *
 from .constants.mode import *
 from .constants.option_field import *
 from .constants.print_level import *
-from .constants.thread_model import *

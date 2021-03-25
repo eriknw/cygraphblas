@@ -5,6 +5,53 @@ import pycparser
 import tlz
 from pycparser import c_ast, c_generator, parse_file
 
+#PTR_ALLOWED = {
+#    'FILE', 'bool', 'char', 'double', 'float', 'int16_t', 'int32_t', 'int64_t', 'int8_t',
+#    'size_t', 'uint16_t', 'uint32_t', 'uint64_t', 'uint8_t', 'unsigned', 'void',
+#}
+
+simple_types = {
+    # 'FILE',
+    'Index',
+    'bint',
+    'char',
+    'double',
+    'double complex',
+    'float',
+    'float complex',
+    'int16_t',
+    'int32_t',
+    'int64_t',
+    'int8_t',
+    'size_t',
+    'uint16_t',
+    'uint32_t',
+    'uint64_t',
+    'uint8_t',
+    'unsigned int',
+    # 'void',
+}
+python_types = {
+    'BinaryOp',
+    'Descriptor',
+    'Matrix',
+    'Monoid',
+    'Scalar',
+    'SelectOp',
+    'Semiring',
+    'Type',
+    'UnaryOp',
+    'Vector',
+}
+enum_types = {
+    'Desc_Field',
+    'Desc_Value',
+    'Mode',
+    'Option_Field',
+    'Print_Level',
+}
+
+
 BACKENDS = [
     'SS',
     'GBTL',
@@ -639,7 +686,30 @@ def main(basedir):
     with open(filename, 'w') as f:
         f.write(pxd)
 
-    def handle_lib(objects, enums, is_pyx=False, extra=None):
+    def skipfunc(d):
+        # Don't handle everything yet
+        params = d['cnode'].type.args.params
+        if not params or type(params[-1]) is c_ast.EllipsisParam:
+            print('skipping:', d['pyname'])
+            return True
+        if d['arg_pytypes'] and d['arg_pytypes'][0] in simple_types:
+            print('skipping:', d['pyname'])
+            return True
+        for pytype, nptr in zip(d['arg_pytypes'], d['arg_num_pointers']):
+            if pytype in {'FILE', 'unary_function', 'binary_function', 'select_function'}:
+                print('skipping:', d['pyname'])
+                return True
+            if nptr > 0:
+                # if pytype in python_types and nptr == 1:
+                if pytype in {'Matrix', 'Vector'} and nptr == 1:
+                    continue
+                if pytype in simple_types:
+                    continue
+                print('skipping:', d['pyname'])
+                return True
+        return False
+
+    def handle_lib(objects, enums, methods, is_pyx=False, extra=None):
         text = [
             AUTO,
         ]
@@ -669,6 +739,24 @@ def main(basedir):
                 text.append(f'cdef {info["pytype"]} {info["pyname"]} = {info["pytype"]}._new("{info["cname"]}")')
             else:
                 text.append(f'cdef {info["pytype"]} {info["pyname"]}')
+        if not is_pyx:
+            text.append('')
+            for info in methods:
+                if not skipfunc(info):
+                    text.append(
+                        'ctypedef object (*{}_ptr)({})'.format(
+                            info["pyname"],
+                            ", ".join(
+                                typ + nptr * '*' if typ in simple_types else typ
+                                for typ, nptr in zip(info['arg_pytypes'], info['arg_num_pointers'])
+                            )
+                        )
+                    )
+            text.append('')
+            for info in methods:
+                if not skipfunc(info):
+                    name = info['pyname']
+                    text.append(f"cdef {name}_ptr {name}_ptrs[CYGB_NBACKENDS]")
         return text
 
     def get_enums(group, field_filter):
@@ -682,8 +770,9 @@ def main(basedir):
     group = [info for info in groups['GrB objects'] if 'GxB' not in info['text']]
     enums = get_enums(groups['GrB typedef enums'], 'GrB')
     extra = [
-        'from libc.stdint cimport int8_t, INT8_MIN',
+        'from libc.stdint cimport int8_t, int16_t, int32_t, int64_t, uint8_t, uint16_t, uint32_t, uint64_t, INT8_MIN',
         '',
+        'ctypedef uint64_t Index',
         'ctypedef int8_t backend_id_t',
         'cdef backend_id_t NBACKENDS',
     ]
@@ -691,7 +780,7 @@ def main(basedir):
     extra.extend([
         'cdef char *BACKEND_NAMES[CYGB_NBACKENDS]',
     ])
-    text = handle_lib(group, enums, is_pyx=False, extra=extra)
+    text = handle_lib(group, enums, groups['GrB methods'], is_pyx=False, extra=extra)
     filename = os.path.join(basedir, 'cygraphblas', '_clib.pxd')
     # filename = os.path.join(basedir, 'cygraphblas', '_clib', '__init__.pxd')
     print(f'Writing {filename}')
@@ -713,9 +802,93 @@ def main(basedir):
             f'    cdef backend_id_t BACKEND_{backend} = INT8_MIN',
         ])
 
-    text = handle_lib(group, enums, is_pyx=True, extra=extra)
+    text = handle_lib(group, enums, groups['GrB methods'], is_pyx=True, extra=extra)
     # filename = os.path.join(basedir, 'cygraphblas', '_clib', '__init__.pyx')
     filename = os.path.join(basedir, 'cygraphblas', '_clib.pyx')
+    print(f'Writing {filename}')
+    with open(filename, 'w') as f:
+        f.write('\n'.join(text))
+
+    def handle_funcs(methods, is_pyx=False, extra=None):
+        text = [
+            AUTO,
+        ]
+        if extra is not None:
+            text.extend(extra)
+
+        def to_view(pytype, nptr):
+            if pytype in simple_types and nptr > 0:
+                if nptr == 1:
+                    return f'{pytype}[::1]'  # contiguous memoryview
+                1/0
+            return pytype
+
+        def view_to_ptr(pytype, nptr, name):
+            if pytype in simple_types and nptr > 0:
+                if nptr == 1:
+                    return f'&{name}[0]'
+                1/0
+            return name
+
+        default = 'None' if is_pyx else '*'
+        for info in methods:
+            if skipfunc(info):
+                continue
+            name = info['pyname']
+            pos = -1
+            for i, pytype in enumerate(info['arg_pytypes']):
+                if pytype not in python_types:
+                    pos = i
+            args = [
+                f'    {to_view(pytype, nptr)} {name}={default},'
+                if pytype in python_types and i > pos
+                else f'    {to_view(pytype, nptr)} {name},'
+                for i, (pytype, nptr, name) in enumerate(zip(info['arg_pytypes'], info['arg_num_pointers'], info['arg_names']))
+            ]
+            if not args:
+                #print('skipping', name)
+                continue
+            # funcargs = ', '.join(info['arg_names'])
+            funcargs = ', '.join(
+                view_to_ptr(pytype, nptr, name)
+                for pytype, nptr, name in zip(info['arg_pytypes'], info['arg_num_pointers'], info['arg_names'])
+            )
+
+            backend_arg = info['arg_names'][0]
+            functext = [
+                f'cpdef object {name}(',
+            ]
+            functext.extend(args)
+            if is_pyx:
+                functext.extend([
+                    '):',
+                    f'    if {backend_arg} is None:',
+                    '        raise TypeError()',
+                    f'    cdef {name}_ptr func = {name}_ptrs[{backend_arg}.backend_id]',
+                    '    if func is NULL:',
+                    "        raise ValueError(f'{%s.backend} backend does not have %s')" % (backend_arg, name),
+                    f'    func({funcargs})',
+                ])
+            else:
+                functext.append(')')
+            text.append('')
+            text.extend(functext)
+        return text
+
+    text = handle_funcs(groups['GrB methods'], is_pyx=True)
+    filename = os.path.join(basedir, 'cygraphblas', 'lib', 'funcs.pyx')
+    print(f'Writing {filename}')
+    with open(filename, 'w') as f:
+        f.write('\n'.join(text))
+
+    extra = [
+        'from libc.stdint cimport *',
+        'from cygraphblas._clib cimport *',
+        'from cygraphblas.matrix cimport Matrix',
+        'from cygraphblas.vector cimport Vector',
+    ]
+    text = handle_funcs(groups['GrB methods'], is_pyx=False, extra=extra)
+    filename = os.path.join(basedir, 'cygraphblas', 'lib', 'funcs.pxd')
     print(f'Writing {filename}')
     with open(filename, 'w') as f:
         f.write('\n'.join(text))
@@ -792,6 +965,7 @@ def main(basedir):
     group = [info for info in groups['GrB objects'] if 'GxB' in info['text']]
     gxb_group = sorted(group + groups['GxB objects'], key=lambda info: info['pytype'])
     extra = [
+        'from cygraphblas._clib cimport Index',
         'from cygraphblas_ss.wrappertypes cimport SelectOp',
         'from cygraphblas_ss.wrappertypes.constants cimport Format_Value, Option_Field, Print_Level, Thread_Model'
     ]
@@ -799,13 +973,13 @@ def main(basedir):
         get_enums(groups['GrB typedef enums'], 'GxB')
         + get_enums(groups['GxB typedef enums'], 'GxB')
     )
-    text = handle_lib(gxb_group, enums, is_pyx=False, extra=extra)
+    text = handle_lib(gxb_group, enums, groups['GxB methods'], is_pyx=False, extra=extra)
     filename = os.path.join(basedir, 'cygraphblas_ss', '_clib.pxd')
     print(f'Writing {filename}')
     with open(filename, 'w') as f:
         f.write('\n'.join(text))
 
-    text = handle_lib(gxb_group, enums, is_pyx=True)  #, extra=extra)
+    text = handle_lib(gxb_group, enums, groups['GxB methods'], is_pyx=True)  #, extra=extra)
     filename = os.path.join(basedir, 'cygraphblas_ss', '_clib.pyx')
     print(f'Writing {filename}')
     with open(filename, 'w') as f:

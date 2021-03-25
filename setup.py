@@ -2,6 +2,9 @@ from setuptools import Extension, setup, find_packages
 from glob import glob
 from Cython.Build import cythonize
 from Cython.Compiler.Options import get_directive_defaults
+# import numpy as np
+# import os
+# import sys
 
 directive_defaults = get_directive_defaults()
 # directive_defaults['embedsignature'] = True
@@ -18,10 +21,14 @@ if use_cython:
 else:
     suffix = '.c'
 
+# define_macros = [("NPY_NO_DEPRECATED_API", "NPY_1_7_API_VERSION")]
+# include_dirs = [np.get_include(), os.path.join(sys.prefix, "include")]
 ext_modules = [
     Extension(
         name[:-len(suffix)].replace('/', '.'),
         [name],
+        # define_macros=define_macros,
+        # include_dirs=include_dirs,
     )
     for name in glob(f'cygraphblas/**/*{suffix}', recursive=True)
 ]
@@ -33,6 +40,8 @@ if use_cython:
             'CYGB_GBTL': support_gbtl,
             'CYGB_NBACKENDS': num_backends,
         },
+        # include_path=include_dirs,
+        annotate=True,
     )
 
 setup(
