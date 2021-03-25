@@ -816,12 +816,14 @@ def main(basedir):
         if extra is not None:
             text.extend(extra)
 
-        def to_view(pytype, nptr):
-            if pytype in simple_types and nptr > 0:
+        def to_view(pytype, nptr, name):
+            if pytype in simple_types:
                 if nptr == 1:
-                    return f'{pytype}[::1]'  # contiguous memoryview
+                    return f'{pytype}[::1] {name}'  # contiguous memoryview
+                elif nptr == 0:
+                    return name  # Python object
                 1/0
-            return pytype
+            return f'{pytype} {name}'
 
         def view_to_ptr(pytype, nptr, name):
             if pytype in simple_types and nptr > 0:
@@ -835,14 +837,15 @@ def main(basedir):
             if skipfunc(info):
                 continue
             name = info['pyname']
-            pos = -1
-            for i, pytype in enumerate(info['arg_pytypes']):
-                if pytype not in python_types:
-                    pos = i
+            #pos = -1
+            #for i, pytype in enumerate(info['arg_pytypes']):
+            #    if pytype not in python_types:
+            #        pos = i
             args = [
-                f'    {to_view(pytype, nptr)} {name}={default},'
-                if pytype in python_types and i > pos
-                else f'    {to_view(pytype, nptr)} {name},'
+                f'    {to_view(pytype, nptr, name)}={default},'
+                # if pytype in python_types and i > 0
+                if i > 0
+                else f'    {to_view(pytype, nptr, name)},'
                 for i, (pytype, nptr, name) in enumerate(zip(info['arg_pytypes'], info['arg_num_pointers'], info['arg_names']))
             ]
             if not args:

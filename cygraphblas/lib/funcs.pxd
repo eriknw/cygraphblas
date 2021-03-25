@@ -6,34 +6,34 @@ from cygraphblas.vector cimport Vector
 
 cpdef object Col_assign(
     Matrix C,
-    Vector mask,
-    BinaryOp accum,
-    Vector u,
-    Index[::1] I,
-    Index ni,
-    Index j,
+    Vector mask=*,
+    BinaryOp accum=*,
+    Vector u=*,
+    Index[::1] I=*,
+    ni=*,
+    j=*,
     Descriptor desc=*,
 )
 
 cpdef object Col_extract(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    Matrix A,
-    Index[::1] I,
-    Index ni,
-    Index j,
+    Vector mask=*,
+    BinaryOp accum=*,
+    Matrix A=*,
+    Index[::1] I=*,
+    ni=*,
+    j=*,
     Descriptor desc=*,
 )
 
 cpdef object Descriptor_set(
     Descriptor desc,
-    Desc_Field field,
-    Desc_Value val,
+    Desc_Field field=*,
+    Desc_Value val=*,
 )
 
 cpdef object Matrix_apply(
-    Matrix C=*,
+    Matrix C,
     Matrix Mask=*,
     BinaryOp accum=*,
     UnaryOp op=*,
@@ -43,478 +43,478 @@ cpdef object Matrix_apply(
 
 cpdef object Matrix_apply_BinaryOp1st_BOOL(
     Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    BinaryOp op,
-    bint x,
+    Matrix Mask=*,
+    BinaryOp accum=*,
+    BinaryOp op=*,
+    x=*,
     Matrix A=*,
     Descriptor desc=*,
 )
 
 cpdef object Matrix_apply_BinaryOp1st_FP32(
     Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    BinaryOp op,
-    float x,
+    Matrix Mask=*,
+    BinaryOp accum=*,
+    BinaryOp op=*,
+    x=*,
     Matrix A=*,
     Descriptor desc=*,
 )
 
 cpdef object Matrix_apply_BinaryOp1st_FP64(
     Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    BinaryOp op,
-    double x,
+    Matrix Mask=*,
+    BinaryOp accum=*,
+    BinaryOp op=*,
+    x=*,
     Matrix A=*,
     Descriptor desc=*,
 )
 
 cpdef object Matrix_apply_BinaryOp1st_INT16(
     Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    BinaryOp op,
-    int16_t x,
+    Matrix Mask=*,
+    BinaryOp accum=*,
+    BinaryOp op=*,
+    x=*,
     Matrix A=*,
     Descriptor desc=*,
 )
 
 cpdef object Matrix_apply_BinaryOp1st_INT32(
     Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    BinaryOp op,
-    int32_t x,
+    Matrix Mask=*,
+    BinaryOp accum=*,
+    BinaryOp op=*,
+    x=*,
     Matrix A=*,
     Descriptor desc=*,
 )
 
 cpdef object Matrix_apply_BinaryOp1st_INT64(
     Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    BinaryOp op,
-    int64_t x,
+    Matrix Mask=*,
+    BinaryOp accum=*,
+    BinaryOp op=*,
+    x=*,
     Matrix A=*,
     Descriptor desc=*,
 )
 
 cpdef object Matrix_apply_BinaryOp1st_INT8(
     Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    BinaryOp op,
-    int8_t x,
+    Matrix Mask=*,
+    BinaryOp accum=*,
+    BinaryOp op=*,
+    x=*,
     Matrix A=*,
     Descriptor desc=*,
 )
 
 cpdef object Matrix_apply_BinaryOp1st_UINT16(
     Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    BinaryOp op,
-    uint16_t x,
+    Matrix Mask=*,
+    BinaryOp accum=*,
+    BinaryOp op=*,
+    x=*,
     Matrix A=*,
     Descriptor desc=*,
 )
 
 cpdef object Matrix_apply_BinaryOp1st_UINT32(
     Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    BinaryOp op,
-    uint32_t x,
+    Matrix Mask=*,
+    BinaryOp accum=*,
+    BinaryOp op=*,
+    x=*,
     Matrix A=*,
     Descriptor desc=*,
 )
 
 cpdef object Matrix_apply_BinaryOp1st_UINT64(
     Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    BinaryOp op,
-    uint64_t x,
+    Matrix Mask=*,
+    BinaryOp accum=*,
+    BinaryOp op=*,
+    x=*,
     Matrix A=*,
     Descriptor desc=*,
 )
 
 cpdef object Matrix_apply_BinaryOp1st_UINT8(
     Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    BinaryOp op,
-    uint8_t x,
+    Matrix Mask=*,
+    BinaryOp accum=*,
+    BinaryOp op=*,
+    x=*,
     Matrix A=*,
     Descriptor desc=*,
 )
 
 cpdef object Matrix_apply_BinaryOp2nd_BOOL(
     Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    BinaryOp op,
-    Matrix A,
-    bint y,
+    Matrix Mask=*,
+    BinaryOp accum=*,
+    BinaryOp op=*,
+    Matrix A=*,
+    y=*,
     Descriptor desc=*,
 )
 
 cpdef object Matrix_apply_BinaryOp2nd_FP32(
     Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    BinaryOp op,
-    Matrix A,
-    float y,
+    Matrix Mask=*,
+    BinaryOp accum=*,
+    BinaryOp op=*,
+    Matrix A=*,
+    y=*,
     Descriptor desc=*,
 )
 
 cpdef object Matrix_apply_BinaryOp2nd_FP64(
     Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    BinaryOp op,
-    Matrix A,
-    double y,
+    Matrix Mask=*,
+    BinaryOp accum=*,
+    BinaryOp op=*,
+    Matrix A=*,
+    y=*,
     Descriptor desc=*,
 )
 
 cpdef object Matrix_apply_BinaryOp2nd_INT16(
     Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    BinaryOp op,
-    Matrix A,
-    int16_t y,
+    Matrix Mask=*,
+    BinaryOp accum=*,
+    BinaryOp op=*,
+    Matrix A=*,
+    y=*,
     Descriptor desc=*,
 )
 
 cpdef object Matrix_apply_BinaryOp2nd_INT32(
     Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    BinaryOp op,
-    Matrix A,
-    int32_t y,
+    Matrix Mask=*,
+    BinaryOp accum=*,
+    BinaryOp op=*,
+    Matrix A=*,
+    y=*,
     Descriptor desc=*,
 )
 
 cpdef object Matrix_apply_BinaryOp2nd_INT64(
     Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    BinaryOp op,
-    Matrix A,
-    int64_t y,
+    Matrix Mask=*,
+    BinaryOp accum=*,
+    BinaryOp op=*,
+    Matrix A=*,
+    y=*,
     Descriptor desc=*,
 )
 
 cpdef object Matrix_apply_BinaryOp2nd_INT8(
     Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    BinaryOp op,
-    Matrix A,
-    int8_t y,
+    Matrix Mask=*,
+    BinaryOp accum=*,
+    BinaryOp op=*,
+    Matrix A=*,
+    y=*,
     Descriptor desc=*,
 )
 
 cpdef object Matrix_apply_BinaryOp2nd_UINT16(
     Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    BinaryOp op,
-    Matrix A,
-    uint16_t y,
+    Matrix Mask=*,
+    BinaryOp accum=*,
+    BinaryOp op=*,
+    Matrix A=*,
+    y=*,
     Descriptor desc=*,
 )
 
 cpdef object Matrix_apply_BinaryOp2nd_UINT32(
     Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    BinaryOp op,
-    Matrix A,
-    uint32_t y,
+    Matrix Mask=*,
+    BinaryOp accum=*,
+    BinaryOp op=*,
+    Matrix A=*,
+    y=*,
     Descriptor desc=*,
 )
 
 cpdef object Matrix_apply_BinaryOp2nd_UINT64(
     Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    BinaryOp op,
-    Matrix A,
-    uint64_t y,
+    Matrix Mask=*,
+    BinaryOp accum=*,
+    BinaryOp op=*,
+    Matrix A=*,
+    y=*,
     Descriptor desc=*,
 )
 
 cpdef object Matrix_apply_BinaryOp2nd_UINT8(
     Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    BinaryOp op,
-    Matrix A,
-    uint8_t y,
+    Matrix Mask=*,
+    BinaryOp accum=*,
+    BinaryOp op=*,
+    Matrix A=*,
+    y=*,
     Descriptor desc=*,
 )
 
 cpdef object Matrix_assign(
     Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    Matrix A,
-    Index[::1] I,
-    Index ni,
-    Index[::1] J,
-    Index nj,
+    Matrix Mask=*,
+    BinaryOp accum=*,
+    Matrix A=*,
+    Index[::1] I=*,
+    ni=*,
+    Index[::1] J=*,
+    nj=*,
     Descriptor desc=*,
 )
 
 cpdef object Matrix_assign_BOOL(
     Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    bint x,
-    Index[::1] I,
-    Index ni,
-    Index[::1] J,
-    Index nj,
+    Matrix Mask=*,
+    BinaryOp accum=*,
+    x=*,
+    Index[::1] I=*,
+    ni=*,
+    Index[::1] J=*,
+    nj=*,
     Descriptor desc=*,
 )
 
 cpdef object Matrix_assign_FP32(
     Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    float x,
-    Index[::1] I,
-    Index ni,
-    Index[::1] J,
-    Index nj,
+    Matrix Mask=*,
+    BinaryOp accum=*,
+    x=*,
+    Index[::1] I=*,
+    ni=*,
+    Index[::1] J=*,
+    nj=*,
     Descriptor desc=*,
 )
 
 cpdef object Matrix_assign_FP64(
     Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    double x,
-    Index[::1] I,
-    Index ni,
-    Index[::1] J,
-    Index nj,
+    Matrix Mask=*,
+    BinaryOp accum=*,
+    x=*,
+    Index[::1] I=*,
+    ni=*,
+    Index[::1] J=*,
+    nj=*,
     Descriptor desc=*,
 )
 
 cpdef object Matrix_assign_INT16(
     Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    int16_t x,
-    Index[::1] I,
-    Index ni,
-    Index[::1] J,
-    Index nj,
+    Matrix Mask=*,
+    BinaryOp accum=*,
+    x=*,
+    Index[::1] I=*,
+    ni=*,
+    Index[::1] J=*,
+    nj=*,
     Descriptor desc=*,
 )
 
 cpdef object Matrix_assign_INT32(
     Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    int32_t x,
-    Index[::1] I,
-    Index ni,
-    Index[::1] J,
-    Index nj,
+    Matrix Mask=*,
+    BinaryOp accum=*,
+    x=*,
+    Index[::1] I=*,
+    ni=*,
+    Index[::1] J=*,
+    nj=*,
     Descriptor desc=*,
 )
 
 cpdef object Matrix_assign_INT64(
     Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    int64_t x,
-    Index[::1] I,
-    Index ni,
-    Index[::1] J,
-    Index nj,
+    Matrix Mask=*,
+    BinaryOp accum=*,
+    x=*,
+    Index[::1] I=*,
+    ni=*,
+    Index[::1] J=*,
+    nj=*,
     Descriptor desc=*,
 )
 
 cpdef object Matrix_assign_INT8(
     Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    int8_t x,
-    Index[::1] I,
-    Index ni,
-    Index[::1] J,
-    Index nj,
+    Matrix Mask=*,
+    BinaryOp accum=*,
+    x=*,
+    Index[::1] I=*,
+    ni=*,
+    Index[::1] J=*,
+    nj=*,
     Descriptor desc=*,
 )
 
 cpdef object Matrix_assign_UINT16(
     Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    uint16_t x,
-    Index[::1] I,
-    Index ni,
-    Index[::1] J,
-    Index nj,
+    Matrix Mask=*,
+    BinaryOp accum=*,
+    x=*,
+    Index[::1] I=*,
+    ni=*,
+    Index[::1] J=*,
+    nj=*,
     Descriptor desc=*,
 )
 
 cpdef object Matrix_assign_UINT32(
     Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    uint32_t x,
-    Index[::1] I,
-    Index ni,
-    Index[::1] J,
-    Index nj,
+    Matrix Mask=*,
+    BinaryOp accum=*,
+    x=*,
+    Index[::1] I=*,
+    ni=*,
+    Index[::1] J=*,
+    nj=*,
     Descriptor desc=*,
 )
 
 cpdef object Matrix_assign_UINT64(
     Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    uint64_t x,
-    Index[::1] I,
-    Index ni,
-    Index[::1] J,
-    Index nj,
+    Matrix Mask=*,
+    BinaryOp accum=*,
+    x=*,
+    Index[::1] I=*,
+    ni=*,
+    Index[::1] J=*,
+    nj=*,
     Descriptor desc=*,
 )
 
 cpdef object Matrix_assign_UINT8(
     Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    uint8_t x,
-    Index[::1] I,
-    Index ni,
-    Index[::1] J,
-    Index nj,
+    Matrix Mask=*,
+    BinaryOp accum=*,
+    x=*,
+    Index[::1] I=*,
+    ni=*,
+    Index[::1] J=*,
+    nj=*,
     Descriptor desc=*,
 )
 
 cpdef object Matrix_build_BOOL(
     Matrix C,
-    Index[::1] I,
-    Index[::1] J,
-    bint[::1] X,
-    Index nvals,
+    Index[::1] I=*,
+    Index[::1] J=*,
+    bint[::1] X=*,
+    nvals=*,
     BinaryOp dup=*,
 )
 
 cpdef object Matrix_build_FP32(
     Matrix C,
-    Index[::1] I,
-    Index[::1] J,
-    float[::1] X,
-    Index nvals,
+    Index[::1] I=*,
+    Index[::1] J=*,
+    float[::1] X=*,
+    nvals=*,
     BinaryOp dup=*,
 )
 
 cpdef object Matrix_build_FP64(
     Matrix C,
-    Index[::1] I,
-    Index[::1] J,
-    double[::1] X,
-    Index nvals,
+    Index[::1] I=*,
+    Index[::1] J=*,
+    double[::1] X=*,
+    nvals=*,
     BinaryOp dup=*,
 )
 
 cpdef object Matrix_build_INT16(
     Matrix C,
-    Index[::1] I,
-    Index[::1] J,
-    int16_t[::1] X,
-    Index nvals,
+    Index[::1] I=*,
+    Index[::1] J=*,
+    int16_t[::1] X=*,
+    nvals=*,
     BinaryOp dup=*,
 )
 
 cpdef object Matrix_build_INT32(
     Matrix C,
-    Index[::1] I,
-    Index[::1] J,
-    int32_t[::1] X,
-    Index nvals,
+    Index[::1] I=*,
+    Index[::1] J=*,
+    int32_t[::1] X=*,
+    nvals=*,
     BinaryOp dup=*,
 )
 
 cpdef object Matrix_build_INT64(
     Matrix C,
-    Index[::1] I,
-    Index[::1] J,
-    int64_t[::1] X,
-    Index nvals,
+    Index[::1] I=*,
+    Index[::1] J=*,
+    int64_t[::1] X=*,
+    nvals=*,
     BinaryOp dup=*,
 )
 
 cpdef object Matrix_build_INT8(
     Matrix C,
-    Index[::1] I,
-    Index[::1] J,
-    int8_t[::1] X,
-    Index nvals,
+    Index[::1] I=*,
+    Index[::1] J=*,
+    int8_t[::1] X=*,
+    nvals=*,
     BinaryOp dup=*,
 )
 
 cpdef object Matrix_build_UINT16(
     Matrix C,
-    Index[::1] I,
-    Index[::1] J,
-    uint16_t[::1] X,
-    Index nvals,
+    Index[::1] I=*,
+    Index[::1] J=*,
+    uint16_t[::1] X=*,
+    nvals=*,
     BinaryOp dup=*,
 )
 
 cpdef object Matrix_build_UINT32(
     Matrix C,
-    Index[::1] I,
-    Index[::1] J,
-    uint32_t[::1] X,
-    Index nvals,
+    Index[::1] I=*,
+    Index[::1] J=*,
+    uint32_t[::1] X=*,
+    nvals=*,
     BinaryOp dup=*,
 )
 
 cpdef object Matrix_build_UINT64(
     Matrix C,
-    Index[::1] I,
-    Index[::1] J,
-    uint64_t[::1] X,
-    Index nvals,
+    Index[::1] I=*,
+    Index[::1] J=*,
+    uint64_t[::1] X=*,
+    nvals=*,
     BinaryOp dup=*,
 )
 
 cpdef object Matrix_build_UINT8(
     Matrix C,
-    Index[::1] I,
-    Index[::1] J,
-    uint8_t[::1] X,
-    Index nvals,
+    Index[::1] I=*,
+    Index[::1] J=*,
+    uint8_t[::1] X=*,
+    nvals=*,
     BinaryOp dup=*,
 )
 
 cpdef object Matrix_clear(
-    Matrix A=*,
+    Matrix A,
 )
 
 cpdef object Matrix_dup(
-    Matrix C=*,
+    Matrix C,
     Matrix A=*,
 )
 
 cpdef object Matrix_eWiseAdd_BinaryOp(
-    Matrix C=*,
+    Matrix C,
     Matrix Mask=*,
     BinaryOp accum=*,
     BinaryOp add=*,
@@ -524,7 +524,7 @@ cpdef object Matrix_eWiseAdd_BinaryOp(
 )
 
 cpdef object Matrix_eWiseAdd_Monoid(
-    Matrix C=*,
+    Matrix C,
     Matrix Mask=*,
     BinaryOp accum=*,
     Monoid monoid=*,
@@ -534,7 +534,7 @@ cpdef object Matrix_eWiseAdd_Monoid(
 )
 
 cpdef object Matrix_eWiseAdd_Semiring(
-    Matrix C=*,
+    Matrix C,
     Matrix Mask=*,
     BinaryOp accum=*,
     Semiring semiring=*,
@@ -544,7 +544,7 @@ cpdef object Matrix_eWiseAdd_Semiring(
 )
 
 cpdef object Matrix_eWiseMult_BinaryOp(
-    Matrix C=*,
+    Matrix C,
     Matrix Mask=*,
     BinaryOp accum=*,
     BinaryOp mult=*,
@@ -554,7 +554,7 @@ cpdef object Matrix_eWiseMult_BinaryOp(
 )
 
 cpdef object Matrix_eWiseMult_Monoid(
-    Matrix C=*,
+    Matrix C,
     Matrix Mask=*,
     BinaryOp accum=*,
     Monoid monoid=*,
@@ -564,7 +564,7 @@ cpdef object Matrix_eWiseMult_Monoid(
 )
 
 cpdef object Matrix_eWiseMult_Semiring(
-    Matrix C=*,
+    Matrix C,
     Matrix Mask=*,
     BinaryOp accum=*,
     Semiring semiring=*,
@@ -575,22 +575,22 @@ cpdef object Matrix_eWiseMult_Semiring(
 
 cpdef object Matrix_extract(
     Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    Matrix A,
-    Index[::1] I,
-    Index ni,
-    Index[::1] J,
-    Index nj,
+    Matrix Mask=*,
+    BinaryOp accum=*,
+    Matrix A=*,
+    Index[::1] I=*,
+    ni=*,
+    Index[::1] J=*,
+    nj=*,
     Descriptor desc=*,
 )
 
 cpdef object Matrix_free(
-    Matrix A=*,
+    Matrix A,
 )
 
 cpdef object Matrix_kronecker_BinaryOp(
-    Matrix C=*,
+    Matrix C,
     Matrix M=*,
     BinaryOp accum=*,
     BinaryOp op=*,
@@ -600,7 +600,7 @@ cpdef object Matrix_kronecker_BinaryOp(
 )
 
 cpdef object Matrix_kronecker_Monoid(
-    Matrix C=*,
+    Matrix C,
     Matrix M=*,
     BinaryOp accum=*,
     Monoid monoid=*,
@@ -610,7 +610,7 @@ cpdef object Matrix_kronecker_Monoid(
 )
 
 cpdef object Matrix_kronecker_Semiring(
-    Matrix C=*,
+    Matrix C,
     Matrix M=*,
     BinaryOp accum=*,
     Semiring semiring=*,
@@ -621,13 +621,13 @@ cpdef object Matrix_kronecker_Semiring(
 
 cpdef object Matrix_new(
     Matrix A,
-    Type type,
-    Index nrows,
-    Index ncols,
+    Type type=*,
+    nrows=*,
+    ncols=*,
 )
 
 cpdef object Matrix_reduce_BinaryOp(
-    Vector w=*,
+    Vector w,
     Vector mask=*,
     BinaryOp accum=*,
     BinaryOp op=*,
@@ -636,7 +636,7 @@ cpdef object Matrix_reduce_BinaryOp(
 )
 
 cpdef object Matrix_reduce_Monoid(
-    Vector w=*,
+    Vector w,
     Vector mask=*,
     BinaryOp accum=*,
     Monoid monoid=*,
@@ -646,110 +646,110 @@ cpdef object Matrix_reduce_Monoid(
 
 cpdef object Matrix_removeElement(
     Matrix C,
-    Index i,
-    Index j,
+    i=*,
+    j=*,
 )
 
 cpdef object Matrix_resize(
     Matrix C,
-    Index nrows_new,
-    Index ncols_new,
+    nrows_new=*,
+    ncols_new=*,
 )
 
 cpdef object Matrix_setElement_BOOL(
     Matrix C,
-    bint x,
-    Index i,
-    Index j,
+    x=*,
+    i=*,
+    j=*,
 )
 
 cpdef object Matrix_setElement_FP32(
     Matrix C,
-    float x,
-    Index i,
-    Index j,
+    x=*,
+    i=*,
+    j=*,
 )
 
 cpdef object Matrix_setElement_FP64(
     Matrix C,
-    double x,
-    Index i,
-    Index j,
+    x=*,
+    i=*,
+    j=*,
 )
 
 cpdef object Matrix_setElement_INT16(
     Matrix C,
-    int16_t x,
-    Index i,
-    Index j,
+    x=*,
+    i=*,
+    j=*,
 )
 
 cpdef object Matrix_setElement_INT32(
     Matrix C,
-    int32_t x,
-    Index i,
-    Index j,
+    x=*,
+    i=*,
+    j=*,
 )
 
 cpdef object Matrix_setElement_INT64(
     Matrix C,
-    int64_t x,
-    Index i,
-    Index j,
+    x=*,
+    i=*,
+    j=*,
 )
 
 cpdef object Matrix_setElement_INT8(
     Matrix C,
-    int8_t x,
-    Index i,
-    Index j,
+    x=*,
+    i=*,
+    j=*,
 )
 
 cpdef object Matrix_setElement_UINT16(
     Matrix C,
-    uint16_t x,
-    Index i,
-    Index j,
+    x=*,
+    i=*,
+    j=*,
 )
 
 cpdef object Matrix_setElement_UINT32(
     Matrix C,
-    uint32_t x,
-    Index i,
-    Index j,
+    x=*,
+    i=*,
+    j=*,
 )
 
 cpdef object Matrix_setElement_UINT64(
     Matrix C,
-    uint64_t x,
-    Index i,
-    Index j,
+    x=*,
+    i=*,
+    j=*,
 )
 
 cpdef object Matrix_setElement_UINT8(
     Matrix C,
-    uint8_t x,
-    Index i,
-    Index j,
+    x=*,
+    i=*,
+    j=*,
 )
 
 cpdef object Matrix_wait(
-    Matrix A=*,
+    Matrix A,
 )
 
 cpdef object Row_assign(
     Matrix C,
-    Vector mask,
-    BinaryOp accum,
-    Vector u,
-    Index i,
-    Index[::1] J,
-    Index nj,
+    Vector mask=*,
+    BinaryOp accum=*,
+    Vector u=*,
+    i=*,
+    Index[::1] J=*,
+    nj=*,
     Descriptor desc=*,
 )
 
 cpdef object Vector_apply(
-    Vector w=*,
+    Vector w,
     Vector mask=*,
     BinaryOp accum=*,
     UnaryOp op=*,
@@ -759,443 +759,443 @@ cpdef object Vector_apply(
 
 cpdef object Vector_apply_BinaryOp1st_BOOL(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    BinaryOp op,
-    bint x,
+    Vector mask=*,
+    BinaryOp accum=*,
+    BinaryOp op=*,
+    x=*,
     Vector u=*,
     Descriptor desc=*,
 )
 
 cpdef object Vector_apply_BinaryOp1st_FP32(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    BinaryOp op,
-    float x,
+    Vector mask=*,
+    BinaryOp accum=*,
+    BinaryOp op=*,
+    x=*,
     Vector u=*,
     Descriptor desc=*,
 )
 
 cpdef object Vector_apply_BinaryOp1st_FP64(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    BinaryOp op,
-    double x,
+    Vector mask=*,
+    BinaryOp accum=*,
+    BinaryOp op=*,
+    x=*,
     Vector u=*,
     Descriptor desc=*,
 )
 
 cpdef object Vector_apply_BinaryOp1st_INT16(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    BinaryOp op,
-    int16_t x,
+    Vector mask=*,
+    BinaryOp accum=*,
+    BinaryOp op=*,
+    x=*,
     Vector u=*,
     Descriptor desc=*,
 )
 
 cpdef object Vector_apply_BinaryOp1st_INT32(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    BinaryOp op,
-    int32_t x,
+    Vector mask=*,
+    BinaryOp accum=*,
+    BinaryOp op=*,
+    x=*,
     Vector u=*,
     Descriptor desc=*,
 )
 
 cpdef object Vector_apply_BinaryOp1st_INT64(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    BinaryOp op,
-    int64_t x,
+    Vector mask=*,
+    BinaryOp accum=*,
+    BinaryOp op=*,
+    x=*,
     Vector u=*,
     Descriptor desc=*,
 )
 
 cpdef object Vector_apply_BinaryOp1st_INT8(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    BinaryOp op,
-    int8_t x,
+    Vector mask=*,
+    BinaryOp accum=*,
+    BinaryOp op=*,
+    x=*,
     Vector u=*,
     Descriptor desc=*,
 )
 
 cpdef object Vector_apply_BinaryOp1st_UINT16(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    BinaryOp op,
-    uint16_t x,
+    Vector mask=*,
+    BinaryOp accum=*,
+    BinaryOp op=*,
+    x=*,
     Vector u=*,
     Descriptor desc=*,
 )
 
 cpdef object Vector_apply_BinaryOp1st_UINT32(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    BinaryOp op,
-    uint32_t x,
+    Vector mask=*,
+    BinaryOp accum=*,
+    BinaryOp op=*,
+    x=*,
     Vector u=*,
     Descriptor desc=*,
 )
 
 cpdef object Vector_apply_BinaryOp1st_UINT64(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    BinaryOp op,
-    uint64_t x,
+    Vector mask=*,
+    BinaryOp accum=*,
+    BinaryOp op=*,
+    x=*,
     Vector u=*,
     Descriptor desc=*,
 )
 
 cpdef object Vector_apply_BinaryOp1st_UINT8(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    BinaryOp op,
-    uint8_t x,
+    Vector mask=*,
+    BinaryOp accum=*,
+    BinaryOp op=*,
+    x=*,
     Vector u=*,
     Descriptor desc=*,
 )
 
 cpdef object Vector_apply_BinaryOp2nd_BOOL(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    BinaryOp op,
-    Vector u,
-    bint y,
+    Vector mask=*,
+    BinaryOp accum=*,
+    BinaryOp op=*,
+    Vector u=*,
+    y=*,
     Descriptor desc=*,
 )
 
 cpdef object Vector_apply_BinaryOp2nd_FP32(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    BinaryOp op,
-    Vector u,
-    float y,
+    Vector mask=*,
+    BinaryOp accum=*,
+    BinaryOp op=*,
+    Vector u=*,
+    y=*,
     Descriptor desc=*,
 )
 
 cpdef object Vector_apply_BinaryOp2nd_FP64(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    BinaryOp op,
-    Vector u,
-    double y,
+    Vector mask=*,
+    BinaryOp accum=*,
+    BinaryOp op=*,
+    Vector u=*,
+    y=*,
     Descriptor desc=*,
 )
 
 cpdef object Vector_apply_BinaryOp2nd_INT16(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    BinaryOp op,
-    Vector u,
-    int16_t y,
+    Vector mask=*,
+    BinaryOp accum=*,
+    BinaryOp op=*,
+    Vector u=*,
+    y=*,
     Descriptor desc=*,
 )
 
 cpdef object Vector_apply_BinaryOp2nd_INT32(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    BinaryOp op,
-    Vector u,
-    int32_t y,
+    Vector mask=*,
+    BinaryOp accum=*,
+    BinaryOp op=*,
+    Vector u=*,
+    y=*,
     Descriptor desc=*,
 )
 
 cpdef object Vector_apply_BinaryOp2nd_INT64(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    BinaryOp op,
-    Vector u,
-    int64_t y,
+    Vector mask=*,
+    BinaryOp accum=*,
+    BinaryOp op=*,
+    Vector u=*,
+    y=*,
     Descriptor desc=*,
 )
 
 cpdef object Vector_apply_BinaryOp2nd_INT8(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    BinaryOp op,
-    Vector u,
-    int8_t y,
+    Vector mask=*,
+    BinaryOp accum=*,
+    BinaryOp op=*,
+    Vector u=*,
+    y=*,
     Descriptor desc=*,
 )
 
 cpdef object Vector_apply_BinaryOp2nd_UINT16(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    BinaryOp op,
-    Vector u,
-    uint16_t y,
+    Vector mask=*,
+    BinaryOp accum=*,
+    BinaryOp op=*,
+    Vector u=*,
+    y=*,
     Descriptor desc=*,
 )
 
 cpdef object Vector_apply_BinaryOp2nd_UINT32(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    BinaryOp op,
-    Vector u,
-    uint32_t y,
+    Vector mask=*,
+    BinaryOp accum=*,
+    BinaryOp op=*,
+    Vector u=*,
+    y=*,
     Descriptor desc=*,
 )
 
 cpdef object Vector_apply_BinaryOp2nd_UINT64(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    BinaryOp op,
-    Vector u,
-    uint64_t y,
+    Vector mask=*,
+    BinaryOp accum=*,
+    BinaryOp op=*,
+    Vector u=*,
+    y=*,
     Descriptor desc=*,
 )
 
 cpdef object Vector_apply_BinaryOp2nd_UINT8(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    BinaryOp op,
-    Vector u,
-    uint8_t y,
+    Vector mask=*,
+    BinaryOp accum=*,
+    BinaryOp op=*,
+    Vector u=*,
+    y=*,
     Descriptor desc=*,
 )
 
 cpdef object Vector_assign(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    Vector u,
-    Index[::1] I,
-    Index ni,
+    Vector mask=*,
+    BinaryOp accum=*,
+    Vector u=*,
+    Index[::1] I=*,
+    ni=*,
     Descriptor desc=*,
 )
 
 cpdef object Vector_assign_BOOL(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    bint x,
-    Index[::1] I,
-    Index ni,
+    Vector mask=*,
+    BinaryOp accum=*,
+    x=*,
+    Index[::1] I=*,
+    ni=*,
     Descriptor desc=*,
 )
 
 cpdef object Vector_assign_FP32(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    float x,
-    Index[::1] I,
-    Index ni,
+    Vector mask=*,
+    BinaryOp accum=*,
+    x=*,
+    Index[::1] I=*,
+    ni=*,
     Descriptor desc=*,
 )
 
 cpdef object Vector_assign_FP64(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    double x,
-    Index[::1] I,
-    Index ni,
+    Vector mask=*,
+    BinaryOp accum=*,
+    x=*,
+    Index[::1] I=*,
+    ni=*,
     Descriptor desc=*,
 )
 
 cpdef object Vector_assign_INT16(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    int16_t x,
-    Index[::1] I,
-    Index ni,
+    Vector mask=*,
+    BinaryOp accum=*,
+    x=*,
+    Index[::1] I=*,
+    ni=*,
     Descriptor desc=*,
 )
 
 cpdef object Vector_assign_INT32(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    int32_t x,
-    Index[::1] I,
-    Index ni,
+    Vector mask=*,
+    BinaryOp accum=*,
+    x=*,
+    Index[::1] I=*,
+    ni=*,
     Descriptor desc=*,
 )
 
 cpdef object Vector_assign_INT64(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    int64_t x,
-    Index[::1] I,
-    Index ni,
+    Vector mask=*,
+    BinaryOp accum=*,
+    x=*,
+    Index[::1] I=*,
+    ni=*,
     Descriptor desc=*,
 )
 
 cpdef object Vector_assign_INT8(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    int8_t x,
-    Index[::1] I,
-    Index ni,
+    Vector mask=*,
+    BinaryOp accum=*,
+    x=*,
+    Index[::1] I=*,
+    ni=*,
     Descriptor desc=*,
 )
 
 cpdef object Vector_assign_UINT16(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    uint16_t x,
-    Index[::1] I,
-    Index ni,
+    Vector mask=*,
+    BinaryOp accum=*,
+    x=*,
+    Index[::1] I=*,
+    ni=*,
     Descriptor desc=*,
 )
 
 cpdef object Vector_assign_UINT32(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    uint32_t x,
-    Index[::1] I,
-    Index ni,
+    Vector mask=*,
+    BinaryOp accum=*,
+    x=*,
+    Index[::1] I=*,
+    ni=*,
     Descriptor desc=*,
 )
 
 cpdef object Vector_assign_UINT64(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    uint64_t x,
-    Index[::1] I,
-    Index ni,
+    Vector mask=*,
+    BinaryOp accum=*,
+    x=*,
+    Index[::1] I=*,
+    ni=*,
     Descriptor desc=*,
 )
 
 cpdef object Vector_assign_UINT8(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    uint8_t x,
-    Index[::1] I,
-    Index ni,
+    Vector mask=*,
+    BinaryOp accum=*,
+    x=*,
+    Index[::1] I=*,
+    ni=*,
     Descriptor desc=*,
 )
 
 cpdef object Vector_build_BOOL(
     Vector w,
-    Index[::1] I,
-    bint[::1] X,
-    Index nvals,
+    Index[::1] I=*,
+    bint[::1] X=*,
+    nvals=*,
     BinaryOp dup=*,
 )
 
 cpdef object Vector_build_FP32(
     Vector w,
-    Index[::1] I,
-    float[::1] X,
-    Index nvals,
+    Index[::1] I=*,
+    float[::1] X=*,
+    nvals=*,
     BinaryOp dup=*,
 )
 
 cpdef object Vector_build_FP64(
     Vector w,
-    Index[::1] I,
-    double[::1] X,
-    Index nvals,
+    Index[::1] I=*,
+    double[::1] X=*,
+    nvals=*,
     BinaryOp dup=*,
 )
 
 cpdef object Vector_build_INT16(
     Vector w,
-    Index[::1] I,
-    int16_t[::1] X,
-    Index nvals,
+    Index[::1] I=*,
+    int16_t[::1] X=*,
+    nvals=*,
     BinaryOp dup=*,
 )
 
 cpdef object Vector_build_INT32(
     Vector w,
-    Index[::1] I,
-    int32_t[::1] X,
-    Index nvals,
+    Index[::1] I=*,
+    int32_t[::1] X=*,
+    nvals=*,
     BinaryOp dup=*,
 )
 
 cpdef object Vector_build_INT64(
     Vector w,
-    Index[::1] I,
-    int64_t[::1] X,
-    Index nvals,
+    Index[::1] I=*,
+    int64_t[::1] X=*,
+    nvals=*,
     BinaryOp dup=*,
 )
 
 cpdef object Vector_build_INT8(
     Vector w,
-    Index[::1] I,
-    int8_t[::1] X,
-    Index nvals,
+    Index[::1] I=*,
+    int8_t[::1] X=*,
+    nvals=*,
     BinaryOp dup=*,
 )
 
 cpdef object Vector_build_UINT16(
     Vector w,
-    Index[::1] I,
-    uint16_t[::1] X,
-    Index nvals,
+    Index[::1] I=*,
+    uint16_t[::1] X=*,
+    nvals=*,
     BinaryOp dup=*,
 )
 
 cpdef object Vector_build_UINT32(
     Vector w,
-    Index[::1] I,
-    uint32_t[::1] X,
-    Index nvals,
+    Index[::1] I=*,
+    uint32_t[::1] X=*,
+    nvals=*,
     BinaryOp dup=*,
 )
 
 cpdef object Vector_build_UINT64(
     Vector w,
-    Index[::1] I,
-    uint64_t[::1] X,
-    Index nvals,
+    Index[::1] I=*,
+    uint64_t[::1] X=*,
+    nvals=*,
     BinaryOp dup=*,
 )
 
 cpdef object Vector_build_UINT8(
     Vector w,
-    Index[::1] I,
-    uint8_t[::1] X,
-    Index nvals,
+    Index[::1] I=*,
+    uint8_t[::1] X=*,
+    nvals=*,
     BinaryOp dup=*,
 )
 
 cpdef object Vector_clear(
-    Vector v=*,
+    Vector v,
 )
 
 cpdef object Vector_dup(
-    Vector w=*,
+    Vector w,
     Vector u=*,
 )
 
 cpdef object Vector_eWiseAdd_BinaryOp(
-    Vector w=*,
+    Vector w,
     Vector mask=*,
     BinaryOp accum=*,
     BinaryOp add=*,
@@ -1205,7 +1205,7 @@ cpdef object Vector_eWiseAdd_BinaryOp(
 )
 
 cpdef object Vector_eWiseAdd_Monoid(
-    Vector w=*,
+    Vector w,
     Vector mask=*,
     BinaryOp accum=*,
     Monoid monoid=*,
@@ -1215,7 +1215,7 @@ cpdef object Vector_eWiseAdd_Monoid(
 )
 
 cpdef object Vector_eWiseAdd_Semiring(
-    Vector w=*,
+    Vector w,
     Vector mask=*,
     BinaryOp accum=*,
     Semiring semiring=*,
@@ -1225,7 +1225,7 @@ cpdef object Vector_eWiseAdd_Semiring(
 )
 
 cpdef object Vector_eWiseMult_BinaryOp(
-    Vector w=*,
+    Vector w,
     Vector mask=*,
     BinaryOp accum=*,
     BinaryOp mult=*,
@@ -1235,7 +1235,7 @@ cpdef object Vector_eWiseMult_BinaryOp(
 )
 
 cpdef object Vector_eWiseMult_Monoid(
-    Vector w=*,
+    Vector w,
     Vector mask=*,
     BinaryOp accum=*,
     Monoid monoid=*,
@@ -1245,7 +1245,7 @@ cpdef object Vector_eWiseMult_Monoid(
 )
 
 cpdef object Vector_eWiseMult_Semiring(
-    Vector w=*,
+    Vector w,
     Vector mask=*,
     BinaryOp accum=*,
     Semiring semiring=*,
@@ -1256,102 +1256,102 @@ cpdef object Vector_eWiseMult_Semiring(
 
 cpdef object Vector_extract(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    Vector u,
-    Index[::1] I,
-    Index ni,
+    Vector mask=*,
+    BinaryOp accum=*,
+    Vector u=*,
+    Index[::1] I=*,
+    ni=*,
     Descriptor desc=*,
 )
 
 cpdef object Vector_free(
-    Vector v=*,
+    Vector v,
 )
 
 cpdef object Vector_new(
     Vector v,
-    Type type,
-    Index n,
+    Type type=*,
+    n=*,
 )
 
 cpdef object Vector_removeElement(
     Vector v,
-    Index i,
+    i=*,
 )
 
 cpdef object Vector_resize(
     Vector w,
-    Index nrows_new,
+    nrows_new=*,
 )
 
 cpdef object Vector_setElement_BOOL(
     Vector w,
-    bint x,
-    Index i,
+    x=*,
+    i=*,
 )
 
 cpdef object Vector_setElement_FP32(
     Vector w,
-    float x,
-    Index i,
+    x=*,
+    i=*,
 )
 
 cpdef object Vector_setElement_FP64(
     Vector w,
-    double x,
-    Index i,
+    x=*,
+    i=*,
 )
 
 cpdef object Vector_setElement_INT16(
     Vector w,
-    int16_t x,
-    Index i,
+    x=*,
+    i=*,
 )
 
 cpdef object Vector_setElement_INT32(
     Vector w,
-    int32_t x,
-    Index i,
+    x=*,
+    i=*,
 )
 
 cpdef object Vector_setElement_INT64(
     Vector w,
-    int64_t x,
-    Index i,
+    x=*,
+    i=*,
 )
 
 cpdef object Vector_setElement_INT8(
     Vector w,
-    int8_t x,
-    Index i,
+    x=*,
+    i=*,
 )
 
 cpdef object Vector_setElement_UINT16(
     Vector w,
-    uint16_t x,
-    Index i,
+    x=*,
+    i=*,
 )
 
 cpdef object Vector_setElement_UINT32(
     Vector w,
-    uint32_t x,
-    Index i,
+    x=*,
+    i=*,
 )
 
 cpdef object Vector_setElement_UINT64(
     Vector w,
-    uint64_t x,
-    Index i,
+    x=*,
+    i=*,
 )
 
 cpdef object Vector_setElement_UINT8(
     Vector w,
-    uint8_t x,
-    Index i,
+    x=*,
+    i=*,
 )
 
 cpdef object Vector_wait(
-    Vector v=*,
+    Vector v,
 )
 
 cpdef object init(
@@ -1359,7 +1359,7 @@ cpdef object init(
 )
 
 cpdef object mxm(
-    Matrix C=*,
+    Matrix C,
     Matrix Mask=*,
     BinaryOp accum=*,
     Semiring semiring=*,
@@ -1369,7 +1369,7 @@ cpdef object mxm(
 )
 
 cpdef object mxv(
-    Vector w=*,
+    Vector w,
     Vector mask=*,
     BinaryOp accum=*,
     Semiring semiring=*,
@@ -1379,7 +1379,7 @@ cpdef object mxv(
 )
 
 cpdef object transpose(
-    Matrix C=*,
+    Matrix C,
     Matrix Mask=*,
     BinaryOp accum=*,
     Matrix A=*,
@@ -1387,7 +1387,7 @@ cpdef object transpose(
 )
 
 cpdef object vxm(
-    Vector w=*,
+    Vector w,
     Vector mask=*,
     BinaryOp accum=*,
     Semiring semiring=*,

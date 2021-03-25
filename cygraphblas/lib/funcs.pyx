@@ -2,12 +2,12 @@
 
 cpdef object Col_assign(
     Matrix C,
-    Vector mask,
-    BinaryOp accum,
-    Vector u,
-    Index[::1] I,
-    Index ni,
-    Index j,
+    Vector mask=None,
+    BinaryOp accum=None,
+    Vector u=None,
+    Index[::1] I=None,
+    ni=None,
+    j=None,
     Descriptor desc=None,
 ):
     if C is None:
@@ -19,12 +19,12 @@ cpdef object Col_assign(
 
 cpdef object Col_extract(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    Matrix A,
-    Index[::1] I,
-    Index ni,
-    Index j,
+    Vector mask=None,
+    BinaryOp accum=None,
+    Matrix A=None,
+    Index[::1] I=None,
+    ni=None,
+    j=None,
     Descriptor desc=None,
 ):
     if w is None:
@@ -36,8 +36,8 @@ cpdef object Col_extract(
 
 cpdef object Descriptor_set(
     Descriptor desc,
-    Desc_Field field,
-    Desc_Value val,
+    Desc_Field field=None,
+    Desc_Value val=None,
 ):
     if desc is None:
         raise TypeError()
@@ -47,7 +47,7 @@ cpdef object Descriptor_set(
     func(desc, field, val)
 
 cpdef object Matrix_apply(
-    Matrix C=None,
+    Matrix C,
     Matrix Mask=None,
     BinaryOp accum=None,
     UnaryOp op=None,
@@ -63,10 +63,10 @@ cpdef object Matrix_apply(
 
 cpdef object Matrix_apply_BinaryOp1st_BOOL(
     Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    BinaryOp op,
-    bint x,
+    Matrix Mask=None,
+    BinaryOp accum=None,
+    BinaryOp op=None,
+    x=None,
     Matrix A=None,
     Descriptor desc=None,
 ):
@@ -79,10 +79,10 @@ cpdef object Matrix_apply_BinaryOp1st_BOOL(
 
 cpdef object Matrix_apply_BinaryOp1st_FP32(
     Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    BinaryOp op,
-    float x,
+    Matrix Mask=None,
+    BinaryOp accum=None,
+    BinaryOp op=None,
+    x=None,
     Matrix A=None,
     Descriptor desc=None,
 ):
@@ -95,10 +95,10 @@ cpdef object Matrix_apply_BinaryOp1st_FP32(
 
 cpdef object Matrix_apply_BinaryOp1st_FP64(
     Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    BinaryOp op,
-    double x,
+    Matrix Mask=None,
+    BinaryOp accum=None,
+    BinaryOp op=None,
+    x=None,
     Matrix A=None,
     Descriptor desc=None,
 ):
@@ -111,10 +111,10 @@ cpdef object Matrix_apply_BinaryOp1st_FP64(
 
 cpdef object Matrix_apply_BinaryOp1st_INT16(
     Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    BinaryOp op,
-    int16_t x,
+    Matrix Mask=None,
+    BinaryOp accum=None,
+    BinaryOp op=None,
+    x=None,
     Matrix A=None,
     Descriptor desc=None,
 ):
@@ -127,10 +127,10 @@ cpdef object Matrix_apply_BinaryOp1st_INT16(
 
 cpdef object Matrix_apply_BinaryOp1st_INT32(
     Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    BinaryOp op,
-    int32_t x,
+    Matrix Mask=None,
+    BinaryOp accum=None,
+    BinaryOp op=None,
+    x=None,
     Matrix A=None,
     Descriptor desc=None,
 ):
@@ -143,10 +143,10 @@ cpdef object Matrix_apply_BinaryOp1st_INT32(
 
 cpdef object Matrix_apply_BinaryOp1st_INT64(
     Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    BinaryOp op,
-    int64_t x,
+    Matrix Mask=None,
+    BinaryOp accum=None,
+    BinaryOp op=None,
+    x=None,
     Matrix A=None,
     Descriptor desc=None,
 ):
@@ -159,10 +159,10 @@ cpdef object Matrix_apply_BinaryOp1st_INT64(
 
 cpdef object Matrix_apply_BinaryOp1st_INT8(
     Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    BinaryOp op,
-    int8_t x,
+    Matrix Mask=None,
+    BinaryOp accum=None,
+    BinaryOp op=None,
+    x=None,
     Matrix A=None,
     Descriptor desc=None,
 ):
@@ -175,10 +175,10 @@ cpdef object Matrix_apply_BinaryOp1st_INT8(
 
 cpdef object Matrix_apply_BinaryOp1st_UINT16(
     Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    BinaryOp op,
-    uint16_t x,
+    Matrix Mask=None,
+    BinaryOp accum=None,
+    BinaryOp op=None,
+    x=None,
     Matrix A=None,
     Descriptor desc=None,
 ):
@@ -191,10 +191,10 @@ cpdef object Matrix_apply_BinaryOp1st_UINT16(
 
 cpdef object Matrix_apply_BinaryOp1st_UINT32(
     Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    BinaryOp op,
-    uint32_t x,
+    Matrix Mask=None,
+    BinaryOp accum=None,
+    BinaryOp op=None,
+    x=None,
     Matrix A=None,
     Descriptor desc=None,
 ):
@@ -207,10 +207,10 @@ cpdef object Matrix_apply_BinaryOp1st_UINT32(
 
 cpdef object Matrix_apply_BinaryOp1st_UINT64(
     Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    BinaryOp op,
-    uint64_t x,
+    Matrix Mask=None,
+    BinaryOp accum=None,
+    BinaryOp op=None,
+    x=None,
     Matrix A=None,
     Descriptor desc=None,
 ):
@@ -223,10 +223,10 @@ cpdef object Matrix_apply_BinaryOp1st_UINT64(
 
 cpdef object Matrix_apply_BinaryOp1st_UINT8(
     Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    BinaryOp op,
-    uint8_t x,
+    Matrix Mask=None,
+    BinaryOp accum=None,
+    BinaryOp op=None,
+    x=None,
     Matrix A=None,
     Descriptor desc=None,
 ):
@@ -239,11 +239,11 @@ cpdef object Matrix_apply_BinaryOp1st_UINT8(
 
 cpdef object Matrix_apply_BinaryOp2nd_BOOL(
     Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    BinaryOp op,
-    Matrix A,
-    bint y,
+    Matrix Mask=None,
+    BinaryOp accum=None,
+    BinaryOp op=None,
+    Matrix A=None,
+    y=None,
     Descriptor desc=None,
 ):
     if C is None:
@@ -255,11 +255,11 @@ cpdef object Matrix_apply_BinaryOp2nd_BOOL(
 
 cpdef object Matrix_apply_BinaryOp2nd_FP32(
     Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    BinaryOp op,
-    Matrix A,
-    float y,
+    Matrix Mask=None,
+    BinaryOp accum=None,
+    BinaryOp op=None,
+    Matrix A=None,
+    y=None,
     Descriptor desc=None,
 ):
     if C is None:
@@ -271,11 +271,11 @@ cpdef object Matrix_apply_BinaryOp2nd_FP32(
 
 cpdef object Matrix_apply_BinaryOp2nd_FP64(
     Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    BinaryOp op,
-    Matrix A,
-    double y,
+    Matrix Mask=None,
+    BinaryOp accum=None,
+    BinaryOp op=None,
+    Matrix A=None,
+    y=None,
     Descriptor desc=None,
 ):
     if C is None:
@@ -287,11 +287,11 @@ cpdef object Matrix_apply_BinaryOp2nd_FP64(
 
 cpdef object Matrix_apply_BinaryOp2nd_INT16(
     Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    BinaryOp op,
-    Matrix A,
-    int16_t y,
+    Matrix Mask=None,
+    BinaryOp accum=None,
+    BinaryOp op=None,
+    Matrix A=None,
+    y=None,
     Descriptor desc=None,
 ):
     if C is None:
@@ -303,11 +303,11 @@ cpdef object Matrix_apply_BinaryOp2nd_INT16(
 
 cpdef object Matrix_apply_BinaryOp2nd_INT32(
     Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    BinaryOp op,
-    Matrix A,
-    int32_t y,
+    Matrix Mask=None,
+    BinaryOp accum=None,
+    BinaryOp op=None,
+    Matrix A=None,
+    y=None,
     Descriptor desc=None,
 ):
     if C is None:
@@ -319,11 +319,11 @@ cpdef object Matrix_apply_BinaryOp2nd_INT32(
 
 cpdef object Matrix_apply_BinaryOp2nd_INT64(
     Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    BinaryOp op,
-    Matrix A,
-    int64_t y,
+    Matrix Mask=None,
+    BinaryOp accum=None,
+    BinaryOp op=None,
+    Matrix A=None,
+    y=None,
     Descriptor desc=None,
 ):
     if C is None:
@@ -335,11 +335,11 @@ cpdef object Matrix_apply_BinaryOp2nd_INT64(
 
 cpdef object Matrix_apply_BinaryOp2nd_INT8(
     Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    BinaryOp op,
-    Matrix A,
-    int8_t y,
+    Matrix Mask=None,
+    BinaryOp accum=None,
+    BinaryOp op=None,
+    Matrix A=None,
+    y=None,
     Descriptor desc=None,
 ):
     if C is None:
@@ -351,11 +351,11 @@ cpdef object Matrix_apply_BinaryOp2nd_INT8(
 
 cpdef object Matrix_apply_BinaryOp2nd_UINT16(
     Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    BinaryOp op,
-    Matrix A,
-    uint16_t y,
+    Matrix Mask=None,
+    BinaryOp accum=None,
+    BinaryOp op=None,
+    Matrix A=None,
+    y=None,
     Descriptor desc=None,
 ):
     if C is None:
@@ -367,11 +367,11 @@ cpdef object Matrix_apply_BinaryOp2nd_UINT16(
 
 cpdef object Matrix_apply_BinaryOp2nd_UINT32(
     Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    BinaryOp op,
-    Matrix A,
-    uint32_t y,
+    Matrix Mask=None,
+    BinaryOp accum=None,
+    BinaryOp op=None,
+    Matrix A=None,
+    y=None,
     Descriptor desc=None,
 ):
     if C is None:
@@ -383,11 +383,11 @@ cpdef object Matrix_apply_BinaryOp2nd_UINT32(
 
 cpdef object Matrix_apply_BinaryOp2nd_UINT64(
     Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    BinaryOp op,
-    Matrix A,
-    uint64_t y,
+    Matrix Mask=None,
+    BinaryOp accum=None,
+    BinaryOp op=None,
+    Matrix A=None,
+    y=None,
     Descriptor desc=None,
 ):
     if C is None:
@@ -399,11 +399,11 @@ cpdef object Matrix_apply_BinaryOp2nd_UINT64(
 
 cpdef object Matrix_apply_BinaryOp2nd_UINT8(
     Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    BinaryOp op,
-    Matrix A,
-    uint8_t y,
+    Matrix Mask=None,
+    BinaryOp accum=None,
+    BinaryOp op=None,
+    Matrix A=None,
+    y=None,
     Descriptor desc=None,
 ):
     if C is None:
@@ -415,13 +415,13 @@ cpdef object Matrix_apply_BinaryOp2nd_UINT8(
 
 cpdef object Matrix_assign(
     Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    Matrix A,
-    Index[::1] I,
-    Index ni,
-    Index[::1] J,
-    Index nj,
+    Matrix Mask=None,
+    BinaryOp accum=None,
+    Matrix A=None,
+    Index[::1] I=None,
+    ni=None,
+    Index[::1] J=None,
+    nj=None,
     Descriptor desc=None,
 ):
     if C is None:
@@ -433,13 +433,13 @@ cpdef object Matrix_assign(
 
 cpdef object Matrix_assign_BOOL(
     Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    bint x,
-    Index[::1] I,
-    Index ni,
-    Index[::1] J,
-    Index nj,
+    Matrix Mask=None,
+    BinaryOp accum=None,
+    x=None,
+    Index[::1] I=None,
+    ni=None,
+    Index[::1] J=None,
+    nj=None,
     Descriptor desc=None,
 ):
     if C is None:
@@ -451,13 +451,13 @@ cpdef object Matrix_assign_BOOL(
 
 cpdef object Matrix_assign_FP32(
     Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    float x,
-    Index[::1] I,
-    Index ni,
-    Index[::1] J,
-    Index nj,
+    Matrix Mask=None,
+    BinaryOp accum=None,
+    x=None,
+    Index[::1] I=None,
+    ni=None,
+    Index[::1] J=None,
+    nj=None,
     Descriptor desc=None,
 ):
     if C is None:
@@ -469,13 +469,13 @@ cpdef object Matrix_assign_FP32(
 
 cpdef object Matrix_assign_FP64(
     Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    double x,
-    Index[::1] I,
-    Index ni,
-    Index[::1] J,
-    Index nj,
+    Matrix Mask=None,
+    BinaryOp accum=None,
+    x=None,
+    Index[::1] I=None,
+    ni=None,
+    Index[::1] J=None,
+    nj=None,
     Descriptor desc=None,
 ):
     if C is None:
@@ -487,13 +487,13 @@ cpdef object Matrix_assign_FP64(
 
 cpdef object Matrix_assign_INT16(
     Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    int16_t x,
-    Index[::1] I,
-    Index ni,
-    Index[::1] J,
-    Index nj,
+    Matrix Mask=None,
+    BinaryOp accum=None,
+    x=None,
+    Index[::1] I=None,
+    ni=None,
+    Index[::1] J=None,
+    nj=None,
     Descriptor desc=None,
 ):
     if C is None:
@@ -505,13 +505,13 @@ cpdef object Matrix_assign_INT16(
 
 cpdef object Matrix_assign_INT32(
     Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    int32_t x,
-    Index[::1] I,
-    Index ni,
-    Index[::1] J,
-    Index nj,
+    Matrix Mask=None,
+    BinaryOp accum=None,
+    x=None,
+    Index[::1] I=None,
+    ni=None,
+    Index[::1] J=None,
+    nj=None,
     Descriptor desc=None,
 ):
     if C is None:
@@ -523,13 +523,13 @@ cpdef object Matrix_assign_INT32(
 
 cpdef object Matrix_assign_INT64(
     Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    int64_t x,
-    Index[::1] I,
-    Index ni,
-    Index[::1] J,
-    Index nj,
+    Matrix Mask=None,
+    BinaryOp accum=None,
+    x=None,
+    Index[::1] I=None,
+    ni=None,
+    Index[::1] J=None,
+    nj=None,
     Descriptor desc=None,
 ):
     if C is None:
@@ -541,13 +541,13 @@ cpdef object Matrix_assign_INT64(
 
 cpdef object Matrix_assign_INT8(
     Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    int8_t x,
-    Index[::1] I,
-    Index ni,
-    Index[::1] J,
-    Index nj,
+    Matrix Mask=None,
+    BinaryOp accum=None,
+    x=None,
+    Index[::1] I=None,
+    ni=None,
+    Index[::1] J=None,
+    nj=None,
     Descriptor desc=None,
 ):
     if C is None:
@@ -559,13 +559,13 @@ cpdef object Matrix_assign_INT8(
 
 cpdef object Matrix_assign_UINT16(
     Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    uint16_t x,
-    Index[::1] I,
-    Index ni,
-    Index[::1] J,
-    Index nj,
+    Matrix Mask=None,
+    BinaryOp accum=None,
+    x=None,
+    Index[::1] I=None,
+    ni=None,
+    Index[::1] J=None,
+    nj=None,
     Descriptor desc=None,
 ):
     if C is None:
@@ -577,13 +577,13 @@ cpdef object Matrix_assign_UINT16(
 
 cpdef object Matrix_assign_UINT32(
     Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    uint32_t x,
-    Index[::1] I,
-    Index ni,
-    Index[::1] J,
-    Index nj,
+    Matrix Mask=None,
+    BinaryOp accum=None,
+    x=None,
+    Index[::1] I=None,
+    ni=None,
+    Index[::1] J=None,
+    nj=None,
     Descriptor desc=None,
 ):
     if C is None:
@@ -595,13 +595,13 @@ cpdef object Matrix_assign_UINT32(
 
 cpdef object Matrix_assign_UINT64(
     Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    uint64_t x,
-    Index[::1] I,
-    Index ni,
-    Index[::1] J,
-    Index nj,
+    Matrix Mask=None,
+    BinaryOp accum=None,
+    x=None,
+    Index[::1] I=None,
+    ni=None,
+    Index[::1] J=None,
+    nj=None,
     Descriptor desc=None,
 ):
     if C is None:
@@ -613,13 +613,13 @@ cpdef object Matrix_assign_UINT64(
 
 cpdef object Matrix_assign_UINT8(
     Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    uint8_t x,
-    Index[::1] I,
-    Index ni,
-    Index[::1] J,
-    Index nj,
+    Matrix Mask=None,
+    BinaryOp accum=None,
+    x=None,
+    Index[::1] I=None,
+    ni=None,
+    Index[::1] J=None,
+    nj=None,
     Descriptor desc=None,
 ):
     if C is None:
@@ -631,10 +631,10 @@ cpdef object Matrix_assign_UINT8(
 
 cpdef object Matrix_build_BOOL(
     Matrix C,
-    Index[::1] I,
-    Index[::1] J,
-    bint[::1] X,
-    Index nvals,
+    Index[::1] I=None,
+    Index[::1] J=None,
+    bint[::1] X=None,
+    nvals=None,
     BinaryOp dup=None,
 ):
     if C is None:
@@ -646,10 +646,10 @@ cpdef object Matrix_build_BOOL(
 
 cpdef object Matrix_build_FP32(
     Matrix C,
-    Index[::1] I,
-    Index[::1] J,
-    float[::1] X,
-    Index nvals,
+    Index[::1] I=None,
+    Index[::1] J=None,
+    float[::1] X=None,
+    nvals=None,
     BinaryOp dup=None,
 ):
     if C is None:
@@ -661,10 +661,10 @@ cpdef object Matrix_build_FP32(
 
 cpdef object Matrix_build_FP64(
     Matrix C,
-    Index[::1] I,
-    Index[::1] J,
-    double[::1] X,
-    Index nvals,
+    Index[::1] I=None,
+    Index[::1] J=None,
+    double[::1] X=None,
+    nvals=None,
     BinaryOp dup=None,
 ):
     if C is None:
@@ -676,10 +676,10 @@ cpdef object Matrix_build_FP64(
 
 cpdef object Matrix_build_INT16(
     Matrix C,
-    Index[::1] I,
-    Index[::1] J,
-    int16_t[::1] X,
-    Index nvals,
+    Index[::1] I=None,
+    Index[::1] J=None,
+    int16_t[::1] X=None,
+    nvals=None,
     BinaryOp dup=None,
 ):
     if C is None:
@@ -691,10 +691,10 @@ cpdef object Matrix_build_INT16(
 
 cpdef object Matrix_build_INT32(
     Matrix C,
-    Index[::1] I,
-    Index[::1] J,
-    int32_t[::1] X,
-    Index nvals,
+    Index[::1] I=None,
+    Index[::1] J=None,
+    int32_t[::1] X=None,
+    nvals=None,
     BinaryOp dup=None,
 ):
     if C is None:
@@ -706,10 +706,10 @@ cpdef object Matrix_build_INT32(
 
 cpdef object Matrix_build_INT64(
     Matrix C,
-    Index[::1] I,
-    Index[::1] J,
-    int64_t[::1] X,
-    Index nvals,
+    Index[::1] I=None,
+    Index[::1] J=None,
+    int64_t[::1] X=None,
+    nvals=None,
     BinaryOp dup=None,
 ):
     if C is None:
@@ -721,10 +721,10 @@ cpdef object Matrix_build_INT64(
 
 cpdef object Matrix_build_INT8(
     Matrix C,
-    Index[::1] I,
-    Index[::1] J,
-    int8_t[::1] X,
-    Index nvals,
+    Index[::1] I=None,
+    Index[::1] J=None,
+    int8_t[::1] X=None,
+    nvals=None,
     BinaryOp dup=None,
 ):
     if C is None:
@@ -736,10 +736,10 @@ cpdef object Matrix_build_INT8(
 
 cpdef object Matrix_build_UINT16(
     Matrix C,
-    Index[::1] I,
-    Index[::1] J,
-    uint16_t[::1] X,
-    Index nvals,
+    Index[::1] I=None,
+    Index[::1] J=None,
+    uint16_t[::1] X=None,
+    nvals=None,
     BinaryOp dup=None,
 ):
     if C is None:
@@ -751,10 +751,10 @@ cpdef object Matrix_build_UINT16(
 
 cpdef object Matrix_build_UINT32(
     Matrix C,
-    Index[::1] I,
-    Index[::1] J,
-    uint32_t[::1] X,
-    Index nvals,
+    Index[::1] I=None,
+    Index[::1] J=None,
+    uint32_t[::1] X=None,
+    nvals=None,
     BinaryOp dup=None,
 ):
     if C is None:
@@ -766,10 +766,10 @@ cpdef object Matrix_build_UINT32(
 
 cpdef object Matrix_build_UINT64(
     Matrix C,
-    Index[::1] I,
-    Index[::1] J,
-    uint64_t[::1] X,
-    Index nvals,
+    Index[::1] I=None,
+    Index[::1] J=None,
+    uint64_t[::1] X=None,
+    nvals=None,
     BinaryOp dup=None,
 ):
     if C is None:
@@ -781,10 +781,10 @@ cpdef object Matrix_build_UINT64(
 
 cpdef object Matrix_build_UINT8(
     Matrix C,
-    Index[::1] I,
-    Index[::1] J,
-    uint8_t[::1] X,
-    Index nvals,
+    Index[::1] I=None,
+    Index[::1] J=None,
+    uint8_t[::1] X=None,
+    nvals=None,
     BinaryOp dup=None,
 ):
     if C is None:
@@ -795,7 +795,7 @@ cpdef object Matrix_build_UINT8(
     func(C, &I[0], &J[0], &X[0], nvals, dup)
 
 cpdef object Matrix_clear(
-    Matrix A=None,
+    Matrix A,
 ):
     if A is None:
         raise TypeError()
@@ -805,7 +805,7 @@ cpdef object Matrix_clear(
     func(A)
 
 cpdef object Matrix_dup(
-    Matrix C=None,
+    Matrix C,
     Matrix A=None,
 ):
     if C is None:
@@ -816,7 +816,7 @@ cpdef object Matrix_dup(
     func(C, A)
 
 cpdef object Matrix_eWiseAdd_BinaryOp(
-    Matrix C=None,
+    Matrix C,
     Matrix Mask=None,
     BinaryOp accum=None,
     BinaryOp add=None,
@@ -832,7 +832,7 @@ cpdef object Matrix_eWiseAdd_BinaryOp(
     func(C, Mask, accum, add, A, B, desc)
 
 cpdef object Matrix_eWiseAdd_Monoid(
-    Matrix C=None,
+    Matrix C,
     Matrix Mask=None,
     BinaryOp accum=None,
     Monoid monoid=None,
@@ -848,7 +848,7 @@ cpdef object Matrix_eWiseAdd_Monoid(
     func(C, Mask, accum, monoid, A, B, desc)
 
 cpdef object Matrix_eWiseAdd_Semiring(
-    Matrix C=None,
+    Matrix C,
     Matrix Mask=None,
     BinaryOp accum=None,
     Semiring semiring=None,
@@ -864,7 +864,7 @@ cpdef object Matrix_eWiseAdd_Semiring(
     func(C, Mask, accum, semiring, A, B, desc)
 
 cpdef object Matrix_eWiseMult_BinaryOp(
-    Matrix C=None,
+    Matrix C,
     Matrix Mask=None,
     BinaryOp accum=None,
     BinaryOp mult=None,
@@ -880,7 +880,7 @@ cpdef object Matrix_eWiseMult_BinaryOp(
     func(C, Mask, accum, mult, A, B, desc)
 
 cpdef object Matrix_eWiseMult_Monoid(
-    Matrix C=None,
+    Matrix C,
     Matrix Mask=None,
     BinaryOp accum=None,
     Monoid monoid=None,
@@ -896,7 +896,7 @@ cpdef object Matrix_eWiseMult_Monoid(
     func(C, Mask, accum, monoid, A, B, desc)
 
 cpdef object Matrix_eWiseMult_Semiring(
-    Matrix C=None,
+    Matrix C,
     Matrix Mask=None,
     BinaryOp accum=None,
     Semiring semiring=None,
@@ -913,13 +913,13 @@ cpdef object Matrix_eWiseMult_Semiring(
 
 cpdef object Matrix_extract(
     Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    Matrix A,
-    Index[::1] I,
-    Index ni,
-    Index[::1] J,
-    Index nj,
+    Matrix Mask=None,
+    BinaryOp accum=None,
+    Matrix A=None,
+    Index[::1] I=None,
+    ni=None,
+    Index[::1] J=None,
+    nj=None,
     Descriptor desc=None,
 ):
     if C is None:
@@ -930,7 +930,7 @@ cpdef object Matrix_extract(
     func(C, Mask, accum, A, &I[0], ni, &J[0], nj, desc)
 
 cpdef object Matrix_free(
-    Matrix A=None,
+    Matrix A,
 ):
     if A is None:
         raise TypeError()
@@ -940,7 +940,7 @@ cpdef object Matrix_free(
     func(A)
 
 cpdef object Matrix_kronecker_BinaryOp(
-    Matrix C=None,
+    Matrix C,
     Matrix M=None,
     BinaryOp accum=None,
     BinaryOp op=None,
@@ -956,7 +956,7 @@ cpdef object Matrix_kronecker_BinaryOp(
     func(C, M, accum, op, A, B, desc)
 
 cpdef object Matrix_kronecker_Monoid(
-    Matrix C=None,
+    Matrix C,
     Matrix M=None,
     BinaryOp accum=None,
     Monoid monoid=None,
@@ -972,7 +972,7 @@ cpdef object Matrix_kronecker_Monoid(
     func(C, M, accum, monoid, A, B, desc)
 
 cpdef object Matrix_kronecker_Semiring(
-    Matrix C=None,
+    Matrix C,
     Matrix M=None,
     BinaryOp accum=None,
     Semiring semiring=None,
@@ -989,9 +989,9 @@ cpdef object Matrix_kronecker_Semiring(
 
 cpdef object Matrix_new(
     Matrix A,
-    Type type,
-    Index nrows,
-    Index ncols,
+    Type type=None,
+    nrows=None,
+    ncols=None,
 ):
     if A is None:
         raise TypeError()
@@ -1001,7 +1001,7 @@ cpdef object Matrix_new(
     func(A, type, nrows, ncols)
 
 cpdef object Matrix_reduce_BinaryOp(
-    Vector w=None,
+    Vector w,
     Vector mask=None,
     BinaryOp accum=None,
     BinaryOp op=None,
@@ -1016,7 +1016,7 @@ cpdef object Matrix_reduce_BinaryOp(
     func(w, mask, accum, op, A, desc)
 
 cpdef object Matrix_reduce_Monoid(
-    Vector w=None,
+    Vector w,
     Vector mask=None,
     BinaryOp accum=None,
     Monoid monoid=None,
@@ -1032,8 +1032,8 @@ cpdef object Matrix_reduce_Monoid(
 
 cpdef object Matrix_removeElement(
     Matrix C,
-    Index i,
-    Index j,
+    i=None,
+    j=None,
 ):
     if C is None:
         raise TypeError()
@@ -1044,8 +1044,8 @@ cpdef object Matrix_removeElement(
 
 cpdef object Matrix_resize(
     Matrix C,
-    Index nrows_new,
-    Index ncols_new,
+    nrows_new=None,
+    ncols_new=None,
 ):
     if C is None:
         raise TypeError()
@@ -1056,9 +1056,9 @@ cpdef object Matrix_resize(
 
 cpdef object Matrix_setElement_BOOL(
     Matrix C,
-    bint x,
-    Index i,
-    Index j,
+    x=None,
+    i=None,
+    j=None,
 ):
     if C is None:
         raise TypeError()
@@ -1069,9 +1069,9 @@ cpdef object Matrix_setElement_BOOL(
 
 cpdef object Matrix_setElement_FP32(
     Matrix C,
-    float x,
-    Index i,
-    Index j,
+    x=None,
+    i=None,
+    j=None,
 ):
     if C is None:
         raise TypeError()
@@ -1082,9 +1082,9 @@ cpdef object Matrix_setElement_FP32(
 
 cpdef object Matrix_setElement_FP64(
     Matrix C,
-    double x,
-    Index i,
-    Index j,
+    x=None,
+    i=None,
+    j=None,
 ):
     if C is None:
         raise TypeError()
@@ -1095,9 +1095,9 @@ cpdef object Matrix_setElement_FP64(
 
 cpdef object Matrix_setElement_INT16(
     Matrix C,
-    int16_t x,
-    Index i,
-    Index j,
+    x=None,
+    i=None,
+    j=None,
 ):
     if C is None:
         raise TypeError()
@@ -1108,9 +1108,9 @@ cpdef object Matrix_setElement_INT16(
 
 cpdef object Matrix_setElement_INT32(
     Matrix C,
-    int32_t x,
-    Index i,
-    Index j,
+    x=None,
+    i=None,
+    j=None,
 ):
     if C is None:
         raise TypeError()
@@ -1121,9 +1121,9 @@ cpdef object Matrix_setElement_INT32(
 
 cpdef object Matrix_setElement_INT64(
     Matrix C,
-    int64_t x,
-    Index i,
-    Index j,
+    x=None,
+    i=None,
+    j=None,
 ):
     if C is None:
         raise TypeError()
@@ -1134,9 +1134,9 @@ cpdef object Matrix_setElement_INT64(
 
 cpdef object Matrix_setElement_INT8(
     Matrix C,
-    int8_t x,
-    Index i,
-    Index j,
+    x=None,
+    i=None,
+    j=None,
 ):
     if C is None:
         raise TypeError()
@@ -1147,9 +1147,9 @@ cpdef object Matrix_setElement_INT8(
 
 cpdef object Matrix_setElement_UINT16(
     Matrix C,
-    uint16_t x,
-    Index i,
-    Index j,
+    x=None,
+    i=None,
+    j=None,
 ):
     if C is None:
         raise TypeError()
@@ -1160,9 +1160,9 @@ cpdef object Matrix_setElement_UINT16(
 
 cpdef object Matrix_setElement_UINT32(
     Matrix C,
-    uint32_t x,
-    Index i,
-    Index j,
+    x=None,
+    i=None,
+    j=None,
 ):
     if C is None:
         raise TypeError()
@@ -1173,9 +1173,9 @@ cpdef object Matrix_setElement_UINT32(
 
 cpdef object Matrix_setElement_UINT64(
     Matrix C,
-    uint64_t x,
-    Index i,
-    Index j,
+    x=None,
+    i=None,
+    j=None,
 ):
     if C is None:
         raise TypeError()
@@ -1186,9 +1186,9 @@ cpdef object Matrix_setElement_UINT64(
 
 cpdef object Matrix_setElement_UINT8(
     Matrix C,
-    uint8_t x,
-    Index i,
-    Index j,
+    x=None,
+    i=None,
+    j=None,
 ):
     if C is None:
         raise TypeError()
@@ -1198,7 +1198,7 @@ cpdef object Matrix_setElement_UINT8(
     func(C, x, i, j)
 
 cpdef object Matrix_wait(
-    Matrix A=None,
+    Matrix A,
 ):
     if A is None:
         raise TypeError()
@@ -1209,12 +1209,12 @@ cpdef object Matrix_wait(
 
 cpdef object Row_assign(
     Matrix C,
-    Vector mask,
-    BinaryOp accum,
-    Vector u,
-    Index i,
-    Index[::1] J,
-    Index nj,
+    Vector mask=None,
+    BinaryOp accum=None,
+    Vector u=None,
+    i=None,
+    Index[::1] J=None,
+    nj=None,
     Descriptor desc=None,
 ):
     if C is None:
@@ -1225,7 +1225,7 @@ cpdef object Row_assign(
     func(C, mask, accum, u, i, &J[0], nj, desc)
 
 cpdef object Vector_apply(
-    Vector w=None,
+    Vector w,
     Vector mask=None,
     BinaryOp accum=None,
     UnaryOp op=None,
@@ -1241,10 +1241,10 @@ cpdef object Vector_apply(
 
 cpdef object Vector_apply_BinaryOp1st_BOOL(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    BinaryOp op,
-    bint x,
+    Vector mask=None,
+    BinaryOp accum=None,
+    BinaryOp op=None,
+    x=None,
     Vector u=None,
     Descriptor desc=None,
 ):
@@ -1257,10 +1257,10 @@ cpdef object Vector_apply_BinaryOp1st_BOOL(
 
 cpdef object Vector_apply_BinaryOp1st_FP32(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    BinaryOp op,
-    float x,
+    Vector mask=None,
+    BinaryOp accum=None,
+    BinaryOp op=None,
+    x=None,
     Vector u=None,
     Descriptor desc=None,
 ):
@@ -1273,10 +1273,10 @@ cpdef object Vector_apply_BinaryOp1st_FP32(
 
 cpdef object Vector_apply_BinaryOp1st_FP64(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    BinaryOp op,
-    double x,
+    Vector mask=None,
+    BinaryOp accum=None,
+    BinaryOp op=None,
+    x=None,
     Vector u=None,
     Descriptor desc=None,
 ):
@@ -1289,10 +1289,10 @@ cpdef object Vector_apply_BinaryOp1st_FP64(
 
 cpdef object Vector_apply_BinaryOp1st_INT16(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    BinaryOp op,
-    int16_t x,
+    Vector mask=None,
+    BinaryOp accum=None,
+    BinaryOp op=None,
+    x=None,
     Vector u=None,
     Descriptor desc=None,
 ):
@@ -1305,10 +1305,10 @@ cpdef object Vector_apply_BinaryOp1st_INT16(
 
 cpdef object Vector_apply_BinaryOp1st_INT32(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    BinaryOp op,
-    int32_t x,
+    Vector mask=None,
+    BinaryOp accum=None,
+    BinaryOp op=None,
+    x=None,
     Vector u=None,
     Descriptor desc=None,
 ):
@@ -1321,10 +1321,10 @@ cpdef object Vector_apply_BinaryOp1st_INT32(
 
 cpdef object Vector_apply_BinaryOp1st_INT64(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    BinaryOp op,
-    int64_t x,
+    Vector mask=None,
+    BinaryOp accum=None,
+    BinaryOp op=None,
+    x=None,
     Vector u=None,
     Descriptor desc=None,
 ):
@@ -1337,10 +1337,10 @@ cpdef object Vector_apply_BinaryOp1st_INT64(
 
 cpdef object Vector_apply_BinaryOp1st_INT8(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    BinaryOp op,
-    int8_t x,
+    Vector mask=None,
+    BinaryOp accum=None,
+    BinaryOp op=None,
+    x=None,
     Vector u=None,
     Descriptor desc=None,
 ):
@@ -1353,10 +1353,10 @@ cpdef object Vector_apply_BinaryOp1st_INT8(
 
 cpdef object Vector_apply_BinaryOp1st_UINT16(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    BinaryOp op,
-    uint16_t x,
+    Vector mask=None,
+    BinaryOp accum=None,
+    BinaryOp op=None,
+    x=None,
     Vector u=None,
     Descriptor desc=None,
 ):
@@ -1369,10 +1369,10 @@ cpdef object Vector_apply_BinaryOp1st_UINT16(
 
 cpdef object Vector_apply_BinaryOp1st_UINT32(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    BinaryOp op,
-    uint32_t x,
+    Vector mask=None,
+    BinaryOp accum=None,
+    BinaryOp op=None,
+    x=None,
     Vector u=None,
     Descriptor desc=None,
 ):
@@ -1385,10 +1385,10 @@ cpdef object Vector_apply_BinaryOp1st_UINT32(
 
 cpdef object Vector_apply_BinaryOp1st_UINT64(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    BinaryOp op,
-    uint64_t x,
+    Vector mask=None,
+    BinaryOp accum=None,
+    BinaryOp op=None,
+    x=None,
     Vector u=None,
     Descriptor desc=None,
 ):
@@ -1401,10 +1401,10 @@ cpdef object Vector_apply_BinaryOp1st_UINT64(
 
 cpdef object Vector_apply_BinaryOp1st_UINT8(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    BinaryOp op,
-    uint8_t x,
+    Vector mask=None,
+    BinaryOp accum=None,
+    BinaryOp op=None,
+    x=None,
     Vector u=None,
     Descriptor desc=None,
 ):
@@ -1417,11 +1417,11 @@ cpdef object Vector_apply_BinaryOp1st_UINT8(
 
 cpdef object Vector_apply_BinaryOp2nd_BOOL(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    BinaryOp op,
-    Vector u,
-    bint y,
+    Vector mask=None,
+    BinaryOp accum=None,
+    BinaryOp op=None,
+    Vector u=None,
+    y=None,
     Descriptor desc=None,
 ):
     if w is None:
@@ -1433,11 +1433,11 @@ cpdef object Vector_apply_BinaryOp2nd_BOOL(
 
 cpdef object Vector_apply_BinaryOp2nd_FP32(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    BinaryOp op,
-    Vector u,
-    float y,
+    Vector mask=None,
+    BinaryOp accum=None,
+    BinaryOp op=None,
+    Vector u=None,
+    y=None,
     Descriptor desc=None,
 ):
     if w is None:
@@ -1449,11 +1449,11 @@ cpdef object Vector_apply_BinaryOp2nd_FP32(
 
 cpdef object Vector_apply_BinaryOp2nd_FP64(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    BinaryOp op,
-    Vector u,
-    double y,
+    Vector mask=None,
+    BinaryOp accum=None,
+    BinaryOp op=None,
+    Vector u=None,
+    y=None,
     Descriptor desc=None,
 ):
     if w is None:
@@ -1465,11 +1465,11 @@ cpdef object Vector_apply_BinaryOp2nd_FP64(
 
 cpdef object Vector_apply_BinaryOp2nd_INT16(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    BinaryOp op,
-    Vector u,
-    int16_t y,
+    Vector mask=None,
+    BinaryOp accum=None,
+    BinaryOp op=None,
+    Vector u=None,
+    y=None,
     Descriptor desc=None,
 ):
     if w is None:
@@ -1481,11 +1481,11 @@ cpdef object Vector_apply_BinaryOp2nd_INT16(
 
 cpdef object Vector_apply_BinaryOp2nd_INT32(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    BinaryOp op,
-    Vector u,
-    int32_t y,
+    Vector mask=None,
+    BinaryOp accum=None,
+    BinaryOp op=None,
+    Vector u=None,
+    y=None,
     Descriptor desc=None,
 ):
     if w is None:
@@ -1497,11 +1497,11 @@ cpdef object Vector_apply_BinaryOp2nd_INT32(
 
 cpdef object Vector_apply_BinaryOp2nd_INT64(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    BinaryOp op,
-    Vector u,
-    int64_t y,
+    Vector mask=None,
+    BinaryOp accum=None,
+    BinaryOp op=None,
+    Vector u=None,
+    y=None,
     Descriptor desc=None,
 ):
     if w is None:
@@ -1513,11 +1513,11 @@ cpdef object Vector_apply_BinaryOp2nd_INT64(
 
 cpdef object Vector_apply_BinaryOp2nd_INT8(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    BinaryOp op,
-    Vector u,
-    int8_t y,
+    Vector mask=None,
+    BinaryOp accum=None,
+    BinaryOp op=None,
+    Vector u=None,
+    y=None,
     Descriptor desc=None,
 ):
     if w is None:
@@ -1529,11 +1529,11 @@ cpdef object Vector_apply_BinaryOp2nd_INT8(
 
 cpdef object Vector_apply_BinaryOp2nd_UINT16(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    BinaryOp op,
-    Vector u,
-    uint16_t y,
+    Vector mask=None,
+    BinaryOp accum=None,
+    BinaryOp op=None,
+    Vector u=None,
+    y=None,
     Descriptor desc=None,
 ):
     if w is None:
@@ -1545,11 +1545,11 @@ cpdef object Vector_apply_BinaryOp2nd_UINT16(
 
 cpdef object Vector_apply_BinaryOp2nd_UINT32(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    BinaryOp op,
-    Vector u,
-    uint32_t y,
+    Vector mask=None,
+    BinaryOp accum=None,
+    BinaryOp op=None,
+    Vector u=None,
+    y=None,
     Descriptor desc=None,
 ):
     if w is None:
@@ -1561,11 +1561,11 @@ cpdef object Vector_apply_BinaryOp2nd_UINT32(
 
 cpdef object Vector_apply_BinaryOp2nd_UINT64(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    BinaryOp op,
-    Vector u,
-    uint64_t y,
+    Vector mask=None,
+    BinaryOp accum=None,
+    BinaryOp op=None,
+    Vector u=None,
+    y=None,
     Descriptor desc=None,
 ):
     if w is None:
@@ -1577,11 +1577,11 @@ cpdef object Vector_apply_BinaryOp2nd_UINT64(
 
 cpdef object Vector_apply_BinaryOp2nd_UINT8(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    BinaryOp op,
-    Vector u,
-    uint8_t y,
+    Vector mask=None,
+    BinaryOp accum=None,
+    BinaryOp op=None,
+    Vector u=None,
+    y=None,
     Descriptor desc=None,
 ):
     if w is None:
@@ -1593,11 +1593,11 @@ cpdef object Vector_apply_BinaryOp2nd_UINT8(
 
 cpdef object Vector_assign(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    Vector u,
-    Index[::1] I,
-    Index ni,
+    Vector mask=None,
+    BinaryOp accum=None,
+    Vector u=None,
+    Index[::1] I=None,
+    ni=None,
     Descriptor desc=None,
 ):
     if w is None:
@@ -1609,11 +1609,11 @@ cpdef object Vector_assign(
 
 cpdef object Vector_assign_BOOL(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    bint x,
-    Index[::1] I,
-    Index ni,
+    Vector mask=None,
+    BinaryOp accum=None,
+    x=None,
+    Index[::1] I=None,
+    ni=None,
     Descriptor desc=None,
 ):
     if w is None:
@@ -1625,11 +1625,11 @@ cpdef object Vector_assign_BOOL(
 
 cpdef object Vector_assign_FP32(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    float x,
-    Index[::1] I,
-    Index ni,
+    Vector mask=None,
+    BinaryOp accum=None,
+    x=None,
+    Index[::1] I=None,
+    ni=None,
     Descriptor desc=None,
 ):
     if w is None:
@@ -1641,11 +1641,11 @@ cpdef object Vector_assign_FP32(
 
 cpdef object Vector_assign_FP64(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    double x,
-    Index[::1] I,
-    Index ni,
+    Vector mask=None,
+    BinaryOp accum=None,
+    x=None,
+    Index[::1] I=None,
+    ni=None,
     Descriptor desc=None,
 ):
     if w is None:
@@ -1657,11 +1657,11 @@ cpdef object Vector_assign_FP64(
 
 cpdef object Vector_assign_INT16(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    int16_t x,
-    Index[::1] I,
-    Index ni,
+    Vector mask=None,
+    BinaryOp accum=None,
+    x=None,
+    Index[::1] I=None,
+    ni=None,
     Descriptor desc=None,
 ):
     if w is None:
@@ -1673,11 +1673,11 @@ cpdef object Vector_assign_INT16(
 
 cpdef object Vector_assign_INT32(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    int32_t x,
-    Index[::1] I,
-    Index ni,
+    Vector mask=None,
+    BinaryOp accum=None,
+    x=None,
+    Index[::1] I=None,
+    ni=None,
     Descriptor desc=None,
 ):
     if w is None:
@@ -1689,11 +1689,11 @@ cpdef object Vector_assign_INT32(
 
 cpdef object Vector_assign_INT64(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    int64_t x,
-    Index[::1] I,
-    Index ni,
+    Vector mask=None,
+    BinaryOp accum=None,
+    x=None,
+    Index[::1] I=None,
+    ni=None,
     Descriptor desc=None,
 ):
     if w is None:
@@ -1705,11 +1705,11 @@ cpdef object Vector_assign_INT64(
 
 cpdef object Vector_assign_INT8(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    int8_t x,
-    Index[::1] I,
-    Index ni,
+    Vector mask=None,
+    BinaryOp accum=None,
+    x=None,
+    Index[::1] I=None,
+    ni=None,
     Descriptor desc=None,
 ):
     if w is None:
@@ -1721,11 +1721,11 @@ cpdef object Vector_assign_INT8(
 
 cpdef object Vector_assign_UINT16(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    uint16_t x,
-    Index[::1] I,
-    Index ni,
+    Vector mask=None,
+    BinaryOp accum=None,
+    x=None,
+    Index[::1] I=None,
+    ni=None,
     Descriptor desc=None,
 ):
     if w is None:
@@ -1737,11 +1737,11 @@ cpdef object Vector_assign_UINT16(
 
 cpdef object Vector_assign_UINT32(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    uint32_t x,
-    Index[::1] I,
-    Index ni,
+    Vector mask=None,
+    BinaryOp accum=None,
+    x=None,
+    Index[::1] I=None,
+    ni=None,
     Descriptor desc=None,
 ):
     if w is None:
@@ -1753,11 +1753,11 @@ cpdef object Vector_assign_UINT32(
 
 cpdef object Vector_assign_UINT64(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    uint64_t x,
-    Index[::1] I,
-    Index ni,
+    Vector mask=None,
+    BinaryOp accum=None,
+    x=None,
+    Index[::1] I=None,
+    ni=None,
     Descriptor desc=None,
 ):
     if w is None:
@@ -1769,11 +1769,11 @@ cpdef object Vector_assign_UINT64(
 
 cpdef object Vector_assign_UINT8(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    uint8_t x,
-    Index[::1] I,
-    Index ni,
+    Vector mask=None,
+    BinaryOp accum=None,
+    x=None,
+    Index[::1] I=None,
+    ni=None,
     Descriptor desc=None,
 ):
     if w is None:
@@ -1785,9 +1785,9 @@ cpdef object Vector_assign_UINT8(
 
 cpdef object Vector_build_BOOL(
     Vector w,
-    Index[::1] I,
-    bint[::1] X,
-    Index nvals,
+    Index[::1] I=None,
+    bint[::1] X=None,
+    nvals=None,
     BinaryOp dup=None,
 ):
     if w is None:
@@ -1799,9 +1799,9 @@ cpdef object Vector_build_BOOL(
 
 cpdef object Vector_build_FP32(
     Vector w,
-    Index[::1] I,
-    float[::1] X,
-    Index nvals,
+    Index[::1] I=None,
+    float[::1] X=None,
+    nvals=None,
     BinaryOp dup=None,
 ):
     if w is None:
@@ -1813,9 +1813,9 @@ cpdef object Vector_build_FP32(
 
 cpdef object Vector_build_FP64(
     Vector w,
-    Index[::1] I,
-    double[::1] X,
-    Index nvals,
+    Index[::1] I=None,
+    double[::1] X=None,
+    nvals=None,
     BinaryOp dup=None,
 ):
     if w is None:
@@ -1827,9 +1827,9 @@ cpdef object Vector_build_FP64(
 
 cpdef object Vector_build_INT16(
     Vector w,
-    Index[::1] I,
-    int16_t[::1] X,
-    Index nvals,
+    Index[::1] I=None,
+    int16_t[::1] X=None,
+    nvals=None,
     BinaryOp dup=None,
 ):
     if w is None:
@@ -1841,9 +1841,9 @@ cpdef object Vector_build_INT16(
 
 cpdef object Vector_build_INT32(
     Vector w,
-    Index[::1] I,
-    int32_t[::1] X,
-    Index nvals,
+    Index[::1] I=None,
+    int32_t[::1] X=None,
+    nvals=None,
     BinaryOp dup=None,
 ):
     if w is None:
@@ -1855,9 +1855,9 @@ cpdef object Vector_build_INT32(
 
 cpdef object Vector_build_INT64(
     Vector w,
-    Index[::1] I,
-    int64_t[::1] X,
-    Index nvals,
+    Index[::1] I=None,
+    int64_t[::1] X=None,
+    nvals=None,
     BinaryOp dup=None,
 ):
     if w is None:
@@ -1869,9 +1869,9 @@ cpdef object Vector_build_INT64(
 
 cpdef object Vector_build_INT8(
     Vector w,
-    Index[::1] I,
-    int8_t[::1] X,
-    Index nvals,
+    Index[::1] I=None,
+    int8_t[::1] X=None,
+    nvals=None,
     BinaryOp dup=None,
 ):
     if w is None:
@@ -1883,9 +1883,9 @@ cpdef object Vector_build_INT8(
 
 cpdef object Vector_build_UINT16(
     Vector w,
-    Index[::1] I,
-    uint16_t[::1] X,
-    Index nvals,
+    Index[::1] I=None,
+    uint16_t[::1] X=None,
+    nvals=None,
     BinaryOp dup=None,
 ):
     if w is None:
@@ -1897,9 +1897,9 @@ cpdef object Vector_build_UINT16(
 
 cpdef object Vector_build_UINT32(
     Vector w,
-    Index[::1] I,
-    uint32_t[::1] X,
-    Index nvals,
+    Index[::1] I=None,
+    uint32_t[::1] X=None,
+    nvals=None,
     BinaryOp dup=None,
 ):
     if w is None:
@@ -1911,9 +1911,9 @@ cpdef object Vector_build_UINT32(
 
 cpdef object Vector_build_UINT64(
     Vector w,
-    Index[::1] I,
-    uint64_t[::1] X,
-    Index nvals,
+    Index[::1] I=None,
+    uint64_t[::1] X=None,
+    nvals=None,
     BinaryOp dup=None,
 ):
     if w is None:
@@ -1925,9 +1925,9 @@ cpdef object Vector_build_UINT64(
 
 cpdef object Vector_build_UINT8(
     Vector w,
-    Index[::1] I,
-    uint8_t[::1] X,
-    Index nvals,
+    Index[::1] I=None,
+    uint8_t[::1] X=None,
+    nvals=None,
     BinaryOp dup=None,
 ):
     if w is None:
@@ -1938,7 +1938,7 @@ cpdef object Vector_build_UINT8(
     func(w, &I[0], &X[0], nvals, dup)
 
 cpdef object Vector_clear(
-    Vector v=None,
+    Vector v,
 ):
     if v is None:
         raise TypeError()
@@ -1948,7 +1948,7 @@ cpdef object Vector_clear(
     func(v)
 
 cpdef object Vector_dup(
-    Vector w=None,
+    Vector w,
     Vector u=None,
 ):
     if w is None:
@@ -1959,7 +1959,7 @@ cpdef object Vector_dup(
     func(w, u)
 
 cpdef object Vector_eWiseAdd_BinaryOp(
-    Vector w=None,
+    Vector w,
     Vector mask=None,
     BinaryOp accum=None,
     BinaryOp add=None,
@@ -1975,7 +1975,7 @@ cpdef object Vector_eWiseAdd_BinaryOp(
     func(w, mask, accum, add, u, v, desc)
 
 cpdef object Vector_eWiseAdd_Monoid(
-    Vector w=None,
+    Vector w,
     Vector mask=None,
     BinaryOp accum=None,
     Monoid monoid=None,
@@ -1991,7 +1991,7 @@ cpdef object Vector_eWiseAdd_Monoid(
     func(w, mask, accum, monoid, u, v, desc)
 
 cpdef object Vector_eWiseAdd_Semiring(
-    Vector w=None,
+    Vector w,
     Vector mask=None,
     BinaryOp accum=None,
     Semiring semiring=None,
@@ -2007,7 +2007,7 @@ cpdef object Vector_eWiseAdd_Semiring(
     func(w, mask, accum, semiring, u, v, desc)
 
 cpdef object Vector_eWiseMult_BinaryOp(
-    Vector w=None,
+    Vector w,
     Vector mask=None,
     BinaryOp accum=None,
     BinaryOp mult=None,
@@ -2023,7 +2023,7 @@ cpdef object Vector_eWiseMult_BinaryOp(
     func(w, mask, accum, mult, u, v, desc)
 
 cpdef object Vector_eWiseMult_Monoid(
-    Vector w=None,
+    Vector w,
     Vector mask=None,
     BinaryOp accum=None,
     Monoid monoid=None,
@@ -2039,7 +2039,7 @@ cpdef object Vector_eWiseMult_Monoid(
     func(w, mask, accum, monoid, u, v, desc)
 
 cpdef object Vector_eWiseMult_Semiring(
-    Vector w=None,
+    Vector w,
     Vector mask=None,
     BinaryOp accum=None,
     Semiring semiring=None,
@@ -2056,11 +2056,11 @@ cpdef object Vector_eWiseMult_Semiring(
 
 cpdef object Vector_extract(
     Vector w,
-    Vector mask,
-    BinaryOp accum,
-    Vector u,
-    Index[::1] I,
-    Index ni,
+    Vector mask=None,
+    BinaryOp accum=None,
+    Vector u=None,
+    Index[::1] I=None,
+    ni=None,
     Descriptor desc=None,
 ):
     if w is None:
@@ -2071,7 +2071,7 @@ cpdef object Vector_extract(
     func(w, mask, accum, u, &I[0], ni, desc)
 
 cpdef object Vector_free(
-    Vector v=None,
+    Vector v,
 ):
     if v is None:
         raise TypeError()
@@ -2082,8 +2082,8 @@ cpdef object Vector_free(
 
 cpdef object Vector_new(
     Vector v,
-    Type type,
-    Index n,
+    Type type=None,
+    n=None,
 ):
     if v is None:
         raise TypeError()
@@ -2094,7 +2094,7 @@ cpdef object Vector_new(
 
 cpdef object Vector_removeElement(
     Vector v,
-    Index i,
+    i=None,
 ):
     if v is None:
         raise TypeError()
@@ -2105,7 +2105,7 @@ cpdef object Vector_removeElement(
 
 cpdef object Vector_resize(
     Vector w,
-    Index nrows_new,
+    nrows_new=None,
 ):
     if w is None:
         raise TypeError()
@@ -2116,8 +2116,8 @@ cpdef object Vector_resize(
 
 cpdef object Vector_setElement_BOOL(
     Vector w,
-    bint x,
-    Index i,
+    x=None,
+    i=None,
 ):
     if w is None:
         raise TypeError()
@@ -2128,8 +2128,8 @@ cpdef object Vector_setElement_BOOL(
 
 cpdef object Vector_setElement_FP32(
     Vector w,
-    float x,
-    Index i,
+    x=None,
+    i=None,
 ):
     if w is None:
         raise TypeError()
@@ -2140,8 +2140,8 @@ cpdef object Vector_setElement_FP32(
 
 cpdef object Vector_setElement_FP64(
     Vector w,
-    double x,
-    Index i,
+    x=None,
+    i=None,
 ):
     if w is None:
         raise TypeError()
@@ -2152,8 +2152,8 @@ cpdef object Vector_setElement_FP64(
 
 cpdef object Vector_setElement_INT16(
     Vector w,
-    int16_t x,
-    Index i,
+    x=None,
+    i=None,
 ):
     if w is None:
         raise TypeError()
@@ -2164,8 +2164,8 @@ cpdef object Vector_setElement_INT16(
 
 cpdef object Vector_setElement_INT32(
     Vector w,
-    int32_t x,
-    Index i,
+    x=None,
+    i=None,
 ):
     if w is None:
         raise TypeError()
@@ -2176,8 +2176,8 @@ cpdef object Vector_setElement_INT32(
 
 cpdef object Vector_setElement_INT64(
     Vector w,
-    int64_t x,
-    Index i,
+    x=None,
+    i=None,
 ):
     if w is None:
         raise TypeError()
@@ -2188,8 +2188,8 @@ cpdef object Vector_setElement_INT64(
 
 cpdef object Vector_setElement_INT8(
     Vector w,
-    int8_t x,
-    Index i,
+    x=None,
+    i=None,
 ):
     if w is None:
         raise TypeError()
@@ -2200,8 +2200,8 @@ cpdef object Vector_setElement_INT8(
 
 cpdef object Vector_setElement_UINT16(
     Vector w,
-    uint16_t x,
-    Index i,
+    x=None,
+    i=None,
 ):
     if w is None:
         raise TypeError()
@@ -2212,8 +2212,8 @@ cpdef object Vector_setElement_UINT16(
 
 cpdef object Vector_setElement_UINT32(
     Vector w,
-    uint32_t x,
-    Index i,
+    x=None,
+    i=None,
 ):
     if w is None:
         raise TypeError()
@@ -2224,8 +2224,8 @@ cpdef object Vector_setElement_UINT32(
 
 cpdef object Vector_setElement_UINT64(
     Vector w,
-    uint64_t x,
-    Index i,
+    x=None,
+    i=None,
 ):
     if w is None:
         raise TypeError()
@@ -2236,8 +2236,8 @@ cpdef object Vector_setElement_UINT64(
 
 cpdef object Vector_setElement_UINT8(
     Vector w,
-    uint8_t x,
-    Index i,
+    x=None,
+    i=None,
 ):
     if w is None:
         raise TypeError()
@@ -2247,7 +2247,7 @@ cpdef object Vector_setElement_UINT8(
     func(w, x, i)
 
 cpdef object Vector_wait(
-    Vector v=None,
+    Vector v,
 ):
     if v is None:
         raise TypeError()
@@ -2267,7 +2267,7 @@ cpdef object init(
     func(mode)
 
 cpdef object mxm(
-    Matrix C=None,
+    Matrix C,
     Matrix Mask=None,
     BinaryOp accum=None,
     Semiring semiring=None,
@@ -2283,7 +2283,7 @@ cpdef object mxm(
     func(C, Mask, accum, semiring, A, B, desc)
 
 cpdef object mxv(
-    Vector w=None,
+    Vector w,
     Vector mask=None,
     BinaryOp accum=None,
     Semiring semiring=None,
@@ -2299,7 +2299,7 @@ cpdef object mxv(
     func(w, mask, accum, semiring, A, u, desc)
 
 cpdef object transpose(
-    Matrix C=None,
+    Matrix C,
     Matrix Mask=None,
     BinaryOp accum=None,
     Matrix A=None,
@@ -2313,7 +2313,7 @@ cpdef object transpose(
     func(C, Mask, accum, A, desc)
 
 cpdef object vxm(
-    Vector w=None,
+    Vector w,
     Vector mask=None,
     BinaryOp accum=None,
     Semiring semiring=None,
