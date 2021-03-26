@@ -22,10 +22,10 @@ gen: scripts/GraphBLAS-processed.h
 	$(PYTHON) scripts/automate.py
 
 cy:
-	$(PYTHON) setup.py build_ext --inplace
+	$(PYTHON) setup.py build_ext --inplace -j 8
 
 ss:
-	$(PYTHON) setup_ss.py build_ext --inplace
+	$(PYTHON) setup_ss.py build_ext --inplace -j 8
 
 inplace: cy ss
 

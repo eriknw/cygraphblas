@@ -2144,10 +2144,8 @@ cdef UnaryOp TRUNC_FP32
 cdef UnaryOp TRUNC_FP64
 
 ctypedef object (*Col_subassign_ptr)(Matrix, Vector, BinaryOp, Vector, Index*, Index, Index, Descriptor)
-ctypedef object (*Matrix_apply_BinaryOp1st_ptr)(Matrix, Matrix, BinaryOp, BinaryOp, Scalar, Matrix, Descriptor)
 ctypedef object (*Matrix_apply_BinaryOp1st_FC32_ptr)(Matrix, Matrix, BinaryOp, BinaryOp, float complex, Matrix, Descriptor)
 ctypedef object (*Matrix_apply_BinaryOp1st_FC64_ptr)(Matrix, Matrix, BinaryOp, BinaryOp, double complex, Matrix, Descriptor)
-ctypedef object (*Matrix_apply_BinaryOp2nd_ptr)(Matrix, Matrix, BinaryOp, BinaryOp, Matrix, Scalar, Descriptor)
 ctypedef object (*Matrix_apply_BinaryOp2nd_FC32_ptr)(Matrix, Matrix, BinaryOp, BinaryOp, Matrix, float complex, Descriptor)
 ctypedef object (*Matrix_apply_BinaryOp2nd_FC64_ptr)(Matrix, Matrix, BinaryOp, BinaryOp, Matrix, double complex, Descriptor)
 ctypedef object (*Matrix_assign_FC32_ptr)(Matrix, Matrix, BinaryOp, float complex, Index*, Index, Index*, Index, Descriptor)
@@ -2155,7 +2153,6 @@ ctypedef object (*Matrix_assign_FC64_ptr)(Matrix, Matrix, BinaryOp, double compl
 ctypedef object (*Matrix_build_FC32_ptr)(Matrix, Index*, Index*, float complex*, Index, BinaryOp)
 ctypedef object (*Matrix_build_FC64_ptr)(Matrix, Index*, Index*, double complex*, Index, BinaryOp)
 ctypedef object (*Matrix_resize_ptr)(Matrix, Index, Index)
-ctypedef object (*Matrix_select_ptr)(Matrix, Matrix, BinaryOp, SelectOp, Matrix, Scalar, Descriptor)
 ctypedef object (*Matrix_setElement_FC32_ptr)(Matrix, float complex, Index, Index)
 ctypedef object (*Matrix_setElement_FC64_ptr)(Matrix, double complex, Index, Index)
 ctypedef object (*Matrix_subassign_ptr)(Matrix, Matrix, BinaryOp, Matrix, Index*, Index, Index*, Index, Descriptor)
@@ -2173,24 +2170,8 @@ ctypedef object (*Matrix_subassign_UINT32_ptr)(Matrix, Matrix, BinaryOp, uint32_
 ctypedef object (*Matrix_subassign_UINT64_ptr)(Matrix, Matrix, BinaryOp, uint64_t, Index*, Index, Index*, Index, Descriptor)
 ctypedef object (*Matrix_subassign_UINT8_ptr)(Matrix, Matrix, BinaryOp, uint8_t, Index*, Index, Index*, Index, Descriptor)
 ctypedef object (*Row_subassign_ptr)(Matrix, Vector, BinaryOp, Vector, Index, Index*, Index, Descriptor)
-ctypedef object (*Scalar_clear_ptr)(Scalar)
-ctypedef object (*Scalar_setElement_BOOL_ptr)(Scalar, bint)
-ctypedef object (*Scalar_setElement_FC32_ptr)(Scalar, float complex)
-ctypedef object (*Scalar_setElement_FC64_ptr)(Scalar, double complex)
-ctypedef object (*Scalar_setElement_FP32_ptr)(Scalar, float)
-ctypedef object (*Scalar_setElement_FP64_ptr)(Scalar, double)
-ctypedef object (*Scalar_setElement_INT16_ptr)(Scalar, int16_t)
-ctypedef object (*Scalar_setElement_INT32_ptr)(Scalar, int32_t)
-ctypedef object (*Scalar_setElement_INT64_ptr)(Scalar, int64_t)
-ctypedef object (*Scalar_setElement_INT8_ptr)(Scalar, int8_t)
-ctypedef object (*Scalar_setElement_UINT16_ptr)(Scalar, uint16_t)
-ctypedef object (*Scalar_setElement_UINT32_ptr)(Scalar, uint32_t)
-ctypedef object (*Scalar_setElement_UINT64_ptr)(Scalar, uint64_t)
-ctypedef object (*Scalar_setElement_UINT8_ptr)(Scalar, uint8_t)
-ctypedef object (*Vector_apply_BinaryOp1st_ptr)(Vector, Vector, BinaryOp, BinaryOp, Scalar, Vector, Descriptor)
 ctypedef object (*Vector_apply_BinaryOp1st_FC32_ptr)(Vector, Vector, BinaryOp, BinaryOp, float complex, Vector, Descriptor)
 ctypedef object (*Vector_apply_BinaryOp1st_FC64_ptr)(Vector, Vector, BinaryOp, BinaryOp, double complex, Vector, Descriptor)
-ctypedef object (*Vector_apply_BinaryOp2nd_ptr)(Vector, Vector, BinaryOp, BinaryOp, Vector, Scalar, Descriptor)
 ctypedef object (*Vector_apply_BinaryOp2nd_FC32_ptr)(Vector, Vector, BinaryOp, BinaryOp, Vector, float complex, Descriptor)
 ctypedef object (*Vector_apply_BinaryOp2nd_FC64_ptr)(Vector, Vector, BinaryOp, BinaryOp, Vector, double complex, Descriptor)
 ctypedef object (*Vector_assign_FC32_ptr)(Vector, Vector, BinaryOp, float complex, Index*, Index, Descriptor)
@@ -2198,7 +2179,6 @@ ctypedef object (*Vector_assign_FC64_ptr)(Vector, Vector, BinaryOp, double compl
 ctypedef object (*Vector_build_FC32_ptr)(Vector, Index*, float complex*, Index, BinaryOp)
 ctypedef object (*Vector_build_FC64_ptr)(Vector, Index*, double complex*, Index, BinaryOp)
 ctypedef object (*Vector_resize_ptr)(Vector, Index)
-ctypedef object (*Vector_select_ptr)(Vector, Vector, BinaryOp, SelectOp, Vector, Scalar, Descriptor)
 ctypedef object (*Vector_setElement_FC32_ptr)(Vector, float complex, Index)
 ctypedef object (*Vector_setElement_FC64_ptr)(Vector, double complex, Index)
 ctypedef object (*Vector_subassign_ptr)(Vector, Vector, BinaryOp, Vector, Index*, Index, Descriptor)
@@ -2219,10 +2199,8 @@ ctypedef object (*cuda_init_ptr)(Mode)
 ctypedef object (*kron_ptr)(Matrix, Matrix, BinaryOp, BinaryOp, Matrix, Matrix, Descriptor)
 
 cdef Col_subassign_ptr Col_subassign_ptrs[CYGB_NBACKENDS]
-cdef Matrix_apply_BinaryOp1st_ptr Matrix_apply_BinaryOp1st_ptrs[CYGB_NBACKENDS]
 cdef Matrix_apply_BinaryOp1st_FC32_ptr Matrix_apply_BinaryOp1st_FC32_ptrs[CYGB_NBACKENDS]
 cdef Matrix_apply_BinaryOp1st_FC64_ptr Matrix_apply_BinaryOp1st_FC64_ptrs[CYGB_NBACKENDS]
-cdef Matrix_apply_BinaryOp2nd_ptr Matrix_apply_BinaryOp2nd_ptrs[CYGB_NBACKENDS]
 cdef Matrix_apply_BinaryOp2nd_FC32_ptr Matrix_apply_BinaryOp2nd_FC32_ptrs[CYGB_NBACKENDS]
 cdef Matrix_apply_BinaryOp2nd_FC64_ptr Matrix_apply_BinaryOp2nd_FC64_ptrs[CYGB_NBACKENDS]
 cdef Matrix_assign_FC32_ptr Matrix_assign_FC32_ptrs[CYGB_NBACKENDS]
@@ -2230,7 +2208,6 @@ cdef Matrix_assign_FC64_ptr Matrix_assign_FC64_ptrs[CYGB_NBACKENDS]
 cdef Matrix_build_FC32_ptr Matrix_build_FC32_ptrs[CYGB_NBACKENDS]
 cdef Matrix_build_FC64_ptr Matrix_build_FC64_ptrs[CYGB_NBACKENDS]
 cdef Matrix_resize_ptr Matrix_resize_ptrs[CYGB_NBACKENDS]
-cdef Matrix_select_ptr Matrix_select_ptrs[CYGB_NBACKENDS]
 cdef Matrix_setElement_FC32_ptr Matrix_setElement_FC32_ptrs[CYGB_NBACKENDS]
 cdef Matrix_setElement_FC64_ptr Matrix_setElement_FC64_ptrs[CYGB_NBACKENDS]
 cdef Matrix_subassign_ptr Matrix_subassign_ptrs[CYGB_NBACKENDS]
@@ -2248,24 +2225,8 @@ cdef Matrix_subassign_UINT32_ptr Matrix_subassign_UINT32_ptrs[CYGB_NBACKENDS]
 cdef Matrix_subassign_UINT64_ptr Matrix_subassign_UINT64_ptrs[CYGB_NBACKENDS]
 cdef Matrix_subassign_UINT8_ptr Matrix_subassign_UINT8_ptrs[CYGB_NBACKENDS]
 cdef Row_subassign_ptr Row_subassign_ptrs[CYGB_NBACKENDS]
-cdef Scalar_clear_ptr Scalar_clear_ptrs[CYGB_NBACKENDS]
-cdef Scalar_setElement_BOOL_ptr Scalar_setElement_BOOL_ptrs[CYGB_NBACKENDS]
-cdef Scalar_setElement_FC32_ptr Scalar_setElement_FC32_ptrs[CYGB_NBACKENDS]
-cdef Scalar_setElement_FC64_ptr Scalar_setElement_FC64_ptrs[CYGB_NBACKENDS]
-cdef Scalar_setElement_FP32_ptr Scalar_setElement_FP32_ptrs[CYGB_NBACKENDS]
-cdef Scalar_setElement_FP64_ptr Scalar_setElement_FP64_ptrs[CYGB_NBACKENDS]
-cdef Scalar_setElement_INT16_ptr Scalar_setElement_INT16_ptrs[CYGB_NBACKENDS]
-cdef Scalar_setElement_INT32_ptr Scalar_setElement_INT32_ptrs[CYGB_NBACKENDS]
-cdef Scalar_setElement_INT64_ptr Scalar_setElement_INT64_ptrs[CYGB_NBACKENDS]
-cdef Scalar_setElement_INT8_ptr Scalar_setElement_INT8_ptrs[CYGB_NBACKENDS]
-cdef Scalar_setElement_UINT16_ptr Scalar_setElement_UINT16_ptrs[CYGB_NBACKENDS]
-cdef Scalar_setElement_UINT32_ptr Scalar_setElement_UINT32_ptrs[CYGB_NBACKENDS]
-cdef Scalar_setElement_UINT64_ptr Scalar_setElement_UINT64_ptrs[CYGB_NBACKENDS]
-cdef Scalar_setElement_UINT8_ptr Scalar_setElement_UINT8_ptrs[CYGB_NBACKENDS]
-cdef Vector_apply_BinaryOp1st_ptr Vector_apply_BinaryOp1st_ptrs[CYGB_NBACKENDS]
 cdef Vector_apply_BinaryOp1st_FC32_ptr Vector_apply_BinaryOp1st_FC32_ptrs[CYGB_NBACKENDS]
 cdef Vector_apply_BinaryOp1st_FC64_ptr Vector_apply_BinaryOp1st_FC64_ptrs[CYGB_NBACKENDS]
-cdef Vector_apply_BinaryOp2nd_ptr Vector_apply_BinaryOp2nd_ptrs[CYGB_NBACKENDS]
 cdef Vector_apply_BinaryOp2nd_FC32_ptr Vector_apply_BinaryOp2nd_FC32_ptrs[CYGB_NBACKENDS]
 cdef Vector_apply_BinaryOp2nd_FC64_ptr Vector_apply_BinaryOp2nd_FC64_ptrs[CYGB_NBACKENDS]
 cdef Vector_assign_FC32_ptr Vector_assign_FC32_ptrs[CYGB_NBACKENDS]
@@ -2273,7 +2234,6 @@ cdef Vector_assign_FC64_ptr Vector_assign_FC64_ptrs[CYGB_NBACKENDS]
 cdef Vector_build_FC32_ptr Vector_build_FC32_ptrs[CYGB_NBACKENDS]
 cdef Vector_build_FC64_ptr Vector_build_FC64_ptrs[CYGB_NBACKENDS]
 cdef Vector_resize_ptr Vector_resize_ptrs[CYGB_NBACKENDS]
-cdef Vector_select_ptr Vector_select_ptrs[CYGB_NBACKENDS]
 cdef Vector_setElement_FC32_ptr Vector_setElement_FC32_ptrs[CYGB_NBACKENDS]
 cdef Vector_setElement_FC64_ptr Vector_setElement_FC64_ptrs[CYGB_NBACKENDS]
 cdef Vector_subassign_ptr Vector_subassign_ptrs[CYGB_NBACKENDS]
