@@ -11,7 +11,7 @@ cpdef Col_assign(
     Descriptor desc=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Col_assign must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Col_assign_ptr func = Col_assign_ptrs[backend_id]
     if func is NULL:
@@ -29,7 +29,7 @@ cpdef Col_extract(
     Descriptor desc=None,
 ):
     if w is None:
-        raise TypeError()
+        raise TypeError("w argument of Col_extract must not be None.")
     cdef backend_id_t backend_id = w.backend_id
     cdef Col_extract_ptr func = Col_extract_ptrs[backend_id]
     if func is NULL:
@@ -57,7 +57,7 @@ cpdef Matrix_apply(
     Descriptor desc=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Matrix_apply must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Matrix_apply_ptr func = Matrix_apply_ptrs[backend_id]
     if func is NULL:
@@ -74,7 +74,7 @@ cpdef Matrix_apply_BinaryOp1st_BOOL(
     Descriptor desc=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Matrix_apply_BinaryOp1st_BOOL must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Matrix_apply_BinaryOp1st_BOOL_ptr func = Matrix_apply_BinaryOp1st_BOOL_ptrs[backend_id]
     if func is NULL:
@@ -91,7 +91,7 @@ cpdef Matrix_apply_BinaryOp1st_FP32(
     Descriptor desc=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Matrix_apply_BinaryOp1st_FP32 must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Matrix_apply_BinaryOp1st_FP32_ptr func = Matrix_apply_BinaryOp1st_FP32_ptrs[backend_id]
     if func is NULL:
@@ -108,7 +108,7 @@ cpdef Matrix_apply_BinaryOp1st_FP64(
     Descriptor desc=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Matrix_apply_BinaryOp1st_FP64 must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Matrix_apply_BinaryOp1st_FP64_ptr func = Matrix_apply_BinaryOp1st_FP64_ptrs[backend_id]
     if func is NULL:
@@ -125,7 +125,7 @@ cpdef Matrix_apply_BinaryOp1st_INT16(
     Descriptor desc=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Matrix_apply_BinaryOp1st_INT16 must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Matrix_apply_BinaryOp1st_INT16_ptr func = Matrix_apply_BinaryOp1st_INT16_ptrs[backend_id]
     if func is NULL:
@@ -142,7 +142,7 @@ cpdef Matrix_apply_BinaryOp1st_INT32(
     Descriptor desc=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Matrix_apply_BinaryOp1st_INT32 must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Matrix_apply_BinaryOp1st_INT32_ptr func = Matrix_apply_BinaryOp1st_INT32_ptrs[backend_id]
     if func is NULL:
@@ -159,7 +159,7 @@ cpdef Matrix_apply_BinaryOp1st_INT64(
     Descriptor desc=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Matrix_apply_BinaryOp1st_INT64 must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Matrix_apply_BinaryOp1st_INT64_ptr func = Matrix_apply_BinaryOp1st_INT64_ptrs[backend_id]
     if func is NULL:
@@ -176,7 +176,7 @@ cpdef Matrix_apply_BinaryOp1st_INT8(
     Descriptor desc=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Matrix_apply_BinaryOp1st_INT8 must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Matrix_apply_BinaryOp1st_INT8_ptr func = Matrix_apply_BinaryOp1st_INT8_ptrs[backend_id]
     if func is NULL:
@@ -193,7 +193,7 @@ cpdef Matrix_apply_BinaryOp1st_UINT16(
     Descriptor desc=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Matrix_apply_BinaryOp1st_UINT16 must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Matrix_apply_BinaryOp1st_UINT16_ptr func = Matrix_apply_BinaryOp1st_UINT16_ptrs[backend_id]
     if func is NULL:
@@ -210,7 +210,7 @@ cpdef Matrix_apply_BinaryOp1st_UINT32(
     Descriptor desc=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Matrix_apply_BinaryOp1st_UINT32 must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Matrix_apply_BinaryOp1st_UINT32_ptr func = Matrix_apply_BinaryOp1st_UINT32_ptrs[backend_id]
     if func is NULL:
@@ -227,7 +227,7 @@ cpdef Matrix_apply_BinaryOp1st_UINT64(
     Descriptor desc=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Matrix_apply_BinaryOp1st_UINT64 must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Matrix_apply_BinaryOp1st_UINT64_ptr func = Matrix_apply_BinaryOp1st_UINT64_ptrs[backend_id]
     if func is NULL:
@@ -244,7 +244,7 @@ cpdef Matrix_apply_BinaryOp1st_UINT8(
     Descriptor desc=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Matrix_apply_BinaryOp1st_UINT8 must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Matrix_apply_BinaryOp1st_UINT8_ptr func = Matrix_apply_BinaryOp1st_UINT8_ptrs[backend_id]
     if func is NULL:
@@ -261,7 +261,7 @@ cpdef Matrix_apply_BinaryOp2nd_BOOL(
     Descriptor desc=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Matrix_apply_BinaryOp2nd_BOOL must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Matrix_apply_BinaryOp2nd_BOOL_ptr func = Matrix_apply_BinaryOp2nd_BOOL_ptrs[backend_id]
     if func is NULL:
@@ -278,7 +278,7 @@ cpdef Matrix_apply_BinaryOp2nd_FP32(
     Descriptor desc=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Matrix_apply_BinaryOp2nd_FP32 must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Matrix_apply_BinaryOp2nd_FP32_ptr func = Matrix_apply_BinaryOp2nd_FP32_ptrs[backend_id]
     if func is NULL:
@@ -295,7 +295,7 @@ cpdef Matrix_apply_BinaryOp2nd_FP64(
     Descriptor desc=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Matrix_apply_BinaryOp2nd_FP64 must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Matrix_apply_BinaryOp2nd_FP64_ptr func = Matrix_apply_BinaryOp2nd_FP64_ptrs[backend_id]
     if func is NULL:
@@ -312,7 +312,7 @@ cpdef Matrix_apply_BinaryOp2nd_INT16(
     Descriptor desc=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Matrix_apply_BinaryOp2nd_INT16 must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Matrix_apply_BinaryOp2nd_INT16_ptr func = Matrix_apply_BinaryOp2nd_INT16_ptrs[backend_id]
     if func is NULL:
@@ -329,7 +329,7 @@ cpdef Matrix_apply_BinaryOp2nd_INT32(
     Descriptor desc=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Matrix_apply_BinaryOp2nd_INT32 must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Matrix_apply_BinaryOp2nd_INT32_ptr func = Matrix_apply_BinaryOp2nd_INT32_ptrs[backend_id]
     if func is NULL:
@@ -346,7 +346,7 @@ cpdef Matrix_apply_BinaryOp2nd_INT64(
     Descriptor desc=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Matrix_apply_BinaryOp2nd_INT64 must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Matrix_apply_BinaryOp2nd_INT64_ptr func = Matrix_apply_BinaryOp2nd_INT64_ptrs[backend_id]
     if func is NULL:
@@ -363,7 +363,7 @@ cpdef Matrix_apply_BinaryOp2nd_INT8(
     Descriptor desc=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Matrix_apply_BinaryOp2nd_INT8 must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Matrix_apply_BinaryOp2nd_INT8_ptr func = Matrix_apply_BinaryOp2nd_INT8_ptrs[backend_id]
     if func is NULL:
@@ -380,7 +380,7 @@ cpdef Matrix_apply_BinaryOp2nd_UINT16(
     Descriptor desc=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Matrix_apply_BinaryOp2nd_UINT16 must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Matrix_apply_BinaryOp2nd_UINT16_ptr func = Matrix_apply_BinaryOp2nd_UINT16_ptrs[backend_id]
     if func is NULL:
@@ -397,7 +397,7 @@ cpdef Matrix_apply_BinaryOp2nd_UINT32(
     Descriptor desc=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Matrix_apply_BinaryOp2nd_UINT32 must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Matrix_apply_BinaryOp2nd_UINT32_ptr func = Matrix_apply_BinaryOp2nd_UINT32_ptrs[backend_id]
     if func is NULL:
@@ -414,7 +414,7 @@ cpdef Matrix_apply_BinaryOp2nd_UINT64(
     Descriptor desc=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Matrix_apply_BinaryOp2nd_UINT64 must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Matrix_apply_BinaryOp2nd_UINT64_ptr func = Matrix_apply_BinaryOp2nd_UINT64_ptrs[backend_id]
     if func is NULL:
@@ -431,7 +431,7 @@ cpdef Matrix_apply_BinaryOp2nd_UINT8(
     Descriptor desc=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Matrix_apply_BinaryOp2nd_UINT8 must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Matrix_apply_BinaryOp2nd_UINT8_ptr func = Matrix_apply_BinaryOp2nd_UINT8_ptrs[backend_id]
     if func is NULL:
@@ -450,7 +450,7 @@ cpdef Matrix_assign(
     Descriptor desc=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Matrix_assign must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Matrix_assign_ptr func = Matrix_assign_ptrs[backend_id]
     if func is NULL:
@@ -469,7 +469,7 @@ cpdef Matrix_assign_BOOL(
     Descriptor desc=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Matrix_assign_BOOL must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Matrix_assign_BOOL_ptr func = Matrix_assign_BOOL_ptrs[backend_id]
     if func is NULL:
@@ -488,7 +488,7 @@ cpdef Matrix_assign_FP32(
     Descriptor desc=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Matrix_assign_FP32 must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Matrix_assign_FP32_ptr func = Matrix_assign_FP32_ptrs[backend_id]
     if func is NULL:
@@ -507,7 +507,7 @@ cpdef Matrix_assign_FP64(
     Descriptor desc=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Matrix_assign_FP64 must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Matrix_assign_FP64_ptr func = Matrix_assign_FP64_ptrs[backend_id]
     if func is NULL:
@@ -526,7 +526,7 @@ cpdef Matrix_assign_INT16(
     Descriptor desc=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Matrix_assign_INT16 must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Matrix_assign_INT16_ptr func = Matrix_assign_INT16_ptrs[backend_id]
     if func is NULL:
@@ -545,7 +545,7 @@ cpdef Matrix_assign_INT32(
     Descriptor desc=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Matrix_assign_INT32 must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Matrix_assign_INT32_ptr func = Matrix_assign_INT32_ptrs[backend_id]
     if func is NULL:
@@ -564,7 +564,7 @@ cpdef Matrix_assign_INT64(
     Descriptor desc=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Matrix_assign_INT64 must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Matrix_assign_INT64_ptr func = Matrix_assign_INT64_ptrs[backend_id]
     if func is NULL:
@@ -583,7 +583,7 @@ cpdef Matrix_assign_INT8(
     Descriptor desc=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Matrix_assign_INT8 must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Matrix_assign_INT8_ptr func = Matrix_assign_INT8_ptrs[backend_id]
     if func is NULL:
@@ -602,7 +602,7 @@ cpdef Matrix_assign_UINT16(
     Descriptor desc=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Matrix_assign_UINT16 must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Matrix_assign_UINT16_ptr func = Matrix_assign_UINT16_ptrs[backend_id]
     if func is NULL:
@@ -621,7 +621,7 @@ cpdef Matrix_assign_UINT32(
     Descriptor desc=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Matrix_assign_UINT32 must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Matrix_assign_UINT32_ptr func = Matrix_assign_UINT32_ptrs[backend_id]
     if func is NULL:
@@ -640,7 +640,7 @@ cpdef Matrix_assign_UINT64(
     Descriptor desc=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Matrix_assign_UINT64 must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Matrix_assign_UINT64_ptr func = Matrix_assign_UINT64_ptrs[backend_id]
     if func is NULL:
@@ -659,7 +659,7 @@ cpdef Matrix_assign_UINT8(
     Descriptor desc=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Matrix_assign_UINT8 must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Matrix_assign_UINT8_ptr func = Matrix_assign_UINT8_ptrs[backend_id]
     if func is NULL:
@@ -675,7 +675,7 @@ cpdef Matrix_build_BOOL(
     BinaryOp dup=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Matrix_build_BOOL must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Matrix_build_BOOL_ptr func = Matrix_build_BOOL_ptrs[backend_id]
     if func is NULL:
@@ -691,7 +691,7 @@ cpdef Matrix_build_FP32(
     BinaryOp dup=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Matrix_build_FP32 must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Matrix_build_FP32_ptr func = Matrix_build_FP32_ptrs[backend_id]
     if func is NULL:
@@ -707,7 +707,7 @@ cpdef Matrix_build_FP64(
     BinaryOp dup=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Matrix_build_FP64 must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Matrix_build_FP64_ptr func = Matrix_build_FP64_ptrs[backend_id]
     if func is NULL:
@@ -723,7 +723,7 @@ cpdef Matrix_build_INT16(
     BinaryOp dup=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Matrix_build_INT16 must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Matrix_build_INT16_ptr func = Matrix_build_INT16_ptrs[backend_id]
     if func is NULL:
@@ -739,7 +739,7 @@ cpdef Matrix_build_INT32(
     BinaryOp dup=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Matrix_build_INT32 must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Matrix_build_INT32_ptr func = Matrix_build_INT32_ptrs[backend_id]
     if func is NULL:
@@ -755,7 +755,7 @@ cpdef Matrix_build_INT64(
     BinaryOp dup=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Matrix_build_INT64 must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Matrix_build_INT64_ptr func = Matrix_build_INT64_ptrs[backend_id]
     if func is NULL:
@@ -771,7 +771,7 @@ cpdef Matrix_build_INT8(
     BinaryOp dup=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Matrix_build_INT8 must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Matrix_build_INT8_ptr func = Matrix_build_INT8_ptrs[backend_id]
     if func is NULL:
@@ -787,7 +787,7 @@ cpdef Matrix_build_UINT16(
     BinaryOp dup=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Matrix_build_UINT16 must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Matrix_build_UINT16_ptr func = Matrix_build_UINT16_ptrs[backend_id]
     if func is NULL:
@@ -803,7 +803,7 @@ cpdef Matrix_build_UINT32(
     BinaryOp dup=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Matrix_build_UINT32 must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Matrix_build_UINT32_ptr func = Matrix_build_UINT32_ptrs[backend_id]
     if func is NULL:
@@ -819,7 +819,7 @@ cpdef Matrix_build_UINT64(
     BinaryOp dup=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Matrix_build_UINT64 must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Matrix_build_UINT64_ptr func = Matrix_build_UINT64_ptrs[backend_id]
     if func is NULL:
@@ -835,7 +835,7 @@ cpdef Matrix_build_UINT8(
     BinaryOp dup=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Matrix_build_UINT8 must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Matrix_build_UINT8_ptr func = Matrix_build_UINT8_ptrs[backend_id]
     if func is NULL:
@@ -846,7 +846,7 @@ cpdef Matrix_clear(
     Matrix A,
 ):
     if A is None:
-        raise TypeError()
+        raise TypeError("A argument of Matrix_clear must not be None.")
     cdef backend_id_t backend_id = A.backend_id
     cdef Matrix_clear_ptr func = Matrix_clear_ptrs[backend_id]
     if func is NULL:
@@ -858,7 +858,7 @@ cpdef Matrix_dup(
     Matrix A=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Matrix_dup must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Matrix_dup_ptr func = Matrix_dup_ptrs[backend_id]
     if func is NULL:
@@ -875,7 +875,7 @@ cpdef Matrix_eWiseAdd_BinaryOp(
     Descriptor desc=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Matrix_eWiseAdd_BinaryOp must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Matrix_eWiseAdd_BinaryOp_ptr func = Matrix_eWiseAdd_BinaryOp_ptrs[backend_id]
     if func is NULL:
@@ -892,7 +892,7 @@ cpdef Matrix_eWiseAdd_Monoid(
     Descriptor desc=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Matrix_eWiseAdd_Monoid must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Matrix_eWiseAdd_Monoid_ptr func = Matrix_eWiseAdd_Monoid_ptrs[backend_id]
     if func is NULL:
@@ -909,7 +909,7 @@ cpdef Matrix_eWiseAdd_Semiring(
     Descriptor desc=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Matrix_eWiseAdd_Semiring must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Matrix_eWiseAdd_Semiring_ptr func = Matrix_eWiseAdd_Semiring_ptrs[backend_id]
     if func is NULL:
@@ -926,7 +926,7 @@ cpdef Matrix_eWiseMult_BinaryOp(
     Descriptor desc=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Matrix_eWiseMult_BinaryOp must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Matrix_eWiseMult_BinaryOp_ptr func = Matrix_eWiseMult_BinaryOp_ptrs[backend_id]
     if func is NULL:
@@ -943,7 +943,7 @@ cpdef Matrix_eWiseMult_Monoid(
     Descriptor desc=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Matrix_eWiseMult_Monoid must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Matrix_eWiseMult_Monoid_ptr func = Matrix_eWiseMult_Monoid_ptrs[backend_id]
     if func is NULL:
@@ -960,7 +960,7 @@ cpdef Matrix_eWiseMult_Semiring(
     Descriptor desc=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Matrix_eWiseMult_Semiring must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Matrix_eWiseMult_Semiring_ptr func = Matrix_eWiseMult_Semiring_ptrs[backend_id]
     if func is NULL:
@@ -979,7 +979,7 @@ cpdef Matrix_extract(
     Descriptor desc=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Matrix_extract must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Matrix_extract_ptr func = Matrix_extract_ptrs[backend_id]
     if func is NULL:
@@ -990,7 +990,7 @@ cpdef Matrix_free(
     Matrix A,
 ):
     if A is None:
-        raise TypeError()
+        raise TypeError("A argument of Matrix_free must not be None.")
     cdef backend_id_t backend_id = A.backend_id
     cdef Matrix_free_ptr func = Matrix_free_ptrs[backend_id]
     if func is NULL:
@@ -1007,7 +1007,7 @@ cpdef Matrix_kronecker_BinaryOp(
     Descriptor desc=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Matrix_kronecker_BinaryOp must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Matrix_kronecker_BinaryOp_ptr func = Matrix_kronecker_BinaryOp_ptrs[backend_id]
     if func is NULL:
@@ -1024,7 +1024,7 @@ cpdef Matrix_kronecker_Monoid(
     Descriptor desc=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Matrix_kronecker_Monoid must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Matrix_kronecker_Monoid_ptr func = Matrix_kronecker_Monoid_ptrs[backend_id]
     if func is NULL:
@@ -1041,7 +1041,7 @@ cpdef Matrix_kronecker_Semiring(
     Descriptor desc=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Matrix_kronecker_Semiring must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Matrix_kronecker_Semiring_ptr func = Matrix_kronecker_Semiring_ptrs[backend_id]
     if func is NULL:
@@ -1055,7 +1055,7 @@ cpdef Matrix_new(
     ncols=None,
 ):
     if A is None:
-        raise TypeError()
+        raise TypeError("A argument of Matrix_new must not be None.")
     cdef backend_id_t backend_id = A.backend_id
     cdef Matrix_new_ptr func = Matrix_new_ptrs[backend_id]
     if func is NULL:
@@ -1071,7 +1071,7 @@ cpdef Matrix_reduce_BinaryOp(
     Descriptor desc=None,
 ):
     if w is None:
-        raise TypeError()
+        raise TypeError("w argument of Matrix_reduce_BinaryOp must not be None.")
     cdef backend_id_t backend_id = w.backend_id
     cdef Matrix_reduce_BinaryOp_ptr func = Matrix_reduce_BinaryOp_ptrs[backend_id]
     if func is NULL:
@@ -1087,7 +1087,7 @@ cpdef Matrix_reduce_Monoid(
     Descriptor desc=None,
 ):
     if w is None:
-        raise TypeError()
+        raise TypeError("w argument of Matrix_reduce_Monoid must not be None.")
     cdef backend_id_t backend_id = w.backend_id
     cdef Matrix_reduce_Monoid_ptr func = Matrix_reduce_Monoid_ptrs[backend_id]
     if func is NULL:
@@ -1100,7 +1100,7 @@ cpdef Matrix_removeElement(
     j=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Matrix_removeElement must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Matrix_removeElement_ptr func = Matrix_removeElement_ptrs[backend_id]
     if func is NULL:
@@ -1113,7 +1113,7 @@ cpdef Matrix_resize(
     ncols_new=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Matrix_resize must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Matrix_resize_ptr func = Matrix_resize_ptrs[backend_id]
     if func is NULL:
@@ -1127,7 +1127,7 @@ cpdef Matrix_setElement_BOOL(
     j=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Matrix_setElement_BOOL must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Matrix_setElement_BOOL_ptr func = Matrix_setElement_BOOL_ptrs[backend_id]
     if func is NULL:
@@ -1141,7 +1141,7 @@ cpdef Matrix_setElement_FP32(
     j=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Matrix_setElement_FP32 must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Matrix_setElement_FP32_ptr func = Matrix_setElement_FP32_ptrs[backend_id]
     if func is NULL:
@@ -1155,7 +1155,7 @@ cpdef Matrix_setElement_FP64(
     j=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Matrix_setElement_FP64 must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Matrix_setElement_FP64_ptr func = Matrix_setElement_FP64_ptrs[backend_id]
     if func is NULL:
@@ -1169,7 +1169,7 @@ cpdef Matrix_setElement_INT16(
     j=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Matrix_setElement_INT16 must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Matrix_setElement_INT16_ptr func = Matrix_setElement_INT16_ptrs[backend_id]
     if func is NULL:
@@ -1183,7 +1183,7 @@ cpdef Matrix_setElement_INT32(
     j=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Matrix_setElement_INT32 must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Matrix_setElement_INT32_ptr func = Matrix_setElement_INT32_ptrs[backend_id]
     if func is NULL:
@@ -1197,7 +1197,7 @@ cpdef Matrix_setElement_INT64(
     j=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Matrix_setElement_INT64 must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Matrix_setElement_INT64_ptr func = Matrix_setElement_INT64_ptrs[backend_id]
     if func is NULL:
@@ -1211,7 +1211,7 @@ cpdef Matrix_setElement_INT8(
     j=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Matrix_setElement_INT8 must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Matrix_setElement_INT8_ptr func = Matrix_setElement_INT8_ptrs[backend_id]
     if func is NULL:
@@ -1225,7 +1225,7 @@ cpdef Matrix_setElement_UINT16(
     j=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Matrix_setElement_UINT16 must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Matrix_setElement_UINT16_ptr func = Matrix_setElement_UINT16_ptrs[backend_id]
     if func is NULL:
@@ -1239,7 +1239,7 @@ cpdef Matrix_setElement_UINT32(
     j=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Matrix_setElement_UINT32 must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Matrix_setElement_UINT32_ptr func = Matrix_setElement_UINT32_ptrs[backend_id]
     if func is NULL:
@@ -1253,7 +1253,7 @@ cpdef Matrix_setElement_UINT64(
     j=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Matrix_setElement_UINT64 must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Matrix_setElement_UINT64_ptr func = Matrix_setElement_UINT64_ptrs[backend_id]
     if func is NULL:
@@ -1267,7 +1267,7 @@ cpdef Matrix_setElement_UINT8(
     j=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Matrix_setElement_UINT8 must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Matrix_setElement_UINT8_ptr func = Matrix_setElement_UINT8_ptrs[backend_id]
     if func is NULL:
@@ -1278,7 +1278,7 @@ cpdef Matrix_wait(
     Matrix A,
 ):
     if A is None:
-        raise TypeError()
+        raise TypeError("A argument of Matrix_wait must not be None.")
     cdef backend_id_t backend_id = A.backend_id
     cdef Matrix_wait_ptr func = Matrix_wait_ptrs[backend_id]
     if func is NULL:
@@ -1296,7 +1296,7 @@ cpdef Row_assign(
     Descriptor desc=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of Row_assign must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef Row_assign_ptr func = Row_assign_ptrs[backend_id]
     if func is NULL:
@@ -1312,7 +1312,7 @@ cpdef Vector_apply(
     Descriptor desc=None,
 ):
     if w is None:
-        raise TypeError()
+        raise TypeError("w argument of Vector_apply must not be None.")
     cdef backend_id_t backend_id = w.backend_id
     cdef Vector_apply_ptr func = Vector_apply_ptrs[backend_id]
     if func is NULL:
@@ -1329,7 +1329,7 @@ cpdef Vector_apply_BinaryOp1st_BOOL(
     Descriptor desc=None,
 ):
     if w is None:
-        raise TypeError()
+        raise TypeError("w argument of Vector_apply_BinaryOp1st_BOOL must not be None.")
     cdef backend_id_t backend_id = w.backend_id
     cdef Vector_apply_BinaryOp1st_BOOL_ptr func = Vector_apply_BinaryOp1st_BOOL_ptrs[backend_id]
     if func is NULL:
@@ -1346,7 +1346,7 @@ cpdef Vector_apply_BinaryOp1st_FP32(
     Descriptor desc=None,
 ):
     if w is None:
-        raise TypeError()
+        raise TypeError("w argument of Vector_apply_BinaryOp1st_FP32 must not be None.")
     cdef backend_id_t backend_id = w.backend_id
     cdef Vector_apply_BinaryOp1st_FP32_ptr func = Vector_apply_BinaryOp1st_FP32_ptrs[backend_id]
     if func is NULL:
@@ -1363,7 +1363,7 @@ cpdef Vector_apply_BinaryOp1st_FP64(
     Descriptor desc=None,
 ):
     if w is None:
-        raise TypeError()
+        raise TypeError("w argument of Vector_apply_BinaryOp1st_FP64 must not be None.")
     cdef backend_id_t backend_id = w.backend_id
     cdef Vector_apply_BinaryOp1st_FP64_ptr func = Vector_apply_BinaryOp1st_FP64_ptrs[backend_id]
     if func is NULL:
@@ -1380,7 +1380,7 @@ cpdef Vector_apply_BinaryOp1st_INT16(
     Descriptor desc=None,
 ):
     if w is None:
-        raise TypeError()
+        raise TypeError("w argument of Vector_apply_BinaryOp1st_INT16 must not be None.")
     cdef backend_id_t backend_id = w.backend_id
     cdef Vector_apply_BinaryOp1st_INT16_ptr func = Vector_apply_BinaryOp1st_INT16_ptrs[backend_id]
     if func is NULL:
@@ -1397,7 +1397,7 @@ cpdef Vector_apply_BinaryOp1st_INT32(
     Descriptor desc=None,
 ):
     if w is None:
-        raise TypeError()
+        raise TypeError("w argument of Vector_apply_BinaryOp1st_INT32 must not be None.")
     cdef backend_id_t backend_id = w.backend_id
     cdef Vector_apply_BinaryOp1st_INT32_ptr func = Vector_apply_BinaryOp1st_INT32_ptrs[backend_id]
     if func is NULL:
@@ -1414,7 +1414,7 @@ cpdef Vector_apply_BinaryOp1st_INT64(
     Descriptor desc=None,
 ):
     if w is None:
-        raise TypeError()
+        raise TypeError("w argument of Vector_apply_BinaryOp1st_INT64 must not be None.")
     cdef backend_id_t backend_id = w.backend_id
     cdef Vector_apply_BinaryOp1st_INT64_ptr func = Vector_apply_BinaryOp1st_INT64_ptrs[backend_id]
     if func is NULL:
@@ -1431,7 +1431,7 @@ cpdef Vector_apply_BinaryOp1st_INT8(
     Descriptor desc=None,
 ):
     if w is None:
-        raise TypeError()
+        raise TypeError("w argument of Vector_apply_BinaryOp1st_INT8 must not be None.")
     cdef backend_id_t backend_id = w.backend_id
     cdef Vector_apply_BinaryOp1st_INT8_ptr func = Vector_apply_BinaryOp1st_INT8_ptrs[backend_id]
     if func is NULL:
@@ -1448,7 +1448,7 @@ cpdef Vector_apply_BinaryOp1st_UINT16(
     Descriptor desc=None,
 ):
     if w is None:
-        raise TypeError()
+        raise TypeError("w argument of Vector_apply_BinaryOp1st_UINT16 must not be None.")
     cdef backend_id_t backend_id = w.backend_id
     cdef Vector_apply_BinaryOp1st_UINT16_ptr func = Vector_apply_BinaryOp1st_UINT16_ptrs[backend_id]
     if func is NULL:
@@ -1465,7 +1465,7 @@ cpdef Vector_apply_BinaryOp1st_UINT32(
     Descriptor desc=None,
 ):
     if w is None:
-        raise TypeError()
+        raise TypeError("w argument of Vector_apply_BinaryOp1st_UINT32 must not be None.")
     cdef backend_id_t backend_id = w.backend_id
     cdef Vector_apply_BinaryOp1st_UINT32_ptr func = Vector_apply_BinaryOp1st_UINT32_ptrs[backend_id]
     if func is NULL:
@@ -1482,7 +1482,7 @@ cpdef Vector_apply_BinaryOp1st_UINT64(
     Descriptor desc=None,
 ):
     if w is None:
-        raise TypeError()
+        raise TypeError("w argument of Vector_apply_BinaryOp1st_UINT64 must not be None.")
     cdef backend_id_t backend_id = w.backend_id
     cdef Vector_apply_BinaryOp1st_UINT64_ptr func = Vector_apply_BinaryOp1st_UINT64_ptrs[backend_id]
     if func is NULL:
@@ -1499,7 +1499,7 @@ cpdef Vector_apply_BinaryOp1st_UINT8(
     Descriptor desc=None,
 ):
     if w is None:
-        raise TypeError()
+        raise TypeError("w argument of Vector_apply_BinaryOp1st_UINT8 must not be None.")
     cdef backend_id_t backend_id = w.backend_id
     cdef Vector_apply_BinaryOp1st_UINT8_ptr func = Vector_apply_BinaryOp1st_UINT8_ptrs[backend_id]
     if func is NULL:
@@ -1516,7 +1516,7 @@ cpdef Vector_apply_BinaryOp2nd_BOOL(
     Descriptor desc=None,
 ):
     if w is None:
-        raise TypeError()
+        raise TypeError("w argument of Vector_apply_BinaryOp2nd_BOOL must not be None.")
     cdef backend_id_t backend_id = w.backend_id
     cdef Vector_apply_BinaryOp2nd_BOOL_ptr func = Vector_apply_BinaryOp2nd_BOOL_ptrs[backend_id]
     if func is NULL:
@@ -1533,7 +1533,7 @@ cpdef Vector_apply_BinaryOp2nd_FP32(
     Descriptor desc=None,
 ):
     if w is None:
-        raise TypeError()
+        raise TypeError("w argument of Vector_apply_BinaryOp2nd_FP32 must not be None.")
     cdef backend_id_t backend_id = w.backend_id
     cdef Vector_apply_BinaryOp2nd_FP32_ptr func = Vector_apply_BinaryOp2nd_FP32_ptrs[backend_id]
     if func is NULL:
@@ -1550,7 +1550,7 @@ cpdef Vector_apply_BinaryOp2nd_FP64(
     Descriptor desc=None,
 ):
     if w is None:
-        raise TypeError()
+        raise TypeError("w argument of Vector_apply_BinaryOp2nd_FP64 must not be None.")
     cdef backend_id_t backend_id = w.backend_id
     cdef Vector_apply_BinaryOp2nd_FP64_ptr func = Vector_apply_BinaryOp2nd_FP64_ptrs[backend_id]
     if func is NULL:
@@ -1567,7 +1567,7 @@ cpdef Vector_apply_BinaryOp2nd_INT16(
     Descriptor desc=None,
 ):
     if w is None:
-        raise TypeError()
+        raise TypeError("w argument of Vector_apply_BinaryOp2nd_INT16 must not be None.")
     cdef backend_id_t backend_id = w.backend_id
     cdef Vector_apply_BinaryOp2nd_INT16_ptr func = Vector_apply_BinaryOp2nd_INT16_ptrs[backend_id]
     if func is NULL:
@@ -1584,7 +1584,7 @@ cpdef Vector_apply_BinaryOp2nd_INT32(
     Descriptor desc=None,
 ):
     if w is None:
-        raise TypeError()
+        raise TypeError("w argument of Vector_apply_BinaryOp2nd_INT32 must not be None.")
     cdef backend_id_t backend_id = w.backend_id
     cdef Vector_apply_BinaryOp2nd_INT32_ptr func = Vector_apply_BinaryOp2nd_INT32_ptrs[backend_id]
     if func is NULL:
@@ -1601,7 +1601,7 @@ cpdef Vector_apply_BinaryOp2nd_INT64(
     Descriptor desc=None,
 ):
     if w is None:
-        raise TypeError()
+        raise TypeError("w argument of Vector_apply_BinaryOp2nd_INT64 must not be None.")
     cdef backend_id_t backend_id = w.backend_id
     cdef Vector_apply_BinaryOp2nd_INT64_ptr func = Vector_apply_BinaryOp2nd_INT64_ptrs[backend_id]
     if func is NULL:
@@ -1618,7 +1618,7 @@ cpdef Vector_apply_BinaryOp2nd_INT8(
     Descriptor desc=None,
 ):
     if w is None:
-        raise TypeError()
+        raise TypeError("w argument of Vector_apply_BinaryOp2nd_INT8 must not be None.")
     cdef backend_id_t backend_id = w.backend_id
     cdef Vector_apply_BinaryOp2nd_INT8_ptr func = Vector_apply_BinaryOp2nd_INT8_ptrs[backend_id]
     if func is NULL:
@@ -1635,7 +1635,7 @@ cpdef Vector_apply_BinaryOp2nd_UINT16(
     Descriptor desc=None,
 ):
     if w is None:
-        raise TypeError()
+        raise TypeError("w argument of Vector_apply_BinaryOp2nd_UINT16 must not be None.")
     cdef backend_id_t backend_id = w.backend_id
     cdef Vector_apply_BinaryOp2nd_UINT16_ptr func = Vector_apply_BinaryOp2nd_UINT16_ptrs[backend_id]
     if func is NULL:
@@ -1652,7 +1652,7 @@ cpdef Vector_apply_BinaryOp2nd_UINT32(
     Descriptor desc=None,
 ):
     if w is None:
-        raise TypeError()
+        raise TypeError("w argument of Vector_apply_BinaryOp2nd_UINT32 must not be None.")
     cdef backend_id_t backend_id = w.backend_id
     cdef Vector_apply_BinaryOp2nd_UINT32_ptr func = Vector_apply_BinaryOp2nd_UINT32_ptrs[backend_id]
     if func is NULL:
@@ -1669,7 +1669,7 @@ cpdef Vector_apply_BinaryOp2nd_UINT64(
     Descriptor desc=None,
 ):
     if w is None:
-        raise TypeError()
+        raise TypeError("w argument of Vector_apply_BinaryOp2nd_UINT64 must not be None.")
     cdef backend_id_t backend_id = w.backend_id
     cdef Vector_apply_BinaryOp2nd_UINT64_ptr func = Vector_apply_BinaryOp2nd_UINT64_ptrs[backend_id]
     if func is NULL:
@@ -1686,7 +1686,7 @@ cpdef Vector_apply_BinaryOp2nd_UINT8(
     Descriptor desc=None,
 ):
     if w is None:
-        raise TypeError()
+        raise TypeError("w argument of Vector_apply_BinaryOp2nd_UINT8 must not be None.")
     cdef backend_id_t backend_id = w.backend_id
     cdef Vector_apply_BinaryOp2nd_UINT8_ptr func = Vector_apply_BinaryOp2nd_UINT8_ptrs[backend_id]
     if func is NULL:
@@ -1703,7 +1703,7 @@ cpdef Vector_assign(
     Descriptor desc=None,
 ):
     if w is None:
-        raise TypeError()
+        raise TypeError("w argument of Vector_assign must not be None.")
     cdef backend_id_t backend_id = w.backend_id
     cdef Vector_assign_ptr func = Vector_assign_ptrs[backend_id]
     if func is NULL:
@@ -1720,7 +1720,7 @@ cpdef Vector_assign_BOOL(
     Descriptor desc=None,
 ):
     if w is None:
-        raise TypeError()
+        raise TypeError("w argument of Vector_assign_BOOL must not be None.")
     cdef backend_id_t backend_id = w.backend_id
     cdef Vector_assign_BOOL_ptr func = Vector_assign_BOOL_ptrs[backend_id]
     if func is NULL:
@@ -1737,7 +1737,7 @@ cpdef Vector_assign_FP32(
     Descriptor desc=None,
 ):
     if w is None:
-        raise TypeError()
+        raise TypeError("w argument of Vector_assign_FP32 must not be None.")
     cdef backend_id_t backend_id = w.backend_id
     cdef Vector_assign_FP32_ptr func = Vector_assign_FP32_ptrs[backend_id]
     if func is NULL:
@@ -1754,7 +1754,7 @@ cpdef Vector_assign_FP64(
     Descriptor desc=None,
 ):
     if w is None:
-        raise TypeError()
+        raise TypeError("w argument of Vector_assign_FP64 must not be None.")
     cdef backend_id_t backend_id = w.backend_id
     cdef Vector_assign_FP64_ptr func = Vector_assign_FP64_ptrs[backend_id]
     if func is NULL:
@@ -1771,7 +1771,7 @@ cpdef Vector_assign_INT16(
     Descriptor desc=None,
 ):
     if w is None:
-        raise TypeError()
+        raise TypeError("w argument of Vector_assign_INT16 must not be None.")
     cdef backend_id_t backend_id = w.backend_id
     cdef Vector_assign_INT16_ptr func = Vector_assign_INT16_ptrs[backend_id]
     if func is NULL:
@@ -1788,7 +1788,7 @@ cpdef Vector_assign_INT32(
     Descriptor desc=None,
 ):
     if w is None:
-        raise TypeError()
+        raise TypeError("w argument of Vector_assign_INT32 must not be None.")
     cdef backend_id_t backend_id = w.backend_id
     cdef Vector_assign_INT32_ptr func = Vector_assign_INT32_ptrs[backend_id]
     if func is NULL:
@@ -1805,7 +1805,7 @@ cpdef Vector_assign_INT64(
     Descriptor desc=None,
 ):
     if w is None:
-        raise TypeError()
+        raise TypeError("w argument of Vector_assign_INT64 must not be None.")
     cdef backend_id_t backend_id = w.backend_id
     cdef Vector_assign_INT64_ptr func = Vector_assign_INT64_ptrs[backend_id]
     if func is NULL:
@@ -1822,7 +1822,7 @@ cpdef Vector_assign_INT8(
     Descriptor desc=None,
 ):
     if w is None:
-        raise TypeError()
+        raise TypeError("w argument of Vector_assign_INT8 must not be None.")
     cdef backend_id_t backend_id = w.backend_id
     cdef Vector_assign_INT8_ptr func = Vector_assign_INT8_ptrs[backend_id]
     if func is NULL:
@@ -1839,7 +1839,7 @@ cpdef Vector_assign_UINT16(
     Descriptor desc=None,
 ):
     if w is None:
-        raise TypeError()
+        raise TypeError("w argument of Vector_assign_UINT16 must not be None.")
     cdef backend_id_t backend_id = w.backend_id
     cdef Vector_assign_UINT16_ptr func = Vector_assign_UINT16_ptrs[backend_id]
     if func is NULL:
@@ -1856,7 +1856,7 @@ cpdef Vector_assign_UINT32(
     Descriptor desc=None,
 ):
     if w is None:
-        raise TypeError()
+        raise TypeError("w argument of Vector_assign_UINT32 must not be None.")
     cdef backend_id_t backend_id = w.backend_id
     cdef Vector_assign_UINT32_ptr func = Vector_assign_UINT32_ptrs[backend_id]
     if func is NULL:
@@ -1873,7 +1873,7 @@ cpdef Vector_assign_UINT64(
     Descriptor desc=None,
 ):
     if w is None:
-        raise TypeError()
+        raise TypeError("w argument of Vector_assign_UINT64 must not be None.")
     cdef backend_id_t backend_id = w.backend_id
     cdef Vector_assign_UINT64_ptr func = Vector_assign_UINT64_ptrs[backend_id]
     if func is NULL:
@@ -1890,7 +1890,7 @@ cpdef Vector_assign_UINT8(
     Descriptor desc=None,
 ):
     if w is None:
-        raise TypeError()
+        raise TypeError("w argument of Vector_assign_UINT8 must not be None.")
     cdef backend_id_t backend_id = w.backend_id
     cdef Vector_assign_UINT8_ptr func = Vector_assign_UINT8_ptrs[backend_id]
     if func is NULL:
@@ -1905,7 +1905,7 @@ cpdef Vector_build_BOOL(
     BinaryOp dup=None,
 ):
     if w is None:
-        raise TypeError()
+        raise TypeError("w argument of Vector_build_BOOL must not be None.")
     cdef backend_id_t backend_id = w.backend_id
     cdef Vector_build_BOOL_ptr func = Vector_build_BOOL_ptrs[backend_id]
     if func is NULL:
@@ -1920,7 +1920,7 @@ cpdef Vector_build_FP32(
     BinaryOp dup=None,
 ):
     if w is None:
-        raise TypeError()
+        raise TypeError("w argument of Vector_build_FP32 must not be None.")
     cdef backend_id_t backend_id = w.backend_id
     cdef Vector_build_FP32_ptr func = Vector_build_FP32_ptrs[backend_id]
     if func is NULL:
@@ -1935,7 +1935,7 @@ cpdef Vector_build_FP64(
     BinaryOp dup=None,
 ):
     if w is None:
-        raise TypeError()
+        raise TypeError("w argument of Vector_build_FP64 must not be None.")
     cdef backend_id_t backend_id = w.backend_id
     cdef Vector_build_FP64_ptr func = Vector_build_FP64_ptrs[backend_id]
     if func is NULL:
@@ -1950,7 +1950,7 @@ cpdef Vector_build_INT16(
     BinaryOp dup=None,
 ):
     if w is None:
-        raise TypeError()
+        raise TypeError("w argument of Vector_build_INT16 must not be None.")
     cdef backend_id_t backend_id = w.backend_id
     cdef Vector_build_INT16_ptr func = Vector_build_INT16_ptrs[backend_id]
     if func is NULL:
@@ -1965,7 +1965,7 @@ cpdef Vector_build_INT32(
     BinaryOp dup=None,
 ):
     if w is None:
-        raise TypeError()
+        raise TypeError("w argument of Vector_build_INT32 must not be None.")
     cdef backend_id_t backend_id = w.backend_id
     cdef Vector_build_INT32_ptr func = Vector_build_INT32_ptrs[backend_id]
     if func is NULL:
@@ -1980,7 +1980,7 @@ cpdef Vector_build_INT64(
     BinaryOp dup=None,
 ):
     if w is None:
-        raise TypeError()
+        raise TypeError("w argument of Vector_build_INT64 must not be None.")
     cdef backend_id_t backend_id = w.backend_id
     cdef Vector_build_INT64_ptr func = Vector_build_INT64_ptrs[backend_id]
     if func is NULL:
@@ -1995,7 +1995,7 @@ cpdef Vector_build_INT8(
     BinaryOp dup=None,
 ):
     if w is None:
-        raise TypeError()
+        raise TypeError("w argument of Vector_build_INT8 must not be None.")
     cdef backend_id_t backend_id = w.backend_id
     cdef Vector_build_INT8_ptr func = Vector_build_INT8_ptrs[backend_id]
     if func is NULL:
@@ -2010,7 +2010,7 @@ cpdef Vector_build_UINT16(
     BinaryOp dup=None,
 ):
     if w is None:
-        raise TypeError()
+        raise TypeError("w argument of Vector_build_UINT16 must not be None.")
     cdef backend_id_t backend_id = w.backend_id
     cdef Vector_build_UINT16_ptr func = Vector_build_UINT16_ptrs[backend_id]
     if func is NULL:
@@ -2025,7 +2025,7 @@ cpdef Vector_build_UINT32(
     BinaryOp dup=None,
 ):
     if w is None:
-        raise TypeError()
+        raise TypeError("w argument of Vector_build_UINT32 must not be None.")
     cdef backend_id_t backend_id = w.backend_id
     cdef Vector_build_UINT32_ptr func = Vector_build_UINT32_ptrs[backend_id]
     if func is NULL:
@@ -2040,7 +2040,7 @@ cpdef Vector_build_UINT64(
     BinaryOp dup=None,
 ):
     if w is None:
-        raise TypeError()
+        raise TypeError("w argument of Vector_build_UINT64 must not be None.")
     cdef backend_id_t backend_id = w.backend_id
     cdef Vector_build_UINT64_ptr func = Vector_build_UINT64_ptrs[backend_id]
     if func is NULL:
@@ -2055,7 +2055,7 @@ cpdef Vector_build_UINT8(
     BinaryOp dup=None,
 ):
     if w is None:
-        raise TypeError()
+        raise TypeError("w argument of Vector_build_UINT8 must not be None.")
     cdef backend_id_t backend_id = w.backend_id
     cdef Vector_build_UINT8_ptr func = Vector_build_UINT8_ptrs[backend_id]
     if func is NULL:
@@ -2066,7 +2066,7 @@ cpdef Vector_clear(
     Vector v,
 ):
     if v is None:
-        raise TypeError()
+        raise TypeError("v argument of Vector_clear must not be None.")
     cdef backend_id_t backend_id = v.backend_id
     cdef Vector_clear_ptr func = Vector_clear_ptrs[backend_id]
     if func is NULL:
@@ -2078,7 +2078,7 @@ cpdef Vector_dup(
     Vector u=None,
 ):
     if w is None:
-        raise TypeError()
+        raise TypeError("w argument of Vector_dup must not be None.")
     cdef backend_id_t backend_id = w.backend_id
     cdef Vector_dup_ptr func = Vector_dup_ptrs[backend_id]
     if func is NULL:
@@ -2095,7 +2095,7 @@ cpdef Vector_eWiseAdd_BinaryOp(
     Descriptor desc=None,
 ):
     if w is None:
-        raise TypeError()
+        raise TypeError("w argument of Vector_eWiseAdd_BinaryOp must not be None.")
     cdef backend_id_t backend_id = w.backend_id
     cdef Vector_eWiseAdd_BinaryOp_ptr func = Vector_eWiseAdd_BinaryOp_ptrs[backend_id]
     if func is NULL:
@@ -2112,7 +2112,7 @@ cpdef Vector_eWiseAdd_Monoid(
     Descriptor desc=None,
 ):
     if w is None:
-        raise TypeError()
+        raise TypeError("w argument of Vector_eWiseAdd_Monoid must not be None.")
     cdef backend_id_t backend_id = w.backend_id
     cdef Vector_eWiseAdd_Monoid_ptr func = Vector_eWiseAdd_Monoid_ptrs[backend_id]
     if func is NULL:
@@ -2129,7 +2129,7 @@ cpdef Vector_eWiseAdd_Semiring(
     Descriptor desc=None,
 ):
     if w is None:
-        raise TypeError()
+        raise TypeError("w argument of Vector_eWiseAdd_Semiring must not be None.")
     cdef backend_id_t backend_id = w.backend_id
     cdef Vector_eWiseAdd_Semiring_ptr func = Vector_eWiseAdd_Semiring_ptrs[backend_id]
     if func is NULL:
@@ -2146,7 +2146,7 @@ cpdef Vector_eWiseMult_BinaryOp(
     Descriptor desc=None,
 ):
     if w is None:
-        raise TypeError()
+        raise TypeError("w argument of Vector_eWiseMult_BinaryOp must not be None.")
     cdef backend_id_t backend_id = w.backend_id
     cdef Vector_eWiseMult_BinaryOp_ptr func = Vector_eWiseMult_BinaryOp_ptrs[backend_id]
     if func is NULL:
@@ -2163,7 +2163,7 @@ cpdef Vector_eWiseMult_Monoid(
     Descriptor desc=None,
 ):
     if w is None:
-        raise TypeError()
+        raise TypeError("w argument of Vector_eWiseMult_Monoid must not be None.")
     cdef backend_id_t backend_id = w.backend_id
     cdef Vector_eWiseMult_Monoid_ptr func = Vector_eWiseMult_Monoid_ptrs[backend_id]
     if func is NULL:
@@ -2180,7 +2180,7 @@ cpdef Vector_eWiseMult_Semiring(
     Descriptor desc=None,
 ):
     if w is None:
-        raise TypeError()
+        raise TypeError("w argument of Vector_eWiseMult_Semiring must not be None.")
     cdef backend_id_t backend_id = w.backend_id
     cdef Vector_eWiseMult_Semiring_ptr func = Vector_eWiseMult_Semiring_ptrs[backend_id]
     if func is NULL:
@@ -2197,7 +2197,7 @@ cpdef Vector_extract(
     Descriptor desc=None,
 ):
     if w is None:
-        raise TypeError()
+        raise TypeError("w argument of Vector_extract must not be None.")
     cdef backend_id_t backend_id = w.backend_id
     cdef Vector_extract_ptr func = Vector_extract_ptrs[backend_id]
     if func is NULL:
@@ -2208,7 +2208,7 @@ cpdef Vector_free(
     Vector v,
 ):
     if v is None:
-        raise TypeError()
+        raise TypeError("v argument of Vector_free must not be None.")
     cdef backend_id_t backend_id = v.backend_id
     cdef Vector_free_ptr func = Vector_free_ptrs[backend_id]
     if func is NULL:
@@ -2221,7 +2221,7 @@ cpdef Vector_new(
     n=None,
 ):
     if v is None:
-        raise TypeError()
+        raise TypeError("v argument of Vector_new must not be None.")
     cdef backend_id_t backend_id = v.backend_id
     cdef Vector_new_ptr func = Vector_new_ptrs[backend_id]
     if func is NULL:
@@ -2233,7 +2233,7 @@ cpdef Vector_removeElement(
     i=None,
 ):
     if v is None:
-        raise TypeError()
+        raise TypeError("v argument of Vector_removeElement must not be None.")
     cdef backend_id_t backend_id = v.backend_id
     cdef Vector_removeElement_ptr func = Vector_removeElement_ptrs[backend_id]
     if func is NULL:
@@ -2245,7 +2245,7 @@ cpdef Vector_resize(
     nrows_new=None,
 ):
     if w is None:
-        raise TypeError()
+        raise TypeError("w argument of Vector_resize must not be None.")
     cdef backend_id_t backend_id = w.backend_id
     cdef Vector_resize_ptr func = Vector_resize_ptrs[backend_id]
     if func is NULL:
@@ -2258,7 +2258,7 @@ cpdef Vector_setElement_BOOL(
     i=None,
 ):
     if w is None:
-        raise TypeError()
+        raise TypeError("w argument of Vector_setElement_BOOL must not be None.")
     cdef backend_id_t backend_id = w.backend_id
     cdef Vector_setElement_BOOL_ptr func = Vector_setElement_BOOL_ptrs[backend_id]
     if func is NULL:
@@ -2271,7 +2271,7 @@ cpdef Vector_setElement_FP32(
     i=None,
 ):
     if w is None:
-        raise TypeError()
+        raise TypeError("w argument of Vector_setElement_FP32 must not be None.")
     cdef backend_id_t backend_id = w.backend_id
     cdef Vector_setElement_FP32_ptr func = Vector_setElement_FP32_ptrs[backend_id]
     if func is NULL:
@@ -2284,7 +2284,7 @@ cpdef Vector_setElement_FP64(
     i=None,
 ):
     if w is None:
-        raise TypeError()
+        raise TypeError("w argument of Vector_setElement_FP64 must not be None.")
     cdef backend_id_t backend_id = w.backend_id
     cdef Vector_setElement_FP64_ptr func = Vector_setElement_FP64_ptrs[backend_id]
     if func is NULL:
@@ -2297,7 +2297,7 @@ cpdef Vector_setElement_INT16(
     i=None,
 ):
     if w is None:
-        raise TypeError()
+        raise TypeError("w argument of Vector_setElement_INT16 must not be None.")
     cdef backend_id_t backend_id = w.backend_id
     cdef Vector_setElement_INT16_ptr func = Vector_setElement_INT16_ptrs[backend_id]
     if func is NULL:
@@ -2310,7 +2310,7 @@ cpdef Vector_setElement_INT32(
     i=None,
 ):
     if w is None:
-        raise TypeError()
+        raise TypeError("w argument of Vector_setElement_INT32 must not be None.")
     cdef backend_id_t backend_id = w.backend_id
     cdef Vector_setElement_INT32_ptr func = Vector_setElement_INT32_ptrs[backend_id]
     if func is NULL:
@@ -2323,7 +2323,7 @@ cpdef Vector_setElement_INT64(
     i=None,
 ):
     if w is None:
-        raise TypeError()
+        raise TypeError("w argument of Vector_setElement_INT64 must not be None.")
     cdef backend_id_t backend_id = w.backend_id
     cdef Vector_setElement_INT64_ptr func = Vector_setElement_INT64_ptrs[backend_id]
     if func is NULL:
@@ -2336,7 +2336,7 @@ cpdef Vector_setElement_INT8(
     i=None,
 ):
     if w is None:
-        raise TypeError()
+        raise TypeError("w argument of Vector_setElement_INT8 must not be None.")
     cdef backend_id_t backend_id = w.backend_id
     cdef Vector_setElement_INT8_ptr func = Vector_setElement_INT8_ptrs[backend_id]
     if func is NULL:
@@ -2349,7 +2349,7 @@ cpdef Vector_setElement_UINT16(
     i=None,
 ):
     if w is None:
-        raise TypeError()
+        raise TypeError("w argument of Vector_setElement_UINT16 must not be None.")
     cdef backend_id_t backend_id = w.backend_id
     cdef Vector_setElement_UINT16_ptr func = Vector_setElement_UINT16_ptrs[backend_id]
     if func is NULL:
@@ -2362,7 +2362,7 @@ cpdef Vector_setElement_UINT32(
     i=None,
 ):
     if w is None:
-        raise TypeError()
+        raise TypeError("w argument of Vector_setElement_UINT32 must not be None.")
     cdef backend_id_t backend_id = w.backend_id
     cdef Vector_setElement_UINT32_ptr func = Vector_setElement_UINT32_ptrs[backend_id]
     if func is NULL:
@@ -2375,7 +2375,7 @@ cpdef Vector_setElement_UINT64(
     i=None,
 ):
     if w is None:
-        raise TypeError()
+        raise TypeError("w argument of Vector_setElement_UINT64 must not be None.")
     cdef backend_id_t backend_id = w.backend_id
     cdef Vector_setElement_UINT64_ptr func = Vector_setElement_UINT64_ptrs[backend_id]
     if func is NULL:
@@ -2388,7 +2388,7 @@ cpdef Vector_setElement_UINT8(
     i=None,
 ):
     if w is None:
-        raise TypeError()
+        raise TypeError("w argument of Vector_setElement_UINT8 must not be None.")
     cdef backend_id_t backend_id = w.backend_id
     cdef Vector_setElement_UINT8_ptr func = Vector_setElement_UINT8_ptrs[backend_id]
     if func is NULL:
@@ -2399,7 +2399,7 @@ cpdef Vector_wait(
     Vector v,
 ):
     if v is None:
-        raise TypeError()
+        raise TypeError("v argument of Vector_wait must not be None.")
     cdef backend_id_t backend_id = v.backend_id
     cdef Vector_wait_ptr func = Vector_wait_ptrs[backend_id]
     if func is NULL:
@@ -2426,7 +2426,7 @@ cpdef mxm(
     Descriptor desc=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of mxm must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef mxm_ptr func = mxm_ptrs[backend_id]
     if func is NULL:
@@ -2443,7 +2443,7 @@ cpdef mxv(
     Descriptor desc=None,
 ):
     if w is None:
-        raise TypeError()
+        raise TypeError("w argument of mxv must not be None.")
     cdef backend_id_t backend_id = w.backend_id
     cdef mxv_ptr func = mxv_ptrs[backend_id]
     if func is NULL:
@@ -2458,7 +2458,7 @@ cpdef transpose(
     Descriptor desc=None,
 ):
     if C is None:
-        raise TypeError()
+        raise TypeError("C argument of transpose must not be None.")
     cdef backend_id_t backend_id = C.backend_id
     cdef transpose_ptr func = transpose_ptrs[backend_id]
     if func is NULL:
@@ -2475,7 +2475,7 @@ cpdef vxm(
     Descriptor desc=None,
 ):
     if w is None:
-        raise TypeError()
+        raise TypeError("w argument of vxm must not be None.")
     cdef backend_id_t backend_id = w.backend_id
     cdef vxm_ptr func = vxm_ptrs[backend_id]
     if func is NULL:

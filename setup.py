@@ -30,6 +30,7 @@ if __name__ == '__main__':
             [name],
             # define_macros=define_macros,
             # include_dirs=include_dirs,
+            extra_compile_args=["-std=c99"],  # should we?  -pedantic -ansi -std=c11
         )
         for name in glob(f'cygraphblas/**/*{suffix}', recursive=True)
     ]

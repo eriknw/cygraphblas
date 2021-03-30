@@ -2,6 +2,8 @@
 from cygraphblas.wrappertypes cimport BinaryOp, Descriptor, Monoid, Semiring, UnaryOp, Type
 from cygraphblas.wrappertypes.constants cimport Desc_Field, Desc_Value, Info, Mode
 from cygraphblas._utils cimport backend_id_t, get_backend
+from cygraphblas.matrix cimport Matrix
+from cygraphblas.vector cimport Vector
 from libc.stdint cimport int8_t, int16_t, int32_t, int64_t, uint8_t, uint16_t, uint32_t, uint64_t, INT8_MIN
 
 ctypedef uint64_t Index

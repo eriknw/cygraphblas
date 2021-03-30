@@ -376,6 +376,7 @@ def get_group_info(groups, ast):
         arg_num_pointers = []
         arg_names = []
         arg_pytypes = []
+        arg_ctypes = []
         if generator.visit(node.type.args) == 'void':
             # show `func()` instead of `func(void)`
             cnode.type.args.params = []
@@ -479,10 +480,11 @@ def get_group_info(groups, ast):
                     arg_num_pointers.append(count)
                     arg_names.append(carg.name)
                     arg_pytypes.append(generator.visit(py_t))
+                    arg_ctypes.append(generator.visit(c_t))
                     # print(i, generator.visit(pynode))
                     # print(i, generator.visit(node))
                 else:
-                    raise ValueError(generator.visit(arg))
+                    raise ValueError(generator.visit(carg))
                 # print(generator.visit(pynode))
             # print(generator.visit(pynode))
 
@@ -516,6 +518,13 @@ def get_group_info(groups, ast):
                 'init': 'core',
                 'wait': 'core',
             }[group]
+        args = [
+            {'name': name, 'pytype': pytype, 'ctype': ctype, 'num_pointers': num_ptr}
+            for name, pytype, ctype, num_ptr in zip(arg_names, arg_pytypes, arg_ctypes, arg_num_pointers)
+        ]
+        for arg in args:
+            arg['has_obj'] = arg['pytype'] in {'Vector', 'Matrix'} or arg['pytype'] in enum_types  # has `.obj`
+            arg['has_objs'] = not arg['has_obj'] and arg['pytype'] not in simple_types  # has `.ss_obj`
         return {
             # names
             'cname': node.name,
@@ -525,6 +534,8 @@ def get_group_info(groups, ast):
             'arg_num_pointers': arg_num_pointers,  # number of `*` of type of each arg
             'arg_names': arg_names,
             'arg_pytypes': arg_pytypes,
+            'arg_ctypes': arg_ctypes,
+            'args': args,
             # AST nodes
             'cnode': cnode,
             'cnode_t': cnode_t,
@@ -779,6 +790,8 @@ def main(basedir):
     enums = get_enums(groups['GrB typedef enums'], 'GrB')
     extra = [
         'from cygraphblas._utils cimport backend_id_t, get_backend',
+        'from cygraphblas.matrix cimport Matrix',
+        'from cygraphblas.vector cimport Vector',
         'from libc.stdint cimport int8_t, int16_t, int32_t, int64_t, uint8_t, uint16_t, uint32_t, uint64_t, INT8_MIN',
         '',
         'ctypedef uint64_t Index',
@@ -831,14 +844,14 @@ def main(basedir):
                     return f'{pytype}[::1] {name}'  # contiguous memoryview
                 elif nptr == 0:
                     return name  # Python object
-                1/0
+                return pytype + ' ' + '*' * nptr + name
             return f'{pytype} {name}'
 
         def view_to_ptr(pytype, nptr, name):
             if pytype in simple_types and nptr > 0:
                 if nptr == 1:
                     return f'&{name}[0]'
-                1/0
+                return name
             return name
 
         default = 'None' if is_pyx else '*'
@@ -873,6 +886,8 @@ def main(basedir):
             )
 
             backend_arg = info['arg_names'][0]
+            # if not has_backend_arg and info['arg_pytypes'][0] not in {'Vector', 'Matrix'}:
+            #     raise ValueError(name)
             functext = [
                 f'cpdef {name}(',
             ]
@@ -886,7 +901,7 @@ def main(basedir):
                 else:
                     functext.extend([
                         f'    if {backend_arg} is None:',
-                        '        raise TypeError()',
+                        f'        raise TypeError("{backend_arg} argument of {name} must not be None.")',
                         f'    cdef backend_id_t backend_id = {backend_arg}.backend_id',
                     ])
                 functext.extend([
@@ -960,7 +975,7 @@ def main(basedir):
             f.write('\n'.join(text))
 
     # Now do SuiteSparse-specific things (in cygraphblas_ss!)
-    def handle_init(group, altimport=None):
+    def handle_init(group, altimport=None, extra=None):
         text = [
             AUTO,
         ]
@@ -969,6 +984,8 @@ def main(basedir):
         else:
             text.append(altimport)
         text.append('from cygraphblas_ss cimport graphblas as ss')
+        if extra is not None:
+            text.extend(extra)
         prev_pytype = None
         for info in group:
             if info['pytype'] != prev_pytype:
@@ -991,7 +1008,7 @@ def main(basedir):
     group = [info for info in groups['GrB objects'] if 'GxB' in info['text']]
     gxb_group = sorted(group + groups['GxB objects'], key=lambda info: info['pytype'])
     extra = [
-        'from cygraphblas._clib cimport Index',
+        'from cygraphblas._clib cimport Index, Matrix, Vector',
         'from cygraphblas_ss.wrappertypes cimport SelectOp',
         'from cygraphblas_ss.wrappertypes.constants cimport Format_Value, Option_Field, Print_Level, Thread_Model'
     ]
@@ -1042,7 +1059,8 @@ def main(basedir):
     for info in enums:
         gxb_enums.extend(info['fields'])
 
-    text = handle_init(gxb_enums + gxb_group, altimport=altimport)
+    extra = ['from cygraphblas_ss import _funcs']
+    text = handle_init(gxb_enums + gxb_group, altimport=altimport, extra=extra)
     filename = os.path.join(basedir, 'cygraphblas_ss', 'initialize_ss.pyx')
     print(f'Writing {filename}')
     with open(filename, 'w') as f:
@@ -1055,6 +1073,111 @@ def main(basedir):
         with open(filename, 'w') as f:
             f.write('\n'.join(text))
 
+    def implement_funcs(methods, extra=None, is_pyx=False, backend_obj='ss_obj', backend_name="SS"):
+        def to_func(arg, is_pyx):
+            nptr = 0 if arg['pytype'] not in simple_types else arg['num_pointers']
+            ptrs = '*' * nptr
+            if is_pyx:
+                return f'    {arg["pytype"]} {ptrs}{arg["name"]},'
+            else:
+                return f'    {arg["pytype"]}{ptrs},'
+
+        def to_extfunc(arg):
+            name = arg['name']
+            if arg['pytype'] in enum_types:
+                return f'        <{arg["ctype"]}>({name}.obj),'  # TODO: raise if None
+            elif arg['has_obj']:
+                ptr = '*' * arg['num_pointers']
+                return f'        NULL if {name} is None else <{arg["ctype"]}{ptr}>({name}.obj),'
+            elif arg['has_objs']:
+                return f'        NULL if {name} is None else {name}.{backend_obj},'
+            return f'        {name},'
+
+        text = []
+        if extra is not None:
+            text.extend(extra)
+
+        for info in methods:
+            if skipfunc(info):
+                continue
+            text.append(f'cdef {info["pyname"]}_{backend_name}(')
+            text.extend(to_func(arg, is_pyx) for arg in info['args'])
+            if is_pyx:
+                text.append('):')
+                text.append(f'    cdef GrB_Info result = {info["cname"]}(')
+                text.extend(to_extfunc(arg) for arg in info['args'])
+                text.append('    )')
+                text.append('    if result != GrB_SUCCESS:')
+                text.append('        raise ValueError(result)')
+            else:
+                text.append(')')
+            text.append('')
+        return text
+
+    def populate_func_ptrs(methods, extra=None, backend_name='SS'):
+        text = []
+        text = []
+        if extra is not None:
+            text.extend(extra)
+        for info in methods:
+            if skipfunc(info):
+                continue
+            name = info['pyname']
+            if 'subassign' in name and 'INT' in name:
+                # XXX: I have no idea why this is necessary to make it work for only these functions
+                text.append(f'{name}_ptrs[BACKEND_{backend_name}] = <{name}_ptr>{name}_{backend_name}')
+            else:
+                text.append(f'{name}_ptrs[BACKEND_{backend_name}] = {name}_{backend_name}')
+        return text
+
+    grb_method_names = {info['pyname'] for info in groups['GrB methods']}
+    gxb_methods = [info for info in groups['GxB methods'] if info['pyname'] not in grb_method_names]
+
+    extra = [
+        AUTO,
+        'from cygraphblas._clib cimport *',
+        'from cygraphblas_ss._clib cimport *',
+        'from cygraphblas_ss.graphblas cimport *',
+        '',
+        '# GrB methods',
+    ]
+    text = implement_funcs(groups['GrB methods'], extra=extra, is_pyx=False)
+    extra = [
+        '# GxB methods',
+    ]
+    text.extend(implement_funcs(gxb_methods, extra=extra, is_pyx=False))
+
+    filename = os.path.join(basedir, 'cygraphblas_ss', '_funcs.pxd')
+    print(f'Writing {filename}')
+    with open(filename, 'w') as f:
+        f.write('\n'.join(text))
+
+    extra = [
+        AUTO,
+        ''
+        '# GrB methods',
+    ]
+    text = implement_funcs(groups['GrB methods'], extra=extra, is_pyx=True)
+    extra = [
+        '# GxB methods',
+    ]
+    text.extend(implement_funcs(gxb_methods, extra=extra, is_pyx=True))
+
+    extra = [
+        '',
+        '# GrB methods',
+    ]
+    text.extend(populate_func_ptrs(groups['GrB methods'], extra=extra))
+    extra = [
+        '',
+        '# GxB methods',
+    ]
+    text.extend(populate_func_ptrs(gxb_methods, extra=extra))
+
+    filename = os.path.join(basedir, 'cygraphblas_ss', '_funcs.pyx')
+    print(f'Writing {filename}')
+    with open(filename, 'w') as f:
+        f.write('\n'.join(text))
 
 if __name__ == '__main__':
     main(get_basedir())

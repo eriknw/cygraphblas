@@ -3,7 +3,7 @@ PYTHON ?= python
 
 .PHONY: all gen cy ss inplace clean cleangen cleanall test_import test_importss
 
-all: clean cleangen gen inplace test_import test_importss
+all: clean cleangen gen inplace test_import test_importss testss
 
 # For now, assume we are using a conda environment with graphblas and pycparser
 scripts/GraphBLAS.h:
@@ -21,10 +21,10 @@ scripts/GraphBLAS-processed.h: scripts/GraphBLAS.h
 gen: scripts/GraphBLAS-processed.h
 	$(PYTHON) scripts/automate.py
 
-cy:
+cy cygraphblas/_clib.*.so:
 	$(PYTHON) setup.py build_ext --inplace -j 8
 
-ss:
+ss cygraphblas_ss/_clib.*.so: cygraphblas/_clib.*.so
 	$(PYTHON) setup_ss.py build_ext --inplace -j 8
 
 inplace: cy ss
@@ -48,13 +48,16 @@ cleanall: clean cleangen
 	find cygraphblas cygraphblas_ss -name '*.html' -print0 | xargs -0 rm -rf
 
 # Make sure all base modules are imported
-test_import:
+test_import: cygraphblas/_clib.*.so
 	find cygraphblas -name '*.pyx' -print | sed -e 's/\/__init__//g' -e 's/.pyx/"/g' -e 's/^/python -c "import cygraphblas ; /g' -e 's/\//./g'
 	find cygraphblas -name '*.pyx' -print | sed -e 's/\/__init__//g' -e 's/.pyx/"/g' -e 's/^/python -c "import cygraphblas ; /g' -e 's/\//./g' | sh
 	find cygraphblas -name '*.py' -print | grep -v ss | sed -e 's/\/__init__//g' -e 's/.py/"/g' -e 's/^/python -c "import cygraphblas ; /g' -e 's/\//./g'
 	find cygraphblas -name '*.py' -print | grep -v ss | sed -e 's/\/__init__//g' -e 's/.py/"/g' -e 's/^/python -c "import cygraphblas ; /g' -e 's/\//./g' | sh
 
 # If cygraphblas_ss is imported, make sure all `.ss` modules are as well
-test_importss:
+test_importss: cygraphblas_ss/_clib.*.so
 	find cygraphblas -name 'ss.py' -print | sed -e 's/.py/"/g' -e 's/^/python -c "import cygraphblas_ss, cygraphblas ; /g' -e 's/\//./g'
 	find cygraphblas -name 'ss.py' -print | sed -e 's/.py/"/g' -e 's/^/python -c "import cygraphblas_ss, cygraphblas ; /g' -e 's/\//./g' | sh
+
+testss: cygraphblas_ss/_clib.*.so
+	pytest cygraphblas_ss
