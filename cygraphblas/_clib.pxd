@@ -39,196 +39,196 @@ cdef Mode BLOCKING
 cdef Mode NONBLOCKING
 
 # BinaryOp
+cdef BinaryOp BAND_INT8
 cdef BinaryOp BAND_INT16
 cdef BinaryOp BAND_INT32
 cdef BinaryOp BAND_INT64
-cdef BinaryOp BAND_INT8
+cdef BinaryOp BAND_UINT8
 cdef BinaryOp BAND_UINT16
 cdef BinaryOp BAND_UINT32
 cdef BinaryOp BAND_UINT64
-cdef BinaryOp BAND_UINT8
+cdef BinaryOp BOR_INT8
 cdef BinaryOp BOR_INT16
 cdef BinaryOp BOR_INT32
 cdef BinaryOp BOR_INT64
-cdef BinaryOp BOR_INT8
+cdef BinaryOp BOR_UINT8
 cdef BinaryOp BOR_UINT16
 cdef BinaryOp BOR_UINT32
 cdef BinaryOp BOR_UINT64
-cdef BinaryOp BOR_UINT8
+cdef BinaryOp BXNOR_INT8
 cdef BinaryOp BXNOR_INT16
 cdef BinaryOp BXNOR_INT32
 cdef BinaryOp BXNOR_INT64
-cdef BinaryOp BXNOR_INT8
+cdef BinaryOp BXNOR_UINT8
 cdef BinaryOp BXNOR_UINT16
 cdef BinaryOp BXNOR_UINT32
 cdef BinaryOp BXNOR_UINT64
-cdef BinaryOp BXNOR_UINT8
+cdef BinaryOp BXOR_INT8
 cdef BinaryOp BXOR_INT16
 cdef BinaryOp BXOR_INT32
 cdef BinaryOp BXOR_INT64
-cdef BinaryOp BXOR_INT8
+cdef BinaryOp BXOR_UINT8
 cdef BinaryOp BXOR_UINT16
 cdef BinaryOp BXOR_UINT32
 cdef BinaryOp BXOR_UINT64
-cdef BinaryOp BXOR_UINT8
 cdef BinaryOp DIV_BOOL
 cdef BinaryOp DIV_FP32
 cdef BinaryOp DIV_FP64
+cdef BinaryOp DIV_INT8
 cdef BinaryOp DIV_INT16
 cdef BinaryOp DIV_INT32
 cdef BinaryOp DIV_INT64
-cdef BinaryOp DIV_INT8
+cdef BinaryOp DIV_UINT8
 cdef BinaryOp DIV_UINT16
 cdef BinaryOp DIV_UINT32
 cdef BinaryOp DIV_UINT64
-cdef BinaryOp DIV_UINT8
 cdef BinaryOp EQ_BOOL
 cdef BinaryOp EQ_FP32
 cdef BinaryOp EQ_FP64
+cdef BinaryOp EQ_INT8
 cdef BinaryOp EQ_INT16
 cdef BinaryOp EQ_INT32
 cdef BinaryOp EQ_INT64
-cdef BinaryOp EQ_INT8
+cdef BinaryOp EQ_UINT8
 cdef BinaryOp EQ_UINT16
 cdef BinaryOp EQ_UINT32
 cdef BinaryOp EQ_UINT64
-cdef BinaryOp EQ_UINT8
 cdef BinaryOp FIRST_BOOL
 cdef BinaryOp FIRST_FP32
 cdef BinaryOp FIRST_FP64
+cdef BinaryOp FIRST_INT8
 cdef BinaryOp FIRST_INT16
 cdef BinaryOp FIRST_INT32
 cdef BinaryOp FIRST_INT64
-cdef BinaryOp FIRST_INT8
+cdef BinaryOp FIRST_UINT8
 cdef BinaryOp FIRST_UINT16
 cdef BinaryOp FIRST_UINT32
 cdef BinaryOp FIRST_UINT64
-cdef BinaryOp FIRST_UINT8
 cdef BinaryOp GE_BOOL
 cdef BinaryOp GE_FP32
 cdef BinaryOp GE_FP64
+cdef BinaryOp GE_INT8
 cdef BinaryOp GE_INT16
 cdef BinaryOp GE_INT32
 cdef BinaryOp GE_INT64
-cdef BinaryOp GE_INT8
+cdef BinaryOp GE_UINT8
 cdef BinaryOp GE_UINT16
 cdef BinaryOp GE_UINT32
 cdef BinaryOp GE_UINT64
-cdef BinaryOp GE_UINT8
 cdef BinaryOp GT_BOOL
 cdef BinaryOp GT_FP32
 cdef BinaryOp GT_FP64
+cdef BinaryOp GT_INT8
 cdef BinaryOp GT_INT16
 cdef BinaryOp GT_INT32
 cdef BinaryOp GT_INT64
-cdef BinaryOp GT_INT8
+cdef BinaryOp GT_UINT8
 cdef BinaryOp GT_UINT16
 cdef BinaryOp GT_UINT32
 cdef BinaryOp GT_UINT64
-cdef BinaryOp GT_UINT8
 cdef BinaryOp LAND
 cdef BinaryOp LE_BOOL
 cdef BinaryOp LE_FP32
 cdef BinaryOp LE_FP64
+cdef BinaryOp LE_INT8
 cdef BinaryOp LE_INT16
 cdef BinaryOp LE_INT32
 cdef BinaryOp LE_INT64
-cdef BinaryOp LE_INT8
+cdef BinaryOp LE_UINT8
 cdef BinaryOp LE_UINT16
 cdef BinaryOp LE_UINT32
 cdef BinaryOp LE_UINT64
-cdef BinaryOp LE_UINT8
 cdef BinaryOp LOR
 cdef BinaryOp LT_BOOL
 cdef BinaryOp LT_FP32
 cdef BinaryOp LT_FP64
+cdef BinaryOp LT_INT8
 cdef BinaryOp LT_INT16
 cdef BinaryOp LT_INT32
 cdef BinaryOp LT_INT64
-cdef BinaryOp LT_INT8
+cdef BinaryOp LT_UINT8
 cdef BinaryOp LT_UINT16
 cdef BinaryOp LT_UINT32
 cdef BinaryOp LT_UINT64
-cdef BinaryOp LT_UINT8
 cdef BinaryOp LXNOR
 cdef BinaryOp LXOR
 cdef BinaryOp MAX_BOOL
 cdef BinaryOp MAX_FP32
 cdef BinaryOp MAX_FP64
+cdef BinaryOp MAX_INT8
 cdef BinaryOp MAX_INT16
 cdef BinaryOp MAX_INT32
 cdef BinaryOp MAX_INT64
-cdef BinaryOp MAX_INT8
+cdef BinaryOp MAX_UINT8
 cdef BinaryOp MAX_UINT16
 cdef BinaryOp MAX_UINT32
 cdef BinaryOp MAX_UINT64
-cdef BinaryOp MAX_UINT8
 cdef BinaryOp MINUS_BOOL
 cdef BinaryOp MINUS_FP32
 cdef BinaryOp MINUS_FP64
+cdef BinaryOp MINUS_INT8
 cdef BinaryOp MINUS_INT16
 cdef BinaryOp MINUS_INT32
 cdef BinaryOp MINUS_INT64
-cdef BinaryOp MINUS_INT8
+cdef BinaryOp MINUS_UINT8
 cdef BinaryOp MINUS_UINT16
 cdef BinaryOp MINUS_UINT32
 cdef BinaryOp MINUS_UINT64
-cdef BinaryOp MINUS_UINT8
 cdef BinaryOp MIN_BOOL
 cdef BinaryOp MIN_FP32
 cdef BinaryOp MIN_FP64
+cdef BinaryOp MIN_INT8
 cdef BinaryOp MIN_INT16
 cdef BinaryOp MIN_INT32
 cdef BinaryOp MIN_INT64
-cdef BinaryOp MIN_INT8
+cdef BinaryOp MIN_UINT8
 cdef BinaryOp MIN_UINT16
 cdef BinaryOp MIN_UINT32
 cdef BinaryOp MIN_UINT64
-cdef BinaryOp MIN_UINT8
 cdef BinaryOp NE_BOOL
 cdef BinaryOp NE_FP32
 cdef BinaryOp NE_FP64
+cdef BinaryOp NE_INT8
 cdef BinaryOp NE_INT16
 cdef BinaryOp NE_INT32
 cdef BinaryOp NE_INT64
-cdef BinaryOp NE_INT8
+cdef BinaryOp NE_UINT8
 cdef BinaryOp NE_UINT16
 cdef BinaryOp NE_UINT32
 cdef BinaryOp NE_UINT64
-cdef BinaryOp NE_UINT8
 cdef BinaryOp PLUS_BOOL
 cdef BinaryOp PLUS_FP32
 cdef BinaryOp PLUS_FP64
+cdef BinaryOp PLUS_INT8
 cdef BinaryOp PLUS_INT16
 cdef BinaryOp PLUS_INT32
 cdef BinaryOp PLUS_INT64
-cdef BinaryOp PLUS_INT8
+cdef BinaryOp PLUS_UINT8
 cdef BinaryOp PLUS_UINT16
 cdef BinaryOp PLUS_UINT32
 cdef BinaryOp PLUS_UINT64
-cdef BinaryOp PLUS_UINT8
 cdef BinaryOp SECOND_BOOL
 cdef BinaryOp SECOND_FP32
 cdef BinaryOp SECOND_FP64
+cdef BinaryOp SECOND_INT8
 cdef BinaryOp SECOND_INT16
 cdef BinaryOp SECOND_INT32
 cdef BinaryOp SECOND_INT64
-cdef BinaryOp SECOND_INT8
+cdef BinaryOp SECOND_UINT8
 cdef BinaryOp SECOND_UINT16
 cdef BinaryOp SECOND_UINT32
 cdef BinaryOp SECOND_UINT64
-cdef BinaryOp SECOND_UINT8
 cdef BinaryOp TIMES_BOOL
 cdef BinaryOp TIMES_FP32
 cdef BinaryOp TIMES_FP64
+cdef BinaryOp TIMES_INT8
 cdef BinaryOp TIMES_INT16
 cdef BinaryOp TIMES_INT32
 cdef BinaryOp TIMES_INT64
-cdef BinaryOp TIMES_INT8
+cdef BinaryOp TIMES_UINT8
 cdef BinaryOp TIMES_UINT16
 cdef BinaryOp TIMES_UINT32
 cdef BinaryOp TIMES_UINT64
-cdef BinaryOp TIMES_UINT8
 
 # Descriptor
 cdef Descriptor DESC_C
@@ -270,44 +270,44 @@ cdef Monoid LXNOR_MONOID_BOOL
 cdef Monoid LXOR_MONOID_BOOL
 cdef Monoid MAX_MONOID_FP32
 cdef Monoid MAX_MONOID_FP64
+cdef Monoid MAX_MONOID_INT8
 cdef Monoid MAX_MONOID_INT16
 cdef Monoid MAX_MONOID_INT32
 cdef Monoid MAX_MONOID_INT64
-cdef Monoid MAX_MONOID_INT8
+cdef Monoid MAX_MONOID_UINT8
 cdef Monoid MAX_MONOID_UINT16
 cdef Monoid MAX_MONOID_UINT32
 cdef Monoid MAX_MONOID_UINT64
-cdef Monoid MAX_MONOID_UINT8
 cdef Monoid MIN_MONOID_FP32
 cdef Monoid MIN_MONOID_FP64
+cdef Monoid MIN_MONOID_INT8
 cdef Monoid MIN_MONOID_INT16
 cdef Monoid MIN_MONOID_INT32
 cdef Monoid MIN_MONOID_INT64
-cdef Monoid MIN_MONOID_INT8
+cdef Monoid MIN_MONOID_UINT8
 cdef Monoid MIN_MONOID_UINT16
 cdef Monoid MIN_MONOID_UINT32
 cdef Monoid MIN_MONOID_UINT64
-cdef Monoid MIN_MONOID_UINT8
 cdef Monoid PLUS_MONOID_FP32
 cdef Monoid PLUS_MONOID_FP64
+cdef Monoid PLUS_MONOID_INT8
 cdef Monoid PLUS_MONOID_INT16
 cdef Monoid PLUS_MONOID_INT32
 cdef Monoid PLUS_MONOID_INT64
-cdef Monoid PLUS_MONOID_INT8
+cdef Monoid PLUS_MONOID_UINT8
 cdef Monoid PLUS_MONOID_UINT16
 cdef Monoid PLUS_MONOID_UINT32
 cdef Monoid PLUS_MONOID_UINT64
-cdef Monoid PLUS_MONOID_UINT8
 cdef Monoid TIMES_MONOID_FP32
 cdef Monoid TIMES_MONOID_FP64
+cdef Monoid TIMES_MONOID_INT8
 cdef Monoid TIMES_MONOID_INT16
 cdef Monoid TIMES_MONOID_INT32
 cdef Monoid TIMES_MONOID_INT64
-cdef Monoid TIMES_MONOID_INT8
+cdef Monoid TIMES_MONOID_UINT8
 cdef Monoid TIMES_MONOID_UINT16
 cdef Monoid TIMES_MONOID_UINT32
 cdef Monoid TIMES_MONOID_UINT64
-cdef Monoid TIMES_MONOID_UINT8
 
 # Semiring
 cdef Semiring LAND_LOR_SEMIRING_BOOL
@@ -316,192 +316,192 @@ cdef Semiring LXNOR_LOR_SEMIRING_BOOL
 cdef Semiring LXOR_LAND_SEMIRING_BOOL
 cdef Semiring MAX_FIRST_SEMIRING_FP32
 cdef Semiring MAX_FIRST_SEMIRING_FP64
+cdef Semiring MAX_FIRST_SEMIRING_INT8
 cdef Semiring MAX_FIRST_SEMIRING_INT16
 cdef Semiring MAX_FIRST_SEMIRING_INT32
 cdef Semiring MAX_FIRST_SEMIRING_INT64
-cdef Semiring MAX_FIRST_SEMIRING_INT8
+cdef Semiring MAX_FIRST_SEMIRING_UINT8
 cdef Semiring MAX_FIRST_SEMIRING_UINT16
 cdef Semiring MAX_FIRST_SEMIRING_UINT32
 cdef Semiring MAX_FIRST_SEMIRING_UINT64
-cdef Semiring MAX_FIRST_SEMIRING_UINT8
 cdef Semiring MAX_MIN_SEMIRING_FP32
 cdef Semiring MAX_MIN_SEMIRING_FP64
+cdef Semiring MAX_MIN_SEMIRING_INT8
 cdef Semiring MAX_MIN_SEMIRING_INT16
 cdef Semiring MAX_MIN_SEMIRING_INT32
 cdef Semiring MAX_MIN_SEMIRING_INT64
-cdef Semiring MAX_MIN_SEMIRING_INT8
+cdef Semiring MAX_MIN_SEMIRING_UINT8
 cdef Semiring MAX_MIN_SEMIRING_UINT16
 cdef Semiring MAX_MIN_SEMIRING_UINT32
 cdef Semiring MAX_MIN_SEMIRING_UINT64
-cdef Semiring MAX_MIN_SEMIRING_UINT8
 cdef Semiring MAX_PLUS_SEMIRING_FP32
 cdef Semiring MAX_PLUS_SEMIRING_FP64
+cdef Semiring MAX_PLUS_SEMIRING_INT8
 cdef Semiring MAX_PLUS_SEMIRING_INT16
 cdef Semiring MAX_PLUS_SEMIRING_INT32
 cdef Semiring MAX_PLUS_SEMIRING_INT64
-cdef Semiring MAX_PLUS_SEMIRING_INT8
+cdef Semiring MAX_PLUS_SEMIRING_UINT8
 cdef Semiring MAX_PLUS_SEMIRING_UINT16
 cdef Semiring MAX_PLUS_SEMIRING_UINT32
 cdef Semiring MAX_PLUS_SEMIRING_UINT64
-cdef Semiring MAX_PLUS_SEMIRING_UINT8
 cdef Semiring MAX_SECOND_SEMIRING_FP32
 cdef Semiring MAX_SECOND_SEMIRING_FP64
+cdef Semiring MAX_SECOND_SEMIRING_INT8
 cdef Semiring MAX_SECOND_SEMIRING_INT16
 cdef Semiring MAX_SECOND_SEMIRING_INT32
 cdef Semiring MAX_SECOND_SEMIRING_INT64
-cdef Semiring MAX_SECOND_SEMIRING_INT8
+cdef Semiring MAX_SECOND_SEMIRING_UINT8
 cdef Semiring MAX_SECOND_SEMIRING_UINT16
 cdef Semiring MAX_SECOND_SEMIRING_UINT32
 cdef Semiring MAX_SECOND_SEMIRING_UINT64
-cdef Semiring MAX_SECOND_SEMIRING_UINT8
 cdef Semiring MAX_TIMES_SEMIRING_FP32
 cdef Semiring MAX_TIMES_SEMIRING_FP64
+cdef Semiring MAX_TIMES_SEMIRING_INT8
 cdef Semiring MAX_TIMES_SEMIRING_INT16
 cdef Semiring MAX_TIMES_SEMIRING_INT32
 cdef Semiring MAX_TIMES_SEMIRING_INT64
-cdef Semiring MAX_TIMES_SEMIRING_INT8
+cdef Semiring MAX_TIMES_SEMIRING_UINT8
 cdef Semiring MAX_TIMES_SEMIRING_UINT16
 cdef Semiring MAX_TIMES_SEMIRING_UINT32
 cdef Semiring MAX_TIMES_SEMIRING_UINT64
-cdef Semiring MAX_TIMES_SEMIRING_UINT8
 cdef Semiring MIN_FIRST_SEMIRING_FP32
 cdef Semiring MIN_FIRST_SEMIRING_FP64
+cdef Semiring MIN_FIRST_SEMIRING_INT8
 cdef Semiring MIN_FIRST_SEMIRING_INT16
 cdef Semiring MIN_FIRST_SEMIRING_INT32
 cdef Semiring MIN_FIRST_SEMIRING_INT64
-cdef Semiring MIN_FIRST_SEMIRING_INT8
+cdef Semiring MIN_FIRST_SEMIRING_UINT8
 cdef Semiring MIN_FIRST_SEMIRING_UINT16
 cdef Semiring MIN_FIRST_SEMIRING_UINT32
 cdef Semiring MIN_FIRST_SEMIRING_UINT64
-cdef Semiring MIN_FIRST_SEMIRING_UINT8
 cdef Semiring MIN_MAX_SEMIRING_FP32
 cdef Semiring MIN_MAX_SEMIRING_FP64
+cdef Semiring MIN_MAX_SEMIRING_INT8
 cdef Semiring MIN_MAX_SEMIRING_INT16
 cdef Semiring MIN_MAX_SEMIRING_INT32
 cdef Semiring MIN_MAX_SEMIRING_INT64
-cdef Semiring MIN_MAX_SEMIRING_INT8
+cdef Semiring MIN_MAX_SEMIRING_UINT8
 cdef Semiring MIN_MAX_SEMIRING_UINT16
 cdef Semiring MIN_MAX_SEMIRING_UINT32
 cdef Semiring MIN_MAX_SEMIRING_UINT64
-cdef Semiring MIN_MAX_SEMIRING_UINT8
 cdef Semiring MIN_PLUS_SEMIRING_FP32
 cdef Semiring MIN_PLUS_SEMIRING_FP64
+cdef Semiring MIN_PLUS_SEMIRING_INT8
 cdef Semiring MIN_PLUS_SEMIRING_INT16
 cdef Semiring MIN_PLUS_SEMIRING_INT32
 cdef Semiring MIN_PLUS_SEMIRING_INT64
-cdef Semiring MIN_PLUS_SEMIRING_INT8
+cdef Semiring MIN_PLUS_SEMIRING_UINT8
 cdef Semiring MIN_PLUS_SEMIRING_UINT16
 cdef Semiring MIN_PLUS_SEMIRING_UINT32
 cdef Semiring MIN_PLUS_SEMIRING_UINT64
-cdef Semiring MIN_PLUS_SEMIRING_UINT8
 cdef Semiring MIN_SECOND_SEMIRING_FP32
 cdef Semiring MIN_SECOND_SEMIRING_FP64
+cdef Semiring MIN_SECOND_SEMIRING_INT8
 cdef Semiring MIN_SECOND_SEMIRING_INT16
 cdef Semiring MIN_SECOND_SEMIRING_INT32
 cdef Semiring MIN_SECOND_SEMIRING_INT64
-cdef Semiring MIN_SECOND_SEMIRING_INT8
+cdef Semiring MIN_SECOND_SEMIRING_UINT8
 cdef Semiring MIN_SECOND_SEMIRING_UINT16
 cdef Semiring MIN_SECOND_SEMIRING_UINT32
 cdef Semiring MIN_SECOND_SEMIRING_UINT64
-cdef Semiring MIN_SECOND_SEMIRING_UINT8
 cdef Semiring MIN_TIMES_SEMIRING_FP32
 cdef Semiring MIN_TIMES_SEMIRING_FP64
+cdef Semiring MIN_TIMES_SEMIRING_INT8
 cdef Semiring MIN_TIMES_SEMIRING_INT16
 cdef Semiring MIN_TIMES_SEMIRING_INT32
 cdef Semiring MIN_TIMES_SEMIRING_INT64
-cdef Semiring MIN_TIMES_SEMIRING_INT8
+cdef Semiring MIN_TIMES_SEMIRING_UINT8
 cdef Semiring MIN_TIMES_SEMIRING_UINT16
 cdef Semiring MIN_TIMES_SEMIRING_UINT32
 cdef Semiring MIN_TIMES_SEMIRING_UINT64
-cdef Semiring MIN_TIMES_SEMIRING_UINT8
 cdef Semiring PLUS_MIN_SEMIRING_FP32
 cdef Semiring PLUS_MIN_SEMIRING_FP64
+cdef Semiring PLUS_MIN_SEMIRING_INT8
 cdef Semiring PLUS_MIN_SEMIRING_INT16
 cdef Semiring PLUS_MIN_SEMIRING_INT32
 cdef Semiring PLUS_MIN_SEMIRING_INT64
-cdef Semiring PLUS_MIN_SEMIRING_INT8
+cdef Semiring PLUS_MIN_SEMIRING_UINT8
 cdef Semiring PLUS_MIN_SEMIRING_UINT16
 cdef Semiring PLUS_MIN_SEMIRING_UINT32
 cdef Semiring PLUS_MIN_SEMIRING_UINT64
-cdef Semiring PLUS_MIN_SEMIRING_UINT8
 cdef Semiring PLUS_TIMES_SEMIRING_FP32
 cdef Semiring PLUS_TIMES_SEMIRING_FP64
+cdef Semiring PLUS_TIMES_SEMIRING_INT8
 cdef Semiring PLUS_TIMES_SEMIRING_INT16
 cdef Semiring PLUS_TIMES_SEMIRING_INT32
 cdef Semiring PLUS_TIMES_SEMIRING_INT64
-cdef Semiring PLUS_TIMES_SEMIRING_INT8
+cdef Semiring PLUS_TIMES_SEMIRING_UINT8
 cdef Semiring PLUS_TIMES_SEMIRING_UINT16
 cdef Semiring PLUS_TIMES_SEMIRING_UINT32
 cdef Semiring PLUS_TIMES_SEMIRING_UINT64
-cdef Semiring PLUS_TIMES_SEMIRING_UINT8
 
 # Type
 cdef Type BOOL
 cdef Type FP32
 cdef Type FP64
+cdef Type INT8
 cdef Type INT16
 cdef Type INT32
 cdef Type INT64
-cdef Type INT8
+cdef Type UINT8
 cdef Type UINT16
 cdef Type UINT32
 cdef Type UINT64
-cdef Type UINT8
 
 # UnaryOp
 cdef UnaryOp ABS_BOOL
 cdef UnaryOp ABS_FP32
 cdef UnaryOp ABS_FP64
+cdef UnaryOp ABS_INT8
 cdef UnaryOp ABS_INT16
 cdef UnaryOp ABS_INT32
 cdef UnaryOp ABS_INT64
-cdef UnaryOp ABS_INT8
+cdef UnaryOp ABS_UINT8
 cdef UnaryOp ABS_UINT16
 cdef UnaryOp ABS_UINT32
 cdef UnaryOp ABS_UINT64
-cdef UnaryOp ABS_UINT8
 cdef UnaryOp AINV_BOOL
 cdef UnaryOp AINV_FP32
 cdef UnaryOp AINV_FP64
+cdef UnaryOp AINV_INT8
 cdef UnaryOp AINV_INT16
 cdef UnaryOp AINV_INT32
 cdef UnaryOp AINV_INT64
-cdef UnaryOp AINV_INT8
+cdef UnaryOp AINV_UINT8
 cdef UnaryOp AINV_UINT16
 cdef UnaryOp AINV_UINT32
 cdef UnaryOp AINV_UINT64
-cdef UnaryOp AINV_UINT8
+cdef UnaryOp BNOT_INT8
 cdef UnaryOp BNOT_INT16
 cdef UnaryOp BNOT_INT32
 cdef UnaryOp BNOT_INT64
-cdef UnaryOp BNOT_INT8
+cdef UnaryOp BNOT_UINT8
 cdef UnaryOp BNOT_UINT16
 cdef UnaryOp BNOT_UINT32
 cdef UnaryOp BNOT_UINT64
-cdef UnaryOp BNOT_UINT8
 cdef UnaryOp IDENTITY_BOOL
 cdef UnaryOp IDENTITY_FP32
 cdef UnaryOp IDENTITY_FP64
+cdef UnaryOp IDENTITY_INT8
 cdef UnaryOp IDENTITY_INT16
 cdef UnaryOp IDENTITY_INT32
 cdef UnaryOp IDENTITY_INT64
-cdef UnaryOp IDENTITY_INT8
+cdef UnaryOp IDENTITY_UINT8
 cdef UnaryOp IDENTITY_UINT16
 cdef UnaryOp IDENTITY_UINT32
 cdef UnaryOp IDENTITY_UINT64
-cdef UnaryOp IDENTITY_UINT8
 cdef UnaryOp LNOT
 cdef UnaryOp MINV_BOOL
 cdef UnaryOp MINV_FP32
 cdef UnaryOp MINV_FP64
+cdef UnaryOp MINV_INT8
 cdef UnaryOp MINV_INT16
 cdef UnaryOp MINV_INT32
 cdef UnaryOp MINV_INT64
-cdef UnaryOp MINV_INT8
+cdef UnaryOp MINV_UINT8
 cdef UnaryOp MINV_UINT16
 cdef UnaryOp MINV_UINT32
 cdef UnaryOp MINV_UINT64
-cdef UnaryOp MINV_UINT8
 
 ctypedef object (*Col_assign_ptr)(Matrix, Vector, BinaryOp, Vector, Index*, Index, Index, Descriptor)
 ctypedef object (*Col_extract_ptr)(Vector, Vector, BinaryOp, Matrix, Index*, Index, Index, Descriptor)
@@ -510,48 +510,48 @@ ctypedef object (*Matrix_apply_ptr)(Matrix, Matrix, BinaryOp, UnaryOp, Matrix, D
 ctypedef object (*Matrix_apply_BinaryOp1st_BOOL_ptr)(Matrix, Matrix, BinaryOp, BinaryOp, bint, Matrix, Descriptor)
 ctypedef object (*Matrix_apply_BinaryOp1st_FP32_ptr)(Matrix, Matrix, BinaryOp, BinaryOp, float, Matrix, Descriptor)
 ctypedef object (*Matrix_apply_BinaryOp1st_FP64_ptr)(Matrix, Matrix, BinaryOp, BinaryOp, double, Matrix, Descriptor)
+ctypedef object (*Matrix_apply_BinaryOp1st_INT8_ptr)(Matrix, Matrix, BinaryOp, BinaryOp, int8_t, Matrix, Descriptor)
 ctypedef object (*Matrix_apply_BinaryOp1st_INT16_ptr)(Matrix, Matrix, BinaryOp, BinaryOp, int16_t, Matrix, Descriptor)
 ctypedef object (*Matrix_apply_BinaryOp1st_INT32_ptr)(Matrix, Matrix, BinaryOp, BinaryOp, int32_t, Matrix, Descriptor)
 ctypedef object (*Matrix_apply_BinaryOp1st_INT64_ptr)(Matrix, Matrix, BinaryOp, BinaryOp, int64_t, Matrix, Descriptor)
-ctypedef object (*Matrix_apply_BinaryOp1st_INT8_ptr)(Matrix, Matrix, BinaryOp, BinaryOp, int8_t, Matrix, Descriptor)
+ctypedef object (*Matrix_apply_BinaryOp1st_UINT8_ptr)(Matrix, Matrix, BinaryOp, BinaryOp, uint8_t, Matrix, Descriptor)
 ctypedef object (*Matrix_apply_BinaryOp1st_UINT16_ptr)(Matrix, Matrix, BinaryOp, BinaryOp, uint16_t, Matrix, Descriptor)
 ctypedef object (*Matrix_apply_BinaryOp1st_UINT32_ptr)(Matrix, Matrix, BinaryOp, BinaryOp, uint32_t, Matrix, Descriptor)
 ctypedef object (*Matrix_apply_BinaryOp1st_UINT64_ptr)(Matrix, Matrix, BinaryOp, BinaryOp, uint64_t, Matrix, Descriptor)
-ctypedef object (*Matrix_apply_BinaryOp1st_UINT8_ptr)(Matrix, Matrix, BinaryOp, BinaryOp, uint8_t, Matrix, Descriptor)
 ctypedef object (*Matrix_apply_BinaryOp2nd_BOOL_ptr)(Matrix, Matrix, BinaryOp, BinaryOp, Matrix, bint, Descriptor)
 ctypedef object (*Matrix_apply_BinaryOp2nd_FP32_ptr)(Matrix, Matrix, BinaryOp, BinaryOp, Matrix, float, Descriptor)
 ctypedef object (*Matrix_apply_BinaryOp2nd_FP64_ptr)(Matrix, Matrix, BinaryOp, BinaryOp, Matrix, double, Descriptor)
+ctypedef object (*Matrix_apply_BinaryOp2nd_INT8_ptr)(Matrix, Matrix, BinaryOp, BinaryOp, Matrix, int8_t, Descriptor)
 ctypedef object (*Matrix_apply_BinaryOp2nd_INT16_ptr)(Matrix, Matrix, BinaryOp, BinaryOp, Matrix, int16_t, Descriptor)
 ctypedef object (*Matrix_apply_BinaryOp2nd_INT32_ptr)(Matrix, Matrix, BinaryOp, BinaryOp, Matrix, int32_t, Descriptor)
 ctypedef object (*Matrix_apply_BinaryOp2nd_INT64_ptr)(Matrix, Matrix, BinaryOp, BinaryOp, Matrix, int64_t, Descriptor)
-ctypedef object (*Matrix_apply_BinaryOp2nd_INT8_ptr)(Matrix, Matrix, BinaryOp, BinaryOp, Matrix, int8_t, Descriptor)
+ctypedef object (*Matrix_apply_BinaryOp2nd_UINT8_ptr)(Matrix, Matrix, BinaryOp, BinaryOp, Matrix, uint8_t, Descriptor)
 ctypedef object (*Matrix_apply_BinaryOp2nd_UINT16_ptr)(Matrix, Matrix, BinaryOp, BinaryOp, Matrix, uint16_t, Descriptor)
 ctypedef object (*Matrix_apply_BinaryOp2nd_UINT32_ptr)(Matrix, Matrix, BinaryOp, BinaryOp, Matrix, uint32_t, Descriptor)
 ctypedef object (*Matrix_apply_BinaryOp2nd_UINT64_ptr)(Matrix, Matrix, BinaryOp, BinaryOp, Matrix, uint64_t, Descriptor)
-ctypedef object (*Matrix_apply_BinaryOp2nd_UINT8_ptr)(Matrix, Matrix, BinaryOp, BinaryOp, Matrix, uint8_t, Descriptor)
 ctypedef object (*Matrix_assign_ptr)(Matrix, Matrix, BinaryOp, Matrix, Index*, Index, Index*, Index, Descriptor)
 ctypedef object (*Matrix_assign_BOOL_ptr)(Matrix, Matrix, BinaryOp, bint, Index*, Index, Index*, Index, Descriptor)
 ctypedef object (*Matrix_assign_FP32_ptr)(Matrix, Matrix, BinaryOp, float, Index*, Index, Index*, Index, Descriptor)
 ctypedef object (*Matrix_assign_FP64_ptr)(Matrix, Matrix, BinaryOp, double, Index*, Index, Index*, Index, Descriptor)
+ctypedef object (*Matrix_assign_INT8_ptr)(Matrix, Matrix, BinaryOp, int8_t, Index*, Index, Index*, Index, Descriptor)
 ctypedef object (*Matrix_assign_INT16_ptr)(Matrix, Matrix, BinaryOp, int16_t, Index*, Index, Index*, Index, Descriptor)
 ctypedef object (*Matrix_assign_INT32_ptr)(Matrix, Matrix, BinaryOp, int32_t, Index*, Index, Index*, Index, Descriptor)
 ctypedef object (*Matrix_assign_INT64_ptr)(Matrix, Matrix, BinaryOp, int64_t, Index*, Index, Index*, Index, Descriptor)
-ctypedef object (*Matrix_assign_INT8_ptr)(Matrix, Matrix, BinaryOp, int8_t, Index*, Index, Index*, Index, Descriptor)
+ctypedef object (*Matrix_assign_UINT8_ptr)(Matrix, Matrix, BinaryOp, uint8_t, Index*, Index, Index*, Index, Descriptor)
 ctypedef object (*Matrix_assign_UINT16_ptr)(Matrix, Matrix, BinaryOp, uint16_t, Index*, Index, Index*, Index, Descriptor)
 ctypedef object (*Matrix_assign_UINT32_ptr)(Matrix, Matrix, BinaryOp, uint32_t, Index*, Index, Index*, Index, Descriptor)
 ctypedef object (*Matrix_assign_UINT64_ptr)(Matrix, Matrix, BinaryOp, uint64_t, Index*, Index, Index*, Index, Descriptor)
-ctypedef object (*Matrix_assign_UINT8_ptr)(Matrix, Matrix, BinaryOp, uint8_t, Index*, Index, Index*, Index, Descriptor)
 ctypedef object (*Matrix_build_BOOL_ptr)(Matrix, Index*, Index*, bint*, Index, BinaryOp)
 ctypedef object (*Matrix_build_FP32_ptr)(Matrix, Index*, Index*, float*, Index, BinaryOp)
 ctypedef object (*Matrix_build_FP64_ptr)(Matrix, Index*, Index*, double*, Index, BinaryOp)
+ctypedef object (*Matrix_build_INT8_ptr)(Matrix, Index*, Index*, int8_t*, Index, BinaryOp)
 ctypedef object (*Matrix_build_INT16_ptr)(Matrix, Index*, Index*, int16_t*, Index, BinaryOp)
 ctypedef object (*Matrix_build_INT32_ptr)(Matrix, Index*, Index*, int32_t*, Index, BinaryOp)
 ctypedef object (*Matrix_build_INT64_ptr)(Matrix, Index*, Index*, int64_t*, Index, BinaryOp)
-ctypedef object (*Matrix_build_INT8_ptr)(Matrix, Index*, Index*, int8_t*, Index, BinaryOp)
+ctypedef object (*Matrix_build_UINT8_ptr)(Matrix, Index*, Index*, uint8_t*, Index, BinaryOp)
 ctypedef object (*Matrix_build_UINT16_ptr)(Matrix, Index*, Index*, uint16_t*, Index, BinaryOp)
 ctypedef object (*Matrix_build_UINT32_ptr)(Matrix, Index*, Index*, uint32_t*, Index, BinaryOp)
 ctypedef object (*Matrix_build_UINT64_ptr)(Matrix, Index*, Index*, uint64_t*, Index, BinaryOp)
-ctypedef object (*Matrix_build_UINT8_ptr)(Matrix, Index*, Index*, uint8_t*, Index, BinaryOp)
 ctypedef object (*Matrix_clear_ptr)(Matrix)
 ctypedef object (*Matrix_dup_ptr)(Matrix, Matrix)
 ctypedef object (*Matrix_eWiseAdd_BinaryOp_ptr)(Matrix, Matrix, BinaryOp, BinaryOp, Matrix, Matrix, Descriptor)
@@ -573,62 +573,62 @@ ctypedef object (*Matrix_resize_ptr)(Matrix, Index, Index)
 ctypedef object (*Matrix_setElement_BOOL_ptr)(Matrix, bint, Index, Index)
 ctypedef object (*Matrix_setElement_FP32_ptr)(Matrix, float, Index, Index)
 ctypedef object (*Matrix_setElement_FP64_ptr)(Matrix, double, Index, Index)
+ctypedef object (*Matrix_setElement_INT8_ptr)(Matrix, int8_t, Index, Index)
 ctypedef object (*Matrix_setElement_INT16_ptr)(Matrix, int16_t, Index, Index)
 ctypedef object (*Matrix_setElement_INT32_ptr)(Matrix, int32_t, Index, Index)
 ctypedef object (*Matrix_setElement_INT64_ptr)(Matrix, int64_t, Index, Index)
-ctypedef object (*Matrix_setElement_INT8_ptr)(Matrix, int8_t, Index, Index)
+ctypedef object (*Matrix_setElement_UINT8_ptr)(Matrix, uint8_t, Index, Index)
 ctypedef object (*Matrix_setElement_UINT16_ptr)(Matrix, uint16_t, Index, Index)
 ctypedef object (*Matrix_setElement_UINT32_ptr)(Matrix, uint32_t, Index, Index)
 ctypedef object (*Matrix_setElement_UINT64_ptr)(Matrix, uint64_t, Index, Index)
-ctypedef object (*Matrix_setElement_UINT8_ptr)(Matrix, uint8_t, Index, Index)
 ctypedef object (*Matrix_wait_ptr)(Matrix)
 ctypedef object (*Row_assign_ptr)(Matrix, Vector, BinaryOp, Vector, Index, Index*, Index, Descriptor)
 ctypedef object (*Vector_apply_ptr)(Vector, Vector, BinaryOp, UnaryOp, Vector, Descriptor)
 ctypedef object (*Vector_apply_BinaryOp1st_BOOL_ptr)(Vector, Vector, BinaryOp, BinaryOp, bint, Vector, Descriptor)
 ctypedef object (*Vector_apply_BinaryOp1st_FP32_ptr)(Vector, Vector, BinaryOp, BinaryOp, float, Vector, Descriptor)
 ctypedef object (*Vector_apply_BinaryOp1st_FP64_ptr)(Vector, Vector, BinaryOp, BinaryOp, double, Vector, Descriptor)
+ctypedef object (*Vector_apply_BinaryOp1st_INT8_ptr)(Vector, Vector, BinaryOp, BinaryOp, int8_t, Vector, Descriptor)
 ctypedef object (*Vector_apply_BinaryOp1st_INT16_ptr)(Vector, Vector, BinaryOp, BinaryOp, int16_t, Vector, Descriptor)
 ctypedef object (*Vector_apply_BinaryOp1st_INT32_ptr)(Vector, Vector, BinaryOp, BinaryOp, int32_t, Vector, Descriptor)
 ctypedef object (*Vector_apply_BinaryOp1st_INT64_ptr)(Vector, Vector, BinaryOp, BinaryOp, int64_t, Vector, Descriptor)
-ctypedef object (*Vector_apply_BinaryOp1st_INT8_ptr)(Vector, Vector, BinaryOp, BinaryOp, int8_t, Vector, Descriptor)
+ctypedef object (*Vector_apply_BinaryOp1st_UINT8_ptr)(Vector, Vector, BinaryOp, BinaryOp, uint8_t, Vector, Descriptor)
 ctypedef object (*Vector_apply_BinaryOp1st_UINT16_ptr)(Vector, Vector, BinaryOp, BinaryOp, uint16_t, Vector, Descriptor)
 ctypedef object (*Vector_apply_BinaryOp1st_UINT32_ptr)(Vector, Vector, BinaryOp, BinaryOp, uint32_t, Vector, Descriptor)
 ctypedef object (*Vector_apply_BinaryOp1st_UINT64_ptr)(Vector, Vector, BinaryOp, BinaryOp, uint64_t, Vector, Descriptor)
-ctypedef object (*Vector_apply_BinaryOp1st_UINT8_ptr)(Vector, Vector, BinaryOp, BinaryOp, uint8_t, Vector, Descriptor)
 ctypedef object (*Vector_apply_BinaryOp2nd_BOOL_ptr)(Vector, Vector, BinaryOp, BinaryOp, Vector, bint, Descriptor)
 ctypedef object (*Vector_apply_BinaryOp2nd_FP32_ptr)(Vector, Vector, BinaryOp, BinaryOp, Vector, float, Descriptor)
 ctypedef object (*Vector_apply_BinaryOp2nd_FP64_ptr)(Vector, Vector, BinaryOp, BinaryOp, Vector, double, Descriptor)
+ctypedef object (*Vector_apply_BinaryOp2nd_INT8_ptr)(Vector, Vector, BinaryOp, BinaryOp, Vector, int8_t, Descriptor)
 ctypedef object (*Vector_apply_BinaryOp2nd_INT16_ptr)(Vector, Vector, BinaryOp, BinaryOp, Vector, int16_t, Descriptor)
 ctypedef object (*Vector_apply_BinaryOp2nd_INT32_ptr)(Vector, Vector, BinaryOp, BinaryOp, Vector, int32_t, Descriptor)
 ctypedef object (*Vector_apply_BinaryOp2nd_INT64_ptr)(Vector, Vector, BinaryOp, BinaryOp, Vector, int64_t, Descriptor)
-ctypedef object (*Vector_apply_BinaryOp2nd_INT8_ptr)(Vector, Vector, BinaryOp, BinaryOp, Vector, int8_t, Descriptor)
+ctypedef object (*Vector_apply_BinaryOp2nd_UINT8_ptr)(Vector, Vector, BinaryOp, BinaryOp, Vector, uint8_t, Descriptor)
 ctypedef object (*Vector_apply_BinaryOp2nd_UINT16_ptr)(Vector, Vector, BinaryOp, BinaryOp, Vector, uint16_t, Descriptor)
 ctypedef object (*Vector_apply_BinaryOp2nd_UINT32_ptr)(Vector, Vector, BinaryOp, BinaryOp, Vector, uint32_t, Descriptor)
 ctypedef object (*Vector_apply_BinaryOp2nd_UINT64_ptr)(Vector, Vector, BinaryOp, BinaryOp, Vector, uint64_t, Descriptor)
-ctypedef object (*Vector_apply_BinaryOp2nd_UINT8_ptr)(Vector, Vector, BinaryOp, BinaryOp, Vector, uint8_t, Descriptor)
 ctypedef object (*Vector_assign_ptr)(Vector, Vector, BinaryOp, Vector, Index*, Index, Descriptor)
 ctypedef object (*Vector_assign_BOOL_ptr)(Vector, Vector, BinaryOp, bint, Index*, Index, Descriptor)
 ctypedef object (*Vector_assign_FP32_ptr)(Vector, Vector, BinaryOp, float, Index*, Index, Descriptor)
 ctypedef object (*Vector_assign_FP64_ptr)(Vector, Vector, BinaryOp, double, Index*, Index, Descriptor)
+ctypedef object (*Vector_assign_INT8_ptr)(Vector, Vector, BinaryOp, int8_t, Index*, Index, Descriptor)
 ctypedef object (*Vector_assign_INT16_ptr)(Vector, Vector, BinaryOp, int16_t, Index*, Index, Descriptor)
 ctypedef object (*Vector_assign_INT32_ptr)(Vector, Vector, BinaryOp, int32_t, Index*, Index, Descriptor)
 ctypedef object (*Vector_assign_INT64_ptr)(Vector, Vector, BinaryOp, int64_t, Index*, Index, Descriptor)
-ctypedef object (*Vector_assign_INT8_ptr)(Vector, Vector, BinaryOp, int8_t, Index*, Index, Descriptor)
+ctypedef object (*Vector_assign_UINT8_ptr)(Vector, Vector, BinaryOp, uint8_t, Index*, Index, Descriptor)
 ctypedef object (*Vector_assign_UINT16_ptr)(Vector, Vector, BinaryOp, uint16_t, Index*, Index, Descriptor)
 ctypedef object (*Vector_assign_UINT32_ptr)(Vector, Vector, BinaryOp, uint32_t, Index*, Index, Descriptor)
 ctypedef object (*Vector_assign_UINT64_ptr)(Vector, Vector, BinaryOp, uint64_t, Index*, Index, Descriptor)
-ctypedef object (*Vector_assign_UINT8_ptr)(Vector, Vector, BinaryOp, uint8_t, Index*, Index, Descriptor)
 ctypedef object (*Vector_build_BOOL_ptr)(Vector, Index*, bint*, Index, BinaryOp)
 ctypedef object (*Vector_build_FP32_ptr)(Vector, Index*, float*, Index, BinaryOp)
 ctypedef object (*Vector_build_FP64_ptr)(Vector, Index*, double*, Index, BinaryOp)
+ctypedef object (*Vector_build_INT8_ptr)(Vector, Index*, int8_t*, Index, BinaryOp)
 ctypedef object (*Vector_build_INT16_ptr)(Vector, Index*, int16_t*, Index, BinaryOp)
 ctypedef object (*Vector_build_INT32_ptr)(Vector, Index*, int32_t*, Index, BinaryOp)
 ctypedef object (*Vector_build_INT64_ptr)(Vector, Index*, int64_t*, Index, BinaryOp)
-ctypedef object (*Vector_build_INT8_ptr)(Vector, Index*, int8_t*, Index, BinaryOp)
+ctypedef object (*Vector_build_UINT8_ptr)(Vector, Index*, uint8_t*, Index, BinaryOp)
 ctypedef object (*Vector_build_UINT16_ptr)(Vector, Index*, uint16_t*, Index, BinaryOp)
 ctypedef object (*Vector_build_UINT32_ptr)(Vector, Index*, uint32_t*, Index, BinaryOp)
 ctypedef object (*Vector_build_UINT64_ptr)(Vector, Index*, uint64_t*, Index, BinaryOp)
-ctypedef object (*Vector_build_UINT8_ptr)(Vector, Index*, uint8_t*, Index, BinaryOp)
 ctypedef object (*Vector_clear_ptr)(Vector)
 ctypedef object (*Vector_dup_ptr)(Vector, Vector)
 ctypedef object (*Vector_eWiseAdd_BinaryOp_ptr)(Vector, Vector, BinaryOp, BinaryOp, Vector, Vector, Descriptor)
@@ -645,14 +645,14 @@ ctypedef object (*Vector_resize_ptr)(Vector, Index)
 ctypedef object (*Vector_setElement_BOOL_ptr)(Vector, bint, Index)
 ctypedef object (*Vector_setElement_FP32_ptr)(Vector, float, Index)
 ctypedef object (*Vector_setElement_FP64_ptr)(Vector, double, Index)
+ctypedef object (*Vector_setElement_INT8_ptr)(Vector, int8_t, Index)
 ctypedef object (*Vector_setElement_INT16_ptr)(Vector, int16_t, Index)
 ctypedef object (*Vector_setElement_INT32_ptr)(Vector, int32_t, Index)
 ctypedef object (*Vector_setElement_INT64_ptr)(Vector, int64_t, Index)
-ctypedef object (*Vector_setElement_INT8_ptr)(Vector, int8_t, Index)
+ctypedef object (*Vector_setElement_UINT8_ptr)(Vector, uint8_t, Index)
 ctypedef object (*Vector_setElement_UINT16_ptr)(Vector, uint16_t, Index)
 ctypedef object (*Vector_setElement_UINT32_ptr)(Vector, uint32_t, Index)
 ctypedef object (*Vector_setElement_UINT64_ptr)(Vector, uint64_t, Index)
-ctypedef object (*Vector_setElement_UINT8_ptr)(Vector, uint8_t, Index)
 ctypedef object (*Vector_wait_ptr)(Vector)
 ctypedef object (*init_ptr)(Mode)
 ctypedef object (*mxm_ptr)(Matrix, Matrix, BinaryOp, Semiring, Matrix, Matrix, Descriptor)
@@ -667,48 +667,48 @@ cdef Matrix_apply_ptr Matrix_apply_ptrs[CYGB_NBACKENDS]
 cdef Matrix_apply_BinaryOp1st_BOOL_ptr Matrix_apply_BinaryOp1st_BOOL_ptrs[CYGB_NBACKENDS]
 cdef Matrix_apply_BinaryOp1st_FP32_ptr Matrix_apply_BinaryOp1st_FP32_ptrs[CYGB_NBACKENDS]
 cdef Matrix_apply_BinaryOp1st_FP64_ptr Matrix_apply_BinaryOp1st_FP64_ptrs[CYGB_NBACKENDS]
+cdef Matrix_apply_BinaryOp1st_INT8_ptr Matrix_apply_BinaryOp1st_INT8_ptrs[CYGB_NBACKENDS]
 cdef Matrix_apply_BinaryOp1st_INT16_ptr Matrix_apply_BinaryOp1st_INT16_ptrs[CYGB_NBACKENDS]
 cdef Matrix_apply_BinaryOp1st_INT32_ptr Matrix_apply_BinaryOp1st_INT32_ptrs[CYGB_NBACKENDS]
 cdef Matrix_apply_BinaryOp1st_INT64_ptr Matrix_apply_BinaryOp1st_INT64_ptrs[CYGB_NBACKENDS]
-cdef Matrix_apply_BinaryOp1st_INT8_ptr Matrix_apply_BinaryOp1st_INT8_ptrs[CYGB_NBACKENDS]
+cdef Matrix_apply_BinaryOp1st_UINT8_ptr Matrix_apply_BinaryOp1st_UINT8_ptrs[CYGB_NBACKENDS]
 cdef Matrix_apply_BinaryOp1st_UINT16_ptr Matrix_apply_BinaryOp1st_UINT16_ptrs[CYGB_NBACKENDS]
 cdef Matrix_apply_BinaryOp1st_UINT32_ptr Matrix_apply_BinaryOp1st_UINT32_ptrs[CYGB_NBACKENDS]
 cdef Matrix_apply_BinaryOp1st_UINT64_ptr Matrix_apply_BinaryOp1st_UINT64_ptrs[CYGB_NBACKENDS]
-cdef Matrix_apply_BinaryOp1st_UINT8_ptr Matrix_apply_BinaryOp1st_UINT8_ptrs[CYGB_NBACKENDS]
 cdef Matrix_apply_BinaryOp2nd_BOOL_ptr Matrix_apply_BinaryOp2nd_BOOL_ptrs[CYGB_NBACKENDS]
 cdef Matrix_apply_BinaryOp2nd_FP32_ptr Matrix_apply_BinaryOp2nd_FP32_ptrs[CYGB_NBACKENDS]
 cdef Matrix_apply_BinaryOp2nd_FP64_ptr Matrix_apply_BinaryOp2nd_FP64_ptrs[CYGB_NBACKENDS]
+cdef Matrix_apply_BinaryOp2nd_INT8_ptr Matrix_apply_BinaryOp2nd_INT8_ptrs[CYGB_NBACKENDS]
 cdef Matrix_apply_BinaryOp2nd_INT16_ptr Matrix_apply_BinaryOp2nd_INT16_ptrs[CYGB_NBACKENDS]
 cdef Matrix_apply_BinaryOp2nd_INT32_ptr Matrix_apply_BinaryOp2nd_INT32_ptrs[CYGB_NBACKENDS]
 cdef Matrix_apply_BinaryOp2nd_INT64_ptr Matrix_apply_BinaryOp2nd_INT64_ptrs[CYGB_NBACKENDS]
-cdef Matrix_apply_BinaryOp2nd_INT8_ptr Matrix_apply_BinaryOp2nd_INT8_ptrs[CYGB_NBACKENDS]
+cdef Matrix_apply_BinaryOp2nd_UINT8_ptr Matrix_apply_BinaryOp2nd_UINT8_ptrs[CYGB_NBACKENDS]
 cdef Matrix_apply_BinaryOp2nd_UINT16_ptr Matrix_apply_BinaryOp2nd_UINT16_ptrs[CYGB_NBACKENDS]
 cdef Matrix_apply_BinaryOp2nd_UINT32_ptr Matrix_apply_BinaryOp2nd_UINT32_ptrs[CYGB_NBACKENDS]
 cdef Matrix_apply_BinaryOp2nd_UINT64_ptr Matrix_apply_BinaryOp2nd_UINT64_ptrs[CYGB_NBACKENDS]
-cdef Matrix_apply_BinaryOp2nd_UINT8_ptr Matrix_apply_BinaryOp2nd_UINT8_ptrs[CYGB_NBACKENDS]
 cdef Matrix_assign_ptr Matrix_assign_ptrs[CYGB_NBACKENDS]
 cdef Matrix_assign_BOOL_ptr Matrix_assign_BOOL_ptrs[CYGB_NBACKENDS]
 cdef Matrix_assign_FP32_ptr Matrix_assign_FP32_ptrs[CYGB_NBACKENDS]
 cdef Matrix_assign_FP64_ptr Matrix_assign_FP64_ptrs[CYGB_NBACKENDS]
+cdef Matrix_assign_INT8_ptr Matrix_assign_INT8_ptrs[CYGB_NBACKENDS]
 cdef Matrix_assign_INT16_ptr Matrix_assign_INT16_ptrs[CYGB_NBACKENDS]
 cdef Matrix_assign_INT32_ptr Matrix_assign_INT32_ptrs[CYGB_NBACKENDS]
 cdef Matrix_assign_INT64_ptr Matrix_assign_INT64_ptrs[CYGB_NBACKENDS]
-cdef Matrix_assign_INT8_ptr Matrix_assign_INT8_ptrs[CYGB_NBACKENDS]
+cdef Matrix_assign_UINT8_ptr Matrix_assign_UINT8_ptrs[CYGB_NBACKENDS]
 cdef Matrix_assign_UINT16_ptr Matrix_assign_UINT16_ptrs[CYGB_NBACKENDS]
 cdef Matrix_assign_UINT32_ptr Matrix_assign_UINT32_ptrs[CYGB_NBACKENDS]
 cdef Matrix_assign_UINT64_ptr Matrix_assign_UINT64_ptrs[CYGB_NBACKENDS]
-cdef Matrix_assign_UINT8_ptr Matrix_assign_UINT8_ptrs[CYGB_NBACKENDS]
 cdef Matrix_build_BOOL_ptr Matrix_build_BOOL_ptrs[CYGB_NBACKENDS]
 cdef Matrix_build_FP32_ptr Matrix_build_FP32_ptrs[CYGB_NBACKENDS]
 cdef Matrix_build_FP64_ptr Matrix_build_FP64_ptrs[CYGB_NBACKENDS]
+cdef Matrix_build_INT8_ptr Matrix_build_INT8_ptrs[CYGB_NBACKENDS]
 cdef Matrix_build_INT16_ptr Matrix_build_INT16_ptrs[CYGB_NBACKENDS]
 cdef Matrix_build_INT32_ptr Matrix_build_INT32_ptrs[CYGB_NBACKENDS]
 cdef Matrix_build_INT64_ptr Matrix_build_INT64_ptrs[CYGB_NBACKENDS]
-cdef Matrix_build_INT8_ptr Matrix_build_INT8_ptrs[CYGB_NBACKENDS]
+cdef Matrix_build_UINT8_ptr Matrix_build_UINT8_ptrs[CYGB_NBACKENDS]
 cdef Matrix_build_UINT16_ptr Matrix_build_UINT16_ptrs[CYGB_NBACKENDS]
 cdef Matrix_build_UINT32_ptr Matrix_build_UINT32_ptrs[CYGB_NBACKENDS]
 cdef Matrix_build_UINT64_ptr Matrix_build_UINT64_ptrs[CYGB_NBACKENDS]
-cdef Matrix_build_UINT8_ptr Matrix_build_UINT8_ptrs[CYGB_NBACKENDS]
 cdef Matrix_clear_ptr Matrix_clear_ptrs[CYGB_NBACKENDS]
 cdef Matrix_dup_ptr Matrix_dup_ptrs[CYGB_NBACKENDS]
 cdef Matrix_eWiseAdd_BinaryOp_ptr Matrix_eWiseAdd_BinaryOp_ptrs[CYGB_NBACKENDS]
@@ -730,62 +730,62 @@ cdef Matrix_resize_ptr Matrix_resize_ptrs[CYGB_NBACKENDS]
 cdef Matrix_setElement_BOOL_ptr Matrix_setElement_BOOL_ptrs[CYGB_NBACKENDS]
 cdef Matrix_setElement_FP32_ptr Matrix_setElement_FP32_ptrs[CYGB_NBACKENDS]
 cdef Matrix_setElement_FP64_ptr Matrix_setElement_FP64_ptrs[CYGB_NBACKENDS]
+cdef Matrix_setElement_INT8_ptr Matrix_setElement_INT8_ptrs[CYGB_NBACKENDS]
 cdef Matrix_setElement_INT16_ptr Matrix_setElement_INT16_ptrs[CYGB_NBACKENDS]
 cdef Matrix_setElement_INT32_ptr Matrix_setElement_INT32_ptrs[CYGB_NBACKENDS]
 cdef Matrix_setElement_INT64_ptr Matrix_setElement_INT64_ptrs[CYGB_NBACKENDS]
-cdef Matrix_setElement_INT8_ptr Matrix_setElement_INT8_ptrs[CYGB_NBACKENDS]
+cdef Matrix_setElement_UINT8_ptr Matrix_setElement_UINT8_ptrs[CYGB_NBACKENDS]
 cdef Matrix_setElement_UINT16_ptr Matrix_setElement_UINT16_ptrs[CYGB_NBACKENDS]
 cdef Matrix_setElement_UINT32_ptr Matrix_setElement_UINT32_ptrs[CYGB_NBACKENDS]
 cdef Matrix_setElement_UINT64_ptr Matrix_setElement_UINT64_ptrs[CYGB_NBACKENDS]
-cdef Matrix_setElement_UINT8_ptr Matrix_setElement_UINT8_ptrs[CYGB_NBACKENDS]
 cdef Matrix_wait_ptr Matrix_wait_ptrs[CYGB_NBACKENDS]
 cdef Row_assign_ptr Row_assign_ptrs[CYGB_NBACKENDS]
 cdef Vector_apply_ptr Vector_apply_ptrs[CYGB_NBACKENDS]
 cdef Vector_apply_BinaryOp1st_BOOL_ptr Vector_apply_BinaryOp1st_BOOL_ptrs[CYGB_NBACKENDS]
 cdef Vector_apply_BinaryOp1st_FP32_ptr Vector_apply_BinaryOp1st_FP32_ptrs[CYGB_NBACKENDS]
 cdef Vector_apply_BinaryOp1st_FP64_ptr Vector_apply_BinaryOp1st_FP64_ptrs[CYGB_NBACKENDS]
+cdef Vector_apply_BinaryOp1st_INT8_ptr Vector_apply_BinaryOp1st_INT8_ptrs[CYGB_NBACKENDS]
 cdef Vector_apply_BinaryOp1st_INT16_ptr Vector_apply_BinaryOp1st_INT16_ptrs[CYGB_NBACKENDS]
 cdef Vector_apply_BinaryOp1st_INT32_ptr Vector_apply_BinaryOp1st_INT32_ptrs[CYGB_NBACKENDS]
 cdef Vector_apply_BinaryOp1st_INT64_ptr Vector_apply_BinaryOp1st_INT64_ptrs[CYGB_NBACKENDS]
-cdef Vector_apply_BinaryOp1st_INT8_ptr Vector_apply_BinaryOp1st_INT8_ptrs[CYGB_NBACKENDS]
+cdef Vector_apply_BinaryOp1st_UINT8_ptr Vector_apply_BinaryOp1st_UINT8_ptrs[CYGB_NBACKENDS]
 cdef Vector_apply_BinaryOp1st_UINT16_ptr Vector_apply_BinaryOp1st_UINT16_ptrs[CYGB_NBACKENDS]
 cdef Vector_apply_BinaryOp1st_UINT32_ptr Vector_apply_BinaryOp1st_UINT32_ptrs[CYGB_NBACKENDS]
 cdef Vector_apply_BinaryOp1st_UINT64_ptr Vector_apply_BinaryOp1st_UINT64_ptrs[CYGB_NBACKENDS]
-cdef Vector_apply_BinaryOp1st_UINT8_ptr Vector_apply_BinaryOp1st_UINT8_ptrs[CYGB_NBACKENDS]
 cdef Vector_apply_BinaryOp2nd_BOOL_ptr Vector_apply_BinaryOp2nd_BOOL_ptrs[CYGB_NBACKENDS]
 cdef Vector_apply_BinaryOp2nd_FP32_ptr Vector_apply_BinaryOp2nd_FP32_ptrs[CYGB_NBACKENDS]
 cdef Vector_apply_BinaryOp2nd_FP64_ptr Vector_apply_BinaryOp2nd_FP64_ptrs[CYGB_NBACKENDS]
+cdef Vector_apply_BinaryOp2nd_INT8_ptr Vector_apply_BinaryOp2nd_INT8_ptrs[CYGB_NBACKENDS]
 cdef Vector_apply_BinaryOp2nd_INT16_ptr Vector_apply_BinaryOp2nd_INT16_ptrs[CYGB_NBACKENDS]
 cdef Vector_apply_BinaryOp2nd_INT32_ptr Vector_apply_BinaryOp2nd_INT32_ptrs[CYGB_NBACKENDS]
 cdef Vector_apply_BinaryOp2nd_INT64_ptr Vector_apply_BinaryOp2nd_INT64_ptrs[CYGB_NBACKENDS]
-cdef Vector_apply_BinaryOp2nd_INT8_ptr Vector_apply_BinaryOp2nd_INT8_ptrs[CYGB_NBACKENDS]
+cdef Vector_apply_BinaryOp2nd_UINT8_ptr Vector_apply_BinaryOp2nd_UINT8_ptrs[CYGB_NBACKENDS]
 cdef Vector_apply_BinaryOp2nd_UINT16_ptr Vector_apply_BinaryOp2nd_UINT16_ptrs[CYGB_NBACKENDS]
 cdef Vector_apply_BinaryOp2nd_UINT32_ptr Vector_apply_BinaryOp2nd_UINT32_ptrs[CYGB_NBACKENDS]
 cdef Vector_apply_BinaryOp2nd_UINT64_ptr Vector_apply_BinaryOp2nd_UINT64_ptrs[CYGB_NBACKENDS]
-cdef Vector_apply_BinaryOp2nd_UINT8_ptr Vector_apply_BinaryOp2nd_UINT8_ptrs[CYGB_NBACKENDS]
 cdef Vector_assign_ptr Vector_assign_ptrs[CYGB_NBACKENDS]
 cdef Vector_assign_BOOL_ptr Vector_assign_BOOL_ptrs[CYGB_NBACKENDS]
 cdef Vector_assign_FP32_ptr Vector_assign_FP32_ptrs[CYGB_NBACKENDS]
 cdef Vector_assign_FP64_ptr Vector_assign_FP64_ptrs[CYGB_NBACKENDS]
+cdef Vector_assign_INT8_ptr Vector_assign_INT8_ptrs[CYGB_NBACKENDS]
 cdef Vector_assign_INT16_ptr Vector_assign_INT16_ptrs[CYGB_NBACKENDS]
 cdef Vector_assign_INT32_ptr Vector_assign_INT32_ptrs[CYGB_NBACKENDS]
 cdef Vector_assign_INT64_ptr Vector_assign_INT64_ptrs[CYGB_NBACKENDS]
-cdef Vector_assign_INT8_ptr Vector_assign_INT8_ptrs[CYGB_NBACKENDS]
+cdef Vector_assign_UINT8_ptr Vector_assign_UINT8_ptrs[CYGB_NBACKENDS]
 cdef Vector_assign_UINT16_ptr Vector_assign_UINT16_ptrs[CYGB_NBACKENDS]
 cdef Vector_assign_UINT32_ptr Vector_assign_UINT32_ptrs[CYGB_NBACKENDS]
 cdef Vector_assign_UINT64_ptr Vector_assign_UINT64_ptrs[CYGB_NBACKENDS]
-cdef Vector_assign_UINT8_ptr Vector_assign_UINT8_ptrs[CYGB_NBACKENDS]
 cdef Vector_build_BOOL_ptr Vector_build_BOOL_ptrs[CYGB_NBACKENDS]
 cdef Vector_build_FP32_ptr Vector_build_FP32_ptrs[CYGB_NBACKENDS]
 cdef Vector_build_FP64_ptr Vector_build_FP64_ptrs[CYGB_NBACKENDS]
+cdef Vector_build_INT8_ptr Vector_build_INT8_ptrs[CYGB_NBACKENDS]
 cdef Vector_build_INT16_ptr Vector_build_INT16_ptrs[CYGB_NBACKENDS]
 cdef Vector_build_INT32_ptr Vector_build_INT32_ptrs[CYGB_NBACKENDS]
 cdef Vector_build_INT64_ptr Vector_build_INT64_ptrs[CYGB_NBACKENDS]
-cdef Vector_build_INT8_ptr Vector_build_INT8_ptrs[CYGB_NBACKENDS]
+cdef Vector_build_UINT8_ptr Vector_build_UINT8_ptrs[CYGB_NBACKENDS]
 cdef Vector_build_UINT16_ptr Vector_build_UINT16_ptrs[CYGB_NBACKENDS]
 cdef Vector_build_UINT32_ptr Vector_build_UINT32_ptrs[CYGB_NBACKENDS]
 cdef Vector_build_UINT64_ptr Vector_build_UINT64_ptrs[CYGB_NBACKENDS]
-cdef Vector_build_UINT8_ptr Vector_build_UINT8_ptrs[CYGB_NBACKENDS]
 cdef Vector_clear_ptr Vector_clear_ptrs[CYGB_NBACKENDS]
 cdef Vector_dup_ptr Vector_dup_ptrs[CYGB_NBACKENDS]
 cdef Vector_eWiseAdd_BinaryOp_ptr Vector_eWiseAdd_BinaryOp_ptrs[CYGB_NBACKENDS]
@@ -802,14 +802,14 @@ cdef Vector_resize_ptr Vector_resize_ptrs[CYGB_NBACKENDS]
 cdef Vector_setElement_BOOL_ptr Vector_setElement_BOOL_ptrs[CYGB_NBACKENDS]
 cdef Vector_setElement_FP32_ptr Vector_setElement_FP32_ptrs[CYGB_NBACKENDS]
 cdef Vector_setElement_FP64_ptr Vector_setElement_FP64_ptrs[CYGB_NBACKENDS]
+cdef Vector_setElement_INT8_ptr Vector_setElement_INT8_ptrs[CYGB_NBACKENDS]
 cdef Vector_setElement_INT16_ptr Vector_setElement_INT16_ptrs[CYGB_NBACKENDS]
 cdef Vector_setElement_INT32_ptr Vector_setElement_INT32_ptrs[CYGB_NBACKENDS]
 cdef Vector_setElement_INT64_ptr Vector_setElement_INT64_ptrs[CYGB_NBACKENDS]
-cdef Vector_setElement_INT8_ptr Vector_setElement_INT8_ptrs[CYGB_NBACKENDS]
+cdef Vector_setElement_UINT8_ptr Vector_setElement_UINT8_ptrs[CYGB_NBACKENDS]
 cdef Vector_setElement_UINT16_ptr Vector_setElement_UINT16_ptrs[CYGB_NBACKENDS]
 cdef Vector_setElement_UINT32_ptr Vector_setElement_UINT32_ptrs[CYGB_NBACKENDS]
 cdef Vector_setElement_UINT64_ptr Vector_setElement_UINT64_ptrs[CYGB_NBACKENDS]
-cdef Vector_setElement_UINT8_ptr Vector_setElement_UINT8_ptrs[CYGB_NBACKENDS]
 cdef Vector_wait_ptr Vector_wait_ptrs[CYGB_NBACKENDS]
 cdef init_ptr init_ptrs[CYGB_NBACKENDS]
 cdef mxm_ptr mxm_ptrs[CYGB_NBACKENDS]

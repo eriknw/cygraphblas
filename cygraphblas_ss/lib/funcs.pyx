@@ -311,6 +311,25 @@ cpdef Matrix_subassign_FP64(
         raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Matrix_subassign_FP64')
     func(C, Mask, accum, x, &I[0], ni, &J[0], nj, desc)
 
+cpdef Matrix_subassign_INT8(
+    Matrix C,
+    Matrix Mask=None,
+    BinaryOp accum=None,
+    x=None,
+    Index[::1] I=None,
+    ni=None,
+    Index[::1] J=None,
+    nj=None,
+    Descriptor desc=None,
+):
+    if C is None:
+        raise TypeError("C argument of Matrix_subassign_INT8 must not be None.")
+    cdef backend_id_t backend_id = C.backend_id
+    cdef Matrix_subassign_INT8_ptr func = Matrix_subassign_INT8_ptrs[backend_id]
+    if func is NULL:
+        raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Matrix_subassign_INT8')
+    func(C, Mask, accum, x, &I[0], ni, &J[0], nj, desc)
+
 cpdef Matrix_subassign_INT16(
     Matrix C,
     Matrix Mask=None,
@@ -368,7 +387,7 @@ cpdef Matrix_subassign_INT64(
         raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Matrix_subassign_INT64')
     func(C, Mask, accum, x, &I[0], ni, &J[0], nj, desc)
 
-cpdef Matrix_subassign_INT8(
+cpdef Matrix_subassign_UINT8(
     Matrix C,
     Matrix Mask=None,
     BinaryOp accum=None,
@@ -380,11 +399,11 @@ cpdef Matrix_subassign_INT8(
     Descriptor desc=None,
 ):
     if C is None:
-        raise TypeError("C argument of Matrix_subassign_INT8 must not be None.")
+        raise TypeError("C argument of Matrix_subassign_UINT8 must not be None.")
     cdef backend_id_t backend_id = C.backend_id
-    cdef Matrix_subassign_INT8_ptr func = Matrix_subassign_INT8_ptrs[backend_id]
+    cdef Matrix_subassign_UINT8_ptr func = Matrix_subassign_UINT8_ptrs[backend_id]
     if func is NULL:
-        raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Matrix_subassign_INT8')
+        raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Matrix_subassign_UINT8')
     func(C, Mask, accum, x, &I[0], ni, &J[0], nj, desc)
 
 cpdef Matrix_subassign_UINT16(
@@ -442,25 +461,6 @@ cpdef Matrix_subassign_UINT64(
     cdef Matrix_subassign_UINT64_ptr func = Matrix_subassign_UINT64_ptrs[backend_id]
     if func is NULL:
         raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Matrix_subassign_UINT64')
-    func(C, Mask, accum, x, &I[0], ni, &J[0], nj, desc)
-
-cpdef Matrix_subassign_UINT8(
-    Matrix C,
-    Matrix Mask=None,
-    BinaryOp accum=None,
-    x=None,
-    Index[::1] I=None,
-    ni=None,
-    Index[::1] J=None,
-    nj=None,
-    Descriptor desc=None,
-):
-    if C is None:
-        raise TypeError("C argument of Matrix_subassign_UINT8 must not be None.")
-    cdef backend_id_t backend_id = C.backend_id
-    cdef Matrix_subassign_UINT8_ptr func = Matrix_subassign_UINT8_ptrs[backend_id]
-    if func is NULL:
-        raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Matrix_subassign_UINT8')
     func(C, Mask, accum, x, &I[0], ni, &J[0], nj, desc)
 
 cpdef Row_subassign(
@@ -753,6 +753,23 @@ cpdef Vector_subassign_FP64(
         raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Vector_subassign_FP64')
     func(w, mask, accum, x, &I[0], ni, desc)
 
+cpdef Vector_subassign_INT8(
+    Vector w,
+    Vector mask=None,
+    BinaryOp accum=None,
+    x=None,
+    Index[::1] I=None,
+    ni=None,
+    Descriptor desc=None,
+):
+    if w is None:
+        raise TypeError("w argument of Vector_subassign_INT8 must not be None.")
+    cdef backend_id_t backend_id = w.backend_id
+    cdef Vector_subassign_INT8_ptr func = Vector_subassign_INT8_ptrs[backend_id]
+    if func is NULL:
+        raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Vector_subassign_INT8')
+    func(w, mask, accum, x, &I[0], ni, desc)
+
 cpdef Vector_subassign_INT16(
     Vector w,
     Vector mask=None,
@@ -804,7 +821,7 @@ cpdef Vector_subassign_INT64(
         raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Vector_subassign_INT64')
     func(w, mask, accum, x, &I[0], ni, desc)
 
-cpdef Vector_subassign_INT8(
+cpdef Vector_subassign_UINT8(
     Vector w,
     Vector mask=None,
     BinaryOp accum=None,
@@ -814,11 +831,11 @@ cpdef Vector_subassign_INT8(
     Descriptor desc=None,
 ):
     if w is None:
-        raise TypeError("w argument of Vector_subassign_INT8 must not be None.")
+        raise TypeError("w argument of Vector_subassign_UINT8 must not be None.")
     cdef backend_id_t backend_id = w.backend_id
-    cdef Vector_subassign_INT8_ptr func = Vector_subassign_INT8_ptrs[backend_id]
+    cdef Vector_subassign_UINT8_ptr func = Vector_subassign_UINT8_ptrs[backend_id]
     if func is NULL:
-        raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Vector_subassign_INT8')
+        raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Vector_subassign_UINT8')
     func(w, mask, accum, x, &I[0], ni, desc)
 
 cpdef Vector_subassign_UINT16(
@@ -870,23 +887,6 @@ cpdef Vector_subassign_UINT64(
     cdef Vector_subassign_UINT64_ptr func = Vector_subassign_UINT64_ptrs[backend_id]
     if func is NULL:
         raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Vector_subassign_UINT64')
-    func(w, mask, accum, x, &I[0], ni, desc)
-
-cpdef Vector_subassign_UINT8(
-    Vector w,
-    Vector mask=None,
-    BinaryOp accum=None,
-    x=None,
-    Index[::1] I=None,
-    ni=None,
-    Descriptor desc=None,
-):
-    if w is None:
-        raise TypeError("w argument of Vector_subassign_UINT8 must not be None.")
-    cdef backend_id_t backend_id = w.backend_id
-    cdef Vector_subassign_UINT8_ptr func = Vector_subassign_UINT8_ptrs[backend_id]
-    if func is NULL:
-        raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Vector_subassign_UINT8')
     func(w, mask, accum, x, &I[0], ni, desc)
 
 cpdef cuda_init(

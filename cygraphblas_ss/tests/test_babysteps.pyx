@@ -1,11 +1,14 @@
 from pytest import raises
 from cygraphblas.matrix cimport Matrix
-from cygraphblas._clib cimport BACKEND_SS, IDENTITY_INT64
-from cygraphblas_ss.graphblas cimport GrB_Matrix, GrB_init, GrB_Matrix_new, GrB_INT64, GrB_Index, GrB_BLOCKING
+from cygraphblas._clib cimport BACKEND_SS
+from cygraphblas_ss.graphblas cimport GrB_Matrix, GrB_Index, GrB_Matrix_ncols
 
-from cygraphblas.lib.funcs import Matrix_apply
+from cygraphblas.lib.funcs import init, Matrix_new, Matrix_apply
+from cygraphblas.lib.constants.mode import BLOCKING
+from cygraphblas.lib.dtypes import INT64
+from cygraphblas.lib.unary import IDENTITY_INT64
 
-GrB_init(GrB_BLOCKING)
+init(BLOCKING, BACKEND_SS)
 
 
 def test_apply():
@@ -13,8 +16,12 @@ def test_apply():
     cdef Matrix A = Matrix._new(BACKEND_SS)
     cdef GrB_Index n = 4
     cdef GrB_Index ncols = 99
-    GrB_Matrix_new(<GrB_Matrix *>&A.obj, GrB_INT64, n, n)
-    GrB_Matrix_new(<GrB_Matrix *>&C.obj, GrB_INT64, n, n)
+
+    Matrix_new(A, INT64, n, n)
+    Matrix_new(C, INT64, n, n)
+
+    GrB_Matrix_ncols(&ncols, <GrB_Matrix>A.obj)
+    assert ncols == n
 
     Matrix_apply(
         C,
@@ -40,7 +47,7 @@ def test_apply():
             C,
             op=IDENTITY_INT64,
         )
-    with raises(TypeError, match="Argument 'op' has incorrect typ"):
+    with raises(TypeError, match="Argument 'op' has incorrect type"):
         Matrix_apply(
             C,
             A=A,

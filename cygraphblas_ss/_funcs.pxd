@@ -71,6 +71,16 @@ cdef Matrix_apply_BinaryOp1st_FP64_SS(
     Descriptor,
 )
 
+cdef Matrix_apply_BinaryOp1st_INT8_SS(
+    Matrix,
+    Matrix,
+    BinaryOp,
+    BinaryOp,
+    int8_t,
+    Matrix,
+    Descriptor,
+)
+
 cdef Matrix_apply_BinaryOp1st_INT16_SS(
     Matrix,
     Matrix,
@@ -101,12 +111,12 @@ cdef Matrix_apply_BinaryOp1st_INT64_SS(
     Descriptor,
 )
 
-cdef Matrix_apply_BinaryOp1st_INT8_SS(
+cdef Matrix_apply_BinaryOp1st_UINT8_SS(
     Matrix,
     Matrix,
     BinaryOp,
     BinaryOp,
-    int8_t,
+    uint8_t,
     Matrix,
     Descriptor,
 )
@@ -141,16 +151,6 @@ cdef Matrix_apply_BinaryOp1st_UINT64_SS(
     Descriptor,
 )
 
-cdef Matrix_apply_BinaryOp1st_UINT8_SS(
-    Matrix,
-    Matrix,
-    BinaryOp,
-    BinaryOp,
-    uint8_t,
-    Matrix,
-    Descriptor,
-)
-
 cdef Matrix_apply_BinaryOp2nd_BOOL_SS(
     Matrix,
     Matrix,
@@ -178,6 +178,16 @@ cdef Matrix_apply_BinaryOp2nd_FP64_SS(
     BinaryOp,
     Matrix,
     double,
+    Descriptor,
+)
+
+cdef Matrix_apply_BinaryOp2nd_INT8_SS(
+    Matrix,
+    Matrix,
+    BinaryOp,
+    BinaryOp,
+    Matrix,
+    int8_t,
     Descriptor,
 )
 
@@ -211,13 +221,13 @@ cdef Matrix_apply_BinaryOp2nd_INT64_SS(
     Descriptor,
 )
 
-cdef Matrix_apply_BinaryOp2nd_INT8_SS(
+cdef Matrix_apply_BinaryOp2nd_UINT8_SS(
     Matrix,
     Matrix,
     BinaryOp,
     BinaryOp,
     Matrix,
-    int8_t,
+    uint8_t,
     Descriptor,
 )
 
@@ -248,16 +258,6 @@ cdef Matrix_apply_BinaryOp2nd_UINT64_SS(
     BinaryOp,
     Matrix,
     uint64_t,
-    Descriptor,
-)
-
-cdef Matrix_apply_BinaryOp2nd_UINT8_SS(
-    Matrix,
-    Matrix,
-    BinaryOp,
-    BinaryOp,
-    Matrix,
-    uint8_t,
     Descriptor,
 )
 
@@ -309,6 +309,18 @@ cdef Matrix_assign_FP64_SS(
     Descriptor,
 )
 
+cdef Matrix_assign_INT8_SS(
+    Matrix,
+    Matrix,
+    BinaryOp,
+    int8_t,
+    Index*,
+    Index,
+    Index*,
+    Index,
+    Descriptor,
+)
+
 cdef Matrix_assign_INT16_SS(
     Matrix,
     Matrix,
@@ -345,11 +357,11 @@ cdef Matrix_assign_INT64_SS(
     Descriptor,
 )
 
-cdef Matrix_assign_INT8_SS(
+cdef Matrix_assign_UINT8_SS(
     Matrix,
     Matrix,
     BinaryOp,
-    int8_t,
+    uint8_t,
     Index*,
     Index,
     Index*,
@@ -393,18 +405,6 @@ cdef Matrix_assign_UINT64_SS(
     Descriptor,
 )
 
-cdef Matrix_assign_UINT8_SS(
-    Matrix,
-    Matrix,
-    BinaryOp,
-    uint8_t,
-    Index*,
-    Index,
-    Index*,
-    Index,
-    Descriptor,
-)
-
 cdef Matrix_build_BOOL_SS(
     Matrix,
     Index*,
@@ -428,6 +428,15 @@ cdef Matrix_build_FP64_SS(
     Index*,
     Index*,
     double*,
+    Index,
+    BinaryOp,
+)
+
+cdef Matrix_build_INT8_SS(
+    Matrix,
+    Index*,
+    Index*,
+    int8_t*,
     Index,
     BinaryOp,
 )
@@ -459,11 +468,11 @@ cdef Matrix_build_INT64_SS(
     BinaryOp,
 )
 
-cdef Matrix_build_INT8_SS(
+cdef Matrix_build_UINT8_SS(
     Matrix,
     Index*,
     Index*,
-    int8_t*,
+    uint8_t*,
     Index,
     BinaryOp,
 )
@@ -491,15 +500,6 @@ cdef Matrix_build_UINT64_SS(
     Index*,
     Index*,
     uint64_t*,
-    Index,
-    BinaryOp,
-)
-
-cdef Matrix_build_UINT8_SS(
-    Matrix,
-    Index*,
-    Index*,
-    uint8_t*,
     Index,
     BinaryOp,
 )
@@ -677,6 +677,13 @@ cdef Matrix_setElement_FP64_SS(
     Index,
 )
 
+cdef Matrix_setElement_INT8_SS(
+    Matrix,
+    int8_t,
+    Index,
+    Index,
+)
+
 cdef Matrix_setElement_INT16_SS(
     Matrix,
     int16_t,
@@ -698,9 +705,9 @@ cdef Matrix_setElement_INT64_SS(
     Index,
 )
 
-cdef Matrix_setElement_INT8_SS(
+cdef Matrix_setElement_UINT8_SS(
     Matrix,
-    int8_t,
+    uint8_t,
     Index,
     Index,
 )
@@ -722,13 +729,6 @@ cdef Matrix_setElement_UINT32_SS(
 cdef Matrix_setElement_UINT64_SS(
     Matrix,
     uint64_t,
-    Index,
-    Index,
-)
-
-cdef Matrix_setElement_UINT8_SS(
-    Matrix,
-    uint8_t,
     Index,
     Index,
 )
@@ -787,6 +787,16 @@ cdef Vector_apply_BinaryOp1st_FP64_SS(
     Descriptor,
 )
 
+cdef Vector_apply_BinaryOp1st_INT8_SS(
+    Vector,
+    Vector,
+    BinaryOp,
+    BinaryOp,
+    int8_t,
+    Vector,
+    Descriptor,
+)
+
 cdef Vector_apply_BinaryOp1st_INT16_SS(
     Vector,
     Vector,
@@ -817,12 +827,12 @@ cdef Vector_apply_BinaryOp1st_INT64_SS(
     Descriptor,
 )
 
-cdef Vector_apply_BinaryOp1st_INT8_SS(
+cdef Vector_apply_BinaryOp1st_UINT8_SS(
     Vector,
     Vector,
     BinaryOp,
     BinaryOp,
-    int8_t,
+    uint8_t,
     Vector,
     Descriptor,
 )
@@ -857,16 +867,6 @@ cdef Vector_apply_BinaryOp1st_UINT64_SS(
     Descriptor,
 )
 
-cdef Vector_apply_BinaryOp1st_UINT8_SS(
-    Vector,
-    Vector,
-    BinaryOp,
-    BinaryOp,
-    uint8_t,
-    Vector,
-    Descriptor,
-)
-
 cdef Vector_apply_BinaryOp2nd_BOOL_SS(
     Vector,
     Vector,
@@ -894,6 +894,16 @@ cdef Vector_apply_BinaryOp2nd_FP64_SS(
     BinaryOp,
     Vector,
     double,
+    Descriptor,
+)
+
+cdef Vector_apply_BinaryOp2nd_INT8_SS(
+    Vector,
+    Vector,
+    BinaryOp,
+    BinaryOp,
+    Vector,
+    int8_t,
     Descriptor,
 )
 
@@ -927,13 +937,13 @@ cdef Vector_apply_BinaryOp2nd_INT64_SS(
     Descriptor,
 )
 
-cdef Vector_apply_BinaryOp2nd_INT8_SS(
+cdef Vector_apply_BinaryOp2nd_UINT8_SS(
     Vector,
     Vector,
     BinaryOp,
     BinaryOp,
     Vector,
-    int8_t,
+    uint8_t,
     Descriptor,
 )
 
@@ -964,16 +974,6 @@ cdef Vector_apply_BinaryOp2nd_UINT64_SS(
     BinaryOp,
     Vector,
     uint64_t,
-    Descriptor,
-)
-
-cdef Vector_apply_BinaryOp2nd_UINT8_SS(
-    Vector,
-    Vector,
-    BinaryOp,
-    BinaryOp,
-    Vector,
-    uint8_t,
     Descriptor,
 )
 
@@ -1017,6 +1017,16 @@ cdef Vector_assign_FP64_SS(
     Descriptor,
 )
 
+cdef Vector_assign_INT8_SS(
+    Vector,
+    Vector,
+    BinaryOp,
+    int8_t,
+    Index*,
+    Index,
+    Descriptor,
+)
+
 cdef Vector_assign_INT16_SS(
     Vector,
     Vector,
@@ -1047,11 +1057,11 @@ cdef Vector_assign_INT64_SS(
     Descriptor,
 )
 
-cdef Vector_assign_INT8_SS(
+cdef Vector_assign_UINT8_SS(
     Vector,
     Vector,
     BinaryOp,
-    int8_t,
+    uint8_t,
     Index*,
     Index,
     Descriptor,
@@ -1087,16 +1097,6 @@ cdef Vector_assign_UINT64_SS(
     Descriptor,
 )
 
-cdef Vector_assign_UINT8_SS(
-    Vector,
-    Vector,
-    BinaryOp,
-    uint8_t,
-    Index*,
-    Index,
-    Descriptor,
-)
-
 cdef Vector_build_BOOL_SS(
     Vector,
     Index*,
@@ -1117,6 +1117,14 @@ cdef Vector_build_FP64_SS(
     Vector,
     Index*,
     double*,
+    Index,
+    BinaryOp,
+)
+
+cdef Vector_build_INT8_SS(
+    Vector,
+    Index*,
+    int8_t*,
     Index,
     BinaryOp,
 )
@@ -1145,10 +1153,10 @@ cdef Vector_build_INT64_SS(
     BinaryOp,
 )
 
-cdef Vector_build_INT8_SS(
+cdef Vector_build_UINT8_SS(
     Vector,
     Index*,
-    int8_t*,
+    uint8_t*,
     Index,
     BinaryOp,
 )
@@ -1173,14 +1181,6 @@ cdef Vector_build_UINT64_SS(
     Vector,
     Index*,
     uint64_t*,
-    Index,
-    BinaryOp,
-)
-
-cdef Vector_build_UINT8_SS(
-    Vector,
-    Index*,
-    uint8_t*,
     Index,
     BinaryOp,
 )
@@ -1302,6 +1302,12 @@ cdef Vector_setElement_FP64_SS(
     Index,
 )
 
+cdef Vector_setElement_INT8_SS(
+    Vector,
+    int8_t,
+    Index,
+)
+
 cdef Vector_setElement_INT16_SS(
     Vector,
     int16_t,
@@ -1320,9 +1326,9 @@ cdef Vector_setElement_INT64_SS(
     Index,
 )
 
-cdef Vector_setElement_INT8_SS(
+cdef Vector_setElement_UINT8_SS(
     Vector,
-    int8_t,
+    uint8_t,
     Index,
 )
 
@@ -1341,12 +1347,6 @@ cdef Vector_setElement_UINT32_SS(
 cdef Vector_setElement_UINT64_SS(
     Vector,
     uint64_t,
-    Index,
-)
-
-cdef Vector_setElement_UINT8_SS(
-    Vector,
-    uint8_t,
     Index,
 )
 
@@ -1576,6 +1576,18 @@ cdef Matrix_subassign_FP64_SS(
     Descriptor,
 )
 
+cdef Matrix_subassign_INT8_SS(
+    Matrix,
+    Matrix,
+    BinaryOp,
+    int8_t,
+    Index*,
+    Index,
+    Index*,
+    Index,
+    Descriptor,
+)
+
 cdef Matrix_subassign_INT16_SS(
     Matrix,
     Matrix,
@@ -1612,11 +1624,11 @@ cdef Matrix_subassign_INT64_SS(
     Descriptor,
 )
 
-cdef Matrix_subassign_INT8_SS(
+cdef Matrix_subassign_UINT8_SS(
     Matrix,
     Matrix,
     BinaryOp,
-    int8_t,
+    uint8_t,
     Index*,
     Index,
     Index*,
@@ -1653,18 +1665,6 @@ cdef Matrix_subassign_UINT64_SS(
     Matrix,
     BinaryOp,
     uint64_t,
-    Index*,
-    Index,
-    Index*,
-    Index,
-    Descriptor,
-)
-
-cdef Matrix_subassign_UINT8_SS(
-    Matrix,
-    Matrix,
-    BinaryOp,
-    uint8_t,
     Index*,
     Index,
     Index*,
@@ -1831,6 +1831,16 @@ cdef Vector_subassign_FP64_SS(
     Descriptor,
 )
 
+cdef Vector_subassign_INT8_SS(
+    Vector,
+    Vector,
+    BinaryOp,
+    int8_t,
+    Index*,
+    Index,
+    Descriptor,
+)
+
 cdef Vector_subassign_INT16_SS(
     Vector,
     Vector,
@@ -1861,11 +1871,11 @@ cdef Vector_subassign_INT64_SS(
     Descriptor,
 )
 
-cdef Vector_subassign_INT8_SS(
+cdef Vector_subassign_UINT8_SS(
     Vector,
     Vector,
     BinaryOp,
-    int8_t,
+    uint8_t,
     Index*,
     Index,
     Descriptor,
@@ -1896,16 +1906,6 @@ cdef Vector_subassign_UINT64_SS(
     Vector,
     BinaryOp,
     uint64_t,
-    Index*,
-    Index,
-    Descriptor,
-)
-
-cdef Vector_subassign_UINT8_SS(
-    Vector,
-    Vector,
-    BinaryOp,
-    uint8_t,
     Index*,
     Index,
     Descriptor,

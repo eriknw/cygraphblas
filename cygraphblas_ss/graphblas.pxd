@@ -166,196 +166,196 @@ cdef extern from "GraphBLAS.h" nogil:
     const double GxB_NEVER_HYPER
 
     # GrB objects
+    GrB_BinaryOp GrB_BAND_INT8
     GrB_BinaryOp GrB_BAND_INT16
     GrB_BinaryOp GrB_BAND_INT32
     GrB_BinaryOp GrB_BAND_INT64
-    GrB_BinaryOp GrB_BAND_INT8
+    GrB_BinaryOp GrB_BAND_UINT8
     GrB_BinaryOp GrB_BAND_UINT16
     GrB_BinaryOp GrB_BAND_UINT32
     GrB_BinaryOp GrB_BAND_UINT64
-    GrB_BinaryOp GrB_BAND_UINT8
+    GrB_BinaryOp GrB_BOR_INT8
     GrB_BinaryOp GrB_BOR_INT16
     GrB_BinaryOp GrB_BOR_INT32
     GrB_BinaryOp GrB_BOR_INT64
-    GrB_BinaryOp GrB_BOR_INT8
+    GrB_BinaryOp GrB_BOR_UINT8
     GrB_BinaryOp GrB_BOR_UINT16
     GrB_BinaryOp GrB_BOR_UINT32
     GrB_BinaryOp GrB_BOR_UINT64
-    GrB_BinaryOp GrB_BOR_UINT8
+    GrB_BinaryOp GrB_BXNOR_INT8
     GrB_BinaryOp GrB_BXNOR_INT16
     GrB_BinaryOp GrB_BXNOR_INT32
     GrB_BinaryOp GrB_BXNOR_INT64
-    GrB_BinaryOp GrB_BXNOR_INT8
+    GrB_BinaryOp GrB_BXNOR_UINT8
     GrB_BinaryOp GrB_BXNOR_UINT16
     GrB_BinaryOp GrB_BXNOR_UINT32
     GrB_BinaryOp GrB_BXNOR_UINT64
-    GrB_BinaryOp GrB_BXNOR_UINT8
+    GrB_BinaryOp GrB_BXOR_INT8
     GrB_BinaryOp GrB_BXOR_INT16
     GrB_BinaryOp GrB_BXOR_INT32
     GrB_BinaryOp GrB_BXOR_INT64
-    GrB_BinaryOp GrB_BXOR_INT8
+    GrB_BinaryOp GrB_BXOR_UINT8
     GrB_BinaryOp GrB_BXOR_UINT16
     GrB_BinaryOp GrB_BXOR_UINT32
     GrB_BinaryOp GrB_BXOR_UINT64
-    GrB_BinaryOp GrB_BXOR_UINT8
     GrB_BinaryOp GrB_DIV_BOOL
     GrB_BinaryOp GrB_DIV_FP32
     GrB_BinaryOp GrB_DIV_FP64
+    GrB_BinaryOp GrB_DIV_INT8
     GrB_BinaryOp GrB_DIV_INT16
     GrB_BinaryOp GrB_DIV_INT32
     GrB_BinaryOp GrB_DIV_INT64
-    GrB_BinaryOp GrB_DIV_INT8
+    GrB_BinaryOp GrB_DIV_UINT8
     GrB_BinaryOp GrB_DIV_UINT16
     GrB_BinaryOp GrB_DIV_UINT32
     GrB_BinaryOp GrB_DIV_UINT64
-    GrB_BinaryOp GrB_DIV_UINT8
     GrB_BinaryOp GrB_EQ_BOOL
     GrB_BinaryOp GrB_EQ_FP32
     GrB_BinaryOp GrB_EQ_FP64
+    GrB_BinaryOp GrB_EQ_INT8
     GrB_BinaryOp GrB_EQ_INT16
     GrB_BinaryOp GrB_EQ_INT32
     GrB_BinaryOp GrB_EQ_INT64
-    GrB_BinaryOp GrB_EQ_INT8
+    GrB_BinaryOp GrB_EQ_UINT8
     GrB_BinaryOp GrB_EQ_UINT16
     GrB_BinaryOp GrB_EQ_UINT32
     GrB_BinaryOp GrB_EQ_UINT64
-    GrB_BinaryOp GrB_EQ_UINT8
     GrB_BinaryOp GrB_FIRST_BOOL
     GrB_BinaryOp GrB_FIRST_FP32
     GrB_BinaryOp GrB_FIRST_FP64
+    GrB_BinaryOp GrB_FIRST_INT8
     GrB_BinaryOp GrB_FIRST_INT16
     GrB_BinaryOp GrB_FIRST_INT32
     GrB_BinaryOp GrB_FIRST_INT64
-    GrB_BinaryOp GrB_FIRST_INT8
+    GrB_BinaryOp GrB_FIRST_UINT8
     GrB_BinaryOp GrB_FIRST_UINT16
     GrB_BinaryOp GrB_FIRST_UINT32
     GrB_BinaryOp GrB_FIRST_UINT64
-    GrB_BinaryOp GrB_FIRST_UINT8
     GrB_BinaryOp GrB_GE_BOOL
     GrB_BinaryOp GrB_GE_FP32
     GrB_BinaryOp GrB_GE_FP64
+    GrB_BinaryOp GrB_GE_INT8
     GrB_BinaryOp GrB_GE_INT16
     GrB_BinaryOp GrB_GE_INT32
     GrB_BinaryOp GrB_GE_INT64
-    GrB_BinaryOp GrB_GE_INT8
+    GrB_BinaryOp GrB_GE_UINT8
     GrB_BinaryOp GrB_GE_UINT16
     GrB_BinaryOp GrB_GE_UINT32
     GrB_BinaryOp GrB_GE_UINT64
-    GrB_BinaryOp GrB_GE_UINT8
     GrB_BinaryOp GrB_GT_BOOL
     GrB_BinaryOp GrB_GT_FP32
     GrB_BinaryOp GrB_GT_FP64
+    GrB_BinaryOp GrB_GT_INT8
     GrB_BinaryOp GrB_GT_INT16
     GrB_BinaryOp GrB_GT_INT32
     GrB_BinaryOp GrB_GT_INT64
-    GrB_BinaryOp GrB_GT_INT8
+    GrB_BinaryOp GrB_GT_UINT8
     GrB_BinaryOp GrB_GT_UINT16
     GrB_BinaryOp GrB_GT_UINT32
     GrB_BinaryOp GrB_GT_UINT64
-    GrB_BinaryOp GrB_GT_UINT8
     GrB_BinaryOp GrB_LAND
     GrB_BinaryOp GrB_LE_BOOL
     GrB_BinaryOp GrB_LE_FP32
     GrB_BinaryOp GrB_LE_FP64
+    GrB_BinaryOp GrB_LE_INT8
     GrB_BinaryOp GrB_LE_INT16
     GrB_BinaryOp GrB_LE_INT32
     GrB_BinaryOp GrB_LE_INT64
-    GrB_BinaryOp GrB_LE_INT8
+    GrB_BinaryOp GrB_LE_UINT8
     GrB_BinaryOp GrB_LE_UINT16
     GrB_BinaryOp GrB_LE_UINT32
     GrB_BinaryOp GrB_LE_UINT64
-    GrB_BinaryOp GrB_LE_UINT8
     GrB_BinaryOp GrB_LOR
     GrB_BinaryOp GrB_LT_BOOL
     GrB_BinaryOp GrB_LT_FP32
     GrB_BinaryOp GrB_LT_FP64
+    GrB_BinaryOp GrB_LT_INT8
     GrB_BinaryOp GrB_LT_INT16
     GrB_BinaryOp GrB_LT_INT32
     GrB_BinaryOp GrB_LT_INT64
-    GrB_BinaryOp GrB_LT_INT8
+    GrB_BinaryOp GrB_LT_UINT8
     GrB_BinaryOp GrB_LT_UINT16
     GrB_BinaryOp GrB_LT_UINT32
     GrB_BinaryOp GrB_LT_UINT64
-    GrB_BinaryOp GrB_LT_UINT8
     GrB_BinaryOp GrB_LXNOR
     GrB_BinaryOp GrB_LXOR
     GrB_BinaryOp GrB_MAX_BOOL
     GrB_BinaryOp GrB_MAX_FP32
     GrB_BinaryOp GrB_MAX_FP64
+    GrB_BinaryOp GrB_MAX_INT8
     GrB_BinaryOp GrB_MAX_INT16
     GrB_BinaryOp GrB_MAX_INT32
     GrB_BinaryOp GrB_MAX_INT64
-    GrB_BinaryOp GrB_MAX_INT8
+    GrB_BinaryOp GrB_MAX_UINT8
     GrB_BinaryOp GrB_MAX_UINT16
     GrB_BinaryOp GrB_MAX_UINT32
     GrB_BinaryOp GrB_MAX_UINT64
-    GrB_BinaryOp GrB_MAX_UINT8
     GrB_BinaryOp GrB_MINUS_BOOL
     GrB_BinaryOp GrB_MINUS_FP32
     GrB_BinaryOp GrB_MINUS_FP64
+    GrB_BinaryOp GrB_MINUS_INT8
     GrB_BinaryOp GrB_MINUS_INT16
     GrB_BinaryOp GrB_MINUS_INT32
     GrB_BinaryOp GrB_MINUS_INT64
-    GrB_BinaryOp GrB_MINUS_INT8
+    GrB_BinaryOp GrB_MINUS_UINT8
     GrB_BinaryOp GrB_MINUS_UINT16
     GrB_BinaryOp GrB_MINUS_UINT32
     GrB_BinaryOp GrB_MINUS_UINT64
-    GrB_BinaryOp GrB_MINUS_UINT8
     GrB_BinaryOp GrB_MIN_BOOL
     GrB_BinaryOp GrB_MIN_FP32
     GrB_BinaryOp GrB_MIN_FP64
+    GrB_BinaryOp GrB_MIN_INT8
     GrB_BinaryOp GrB_MIN_INT16
     GrB_BinaryOp GrB_MIN_INT32
     GrB_BinaryOp GrB_MIN_INT64
-    GrB_BinaryOp GrB_MIN_INT8
+    GrB_BinaryOp GrB_MIN_UINT8
     GrB_BinaryOp GrB_MIN_UINT16
     GrB_BinaryOp GrB_MIN_UINT32
     GrB_BinaryOp GrB_MIN_UINT64
-    GrB_BinaryOp GrB_MIN_UINT8
     GrB_BinaryOp GrB_NE_BOOL
     GrB_BinaryOp GrB_NE_FP32
     GrB_BinaryOp GrB_NE_FP64
+    GrB_BinaryOp GrB_NE_INT8
     GrB_BinaryOp GrB_NE_INT16
     GrB_BinaryOp GrB_NE_INT32
     GrB_BinaryOp GrB_NE_INT64
-    GrB_BinaryOp GrB_NE_INT8
+    GrB_BinaryOp GrB_NE_UINT8
     GrB_BinaryOp GrB_NE_UINT16
     GrB_BinaryOp GrB_NE_UINT32
     GrB_BinaryOp GrB_NE_UINT64
-    GrB_BinaryOp GrB_NE_UINT8
     GrB_BinaryOp GrB_PLUS_BOOL
     GrB_BinaryOp GrB_PLUS_FP32
     GrB_BinaryOp GrB_PLUS_FP64
+    GrB_BinaryOp GrB_PLUS_INT8
     GrB_BinaryOp GrB_PLUS_INT16
     GrB_BinaryOp GrB_PLUS_INT32
     GrB_BinaryOp GrB_PLUS_INT64
-    GrB_BinaryOp GrB_PLUS_INT8
+    GrB_BinaryOp GrB_PLUS_UINT8
     GrB_BinaryOp GrB_PLUS_UINT16
     GrB_BinaryOp GrB_PLUS_UINT32
     GrB_BinaryOp GrB_PLUS_UINT64
-    GrB_BinaryOp GrB_PLUS_UINT8
     GrB_BinaryOp GrB_SECOND_BOOL
     GrB_BinaryOp GrB_SECOND_FP32
     GrB_BinaryOp GrB_SECOND_FP64
+    GrB_BinaryOp GrB_SECOND_INT8
     GrB_BinaryOp GrB_SECOND_INT16
     GrB_BinaryOp GrB_SECOND_INT32
     GrB_BinaryOp GrB_SECOND_INT64
-    GrB_BinaryOp GrB_SECOND_INT8
+    GrB_BinaryOp GrB_SECOND_UINT8
     GrB_BinaryOp GrB_SECOND_UINT16
     GrB_BinaryOp GrB_SECOND_UINT32
     GrB_BinaryOp GrB_SECOND_UINT64
-    GrB_BinaryOp GrB_SECOND_UINT8
     GrB_BinaryOp GrB_TIMES_BOOL
     GrB_BinaryOp GrB_TIMES_FP32
     GrB_BinaryOp GrB_TIMES_FP64
+    GrB_BinaryOp GrB_TIMES_INT8
     GrB_BinaryOp GrB_TIMES_INT16
     GrB_BinaryOp GrB_TIMES_INT32
     GrB_BinaryOp GrB_TIMES_INT64
-    GrB_BinaryOp GrB_TIMES_INT8
+    GrB_BinaryOp GrB_TIMES_UINT8
     GrB_BinaryOp GrB_TIMES_UINT16
     GrB_BinaryOp GrB_TIMES_UINT32
     GrB_BinaryOp GrB_TIMES_UINT64
-    GrB_BinaryOp GrB_TIMES_UINT8
     GrB_Descriptor GrB_DESC_C
     GrB_Descriptor GrB_DESC_CT0
     GrB_Descriptor GrB_DESC_CT0T1
@@ -393,232 +393,232 @@ cdef extern from "GraphBLAS.h" nogil:
     GrB_Monoid GrB_LXOR_MONOID_BOOL
     GrB_Monoid GrB_MAX_MONOID_FP32
     GrB_Monoid GrB_MAX_MONOID_FP64
+    GrB_Monoid GrB_MAX_MONOID_INT8
     GrB_Monoid GrB_MAX_MONOID_INT16
     GrB_Monoid GrB_MAX_MONOID_INT32
     GrB_Monoid GrB_MAX_MONOID_INT64
-    GrB_Monoid GrB_MAX_MONOID_INT8
+    GrB_Monoid GrB_MAX_MONOID_UINT8
     GrB_Monoid GrB_MAX_MONOID_UINT16
     GrB_Monoid GrB_MAX_MONOID_UINT32
     GrB_Monoid GrB_MAX_MONOID_UINT64
-    GrB_Monoid GrB_MAX_MONOID_UINT8
     GrB_Monoid GrB_MIN_MONOID_FP32
     GrB_Monoid GrB_MIN_MONOID_FP64
+    GrB_Monoid GrB_MIN_MONOID_INT8
     GrB_Monoid GrB_MIN_MONOID_INT16
     GrB_Monoid GrB_MIN_MONOID_INT32
     GrB_Monoid GrB_MIN_MONOID_INT64
-    GrB_Monoid GrB_MIN_MONOID_INT8
+    GrB_Monoid GrB_MIN_MONOID_UINT8
     GrB_Monoid GrB_MIN_MONOID_UINT16
     GrB_Monoid GrB_MIN_MONOID_UINT32
     GrB_Monoid GrB_MIN_MONOID_UINT64
-    GrB_Monoid GrB_MIN_MONOID_UINT8
     GrB_Monoid GrB_PLUS_MONOID_FP32
     GrB_Monoid GrB_PLUS_MONOID_FP64
+    GrB_Monoid GrB_PLUS_MONOID_INT8
     GrB_Monoid GrB_PLUS_MONOID_INT16
     GrB_Monoid GrB_PLUS_MONOID_INT32
     GrB_Monoid GrB_PLUS_MONOID_INT64
-    GrB_Monoid GrB_PLUS_MONOID_INT8
+    GrB_Monoid GrB_PLUS_MONOID_UINT8
     GrB_Monoid GrB_PLUS_MONOID_UINT16
     GrB_Monoid GrB_PLUS_MONOID_UINT32
     GrB_Monoid GrB_PLUS_MONOID_UINT64
-    GrB_Monoid GrB_PLUS_MONOID_UINT8
     GrB_Monoid GrB_TIMES_MONOID_FP32
     GrB_Monoid GrB_TIMES_MONOID_FP64
+    GrB_Monoid GrB_TIMES_MONOID_INT8
     GrB_Monoid GrB_TIMES_MONOID_INT16
     GrB_Monoid GrB_TIMES_MONOID_INT32
     GrB_Monoid GrB_TIMES_MONOID_INT64
-    GrB_Monoid GrB_TIMES_MONOID_INT8
+    GrB_Monoid GrB_TIMES_MONOID_UINT8
     GrB_Monoid GrB_TIMES_MONOID_UINT16
     GrB_Monoid GrB_TIMES_MONOID_UINT32
     GrB_Monoid GrB_TIMES_MONOID_UINT64
-    GrB_Monoid GrB_TIMES_MONOID_UINT8
     GrB_Semiring GrB_LAND_LOR_SEMIRING_BOOL
     GrB_Semiring GrB_LOR_LAND_SEMIRING_BOOL
     GrB_Semiring GrB_LXNOR_LOR_SEMIRING_BOOL
     GrB_Semiring GrB_LXOR_LAND_SEMIRING_BOOL
     GrB_Semiring GrB_MAX_FIRST_SEMIRING_FP32
     GrB_Semiring GrB_MAX_FIRST_SEMIRING_FP64
+    GrB_Semiring GrB_MAX_FIRST_SEMIRING_INT8
     GrB_Semiring GrB_MAX_FIRST_SEMIRING_INT16
     GrB_Semiring GrB_MAX_FIRST_SEMIRING_INT32
     GrB_Semiring GrB_MAX_FIRST_SEMIRING_INT64
-    GrB_Semiring GrB_MAX_FIRST_SEMIRING_INT8
+    GrB_Semiring GrB_MAX_FIRST_SEMIRING_UINT8
     GrB_Semiring GrB_MAX_FIRST_SEMIRING_UINT16
     GrB_Semiring GrB_MAX_FIRST_SEMIRING_UINT32
     GrB_Semiring GrB_MAX_FIRST_SEMIRING_UINT64
-    GrB_Semiring GrB_MAX_FIRST_SEMIRING_UINT8
     GrB_Semiring GrB_MAX_MIN_SEMIRING_FP32
     GrB_Semiring GrB_MAX_MIN_SEMIRING_FP64
+    GrB_Semiring GrB_MAX_MIN_SEMIRING_INT8
     GrB_Semiring GrB_MAX_MIN_SEMIRING_INT16
     GrB_Semiring GrB_MAX_MIN_SEMIRING_INT32
     GrB_Semiring GrB_MAX_MIN_SEMIRING_INT64
-    GrB_Semiring GrB_MAX_MIN_SEMIRING_INT8
+    GrB_Semiring GrB_MAX_MIN_SEMIRING_UINT8
     GrB_Semiring GrB_MAX_MIN_SEMIRING_UINT16
     GrB_Semiring GrB_MAX_MIN_SEMIRING_UINT32
     GrB_Semiring GrB_MAX_MIN_SEMIRING_UINT64
-    GrB_Semiring GrB_MAX_MIN_SEMIRING_UINT8
     GrB_Semiring GrB_MAX_PLUS_SEMIRING_FP32
     GrB_Semiring GrB_MAX_PLUS_SEMIRING_FP64
+    GrB_Semiring GrB_MAX_PLUS_SEMIRING_INT8
     GrB_Semiring GrB_MAX_PLUS_SEMIRING_INT16
     GrB_Semiring GrB_MAX_PLUS_SEMIRING_INT32
     GrB_Semiring GrB_MAX_PLUS_SEMIRING_INT64
-    GrB_Semiring GrB_MAX_PLUS_SEMIRING_INT8
+    GrB_Semiring GrB_MAX_PLUS_SEMIRING_UINT8
     GrB_Semiring GrB_MAX_PLUS_SEMIRING_UINT16
     GrB_Semiring GrB_MAX_PLUS_SEMIRING_UINT32
     GrB_Semiring GrB_MAX_PLUS_SEMIRING_UINT64
-    GrB_Semiring GrB_MAX_PLUS_SEMIRING_UINT8
     GrB_Semiring GrB_MAX_SECOND_SEMIRING_FP32
     GrB_Semiring GrB_MAX_SECOND_SEMIRING_FP64
+    GrB_Semiring GrB_MAX_SECOND_SEMIRING_INT8
     GrB_Semiring GrB_MAX_SECOND_SEMIRING_INT16
     GrB_Semiring GrB_MAX_SECOND_SEMIRING_INT32
     GrB_Semiring GrB_MAX_SECOND_SEMIRING_INT64
-    GrB_Semiring GrB_MAX_SECOND_SEMIRING_INT8
+    GrB_Semiring GrB_MAX_SECOND_SEMIRING_UINT8
     GrB_Semiring GrB_MAX_SECOND_SEMIRING_UINT16
     GrB_Semiring GrB_MAX_SECOND_SEMIRING_UINT32
     GrB_Semiring GrB_MAX_SECOND_SEMIRING_UINT64
-    GrB_Semiring GrB_MAX_SECOND_SEMIRING_UINT8
     GrB_Semiring GrB_MAX_TIMES_SEMIRING_FP32
     GrB_Semiring GrB_MAX_TIMES_SEMIRING_FP64
+    GrB_Semiring GrB_MAX_TIMES_SEMIRING_INT8
     GrB_Semiring GrB_MAX_TIMES_SEMIRING_INT16
     GrB_Semiring GrB_MAX_TIMES_SEMIRING_INT32
     GrB_Semiring GrB_MAX_TIMES_SEMIRING_INT64
-    GrB_Semiring GrB_MAX_TIMES_SEMIRING_INT8
+    GrB_Semiring GrB_MAX_TIMES_SEMIRING_UINT8
     GrB_Semiring GrB_MAX_TIMES_SEMIRING_UINT16
     GrB_Semiring GrB_MAX_TIMES_SEMIRING_UINT32
     GrB_Semiring GrB_MAX_TIMES_SEMIRING_UINT64
-    GrB_Semiring GrB_MAX_TIMES_SEMIRING_UINT8
     GrB_Semiring GrB_MIN_FIRST_SEMIRING_FP32
     GrB_Semiring GrB_MIN_FIRST_SEMIRING_FP64
+    GrB_Semiring GrB_MIN_FIRST_SEMIRING_INT8
     GrB_Semiring GrB_MIN_FIRST_SEMIRING_INT16
     GrB_Semiring GrB_MIN_FIRST_SEMIRING_INT32
     GrB_Semiring GrB_MIN_FIRST_SEMIRING_INT64
-    GrB_Semiring GrB_MIN_FIRST_SEMIRING_INT8
+    GrB_Semiring GrB_MIN_FIRST_SEMIRING_UINT8
     GrB_Semiring GrB_MIN_FIRST_SEMIRING_UINT16
     GrB_Semiring GrB_MIN_FIRST_SEMIRING_UINT32
     GrB_Semiring GrB_MIN_FIRST_SEMIRING_UINT64
-    GrB_Semiring GrB_MIN_FIRST_SEMIRING_UINT8
     GrB_Semiring GrB_MIN_MAX_SEMIRING_FP32
     GrB_Semiring GrB_MIN_MAX_SEMIRING_FP64
+    GrB_Semiring GrB_MIN_MAX_SEMIRING_INT8
     GrB_Semiring GrB_MIN_MAX_SEMIRING_INT16
     GrB_Semiring GrB_MIN_MAX_SEMIRING_INT32
     GrB_Semiring GrB_MIN_MAX_SEMIRING_INT64
-    GrB_Semiring GrB_MIN_MAX_SEMIRING_INT8
+    GrB_Semiring GrB_MIN_MAX_SEMIRING_UINT8
     GrB_Semiring GrB_MIN_MAX_SEMIRING_UINT16
     GrB_Semiring GrB_MIN_MAX_SEMIRING_UINT32
     GrB_Semiring GrB_MIN_MAX_SEMIRING_UINT64
-    GrB_Semiring GrB_MIN_MAX_SEMIRING_UINT8
     GrB_Semiring GrB_MIN_PLUS_SEMIRING_FP32
     GrB_Semiring GrB_MIN_PLUS_SEMIRING_FP64
+    GrB_Semiring GrB_MIN_PLUS_SEMIRING_INT8
     GrB_Semiring GrB_MIN_PLUS_SEMIRING_INT16
     GrB_Semiring GrB_MIN_PLUS_SEMIRING_INT32
     GrB_Semiring GrB_MIN_PLUS_SEMIRING_INT64
-    GrB_Semiring GrB_MIN_PLUS_SEMIRING_INT8
+    GrB_Semiring GrB_MIN_PLUS_SEMIRING_UINT8
     GrB_Semiring GrB_MIN_PLUS_SEMIRING_UINT16
     GrB_Semiring GrB_MIN_PLUS_SEMIRING_UINT32
     GrB_Semiring GrB_MIN_PLUS_SEMIRING_UINT64
-    GrB_Semiring GrB_MIN_PLUS_SEMIRING_UINT8
     GrB_Semiring GrB_MIN_SECOND_SEMIRING_FP32
     GrB_Semiring GrB_MIN_SECOND_SEMIRING_FP64
+    GrB_Semiring GrB_MIN_SECOND_SEMIRING_INT8
     GrB_Semiring GrB_MIN_SECOND_SEMIRING_INT16
     GrB_Semiring GrB_MIN_SECOND_SEMIRING_INT32
     GrB_Semiring GrB_MIN_SECOND_SEMIRING_INT64
-    GrB_Semiring GrB_MIN_SECOND_SEMIRING_INT8
+    GrB_Semiring GrB_MIN_SECOND_SEMIRING_UINT8
     GrB_Semiring GrB_MIN_SECOND_SEMIRING_UINT16
     GrB_Semiring GrB_MIN_SECOND_SEMIRING_UINT32
     GrB_Semiring GrB_MIN_SECOND_SEMIRING_UINT64
-    GrB_Semiring GrB_MIN_SECOND_SEMIRING_UINT8
     GrB_Semiring GrB_MIN_TIMES_SEMIRING_FP32
     GrB_Semiring GrB_MIN_TIMES_SEMIRING_FP64
+    GrB_Semiring GrB_MIN_TIMES_SEMIRING_INT8
     GrB_Semiring GrB_MIN_TIMES_SEMIRING_INT16
     GrB_Semiring GrB_MIN_TIMES_SEMIRING_INT32
     GrB_Semiring GrB_MIN_TIMES_SEMIRING_INT64
-    GrB_Semiring GrB_MIN_TIMES_SEMIRING_INT8
+    GrB_Semiring GrB_MIN_TIMES_SEMIRING_UINT8
     GrB_Semiring GrB_MIN_TIMES_SEMIRING_UINT16
     GrB_Semiring GrB_MIN_TIMES_SEMIRING_UINT32
     GrB_Semiring GrB_MIN_TIMES_SEMIRING_UINT64
-    GrB_Semiring GrB_MIN_TIMES_SEMIRING_UINT8
     GrB_Semiring GrB_PLUS_MIN_SEMIRING_FP32
     GrB_Semiring GrB_PLUS_MIN_SEMIRING_FP64
+    GrB_Semiring GrB_PLUS_MIN_SEMIRING_INT8
     GrB_Semiring GrB_PLUS_MIN_SEMIRING_INT16
     GrB_Semiring GrB_PLUS_MIN_SEMIRING_INT32
     GrB_Semiring GrB_PLUS_MIN_SEMIRING_INT64
-    GrB_Semiring GrB_PLUS_MIN_SEMIRING_INT8
+    GrB_Semiring GrB_PLUS_MIN_SEMIRING_UINT8
     GrB_Semiring GrB_PLUS_MIN_SEMIRING_UINT16
     GrB_Semiring GrB_PLUS_MIN_SEMIRING_UINT32
     GrB_Semiring GrB_PLUS_MIN_SEMIRING_UINT64
-    GrB_Semiring GrB_PLUS_MIN_SEMIRING_UINT8
     GrB_Semiring GrB_PLUS_TIMES_SEMIRING_FP32
     GrB_Semiring GrB_PLUS_TIMES_SEMIRING_FP64
+    GrB_Semiring GrB_PLUS_TIMES_SEMIRING_INT8
     GrB_Semiring GrB_PLUS_TIMES_SEMIRING_INT16
     GrB_Semiring GrB_PLUS_TIMES_SEMIRING_INT32
     GrB_Semiring GrB_PLUS_TIMES_SEMIRING_INT64
-    GrB_Semiring GrB_PLUS_TIMES_SEMIRING_INT8
+    GrB_Semiring GrB_PLUS_TIMES_SEMIRING_UINT8
     GrB_Semiring GrB_PLUS_TIMES_SEMIRING_UINT16
     GrB_Semiring GrB_PLUS_TIMES_SEMIRING_UINT32
     GrB_Semiring GrB_PLUS_TIMES_SEMIRING_UINT64
-    GrB_Semiring GrB_PLUS_TIMES_SEMIRING_UINT8
     GrB_Type GrB_BOOL
     GrB_Type GrB_FP32
     GrB_Type GrB_FP64
+    GrB_Type GrB_INT8
     GrB_Type GrB_INT16
     GrB_Type GrB_INT32
     GrB_Type GrB_INT64
-    GrB_Type GrB_INT8
+    GrB_Type GrB_UINT8
     GrB_Type GrB_UINT16
     GrB_Type GrB_UINT32
     GrB_Type GrB_UINT64
-    GrB_Type GrB_UINT8
     GrB_UnaryOp GrB_ABS_BOOL
     GrB_UnaryOp GrB_ABS_FP32
     GrB_UnaryOp GrB_ABS_FP64
+    GrB_UnaryOp GrB_ABS_INT8
     GrB_UnaryOp GrB_ABS_INT16
     GrB_UnaryOp GrB_ABS_INT32
     GrB_UnaryOp GrB_ABS_INT64
-    GrB_UnaryOp GrB_ABS_INT8
+    GrB_UnaryOp GrB_ABS_UINT8
     GrB_UnaryOp GrB_ABS_UINT16
     GrB_UnaryOp GrB_ABS_UINT32
     GrB_UnaryOp GrB_ABS_UINT64
-    GrB_UnaryOp GrB_ABS_UINT8
     GrB_UnaryOp GrB_AINV_BOOL
     GrB_UnaryOp GrB_AINV_FP32
     GrB_UnaryOp GrB_AINV_FP64
+    GrB_UnaryOp GrB_AINV_INT8
     GrB_UnaryOp GrB_AINV_INT16
     GrB_UnaryOp GrB_AINV_INT32
     GrB_UnaryOp GrB_AINV_INT64
-    GrB_UnaryOp GrB_AINV_INT8
+    GrB_UnaryOp GrB_AINV_UINT8
     GrB_UnaryOp GrB_AINV_UINT16
     GrB_UnaryOp GrB_AINV_UINT32
     GrB_UnaryOp GrB_AINV_UINT64
-    GrB_UnaryOp GrB_AINV_UINT8
+    GrB_UnaryOp GrB_BNOT_INT8
     GrB_UnaryOp GrB_BNOT_INT16
     GrB_UnaryOp GrB_BNOT_INT32
     GrB_UnaryOp GrB_BNOT_INT64
-    GrB_UnaryOp GrB_BNOT_INT8
+    GrB_UnaryOp GrB_BNOT_UINT8
     GrB_UnaryOp GrB_BNOT_UINT16
     GrB_UnaryOp GrB_BNOT_UINT32
     GrB_UnaryOp GrB_BNOT_UINT64
-    GrB_UnaryOp GrB_BNOT_UINT8
     GrB_UnaryOp GrB_IDENTITY_BOOL
     GrB_UnaryOp GrB_IDENTITY_FP32
     GrB_UnaryOp GrB_IDENTITY_FP64
+    GrB_UnaryOp GrB_IDENTITY_INT8
     GrB_UnaryOp GrB_IDENTITY_INT16
     GrB_UnaryOp GrB_IDENTITY_INT32
     GrB_UnaryOp GrB_IDENTITY_INT64
-    GrB_UnaryOp GrB_IDENTITY_INT8
+    GrB_UnaryOp GrB_IDENTITY_UINT8
     GrB_UnaryOp GrB_IDENTITY_UINT16
     GrB_UnaryOp GrB_IDENTITY_UINT32
     GrB_UnaryOp GrB_IDENTITY_UINT64
-    GrB_UnaryOp GrB_IDENTITY_UINT8
     GrB_UnaryOp GrB_LNOT
     GrB_UnaryOp GrB_MINV_BOOL
     GrB_UnaryOp GrB_MINV_FP32
     GrB_UnaryOp GrB_MINV_FP64
+    GrB_UnaryOp GrB_MINV_INT8
     GrB_UnaryOp GrB_MINV_INT16
     GrB_UnaryOp GrB_MINV_INT32
     GrB_UnaryOp GrB_MINV_INT64
-    GrB_UnaryOp GrB_MINV_INT8
+    GrB_UnaryOp GrB_MINV_UINT8
     GrB_UnaryOp GrB_MINV_UINT16
     GrB_UnaryOp GrB_MINV_UINT32
     GrB_UnaryOp GrB_MINV_UINT64
-    GrB_UnaryOp GrB_MINV_UINT8
 
     # GrB objects (extended)
     GrB_BinaryOp GxB_ANY_BOOL
@@ -626,48 +626,48 @@ cdef extern from "GraphBLAS.h" nogil:
     GrB_BinaryOp GxB_ANY_FC64
     GrB_BinaryOp GxB_ANY_FP32
     GrB_BinaryOp GxB_ANY_FP64
+    GrB_BinaryOp GxB_ANY_INT8
     GrB_BinaryOp GxB_ANY_INT16
     GrB_BinaryOp GxB_ANY_INT32
     GrB_BinaryOp GxB_ANY_INT64
-    GrB_BinaryOp GxB_ANY_INT8
+    GrB_BinaryOp GxB_ANY_UINT8
     GrB_BinaryOp GxB_ANY_UINT16
     GrB_BinaryOp GxB_ANY_UINT32
     GrB_BinaryOp GxB_ANY_UINT64
-    GrB_BinaryOp GxB_ANY_UINT8
     GrB_BinaryOp GxB_ATAN2_FP32
     GrB_BinaryOp GxB_ATAN2_FP64
+    GrB_BinaryOp GxB_BCLR_INT8
     GrB_BinaryOp GxB_BCLR_INT16
     GrB_BinaryOp GxB_BCLR_INT32
     GrB_BinaryOp GxB_BCLR_INT64
-    GrB_BinaryOp GxB_BCLR_INT8
+    GrB_BinaryOp GxB_BCLR_UINT8
     GrB_BinaryOp GxB_BCLR_UINT16
     GrB_BinaryOp GxB_BCLR_UINT32
     GrB_BinaryOp GxB_BCLR_UINT64
-    GrB_BinaryOp GxB_BCLR_UINT8
+    GrB_BinaryOp GxB_BGET_INT8
     GrB_BinaryOp GxB_BGET_INT16
     GrB_BinaryOp GxB_BGET_INT32
     GrB_BinaryOp GxB_BGET_INT64
-    GrB_BinaryOp GxB_BGET_INT8
+    GrB_BinaryOp GxB_BGET_UINT8
     GrB_BinaryOp GxB_BGET_UINT16
     GrB_BinaryOp GxB_BGET_UINT32
     GrB_BinaryOp GxB_BGET_UINT64
-    GrB_BinaryOp GxB_BGET_UINT8
+    GrB_BinaryOp GxB_BSET_INT8
     GrB_BinaryOp GxB_BSET_INT16
     GrB_BinaryOp GxB_BSET_INT32
     GrB_BinaryOp GxB_BSET_INT64
-    GrB_BinaryOp GxB_BSET_INT8
+    GrB_BinaryOp GxB_BSET_UINT8
     GrB_BinaryOp GxB_BSET_UINT16
     GrB_BinaryOp GxB_BSET_UINT32
     GrB_BinaryOp GxB_BSET_UINT64
-    GrB_BinaryOp GxB_BSET_UINT8
+    GrB_BinaryOp GxB_BSHIFT_INT8
     GrB_BinaryOp GxB_BSHIFT_INT16
     GrB_BinaryOp GxB_BSHIFT_INT32
     GrB_BinaryOp GxB_BSHIFT_INT64
-    GrB_BinaryOp GxB_BSHIFT_INT8
+    GrB_BinaryOp GxB_BSHIFT_UINT8
     GrB_BinaryOp GxB_BSHIFT_UINT16
     GrB_BinaryOp GxB_BSHIFT_UINT32
     GrB_BinaryOp GxB_BSHIFT_UINT64
-    GrB_BinaryOp GxB_BSHIFT_UINT8
     GrB_BinaryOp GxB_CMPLX_FP32
     GrB_BinaryOp GxB_CMPLX_FP64
     GrB_BinaryOp GxB_COPYSIGN_FP32
@@ -695,106 +695,106 @@ cdef extern from "GraphBLAS.h" nogil:
     GrB_BinaryOp GxB_ISEQ_FC64
     GrB_BinaryOp GxB_ISEQ_FP32
     GrB_BinaryOp GxB_ISEQ_FP64
+    GrB_BinaryOp GxB_ISEQ_INT8
     GrB_BinaryOp GxB_ISEQ_INT16
     GrB_BinaryOp GxB_ISEQ_INT32
     GrB_BinaryOp GxB_ISEQ_INT64
-    GrB_BinaryOp GxB_ISEQ_INT8
+    GrB_BinaryOp GxB_ISEQ_UINT8
     GrB_BinaryOp GxB_ISEQ_UINT16
     GrB_BinaryOp GxB_ISEQ_UINT32
     GrB_BinaryOp GxB_ISEQ_UINT64
-    GrB_BinaryOp GxB_ISEQ_UINT8
     GrB_BinaryOp GxB_ISGE_BOOL
     GrB_BinaryOp GxB_ISGE_FP32
     GrB_BinaryOp GxB_ISGE_FP64
+    GrB_BinaryOp GxB_ISGE_INT8
     GrB_BinaryOp GxB_ISGE_INT16
     GrB_BinaryOp GxB_ISGE_INT32
     GrB_BinaryOp GxB_ISGE_INT64
-    GrB_BinaryOp GxB_ISGE_INT8
+    GrB_BinaryOp GxB_ISGE_UINT8
     GrB_BinaryOp GxB_ISGE_UINT16
     GrB_BinaryOp GxB_ISGE_UINT32
     GrB_BinaryOp GxB_ISGE_UINT64
-    GrB_BinaryOp GxB_ISGE_UINT8
     GrB_BinaryOp GxB_ISGT_BOOL
     GrB_BinaryOp GxB_ISGT_FP32
     GrB_BinaryOp GxB_ISGT_FP64
+    GrB_BinaryOp GxB_ISGT_INT8
     GrB_BinaryOp GxB_ISGT_INT16
     GrB_BinaryOp GxB_ISGT_INT32
     GrB_BinaryOp GxB_ISGT_INT64
-    GrB_BinaryOp GxB_ISGT_INT8
+    GrB_BinaryOp GxB_ISGT_UINT8
     GrB_BinaryOp GxB_ISGT_UINT16
     GrB_BinaryOp GxB_ISGT_UINT32
     GrB_BinaryOp GxB_ISGT_UINT64
-    GrB_BinaryOp GxB_ISGT_UINT8
     GrB_BinaryOp GxB_ISLE_BOOL
     GrB_BinaryOp GxB_ISLE_FP32
     GrB_BinaryOp GxB_ISLE_FP64
+    GrB_BinaryOp GxB_ISLE_INT8
     GrB_BinaryOp GxB_ISLE_INT16
     GrB_BinaryOp GxB_ISLE_INT32
     GrB_BinaryOp GxB_ISLE_INT64
-    GrB_BinaryOp GxB_ISLE_INT8
+    GrB_BinaryOp GxB_ISLE_UINT8
     GrB_BinaryOp GxB_ISLE_UINT16
     GrB_BinaryOp GxB_ISLE_UINT32
     GrB_BinaryOp GxB_ISLE_UINT64
-    GrB_BinaryOp GxB_ISLE_UINT8
     GrB_BinaryOp GxB_ISLT_BOOL
     GrB_BinaryOp GxB_ISLT_FP32
     GrB_BinaryOp GxB_ISLT_FP64
+    GrB_BinaryOp GxB_ISLT_INT8
     GrB_BinaryOp GxB_ISLT_INT16
     GrB_BinaryOp GxB_ISLT_INT32
     GrB_BinaryOp GxB_ISLT_INT64
-    GrB_BinaryOp GxB_ISLT_INT8
+    GrB_BinaryOp GxB_ISLT_UINT8
     GrB_BinaryOp GxB_ISLT_UINT16
     GrB_BinaryOp GxB_ISLT_UINT32
     GrB_BinaryOp GxB_ISLT_UINT64
-    GrB_BinaryOp GxB_ISLT_UINT8
     GrB_BinaryOp GxB_ISNE_BOOL
     GrB_BinaryOp GxB_ISNE_FC32
     GrB_BinaryOp GxB_ISNE_FC64
     GrB_BinaryOp GxB_ISNE_FP32
     GrB_BinaryOp GxB_ISNE_FP64
+    GrB_BinaryOp GxB_ISNE_INT8
     GrB_BinaryOp GxB_ISNE_INT16
     GrB_BinaryOp GxB_ISNE_INT32
     GrB_BinaryOp GxB_ISNE_INT64
-    GrB_BinaryOp GxB_ISNE_INT8
+    GrB_BinaryOp GxB_ISNE_UINT8
     GrB_BinaryOp GxB_ISNE_UINT16
     GrB_BinaryOp GxB_ISNE_UINT32
     GrB_BinaryOp GxB_ISNE_UINT64
-    GrB_BinaryOp GxB_ISNE_UINT8
     GrB_BinaryOp GxB_LAND_BOOL
     GrB_BinaryOp GxB_LAND_FP32
     GrB_BinaryOp GxB_LAND_FP64
+    GrB_BinaryOp GxB_LAND_INT8
     GrB_BinaryOp GxB_LAND_INT16
     GrB_BinaryOp GxB_LAND_INT32
     GrB_BinaryOp GxB_LAND_INT64
-    GrB_BinaryOp GxB_LAND_INT8
+    GrB_BinaryOp GxB_LAND_UINT8
     GrB_BinaryOp GxB_LAND_UINT16
     GrB_BinaryOp GxB_LAND_UINT32
     GrB_BinaryOp GxB_LAND_UINT64
-    GrB_BinaryOp GxB_LAND_UINT8
     GrB_BinaryOp GxB_LDEXP_FP32
     GrB_BinaryOp GxB_LDEXP_FP64
     GrB_BinaryOp GxB_LOR_BOOL
     GrB_BinaryOp GxB_LOR_FP32
     GrB_BinaryOp GxB_LOR_FP64
+    GrB_BinaryOp GxB_LOR_INT8
     GrB_BinaryOp GxB_LOR_INT16
     GrB_BinaryOp GxB_LOR_INT32
     GrB_BinaryOp GxB_LOR_INT64
-    GrB_BinaryOp GxB_LOR_INT8
+    GrB_BinaryOp GxB_LOR_UINT8
     GrB_BinaryOp GxB_LOR_UINT16
     GrB_BinaryOp GxB_LOR_UINT32
     GrB_BinaryOp GxB_LOR_UINT64
-    GrB_BinaryOp GxB_LOR_UINT8
     GrB_BinaryOp GxB_LXOR_BOOL
     GrB_BinaryOp GxB_LXOR_FP32
     GrB_BinaryOp GxB_LXOR_FP64
+    GrB_BinaryOp GxB_LXOR_INT8
     GrB_BinaryOp GxB_LXOR_INT16
     GrB_BinaryOp GxB_LXOR_INT32
     GrB_BinaryOp GxB_LXOR_INT64
-    GrB_BinaryOp GxB_LXOR_INT8
+    GrB_BinaryOp GxB_LXOR_UINT8
     GrB_BinaryOp GxB_LXOR_UINT16
     GrB_BinaryOp GxB_LXOR_UINT32
     GrB_BinaryOp GxB_LXOR_UINT64
-    GrB_BinaryOp GxB_LXOR_UINT8
     GrB_BinaryOp GxB_MINUS_FC32
     GrB_BinaryOp GxB_MINUS_FC64
     GrB_BinaryOp GxB_NE_FC32
@@ -804,14 +804,14 @@ cdef extern from "GraphBLAS.h" nogil:
     GrB_BinaryOp GxB_PAIR_FC64
     GrB_BinaryOp GxB_PAIR_FP32
     GrB_BinaryOp GxB_PAIR_FP64
+    GrB_BinaryOp GxB_PAIR_INT8
     GrB_BinaryOp GxB_PAIR_INT16
     GrB_BinaryOp GxB_PAIR_INT32
     GrB_BinaryOp GxB_PAIR_INT64
-    GrB_BinaryOp GxB_PAIR_INT8
+    GrB_BinaryOp GxB_PAIR_UINT8
     GrB_BinaryOp GxB_PAIR_UINT16
     GrB_BinaryOp GxB_PAIR_UINT32
     GrB_BinaryOp GxB_PAIR_UINT64
-    GrB_BinaryOp GxB_PAIR_UINT8
     GrB_BinaryOp GxB_PLUS_FC32
     GrB_BinaryOp GxB_PLUS_FC64
     GrB_BinaryOp GxB_POW_BOOL
@@ -819,27 +819,27 @@ cdef extern from "GraphBLAS.h" nogil:
     GrB_BinaryOp GxB_POW_FC64
     GrB_BinaryOp GxB_POW_FP32
     GrB_BinaryOp GxB_POW_FP64
+    GrB_BinaryOp GxB_POW_INT8
     GrB_BinaryOp GxB_POW_INT16
     GrB_BinaryOp GxB_POW_INT32
     GrB_BinaryOp GxB_POW_INT64
-    GrB_BinaryOp GxB_POW_INT8
+    GrB_BinaryOp GxB_POW_UINT8
     GrB_BinaryOp GxB_POW_UINT16
     GrB_BinaryOp GxB_POW_UINT32
     GrB_BinaryOp GxB_POW_UINT64
-    GrB_BinaryOp GxB_POW_UINT8
     GrB_BinaryOp GxB_RDIV_BOOL
     GrB_BinaryOp GxB_RDIV_FC32
     GrB_BinaryOp GxB_RDIV_FC64
     GrB_BinaryOp GxB_RDIV_FP32
     GrB_BinaryOp GxB_RDIV_FP64
+    GrB_BinaryOp GxB_RDIV_INT8
     GrB_BinaryOp GxB_RDIV_INT16
     GrB_BinaryOp GxB_RDIV_INT32
     GrB_BinaryOp GxB_RDIV_INT64
-    GrB_BinaryOp GxB_RDIV_INT8
+    GrB_BinaryOp GxB_RDIV_UINT8
     GrB_BinaryOp GxB_RDIV_UINT16
     GrB_BinaryOp GxB_RDIV_UINT32
     GrB_BinaryOp GxB_RDIV_UINT64
-    GrB_BinaryOp GxB_RDIV_UINT8
     GrB_BinaryOp GxB_REMAINDER_FP32
     GrB_BinaryOp GxB_REMAINDER_FP64
     GrB_BinaryOp GxB_RMINUS_BOOL
@@ -847,14 +847,14 @@ cdef extern from "GraphBLAS.h" nogil:
     GrB_BinaryOp GxB_RMINUS_FC64
     GrB_BinaryOp GxB_RMINUS_FP32
     GrB_BinaryOp GxB_RMINUS_FP64
+    GrB_BinaryOp GxB_RMINUS_INT8
     GrB_BinaryOp GxB_RMINUS_INT16
     GrB_BinaryOp GxB_RMINUS_INT32
     GrB_BinaryOp GxB_RMINUS_INT64
-    GrB_BinaryOp GxB_RMINUS_INT8
+    GrB_BinaryOp GxB_RMINUS_UINT8
     GrB_BinaryOp GxB_RMINUS_UINT16
     GrB_BinaryOp GxB_RMINUS_UINT32
     GrB_BinaryOp GxB_RMINUS_UINT64
-    GrB_BinaryOp GxB_RMINUS_UINT8
     GrB_BinaryOp GxB_SECONDI1_INT32
     GrB_BinaryOp GxB_SECONDI1_INT64
     GrB_BinaryOp GxB_SECONDI_INT32
@@ -872,30 +872,30 @@ cdef extern from "GraphBLAS.h" nogil:
     GrB_Monoid GxB_ANY_FC64_MONOID
     GrB_Monoid GxB_ANY_FP32_MONOID
     GrB_Monoid GxB_ANY_FP64_MONOID
+    GrB_Monoid GxB_ANY_INT8_MONOID
     GrB_Monoid GxB_ANY_INT16_MONOID
     GrB_Monoid GxB_ANY_INT32_MONOID
     GrB_Monoid GxB_ANY_INT64_MONOID
-    GrB_Monoid GxB_ANY_INT8_MONOID
+    GrB_Monoid GxB_ANY_UINT8_MONOID
     GrB_Monoid GxB_ANY_UINT16_MONOID
     GrB_Monoid GxB_ANY_UINT32_MONOID
     GrB_Monoid GxB_ANY_UINT64_MONOID
-    GrB_Monoid GxB_ANY_UINT8_MONOID
+    GrB_Monoid GxB_BAND_UINT8_MONOID
     GrB_Monoid GxB_BAND_UINT16_MONOID
     GrB_Monoid GxB_BAND_UINT32_MONOID
     GrB_Monoid GxB_BAND_UINT64_MONOID
-    GrB_Monoid GxB_BAND_UINT8_MONOID
+    GrB_Monoid GxB_BOR_UINT8_MONOID
     GrB_Monoid GxB_BOR_UINT16_MONOID
     GrB_Monoid GxB_BOR_UINT32_MONOID
     GrB_Monoid GxB_BOR_UINT64_MONOID
-    GrB_Monoid GxB_BOR_UINT8_MONOID
+    GrB_Monoid GxB_BXNOR_UINT8_MONOID
     GrB_Monoid GxB_BXNOR_UINT16_MONOID
     GrB_Monoid GxB_BXNOR_UINT32_MONOID
     GrB_Monoid GxB_BXNOR_UINT64_MONOID
-    GrB_Monoid GxB_BXNOR_UINT8_MONOID
+    GrB_Monoid GxB_BXOR_UINT8_MONOID
     GrB_Monoid GxB_BXOR_UINT16_MONOID
     GrB_Monoid GxB_BXOR_UINT32_MONOID
     GrB_Monoid GxB_BXOR_UINT64_MONOID
-    GrB_Monoid GxB_BXOR_UINT8_MONOID
     GrB_Monoid GxB_EQ_BOOL_MONOID
     GrB_Monoid GxB_LAND_BOOL_MONOID
     GrB_Monoid GxB_LOR_BOOL_MONOID
@@ -903,71 +903,71 @@ cdef extern from "GraphBLAS.h" nogil:
     GrB_Monoid GxB_LXOR_BOOL_MONOID
     GrB_Monoid GxB_MAX_FP32_MONOID
     GrB_Monoid GxB_MAX_FP64_MONOID
+    GrB_Monoid GxB_MAX_INT8_MONOID
     GrB_Monoid GxB_MAX_INT16_MONOID
     GrB_Monoid GxB_MAX_INT32_MONOID
     GrB_Monoid GxB_MAX_INT64_MONOID
-    GrB_Monoid GxB_MAX_INT8_MONOID
+    GrB_Monoid GxB_MAX_UINT8_MONOID
     GrB_Monoid GxB_MAX_UINT16_MONOID
     GrB_Monoid GxB_MAX_UINT32_MONOID
     GrB_Monoid GxB_MAX_UINT64_MONOID
-    GrB_Monoid GxB_MAX_UINT8_MONOID
     GrB_Monoid GxB_MIN_FP32_MONOID
     GrB_Monoid GxB_MIN_FP64_MONOID
+    GrB_Monoid GxB_MIN_INT8_MONOID
     GrB_Monoid GxB_MIN_INT16_MONOID
     GrB_Monoid GxB_MIN_INT32_MONOID
     GrB_Monoid GxB_MIN_INT64_MONOID
-    GrB_Monoid GxB_MIN_INT8_MONOID
+    GrB_Monoid GxB_MIN_UINT8_MONOID
     GrB_Monoid GxB_MIN_UINT16_MONOID
     GrB_Monoid GxB_MIN_UINT32_MONOID
     GrB_Monoid GxB_MIN_UINT64_MONOID
-    GrB_Monoid GxB_MIN_UINT8_MONOID
     GrB_Monoid GxB_PLUS_FC32_MONOID
     GrB_Monoid GxB_PLUS_FC64_MONOID
     GrB_Monoid GxB_PLUS_FP32_MONOID
     GrB_Monoid GxB_PLUS_FP64_MONOID
+    GrB_Monoid GxB_PLUS_INT8_MONOID
     GrB_Monoid GxB_PLUS_INT16_MONOID
     GrB_Monoid GxB_PLUS_INT32_MONOID
     GrB_Monoid GxB_PLUS_INT64_MONOID
-    GrB_Monoid GxB_PLUS_INT8_MONOID
+    GrB_Monoid GxB_PLUS_UINT8_MONOID
     GrB_Monoid GxB_PLUS_UINT16_MONOID
     GrB_Monoid GxB_PLUS_UINT32_MONOID
     GrB_Monoid GxB_PLUS_UINT64_MONOID
-    GrB_Monoid GxB_PLUS_UINT8_MONOID
     GrB_Monoid GxB_TIMES_FC32_MONOID
     GrB_Monoid GxB_TIMES_FC64_MONOID
     GrB_Monoid GxB_TIMES_FP32_MONOID
     GrB_Monoid GxB_TIMES_FP64_MONOID
+    GrB_Monoid GxB_TIMES_INT8_MONOID
     GrB_Monoid GxB_TIMES_INT16_MONOID
     GrB_Monoid GxB_TIMES_INT32_MONOID
     GrB_Monoid GxB_TIMES_INT64_MONOID
-    GrB_Monoid GxB_TIMES_INT8_MONOID
+    GrB_Monoid GxB_TIMES_UINT8_MONOID
     GrB_Monoid GxB_TIMES_UINT16_MONOID
     GrB_Monoid GxB_TIMES_UINT32_MONOID
     GrB_Monoid GxB_TIMES_UINT64_MONOID
-    GrB_Monoid GxB_TIMES_UINT8_MONOID
     GrB_Semiring GxB_ANY_DIV_FC32
     GrB_Semiring GxB_ANY_DIV_FC64
     GrB_Semiring GxB_ANY_DIV_FP32
     GrB_Semiring GxB_ANY_DIV_FP64
+    GrB_Semiring GxB_ANY_DIV_INT8
     GrB_Semiring GxB_ANY_DIV_INT16
     GrB_Semiring GxB_ANY_DIV_INT32
     GrB_Semiring GxB_ANY_DIV_INT64
-    GrB_Semiring GxB_ANY_DIV_INT8
+    GrB_Semiring GxB_ANY_DIV_UINT8
     GrB_Semiring GxB_ANY_DIV_UINT16
     GrB_Semiring GxB_ANY_DIV_UINT32
     GrB_Semiring GxB_ANY_DIV_UINT64
-    GrB_Semiring GxB_ANY_DIV_UINT8
     GrB_Semiring GxB_ANY_EQ_BOOL
     GrB_Semiring GxB_ANY_EQ_FP32
     GrB_Semiring GxB_ANY_EQ_FP64
+    GrB_Semiring GxB_ANY_EQ_INT8
     GrB_Semiring GxB_ANY_EQ_INT16
     GrB_Semiring GxB_ANY_EQ_INT32
     GrB_Semiring GxB_ANY_EQ_INT64
-    GrB_Semiring GxB_ANY_EQ_INT8
+    GrB_Semiring GxB_ANY_EQ_UINT8
     GrB_Semiring GxB_ANY_EQ_UINT16
     GrB_Semiring GxB_ANY_EQ_UINT32
     GrB_Semiring GxB_ANY_EQ_UINT64
-    GrB_Semiring GxB_ANY_EQ_UINT8
     GrB_Semiring GxB_ANY_FIRSTI1_INT32
     GrB_Semiring GxB_ANY_FIRSTI1_INT64
     GrB_Semiring GxB_ANY_FIRSTI_INT32
@@ -981,242 +981,242 @@ cdef extern from "GraphBLAS.h" nogil:
     GrB_Semiring GxB_ANY_FIRST_FC64
     GrB_Semiring GxB_ANY_FIRST_FP32
     GrB_Semiring GxB_ANY_FIRST_FP64
+    GrB_Semiring GxB_ANY_FIRST_INT8
     GrB_Semiring GxB_ANY_FIRST_INT16
     GrB_Semiring GxB_ANY_FIRST_INT32
     GrB_Semiring GxB_ANY_FIRST_INT64
-    GrB_Semiring GxB_ANY_FIRST_INT8
+    GrB_Semiring GxB_ANY_FIRST_UINT8
     GrB_Semiring GxB_ANY_FIRST_UINT16
     GrB_Semiring GxB_ANY_FIRST_UINT32
     GrB_Semiring GxB_ANY_FIRST_UINT64
-    GrB_Semiring GxB_ANY_FIRST_UINT8
     GrB_Semiring GxB_ANY_GE_BOOL
     GrB_Semiring GxB_ANY_GE_FP32
     GrB_Semiring GxB_ANY_GE_FP64
+    GrB_Semiring GxB_ANY_GE_INT8
     GrB_Semiring GxB_ANY_GE_INT16
     GrB_Semiring GxB_ANY_GE_INT32
     GrB_Semiring GxB_ANY_GE_INT64
-    GrB_Semiring GxB_ANY_GE_INT8
+    GrB_Semiring GxB_ANY_GE_UINT8
     GrB_Semiring GxB_ANY_GE_UINT16
     GrB_Semiring GxB_ANY_GE_UINT32
     GrB_Semiring GxB_ANY_GE_UINT64
-    GrB_Semiring GxB_ANY_GE_UINT8
     GrB_Semiring GxB_ANY_GT_BOOL
     GrB_Semiring GxB_ANY_GT_FP32
     GrB_Semiring GxB_ANY_GT_FP64
+    GrB_Semiring GxB_ANY_GT_INT8
     GrB_Semiring GxB_ANY_GT_INT16
     GrB_Semiring GxB_ANY_GT_INT32
     GrB_Semiring GxB_ANY_GT_INT64
-    GrB_Semiring GxB_ANY_GT_INT8
+    GrB_Semiring GxB_ANY_GT_UINT8
     GrB_Semiring GxB_ANY_GT_UINT16
     GrB_Semiring GxB_ANY_GT_UINT32
     GrB_Semiring GxB_ANY_GT_UINT64
-    GrB_Semiring GxB_ANY_GT_UINT8
     GrB_Semiring GxB_ANY_ISEQ_FP32
     GrB_Semiring GxB_ANY_ISEQ_FP64
+    GrB_Semiring GxB_ANY_ISEQ_INT8
     GrB_Semiring GxB_ANY_ISEQ_INT16
     GrB_Semiring GxB_ANY_ISEQ_INT32
     GrB_Semiring GxB_ANY_ISEQ_INT64
-    GrB_Semiring GxB_ANY_ISEQ_INT8
+    GrB_Semiring GxB_ANY_ISEQ_UINT8
     GrB_Semiring GxB_ANY_ISEQ_UINT16
     GrB_Semiring GxB_ANY_ISEQ_UINT32
     GrB_Semiring GxB_ANY_ISEQ_UINT64
-    GrB_Semiring GxB_ANY_ISEQ_UINT8
     GrB_Semiring GxB_ANY_ISGE_FP32
     GrB_Semiring GxB_ANY_ISGE_FP64
+    GrB_Semiring GxB_ANY_ISGE_INT8
     GrB_Semiring GxB_ANY_ISGE_INT16
     GrB_Semiring GxB_ANY_ISGE_INT32
     GrB_Semiring GxB_ANY_ISGE_INT64
-    GrB_Semiring GxB_ANY_ISGE_INT8
+    GrB_Semiring GxB_ANY_ISGE_UINT8
     GrB_Semiring GxB_ANY_ISGE_UINT16
     GrB_Semiring GxB_ANY_ISGE_UINT32
     GrB_Semiring GxB_ANY_ISGE_UINT64
-    GrB_Semiring GxB_ANY_ISGE_UINT8
     GrB_Semiring GxB_ANY_ISGT_FP32
     GrB_Semiring GxB_ANY_ISGT_FP64
+    GrB_Semiring GxB_ANY_ISGT_INT8
     GrB_Semiring GxB_ANY_ISGT_INT16
     GrB_Semiring GxB_ANY_ISGT_INT32
     GrB_Semiring GxB_ANY_ISGT_INT64
-    GrB_Semiring GxB_ANY_ISGT_INT8
+    GrB_Semiring GxB_ANY_ISGT_UINT8
     GrB_Semiring GxB_ANY_ISGT_UINT16
     GrB_Semiring GxB_ANY_ISGT_UINT32
     GrB_Semiring GxB_ANY_ISGT_UINT64
-    GrB_Semiring GxB_ANY_ISGT_UINT8
     GrB_Semiring GxB_ANY_ISLE_FP32
     GrB_Semiring GxB_ANY_ISLE_FP64
+    GrB_Semiring GxB_ANY_ISLE_INT8
     GrB_Semiring GxB_ANY_ISLE_INT16
     GrB_Semiring GxB_ANY_ISLE_INT32
     GrB_Semiring GxB_ANY_ISLE_INT64
-    GrB_Semiring GxB_ANY_ISLE_INT8
+    GrB_Semiring GxB_ANY_ISLE_UINT8
     GrB_Semiring GxB_ANY_ISLE_UINT16
     GrB_Semiring GxB_ANY_ISLE_UINT32
     GrB_Semiring GxB_ANY_ISLE_UINT64
-    GrB_Semiring GxB_ANY_ISLE_UINT8
     GrB_Semiring GxB_ANY_ISLT_FP32
     GrB_Semiring GxB_ANY_ISLT_FP64
+    GrB_Semiring GxB_ANY_ISLT_INT8
     GrB_Semiring GxB_ANY_ISLT_INT16
     GrB_Semiring GxB_ANY_ISLT_INT32
     GrB_Semiring GxB_ANY_ISLT_INT64
-    GrB_Semiring GxB_ANY_ISLT_INT8
+    GrB_Semiring GxB_ANY_ISLT_UINT8
     GrB_Semiring GxB_ANY_ISLT_UINT16
     GrB_Semiring GxB_ANY_ISLT_UINT32
     GrB_Semiring GxB_ANY_ISLT_UINT64
-    GrB_Semiring GxB_ANY_ISLT_UINT8
     GrB_Semiring GxB_ANY_ISNE_FP32
     GrB_Semiring GxB_ANY_ISNE_FP64
+    GrB_Semiring GxB_ANY_ISNE_INT8
     GrB_Semiring GxB_ANY_ISNE_INT16
     GrB_Semiring GxB_ANY_ISNE_INT32
     GrB_Semiring GxB_ANY_ISNE_INT64
-    GrB_Semiring GxB_ANY_ISNE_INT8
+    GrB_Semiring GxB_ANY_ISNE_UINT8
     GrB_Semiring GxB_ANY_ISNE_UINT16
     GrB_Semiring GxB_ANY_ISNE_UINT32
     GrB_Semiring GxB_ANY_ISNE_UINT64
-    GrB_Semiring GxB_ANY_ISNE_UINT8
     GrB_Semiring GxB_ANY_LAND_BOOL
     GrB_Semiring GxB_ANY_LAND_FP32
     GrB_Semiring GxB_ANY_LAND_FP64
+    GrB_Semiring GxB_ANY_LAND_INT8
     GrB_Semiring GxB_ANY_LAND_INT16
     GrB_Semiring GxB_ANY_LAND_INT32
     GrB_Semiring GxB_ANY_LAND_INT64
-    GrB_Semiring GxB_ANY_LAND_INT8
+    GrB_Semiring GxB_ANY_LAND_UINT8
     GrB_Semiring GxB_ANY_LAND_UINT16
     GrB_Semiring GxB_ANY_LAND_UINT32
     GrB_Semiring GxB_ANY_LAND_UINT64
-    GrB_Semiring GxB_ANY_LAND_UINT8
     GrB_Semiring GxB_ANY_LE_BOOL
     GrB_Semiring GxB_ANY_LE_FP32
     GrB_Semiring GxB_ANY_LE_FP64
+    GrB_Semiring GxB_ANY_LE_INT8
     GrB_Semiring GxB_ANY_LE_INT16
     GrB_Semiring GxB_ANY_LE_INT32
     GrB_Semiring GxB_ANY_LE_INT64
-    GrB_Semiring GxB_ANY_LE_INT8
+    GrB_Semiring GxB_ANY_LE_UINT8
     GrB_Semiring GxB_ANY_LE_UINT16
     GrB_Semiring GxB_ANY_LE_UINT32
     GrB_Semiring GxB_ANY_LE_UINT64
-    GrB_Semiring GxB_ANY_LE_UINT8
     GrB_Semiring GxB_ANY_LOR_BOOL
     GrB_Semiring GxB_ANY_LOR_FP32
     GrB_Semiring GxB_ANY_LOR_FP64
+    GrB_Semiring GxB_ANY_LOR_INT8
     GrB_Semiring GxB_ANY_LOR_INT16
     GrB_Semiring GxB_ANY_LOR_INT32
     GrB_Semiring GxB_ANY_LOR_INT64
-    GrB_Semiring GxB_ANY_LOR_INT8
+    GrB_Semiring GxB_ANY_LOR_UINT8
     GrB_Semiring GxB_ANY_LOR_UINT16
     GrB_Semiring GxB_ANY_LOR_UINT32
     GrB_Semiring GxB_ANY_LOR_UINT64
-    GrB_Semiring GxB_ANY_LOR_UINT8
     GrB_Semiring GxB_ANY_LT_BOOL
     GrB_Semiring GxB_ANY_LT_FP32
     GrB_Semiring GxB_ANY_LT_FP64
+    GrB_Semiring GxB_ANY_LT_INT8
     GrB_Semiring GxB_ANY_LT_INT16
     GrB_Semiring GxB_ANY_LT_INT32
     GrB_Semiring GxB_ANY_LT_INT64
-    GrB_Semiring GxB_ANY_LT_INT8
+    GrB_Semiring GxB_ANY_LT_UINT8
     GrB_Semiring GxB_ANY_LT_UINT16
     GrB_Semiring GxB_ANY_LT_UINT32
     GrB_Semiring GxB_ANY_LT_UINT64
-    GrB_Semiring GxB_ANY_LT_UINT8
     GrB_Semiring GxB_ANY_LXOR_BOOL
     GrB_Semiring GxB_ANY_LXOR_FP32
     GrB_Semiring GxB_ANY_LXOR_FP64
+    GrB_Semiring GxB_ANY_LXOR_INT8
     GrB_Semiring GxB_ANY_LXOR_INT16
     GrB_Semiring GxB_ANY_LXOR_INT32
     GrB_Semiring GxB_ANY_LXOR_INT64
-    GrB_Semiring GxB_ANY_LXOR_INT8
+    GrB_Semiring GxB_ANY_LXOR_UINT8
     GrB_Semiring GxB_ANY_LXOR_UINT16
     GrB_Semiring GxB_ANY_LXOR_UINT32
     GrB_Semiring GxB_ANY_LXOR_UINT64
-    GrB_Semiring GxB_ANY_LXOR_UINT8
     GrB_Semiring GxB_ANY_MAX_FP32
     GrB_Semiring GxB_ANY_MAX_FP64
+    GrB_Semiring GxB_ANY_MAX_INT8
     GrB_Semiring GxB_ANY_MAX_INT16
     GrB_Semiring GxB_ANY_MAX_INT32
     GrB_Semiring GxB_ANY_MAX_INT64
-    GrB_Semiring GxB_ANY_MAX_INT8
+    GrB_Semiring GxB_ANY_MAX_UINT8
     GrB_Semiring GxB_ANY_MAX_UINT16
     GrB_Semiring GxB_ANY_MAX_UINT32
     GrB_Semiring GxB_ANY_MAX_UINT64
-    GrB_Semiring GxB_ANY_MAX_UINT8
     GrB_Semiring GxB_ANY_MINUS_FC32
     GrB_Semiring GxB_ANY_MINUS_FC64
     GrB_Semiring GxB_ANY_MINUS_FP32
     GrB_Semiring GxB_ANY_MINUS_FP64
+    GrB_Semiring GxB_ANY_MINUS_INT8
     GrB_Semiring GxB_ANY_MINUS_INT16
     GrB_Semiring GxB_ANY_MINUS_INT32
     GrB_Semiring GxB_ANY_MINUS_INT64
-    GrB_Semiring GxB_ANY_MINUS_INT8
+    GrB_Semiring GxB_ANY_MINUS_UINT8
     GrB_Semiring GxB_ANY_MINUS_UINT16
     GrB_Semiring GxB_ANY_MINUS_UINT32
     GrB_Semiring GxB_ANY_MINUS_UINT64
-    GrB_Semiring GxB_ANY_MINUS_UINT8
     GrB_Semiring GxB_ANY_MIN_FP32
     GrB_Semiring GxB_ANY_MIN_FP64
+    GrB_Semiring GxB_ANY_MIN_INT8
     GrB_Semiring GxB_ANY_MIN_INT16
     GrB_Semiring GxB_ANY_MIN_INT32
     GrB_Semiring GxB_ANY_MIN_INT64
-    GrB_Semiring GxB_ANY_MIN_INT8
+    GrB_Semiring GxB_ANY_MIN_UINT8
     GrB_Semiring GxB_ANY_MIN_UINT16
     GrB_Semiring GxB_ANY_MIN_UINT32
     GrB_Semiring GxB_ANY_MIN_UINT64
-    GrB_Semiring GxB_ANY_MIN_UINT8
     GrB_Semiring GxB_ANY_NE_FP32
     GrB_Semiring GxB_ANY_NE_FP64
+    GrB_Semiring GxB_ANY_NE_INT8
     GrB_Semiring GxB_ANY_NE_INT16
     GrB_Semiring GxB_ANY_NE_INT32
     GrB_Semiring GxB_ANY_NE_INT64
-    GrB_Semiring GxB_ANY_NE_INT8
+    GrB_Semiring GxB_ANY_NE_UINT8
     GrB_Semiring GxB_ANY_NE_UINT16
     GrB_Semiring GxB_ANY_NE_UINT32
     GrB_Semiring GxB_ANY_NE_UINT64
-    GrB_Semiring GxB_ANY_NE_UINT8
     GrB_Semiring GxB_ANY_PAIR_BOOL
     GrB_Semiring GxB_ANY_PAIR_FC32
     GrB_Semiring GxB_ANY_PAIR_FC64
     GrB_Semiring GxB_ANY_PAIR_FP32
     GrB_Semiring GxB_ANY_PAIR_FP64
+    GrB_Semiring GxB_ANY_PAIR_INT8
     GrB_Semiring GxB_ANY_PAIR_INT16
     GrB_Semiring GxB_ANY_PAIR_INT32
     GrB_Semiring GxB_ANY_PAIR_INT64
-    GrB_Semiring GxB_ANY_PAIR_INT8
+    GrB_Semiring GxB_ANY_PAIR_UINT8
     GrB_Semiring GxB_ANY_PAIR_UINT16
     GrB_Semiring GxB_ANY_PAIR_UINT32
     GrB_Semiring GxB_ANY_PAIR_UINT64
-    GrB_Semiring GxB_ANY_PAIR_UINT8
     GrB_Semiring GxB_ANY_PLUS_FC32
     GrB_Semiring GxB_ANY_PLUS_FC64
     GrB_Semiring GxB_ANY_PLUS_FP32
     GrB_Semiring GxB_ANY_PLUS_FP64
+    GrB_Semiring GxB_ANY_PLUS_INT8
     GrB_Semiring GxB_ANY_PLUS_INT16
     GrB_Semiring GxB_ANY_PLUS_INT32
     GrB_Semiring GxB_ANY_PLUS_INT64
-    GrB_Semiring GxB_ANY_PLUS_INT8
+    GrB_Semiring GxB_ANY_PLUS_UINT8
     GrB_Semiring GxB_ANY_PLUS_UINT16
     GrB_Semiring GxB_ANY_PLUS_UINT32
     GrB_Semiring GxB_ANY_PLUS_UINT64
-    GrB_Semiring GxB_ANY_PLUS_UINT8
     GrB_Semiring GxB_ANY_RDIV_FC32
     GrB_Semiring GxB_ANY_RDIV_FC64
     GrB_Semiring GxB_ANY_RDIV_FP32
     GrB_Semiring GxB_ANY_RDIV_FP64
+    GrB_Semiring GxB_ANY_RDIV_INT8
     GrB_Semiring GxB_ANY_RDIV_INT16
     GrB_Semiring GxB_ANY_RDIV_INT32
     GrB_Semiring GxB_ANY_RDIV_INT64
-    GrB_Semiring GxB_ANY_RDIV_INT8
+    GrB_Semiring GxB_ANY_RDIV_UINT8
     GrB_Semiring GxB_ANY_RDIV_UINT16
     GrB_Semiring GxB_ANY_RDIV_UINT32
     GrB_Semiring GxB_ANY_RDIV_UINT64
-    GrB_Semiring GxB_ANY_RDIV_UINT8
     GrB_Semiring GxB_ANY_RMINUS_FC32
     GrB_Semiring GxB_ANY_RMINUS_FC64
     GrB_Semiring GxB_ANY_RMINUS_FP32
     GrB_Semiring GxB_ANY_RMINUS_FP64
+    GrB_Semiring GxB_ANY_RMINUS_INT8
     GrB_Semiring GxB_ANY_RMINUS_INT16
     GrB_Semiring GxB_ANY_RMINUS_INT32
     GrB_Semiring GxB_ANY_RMINUS_INT64
-    GrB_Semiring GxB_ANY_RMINUS_INT8
+    GrB_Semiring GxB_ANY_RMINUS_UINT8
     GrB_Semiring GxB_ANY_RMINUS_UINT16
     GrB_Semiring GxB_ANY_RMINUS_UINT32
     GrB_Semiring GxB_ANY_RMINUS_UINT64
-    GrB_Semiring GxB_ANY_RMINUS_UINT8
     GrB_Semiring GxB_ANY_SECONDI1_INT32
     GrB_Semiring GxB_ANY_SECONDI1_INT64
     GrB_Semiring GxB_ANY_SECONDI_INT32
@@ -1230,384 +1230,384 @@ cdef extern from "GraphBLAS.h" nogil:
     GrB_Semiring GxB_ANY_SECOND_FC64
     GrB_Semiring GxB_ANY_SECOND_FP32
     GrB_Semiring GxB_ANY_SECOND_FP64
+    GrB_Semiring GxB_ANY_SECOND_INT8
     GrB_Semiring GxB_ANY_SECOND_INT16
     GrB_Semiring GxB_ANY_SECOND_INT32
     GrB_Semiring GxB_ANY_SECOND_INT64
-    GrB_Semiring GxB_ANY_SECOND_INT8
+    GrB_Semiring GxB_ANY_SECOND_UINT8
     GrB_Semiring GxB_ANY_SECOND_UINT16
     GrB_Semiring GxB_ANY_SECOND_UINT32
     GrB_Semiring GxB_ANY_SECOND_UINT64
-    GrB_Semiring GxB_ANY_SECOND_UINT8
     GrB_Semiring GxB_ANY_TIMES_FC32
     GrB_Semiring GxB_ANY_TIMES_FC64
     GrB_Semiring GxB_ANY_TIMES_FP32
     GrB_Semiring GxB_ANY_TIMES_FP64
+    GrB_Semiring GxB_ANY_TIMES_INT8
     GrB_Semiring GxB_ANY_TIMES_INT16
     GrB_Semiring GxB_ANY_TIMES_INT32
     GrB_Semiring GxB_ANY_TIMES_INT64
-    GrB_Semiring GxB_ANY_TIMES_INT8
+    GrB_Semiring GxB_ANY_TIMES_UINT8
     GrB_Semiring GxB_ANY_TIMES_UINT16
     GrB_Semiring GxB_ANY_TIMES_UINT32
     GrB_Semiring GxB_ANY_TIMES_UINT64
-    GrB_Semiring GxB_ANY_TIMES_UINT8
+    GrB_Semiring GxB_BAND_BAND_UINT8
     GrB_Semiring GxB_BAND_BAND_UINT16
     GrB_Semiring GxB_BAND_BAND_UINT32
     GrB_Semiring GxB_BAND_BAND_UINT64
-    GrB_Semiring GxB_BAND_BAND_UINT8
+    GrB_Semiring GxB_BAND_BOR_UINT8
     GrB_Semiring GxB_BAND_BOR_UINT16
     GrB_Semiring GxB_BAND_BOR_UINT32
     GrB_Semiring GxB_BAND_BOR_UINT64
-    GrB_Semiring GxB_BAND_BOR_UINT8
+    GrB_Semiring GxB_BAND_BXNOR_UINT8
     GrB_Semiring GxB_BAND_BXNOR_UINT16
     GrB_Semiring GxB_BAND_BXNOR_UINT32
     GrB_Semiring GxB_BAND_BXNOR_UINT64
-    GrB_Semiring GxB_BAND_BXNOR_UINT8
+    GrB_Semiring GxB_BAND_BXOR_UINT8
     GrB_Semiring GxB_BAND_BXOR_UINT16
     GrB_Semiring GxB_BAND_BXOR_UINT32
     GrB_Semiring GxB_BAND_BXOR_UINT64
-    GrB_Semiring GxB_BAND_BXOR_UINT8
+    GrB_Semiring GxB_BOR_BAND_UINT8
     GrB_Semiring GxB_BOR_BAND_UINT16
     GrB_Semiring GxB_BOR_BAND_UINT32
     GrB_Semiring GxB_BOR_BAND_UINT64
-    GrB_Semiring GxB_BOR_BAND_UINT8
+    GrB_Semiring GxB_BOR_BOR_UINT8
     GrB_Semiring GxB_BOR_BOR_UINT16
     GrB_Semiring GxB_BOR_BOR_UINT32
     GrB_Semiring GxB_BOR_BOR_UINT64
-    GrB_Semiring GxB_BOR_BOR_UINT8
+    GrB_Semiring GxB_BOR_BXNOR_UINT8
     GrB_Semiring GxB_BOR_BXNOR_UINT16
     GrB_Semiring GxB_BOR_BXNOR_UINT32
     GrB_Semiring GxB_BOR_BXNOR_UINT64
-    GrB_Semiring GxB_BOR_BXNOR_UINT8
+    GrB_Semiring GxB_BOR_BXOR_UINT8
     GrB_Semiring GxB_BOR_BXOR_UINT16
     GrB_Semiring GxB_BOR_BXOR_UINT32
     GrB_Semiring GxB_BOR_BXOR_UINT64
-    GrB_Semiring GxB_BOR_BXOR_UINT8
+    GrB_Semiring GxB_BXNOR_BAND_UINT8
     GrB_Semiring GxB_BXNOR_BAND_UINT16
     GrB_Semiring GxB_BXNOR_BAND_UINT32
     GrB_Semiring GxB_BXNOR_BAND_UINT64
-    GrB_Semiring GxB_BXNOR_BAND_UINT8
+    GrB_Semiring GxB_BXNOR_BOR_UINT8
     GrB_Semiring GxB_BXNOR_BOR_UINT16
     GrB_Semiring GxB_BXNOR_BOR_UINT32
     GrB_Semiring GxB_BXNOR_BOR_UINT64
-    GrB_Semiring GxB_BXNOR_BOR_UINT8
+    GrB_Semiring GxB_BXNOR_BXNOR_UINT8
     GrB_Semiring GxB_BXNOR_BXNOR_UINT16
     GrB_Semiring GxB_BXNOR_BXNOR_UINT32
     GrB_Semiring GxB_BXNOR_BXNOR_UINT64
-    GrB_Semiring GxB_BXNOR_BXNOR_UINT8
+    GrB_Semiring GxB_BXNOR_BXOR_UINT8
     GrB_Semiring GxB_BXNOR_BXOR_UINT16
     GrB_Semiring GxB_BXNOR_BXOR_UINT32
     GrB_Semiring GxB_BXNOR_BXOR_UINT64
-    GrB_Semiring GxB_BXNOR_BXOR_UINT8
+    GrB_Semiring GxB_BXOR_BAND_UINT8
     GrB_Semiring GxB_BXOR_BAND_UINT16
     GrB_Semiring GxB_BXOR_BAND_UINT32
     GrB_Semiring GxB_BXOR_BAND_UINT64
-    GrB_Semiring GxB_BXOR_BAND_UINT8
+    GrB_Semiring GxB_BXOR_BOR_UINT8
     GrB_Semiring GxB_BXOR_BOR_UINT16
     GrB_Semiring GxB_BXOR_BOR_UINT32
     GrB_Semiring GxB_BXOR_BOR_UINT64
-    GrB_Semiring GxB_BXOR_BOR_UINT8
+    GrB_Semiring GxB_BXOR_BXNOR_UINT8
     GrB_Semiring GxB_BXOR_BXNOR_UINT16
     GrB_Semiring GxB_BXOR_BXNOR_UINT32
     GrB_Semiring GxB_BXOR_BXNOR_UINT64
-    GrB_Semiring GxB_BXOR_BXNOR_UINT8
+    GrB_Semiring GxB_BXOR_BXOR_UINT8
     GrB_Semiring GxB_BXOR_BXOR_UINT16
     GrB_Semiring GxB_BXOR_BXOR_UINT32
     GrB_Semiring GxB_BXOR_BXOR_UINT64
-    GrB_Semiring GxB_BXOR_BXOR_UINT8
     GrB_Semiring GxB_EQ_EQ_BOOL
     GrB_Semiring GxB_EQ_EQ_FP32
     GrB_Semiring GxB_EQ_EQ_FP64
+    GrB_Semiring GxB_EQ_EQ_INT8
     GrB_Semiring GxB_EQ_EQ_INT16
     GrB_Semiring GxB_EQ_EQ_INT32
     GrB_Semiring GxB_EQ_EQ_INT64
-    GrB_Semiring GxB_EQ_EQ_INT8
+    GrB_Semiring GxB_EQ_EQ_UINT8
     GrB_Semiring GxB_EQ_EQ_UINT16
     GrB_Semiring GxB_EQ_EQ_UINT32
     GrB_Semiring GxB_EQ_EQ_UINT64
-    GrB_Semiring GxB_EQ_EQ_UINT8
     GrB_Semiring GxB_EQ_FIRST_BOOL
     GrB_Semiring GxB_EQ_GE_BOOL
     GrB_Semiring GxB_EQ_GE_FP32
     GrB_Semiring GxB_EQ_GE_FP64
+    GrB_Semiring GxB_EQ_GE_INT8
     GrB_Semiring GxB_EQ_GE_INT16
     GrB_Semiring GxB_EQ_GE_INT32
     GrB_Semiring GxB_EQ_GE_INT64
-    GrB_Semiring GxB_EQ_GE_INT8
+    GrB_Semiring GxB_EQ_GE_UINT8
     GrB_Semiring GxB_EQ_GE_UINT16
     GrB_Semiring GxB_EQ_GE_UINT32
     GrB_Semiring GxB_EQ_GE_UINT64
-    GrB_Semiring GxB_EQ_GE_UINT8
     GrB_Semiring GxB_EQ_GT_BOOL
     GrB_Semiring GxB_EQ_GT_FP32
     GrB_Semiring GxB_EQ_GT_FP64
+    GrB_Semiring GxB_EQ_GT_INT8
     GrB_Semiring GxB_EQ_GT_INT16
     GrB_Semiring GxB_EQ_GT_INT32
     GrB_Semiring GxB_EQ_GT_INT64
-    GrB_Semiring GxB_EQ_GT_INT8
+    GrB_Semiring GxB_EQ_GT_UINT8
     GrB_Semiring GxB_EQ_GT_UINT16
     GrB_Semiring GxB_EQ_GT_UINT32
     GrB_Semiring GxB_EQ_GT_UINT64
-    GrB_Semiring GxB_EQ_GT_UINT8
     GrB_Semiring GxB_EQ_LAND_BOOL
     GrB_Semiring GxB_EQ_LE_BOOL
     GrB_Semiring GxB_EQ_LE_FP32
     GrB_Semiring GxB_EQ_LE_FP64
+    GrB_Semiring GxB_EQ_LE_INT8
     GrB_Semiring GxB_EQ_LE_INT16
     GrB_Semiring GxB_EQ_LE_INT32
     GrB_Semiring GxB_EQ_LE_INT64
-    GrB_Semiring GxB_EQ_LE_INT8
+    GrB_Semiring GxB_EQ_LE_UINT8
     GrB_Semiring GxB_EQ_LE_UINT16
     GrB_Semiring GxB_EQ_LE_UINT32
     GrB_Semiring GxB_EQ_LE_UINT64
-    GrB_Semiring GxB_EQ_LE_UINT8
     GrB_Semiring GxB_EQ_LOR_BOOL
     GrB_Semiring GxB_EQ_LT_BOOL
     GrB_Semiring GxB_EQ_LT_FP32
     GrB_Semiring GxB_EQ_LT_FP64
+    GrB_Semiring GxB_EQ_LT_INT8
     GrB_Semiring GxB_EQ_LT_INT16
     GrB_Semiring GxB_EQ_LT_INT32
     GrB_Semiring GxB_EQ_LT_INT64
-    GrB_Semiring GxB_EQ_LT_INT8
+    GrB_Semiring GxB_EQ_LT_UINT8
     GrB_Semiring GxB_EQ_LT_UINT16
     GrB_Semiring GxB_EQ_LT_UINT32
     GrB_Semiring GxB_EQ_LT_UINT64
-    GrB_Semiring GxB_EQ_LT_UINT8
     GrB_Semiring GxB_EQ_LXOR_BOOL
     GrB_Semiring GxB_EQ_NE_FP32
     GrB_Semiring GxB_EQ_NE_FP64
+    GrB_Semiring GxB_EQ_NE_INT8
     GrB_Semiring GxB_EQ_NE_INT16
     GrB_Semiring GxB_EQ_NE_INT32
     GrB_Semiring GxB_EQ_NE_INT64
-    GrB_Semiring GxB_EQ_NE_INT8
+    GrB_Semiring GxB_EQ_NE_UINT8
     GrB_Semiring GxB_EQ_NE_UINT16
     GrB_Semiring GxB_EQ_NE_UINT32
     GrB_Semiring GxB_EQ_NE_UINT64
-    GrB_Semiring GxB_EQ_NE_UINT8
     GrB_Semiring GxB_EQ_PAIR_BOOL
     GrB_Semiring GxB_EQ_SECOND_BOOL
     GrB_Semiring GxB_LAND_EQ_BOOL
     GrB_Semiring GxB_LAND_EQ_FP32
     GrB_Semiring GxB_LAND_EQ_FP64
+    GrB_Semiring GxB_LAND_EQ_INT8
     GrB_Semiring GxB_LAND_EQ_INT16
     GrB_Semiring GxB_LAND_EQ_INT32
     GrB_Semiring GxB_LAND_EQ_INT64
-    GrB_Semiring GxB_LAND_EQ_INT8
+    GrB_Semiring GxB_LAND_EQ_UINT8
     GrB_Semiring GxB_LAND_EQ_UINT16
     GrB_Semiring GxB_LAND_EQ_UINT32
     GrB_Semiring GxB_LAND_EQ_UINT64
-    GrB_Semiring GxB_LAND_EQ_UINT8
     GrB_Semiring GxB_LAND_FIRST_BOOL
     GrB_Semiring GxB_LAND_GE_BOOL
     GrB_Semiring GxB_LAND_GE_FP32
     GrB_Semiring GxB_LAND_GE_FP64
+    GrB_Semiring GxB_LAND_GE_INT8
     GrB_Semiring GxB_LAND_GE_INT16
     GrB_Semiring GxB_LAND_GE_INT32
     GrB_Semiring GxB_LAND_GE_INT64
-    GrB_Semiring GxB_LAND_GE_INT8
+    GrB_Semiring GxB_LAND_GE_UINT8
     GrB_Semiring GxB_LAND_GE_UINT16
     GrB_Semiring GxB_LAND_GE_UINT32
     GrB_Semiring GxB_LAND_GE_UINT64
-    GrB_Semiring GxB_LAND_GE_UINT8
     GrB_Semiring GxB_LAND_GT_BOOL
     GrB_Semiring GxB_LAND_GT_FP32
     GrB_Semiring GxB_LAND_GT_FP64
+    GrB_Semiring GxB_LAND_GT_INT8
     GrB_Semiring GxB_LAND_GT_INT16
     GrB_Semiring GxB_LAND_GT_INT32
     GrB_Semiring GxB_LAND_GT_INT64
-    GrB_Semiring GxB_LAND_GT_INT8
+    GrB_Semiring GxB_LAND_GT_UINT8
     GrB_Semiring GxB_LAND_GT_UINT16
     GrB_Semiring GxB_LAND_GT_UINT32
     GrB_Semiring GxB_LAND_GT_UINT64
-    GrB_Semiring GxB_LAND_GT_UINT8
     GrB_Semiring GxB_LAND_LAND_BOOL
     GrB_Semiring GxB_LAND_LE_BOOL
     GrB_Semiring GxB_LAND_LE_FP32
     GrB_Semiring GxB_LAND_LE_FP64
+    GrB_Semiring GxB_LAND_LE_INT8
     GrB_Semiring GxB_LAND_LE_INT16
     GrB_Semiring GxB_LAND_LE_INT32
     GrB_Semiring GxB_LAND_LE_INT64
-    GrB_Semiring GxB_LAND_LE_INT8
+    GrB_Semiring GxB_LAND_LE_UINT8
     GrB_Semiring GxB_LAND_LE_UINT16
     GrB_Semiring GxB_LAND_LE_UINT32
     GrB_Semiring GxB_LAND_LE_UINT64
-    GrB_Semiring GxB_LAND_LE_UINT8
     GrB_Semiring GxB_LAND_LOR_BOOL
     GrB_Semiring GxB_LAND_LT_BOOL
     GrB_Semiring GxB_LAND_LT_FP32
     GrB_Semiring GxB_LAND_LT_FP64
+    GrB_Semiring GxB_LAND_LT_INT8
     GrB_Semiring GxB_LAND_LT_INT16
     GrB_Semiring GxB_LAND_LT_INT32
     GrB_Semiring GxB_LAND_LT_INT64
-    GrB_Semiring GxB_LAND_LT_INT8
+    GrB_Semiring GxB_LAND_LT_UINT8
     GrB_Semiring GxB_LAND_LT_UINT16
     GrB_Semiring GxB_LAND_LT_UINT32
     GrB_Semiring GxB_LAND_LT_UINT64
-    GrB_Semiring GxB_LAND_LT_UINT8
     GrB_Semiring GxB_LAND_LXOR_BOOL
     GrB_Semiring GxB_LAND_NE_FP32
     GrB_Semiring GxB_LAND_NE_FP64
+    GrB_Semiring GxB_LAND_NE_INT8
     GrB_Semiring GxB_LAND_NE_INT16
     GrB_Semiring GxB_LAND_NE_INT32
     GrB_Semiring GxB_LAND_NE_INT64
-    GrB_Semiring GxB_LAND_NE_INT8
+    GrB_Semiring GxB_LAND_NE_UINT8
     GrB_Semiring GxB_LAND_NE_UINT16
     GrB_Semiring GxB_LAND_NE_UINT32
     GrB_Semiring GxB_LAND_NE_UINT64
-    GrB_Semiring GxB_LAND_NE_UINT8
     GrB_Semiring GxB_LAND_PAIR_BOOL
     GrB_Semiring GxB_LAND_SECOND_BOOL
     GrB_Semiring GxB_LOR_EQ_BOOL
     GrB_Semiring GxB_LOR_EQ_FP32
     GrB_Semiring GxB_LOR_EQ_FP64
+    GrB_Semiring GxB_LOR_EQ_INT8
     GrB_Semiring GxB_LOR_EQ_INT16
     GrB_Semiring GxB_LOR_EQ_INT32
     GrB_Semiring GxB_LOR_EQ_INT64
-    GrB_Semiring GxB_LOR_EQ_INT8
+    GrB_Semiring GxB_LOR_EQ_UINT8
     GrB_Semiring GxB_LOR_EQ_UINT16
     GrB_Semiring GxB_LOR_EQ_UINT32
     GrB_Semiring GxB_LOR_EQ_UINT64
-    GrB_Semiring GxB_LOR_EQ_UINT8
     GrB_Semiring GxB_LOR_FIRST_BOOL
     GrB_Semiring GxB_LOR_GE_BOOL
     GrB_Semiring GxB_LOR_GE_FP32
     GrB_Semiring GxB_LOR_GE_FP64
+    GrB_Semiring GxB_LOR_GE_INT8
     GrB_Semiring GxB_LOR_GE_INT16
     GrB_Semiring GxB_LOR_GE_INT32
     GrB_Semiring GxB_LOR_GE_INT64
-    GrB_Semiring GxB_LOR_GE_INT8
+    GrB_Semiring GxB_LOR_GE_UINT8
     GrB_Semiring GxB_LOR_GE_UINT16
     GrB_Semiring GxB_LOR_GE_UINT32
     GrB_Semiring GxB_LOR_GE_UINT64
-    GrB_Semiring GxB_LOR_GE_UINT8
     GrB_Semiring GxB_LOR_GT_BOOL
     GrB_Semiring GxB_LOR_GT_FP32
     GrB_Semiring GxB_LOR_GT_FP64
+    GrB_Semiring GxB_LOR_GT_INT8
     GrB_Semiring GxB_LOR_GT_INT16
     GrB_Semiring GxB_LOR_GT_INT32
     GrB_Semiring GxB_LOR_GT_INT64
-    GrB_Semiring GxB_LOR_GT_INT8
+    GrB_Semiring GxB_LOR_GT_UINT8
     GrB_Semiring GxB_LOR_GT_UINT16
     GrB_Semiring GxB_LOR_GT_UINT32
     GrB_Semiring GxB_LOR_GT_UINT64
-    GrB_Semiring GxB_LOR_GT_UINT8
     GrB_Semiring GxB_LOR_LAND_BOOL
     GrB_Semiring GxB_LOR_LE_BOOL
     GrB_Semiring GxB_LOR_LE_FP32
     GrB_Semiring GxB_LOR_LE_FP64
+    GrB_Semiring GxB_LOR_LE_INT8
     GrB_Semiring GxB_LOR_LE_INT16
     GrB_Semiring GxB_LOR_LE_INT32
     GrB_Semiring GxB_LOR_LE_INT64
-    GrB_Semiring GxB_LOR_LE_INT8
+    GrB_Semiring GxB_LOR_LE_UINT8
     GrB_Semiring GxB_LOR_LE_UINT16
     GrB_Semiring GxB_LOR_LE_UINT32
     GrB_Semiring GxB_LOR_LE_UINT64
-    GrB_Semiring GxB_LOR_LE_UINT8
     GrB_Semiring GxB_LOR_LOR_BOOL
     GrB_Semiring GxB_LOR_LT_BOOL
     GrB_Semiring GxB_LOR_LT_FP32
     GrB_Semiring GxB_LOR_LT_FP64
+    GrB_Semiring GxB_LOR_LT_INT8
     GrB_Semiring GxB_LOR_LT_INT16
     GrB_Semiring GxB_LOR_LT_INT32
     GrB_Semiring GxB_LOR_LT_INT64
-    GrB_Semiring GxB_LOR_LT_INT8
+    GrB_Semiring GxB_LOR_LT_UINT8
     GrB_Semiring GxB_LOR_LT_UINT16
     GrB_Semiring GxB_LOR_LT_UINT32
     GrB_Semiring GxB_LOR_LT_UINT64
-    GrB_Semiring GxB_LOR_LT_UINT8
     GrB_Semiring GxB_LOR_LXOR_BOOL
     GrB_Semiring GxB_LOR_NE_FP32
     GrB_Semiring GxB_LOR_NE_FP64
+    GrB_Semiring GxB_LOR_NE_INT8
     GrB_Semiring GxB_LOR_NE_INT16
     GrB_Semiring GxB_LOR_NE_INT32
     GrB_Semiring GxB_LOR_NE_INT64
-    GrB_Semiring GxB_LOR_NE_INT8
+    GrB_Semiring GxB_LOR_NE_UINT8
     GrB_Semiring GxB_LOR_NE_UINT16
     GrB_Semiring GxB_LOR_NE_UINT32
     GrB_Semiring GxB_LOR_NE_UINT64
-    GrB_Semiring GxB_LOR_NE_UINT8
     GrB_Semiring GxB_LOR_PAIR_BOOL
     GrB_Semiring GxB_LOR_SECOND_BOOL
     GrB_Semiring GxB_LXOR_EQ_BOOL
     GrB_Semiring GxB_LXOR_EQ_FP32
     GrB_Semiring GxB_LXOR_EQ_FP64
+    GrB_Semiring GxB_LXOR_EQ_INT8
     GrB_Semiring GxB_LXOR_EQ_INT16
     GrB_Semiring GxB_LXOR_EQ_INT32
     GrB_Semiring GxB_LXOR_EQ_INT64
-    GrB_Semiring GxB_LXOR_EQ_INT8
+    GrB_Semiring GxB_LXOR_EQ_UINT8
     GrB_Semiring GxB_LXOR_EQ_UINT16
     GrB_Semiring GxB_LXOR_EQ_UINT32
     GrB_Semiring GxB_LXOR_EQ_UINT64
-    GrB_Semiring GxB_LXOR_EQ_UINT8
     GrB_Semiring GxB_LXOR_FIRST_BOOL
     GrB_Semiring GxB_LXOR_GE_BOOL
     GrB_Semiring GxB_LXOR_GE_FP32
     GrB_Semiring GxB_LXOR_GE_FP64
+    GrB_Semiring GxB_LXOR_GE_INT8
     GrB_Semiring GxB_LXOR_GE_INT16
     GrB_Semiring GxB_LXOR_GE_INT32
     GrB_Semiring GxB_LXOR_GE_INT64
-    GrB_Semiring GxB_LXOR_GE_INT8
+    GrB_Semiring GxB_LXOR_GE_UINT8
     GrB_Semiring GxB_LXOR_GE_UINT16
     GrB_Semiring GxB_LXOR_GE_UINT32
     GrB_Semiring GxB_LXOR_GE_UINT64
-    GrB_Semiring GxB_LXOR_GE_UINT8
     GrB_Semiring GxB_LXOR_GT_BOOL
     GrB_Semiring GxB_LXOR_GT_FP32
     GrB_Semiring GxB_LXOR_GT_FP64
+    GrB_Semiring GxB_LXOR_GT_INT8
     GrB_Semiring GxB_LXOR_GT_INT16
     GrB_Semiring GxB_LXOR_GT_INT32
     GrB_Semiring GxB_LXOR_GT_INT64
-    GrB_Semiring GxB_LXOR_GT_INT8
+    GrB_Semiring GxB_LXOR_GT_UINT8
     GrB_Semiring GxB_LXOR_GT_UINT16
     GrB_Semiring GxB_LXOR_GT_UINT32
     GrB_Semiring GxB_LXOR_GT_UINT64
-    GrB_Semiring GxB_LXOR_GT_UINT8
     GrB_Semiring GxB_LXOR_LAND_BOOL
     GrB_Semiring GxB_LXOR_LE_BOOL
     GrB_Semiring GxB_LXOR_LE_FP32
     GrB_Semiring GxB_LXOR_LE_FP64
+    GrB_Semiring GxB_LXOR_LE_INT8
     GrB_Semiring GxB_LXOR_LE_INT16
     GrB_Semiring GxB_LXOR_LE_INT32
     GrB_Semiring GxB_LXOR_LE_INT64
-    GrB_Semiring GxB_LXOR_LE_INT8
+    GrB_Semiring GxB_LXOR_LE_UINT8
     GrB_Semiring GxB_LXOR_LE_UINT16
     GrB_Semiring GxB_LXOR_LE_UINT32
     GrB_Semiring GxB_LXOR_LE_UINT64
-    GrB_Semiring GxB_LXOR_LE_UINT8
     GrB_Semiring GxB_LXOR_LOR_BOOL
     GrB_Semiring GxB_LXOR_LT_BOOL
     GrB_Semiring GxB_LXOR_LT_FP32
     GrB_Semiring GxB_LXOR_LT_FP64
+    GrB_Semiring GxB_LXOR_LT_INT8
     GrB_Semiring GxB_LXOR_LT_INT16
     GrB_Semiring GxB_LXOR_LT_INT32
     GrB_Semiring GxB_LXOR_LT_INT64
-    GrB_Semiring GxB_LXOR_LT_INT8
+    GrB_Semiring GxB_LXOR_LT_UINT8
     GrB_Semiring GxB_LXOR_LT_UINT16
     GrB_Semiring GxB_LXOR_LT_UINT32
     GrB_Semiring GxB_LXOR_LT_UINT64
-    GrB_Semiring GxB_LXOR_LT_UINT8
     GrB_Semiring GxB_LXOR_LXOR_BOOL
     GrB_Semiring GxB_LXOR_NE_FP32
     GrB_Semiring GxB_LXOR_NE_FP64
+    GrB_Semiring GxB_LXOR_NE_INT8
     GrB_Semiring GxB_LXOR_NE_INT16
     GrB_Semiring GxB_LXOR_NE_INT32
     GrB_Semiring GxB_LXOR_NE_INT64
-    GrB_Semiring GxB_LXOR_NE_INT8
+    GrB_Semiring GxB_LXOR_NE_UINT8
     GrB_Semiring GxB_LXOR_NE_UINT16
     GrB_Semiring GxB_LXOR_NE_UINT32
     GrB_Semiring GxB_LXOR_NE_UINT64
-    GrB_Semiring GxB_LXOR_NE_UINT8
     GrB_Semiring GxB_LXOR_PAIR_BOOL
     GrB_Semiring GxB_LXOR_SECOND_BOOL
     GrB_Semiring GxB_MAX_DIV_FP32
     GrB_Semiring GxB_MAX_DIV_FP64
+    GrB_Semiring GxB_MAX_DIV_INT8
     GrB_Semiring GxB_MAX_DIV_INT16
     GrB_Semiring GxB_MAX_DIV_INT32
     GrB_Semiring GxB_MAX_DIV_INT64
-    GrB_Semiring GxB_MAX_DIV_INT8
+    GrB_Semiring GxB_MAX_DIV_UINT8
     GrB_Semiring GxB_MAX_DIV_UINT16
     GrB_Semiring GxB_MAX_DIV_UINT32
     GrB_Semiring GxB_MAX_DIV_UINT64
-    GrB_Semiring GxB_MAX_DIV_UINT8
     GrB_Semiring GxB_MAX_FIRSTI1_INT32
     GrB_Semiring GxB_MAX_FIRSTI1_INT64
     GrB_Semiring GxB_MAX_FIRSTI_INT32
@@ -1618,174 +1618,174 @@ cdef extern from "GraphBLAS.h" nogil:
     GrB_Semiring GxB_MAX_FIRSTJ_INT64
     GrB_Semiring GxB_MAX_FIRST_FP32
     GrB_Semiring GxB_MAX_FIRST_FP64
+    GrB_Semiring GxB_MAX_FIRST_INT8
     GrB_Semiring GxB_MAX_FIRST_INT16
     GrB_Semiring GxB_MAX_FIRST_INT32
     GrB_Semiring GxB_MAX_FIRST_INT64
-    GrB_Semiring GxB_MAX_FIRST_INT8
+    GrB_Semiring GxB_MAX_FIRST_UINT8
     GrB_Semiring GxB_MAX_FIRST_UINT16
     GrB_Semiring GxB_MAX_FIRST_UINT32
     GrB_Semiring GxB_MAX_FIRST_UINT64
-    GrB_Semiring GxB_MAX_FIRST_UINT8
     GrB_Semiring GxB_MAX_ISEQ_FP32
     GrB_Semiring GxB_MAX_ISEQ_FP64
+    GrB_Semiring GxB_MAX_ISEQ_INT8
     GrB_Semiring GxB_MAX_ISEQ_INT16
     GrB_Semiring GxB_MAX_ISEQ_INT32
     GrB_Semiring GxB_MAX_ISEQ_INT64
-    GrB_Semiring GxB_MAX_ISEQ_INT8
+    GrB_Semiring GxB_MAX_ISEQ_UINT8
     GrB_Semiring GxB_MAX_ISEQ_UINT16
     GrB_Semiring GxB_MAX_ISEQ_UINT32
     GrB_Semiring GxB_MAX_ISEQ_UINT64
-    GrB_Semiring GxB_MAX_ISEQ_UINT8
     GrB_Semiring GxB_MAX_ISGE_FP32
     GrB_Semiring GxB_MAX_ISGE_FP64
+    GrB_Semiring GxB_MAX_ISGE_INT8
     GrB_Semiring GxB_MAX_ISGE_INT16
     GrB_Semiring GxB_MAX_ISGE_INT32
     GrB_Semiring GxB_MAX_ISGE_INT64
-    GrB_Semiring GxB_MAX_ISGE_INT8
+    GrB_Semiring GxB_MAX_ISGE_UINT8
     GrB_Semiring GxB_MAX_ISGE_UINT16
     GrB_Semiring GxB_MAX_ISGE_UINT32
     GrB_Semiring GxB_MAX_ISGE_UINT64
-    GrB_Semiring GxB_MAX_ISGE_UINT8
     GrB_Semiring GxB_MAX_ISGT_FP32
     GrB_Semiring GxB_MAX_ISGT_FP64
+    GrB_Semiring GxB_MAX_ISGT_INT8
     GrB_Semiring GxB_MAX_ISGT_INT16
     GrB_Semiring GxB_MAX_ISGT_INT32
     GrB_Semiring GxB_MAX_ISGT_INT64
-    GrB_Semiring GxB_MAX_ISGT_INT8
+    GrB_Semiring GxB_MAX_ISGT_UINT8
     GrB_Semiring GxB_MAX_ISGT_UINT16
     GrB_Semiring GxB_MAX_ISGT_UINT32
     GrB_Semiring GxB_MAX_ISGT_UINT64
-    GrB_Semiring GxB_MAX_ISGT_UINT8
     GrB_Semiring GxB_MAX_ISLE_FP32
     GrB_Semiring GxB_MAX_ISLE_FP64
+    GrB_Semiring GxB_MAX_ISLE_INT8
     GrB_Semiring GxB_MAX_ISLE_INT16
     GrB_Semiring GxB_MAX_ISLE_INT32
     GrB_Semiring GxB_MAX_ISLE_INT64
-    GrB_Semiring GxB_MAX_ISLE_INT8
+    GrB_Semiring GxB_MAX_ISLE_UINT8
     GrB_Semiring GxB_MAX_ISLE_UINT16
     GrB_Semiring GxB_MAX_ISLE_UINT32
     GrB_Semiring GxB_MAX_ISLE_UINT64
-    GrB_Semiring GxB_MAX_ISLE_UINT8
     GrB_Semiring GxB_MAX_ISLT_FP32
     GrB_Semiring GxB_MAX_ISLT_FP64
+    GrB_Semiring GxB_MAX_ISLT_INT8
     GrB_Semiring GxB_MAX_ISLT_INT16
     GrB_Semiring GxB_MAX_ISLT_INT32
     GrB_Semiring GxB_MAX_ISLT_INT64
-    GrB_Semiring GxB_MAX_ISLT_INT8
+    GrB_Semiring GxB_MAX_ISLT_UINT8
     GrB_Semiring GxB_MAX_ISLT_UINT16
     GrB_Semiring GxB_MAX_ISLT_UINT32
     GrB_Semiring GxB_MAX_ISLT_UINT64
-    GrB_Semiring GxB_MAX_ISLT_UINT8
     GrB_Semiring GxB_MAX_ISNE_FP32
     GrB_Semiring GxB_MAX_ISNE_FP64
+    GrB_Semiring GxB_MAX_ISNE_INT8
     GrB_Semiring GxB_MAX_ISNE_INT16
     GrB_Semiring GxB_MAX_ISNE_INT32
     GrB_Semiring GxB_MAX_ISNE_INT64
-    GrB_Semiring GxB_MAX_ISNE_INT8
+    GrB_Semiring GxB_MAX_ISNE_UINT8
     GrB_Semiring GxB_MAX_ISNE_UINT16
     GrB_Semiring GxB_MAX_ISNE_UINT32
     GrB_Semiring GxB_MAX_ISNE_UINT64
-    GrB_Semiring GxB_MAX_ISNE_UINT8
     GrB_Semiring GxB_MAX_LAND_FP32
     GrB_Semiring GxB_MAX_LAND_FP64
+    GrB_Semiring GxB_MAX_LAND_INT8
     GrB_Semiring GxB_MAX_LAND_INT16
     GrB_Semiring GxB_MAX_LAND_INT32
     GrB_Semiring GxB_MAX_LAND_INT64
-    GrB_Semiring GxB_MAX_LAND_INT8
+    GrB_Semiring GxB_MAX_LAND_UINT8
     GrB_Semiring GxB_MAX_LAND_UINT16
     GrB_Semiring GxB_MAX_LAND_UINT32
     GrB_Semiring GxB_MAX_LAND_UINT64
-    GrB_Semiring GxB_MAX_LAND_UINT8
     GrB_Semiring GxB_MAX_LOR_FP32
     GrB_Semiring GxB_MAX_LOR_FP64
+    GrB_Semiring GxB_MAX_LOR_INT8
     GrB_Semiring GxB_MAX_LOR_INT16
     GrB_Semiring GxB_MAX_LOR_INT32
     GrB_Semiring GxB_MAX_LOR_INT64
-    GrB_Semiring GxB_MAX_LOR_INT8
+    GrB_Semiring GxB_MAX_LOR_UINT8
     GrB_Semiring GxB_MAX_LOR_UINT16
     GrB_Semiring GxB_MAX_LOR_UINT32
     GrB_Semiring GxB_MAX_LOR_UINT64
-    GrB_Semiring GxB_MAX_LOR_UINT8
     GrB_Semiring GxB_MAX_LXOR_FP32
     GrB_Semiring GxB_MAX_LXOR_FP64
+    GrB_Semiring GxB_MAX_LXOR_INT8
     GrB_Semiring GxB_MAX_LXOR_INT16
     GrB_Semiring GxB_MAX_LXOR_INT32
     GrB_Semiring GxB_MAX_LXOR_INT64
-    GrB_Semiring GxB_MAX_LXOR_INT8
+    GrB_Semiring GxB_MAX_LXOR_UINT8
     GrB_Semiring GxB_MAX_LXOR_UINT16
     GrB_Semiring GxB_MAX_LXOR_UINT32
     GrB_Semiring GxB_MAX_LXOR_UINT64
-    GrB_Semiring GxB_MAX_LXOR_UINT8
     GrB_Semiring GxB_MAX_MAX_FP32
     GrB_Semiring GxB_MAX_MAX_FP64
+    GrB_Semiring GxB_MAX_MAX_INT8
     GrB_Semiring GxB_MAX_MAX_INT16
     GrB_Semiring GxB_MAX_MAX_INT32
     GrB_Semiring GxB_MAX_MAX_INT64
-    GrB_Semiring GxB_MAX_MAX_INT8
+    GrB_Semiring GxB_MAX_MAX_UINT8
     GrB_Semiring GxB_MAX_MAX_UINT16
     GrB_Semiring GxB_MAX_MAX_UINT32
     GrB_Semiring GxB_MAX_MAX_UINT64
-    GrB_Semiring GxB_MAX_MAX_UINT8
     GrB_Semiring GxB_MAX_MINUS_FP32
     GrB_Semiring GxB_MAX_MINUS_FP64
+    GrB_Semiring GxB_MAX_MINUS_INT8
     GrB_Semiring GxB_MAX_MINUS_INT16
     GrB_Semiring GxB_MAX_MINUS_INT32
     GrB_Semiring GxB_MAX_MINUS_INT64
-    GrB_Semiring GxB_MAX_MINUS_INT8
+    GrB_Semiring GxB_MAX_MINUS_UINT8
     GrB_Semiring GxB_MAX_MINUS_UINT16
     GrB_Semiring GxB_MAX_MINUS_UINT32
     GrB_Semiring GxB_MAX_MINUS_UINT64
-    GrB_Semiring GxB_MAX_MINUS_UINT8
     GrB_Semiring GxB_MAX_MIN_FP32
     GrB_Semiring GxB_MAX_MIN_FP64
+    GrB_Semiring GxB_MAX_MIN_INT8
     GrB_Semiring GxB_MAX_MIN_INT16
     GrB_Semiring GxB_MAX_MIN_INT32
     GrB_Semiring GxB_MAX_MIN_INT64
-    GrB_Semiring GxB_MAX_MIN_INT8
+    GrB_Semiring GxB_MAX_MIN_UINT8
     GrB_Semiring GxB_MAX_MIN_UINT16
     GrB_Semiring GxB_MAX_MIN_UINT32
     GrB_Semiring GxB_MAX_MIN_UINT64
-    GrB_Semiring GxB_MAX_MIN_UINT8
     GrB_Semiring GxB_MAX_PAIR_FP32
     GrB_Semiring GxB_MAX_PAIR_FP64
+    GrB_Semiring GxB_MAX_PAIR_INT8
     GrB_Semiring GxB_MAX_PAIR_INT16
     GrB_Semiring GxB_MAX_PAIR_INT32
     GrB_Semiring GxB_MAX_PAIR_INT64
-    GrB_Semiring GxB_MAX_PAIR_INT8
+    GrB_Semiring GxB_MAX_PAIR_UINT8
     GrB_Semiring GxB_MAX_PAIR_UINT16
     GrB_Semiring GxB_MAX_PAIR_UINT32
     GrB_Semiring GxB_MAX_PAIR_UINT64
-    GrB_Semiring GxB_MAX_PAIR_UINT8
     GrB_Semiring GxB_MAX_PLUS_FP32
     GrB_Semiring GxB_MAX_PLUS_FP64
+    GrB_Semiring GxB_MAX_PLUS_INT8
     GrB_Semiring GxB_MAX_PLUS_INT16
     GrB_Semiring GxB_MAX_PLUS_INT32
     GrB_Semiring GxB_MAX_PLUS_INT64
-    GrB_Semiring GxB_MAX_PLUS_INT8
+    GrB_Semiring GxB_MAX_PLUS_UINT8
     GrB_Semiring GxB_MAX_PLUS_UINT16
     GrB_Semiring GxB_MAX_PLUS_UINT32
     GrB_Semiring GxB_MAX_PLUS_UINT64
-    GrB_Semiring GxB_MAX_PLUS_UINT8
     GrB_Semiring GxB_MAX_RDIV_FP32
     GrB_Semiring GxB_MAX_RDIV_FP64
+    GrB_Semiring GxB_MAX_RDIV_INT8
     GrB_Semiring GxB_MAX_RDIV_INT16
     GrB_Semiring GxB_MAX_RDIV_INT32
     GrB_Semiring GxB_MAX_RDIV_INT64
-    GrB_Semiring GxB_MAX_RDIV_INT8
+    GrB_Semiring GxB_MAX_RDIV_UINT8
     GrB_Semiring GxB_MAX_RDIV_UINT16
     GrB_Semiring GxB_MAX_RDIV_UINT32
     GrB_Semiring GxB_MAX_RDIV_UINT64
-    GrB_Semiring GxB_MAX_RDIV_UINT8
     GrB_Semiring GxB_MAX_RMINUS_FP32
     GrB_Semiring GxB_MAX_RMINUS_FP64
+    GrB_Semiring GxB_MAX_RMINUS_INT8
     GrB_Semiring GxB_MAX_RMINUS_INT16
     GrB_Semiring GxB_MAX_RMINUS_INT32
     GrB_Semiring GxB_MAX_RMINUS_INT64
-    GrB_Semiring GxB_MAX_RMINUS_INT8
+    GrB_Semiring GxB_MAX_RMINUS_UINT8
     GrB_Semiring GxB_MAX_RMINUS_UINT16
     GrB_Semiring GxB_MAX_RMINUS_UINT32
     GrB_Semiring GxB_MAX_RMINUS_UINT64
-    GrB_Semiring GxB_MAX_RMINUS_UINT8
     GrB_Semiring GxB_MAX_SECONDI1_INT32
     GrB_Semiring GxB_MAX_SECONDI1_INT64
     GrB_Semiring GxB_MAX_SECONDI_INT32
@@ -1796,34 +1796,34 @@ cdef extern from "GraphBLAS.h" nogil:
     GrB_Semiring GxB_MAX_SECONDJ_INT64
     GrB_Semiring GxB_MAX_SECOND_FP32
     GrB_Semiring GxB_MAX_SECOND_FP64
+    GrB_Semiring GxB_MAX_SECOND_INT8
     GrB_Semiring GxB_MAX_SECOND_INT16
     GrB_Semiring GxB_MAX_SECOND_INT32
     GrB_Semiring GxB_MAX_SECOND_INT64
-    GrB_Semiring GxB_MAX_SECOND_INT8
+    GrB_Semiring GxB_MAX_SECOND_UINT8
     GrB_Semiring GxB_MAX_SECOND_UINT16
     GrB_Semiring GxB_MAX_SECOND_UINT32
     GrB_Semiring GxB_MAX_SECOND_UINT64
-    GrB_Semiring GxB_MAX_SECOND_UINT8
     GrB_Semiring GxB_MAX_TIMES_FP32
     GrB_Semiring GxB_MAX_TIMES_FP64
+    GrB_Semiring GxB_MAX_TIMES_INT8
     GrB_Semiring GxB_MAX_TIMES_INT16
     GrB_Semiring GxB_MAX_TIMES_INT32
     GrB_Semiring GxB_MAX_TIMES_INT64
-    GrB_Semiring GxB_MAX_TIMES_INT8
+    GrB_Semiring GxB_MAX_TIMES_UINT8
     GrB_Semiring GxB_MAX_TIMES_UINT16
     GrB_Semiring GxB_MAX_TIMES_UINT32
     GrB_Semiring GxB_MAX_TIMES_UINT64
-    GrB_Semiring GxB_MAX_TIMES_UINT8
     GrB_Semiring GxB_MIN_DIV_FP32
     GrB_Semiring GxB_MIN_DIV_FP64
+    GrB_Semiring GxB_MIN_DIV_INT8
     GrB_Semiring GxB_MIN_DIV_INT16
     GrB_Semiring GxB_MIN_DIV_INT32
     GrB_Semiring GxB_MIN_DIV_INT64
-    GrB_Semiring GxB_MIN_DIV_INT8
+    GrB_Semiring GxB_MIN_DIV_UINT8
     GrB_Semiring GxB_MIN_DIV_UINT16
     GrB_Semiring GxB_MIN_DIV_UINT32
     GrB_Semiring GxB_MIN_DIV_UINT64
-    GrB_Semiring GxB_MIN_DIV_UINT8
     GrB_Semiring GxB_MIN_FIRSTI1_INT32
     GrB_Semiring GxB_MIN_FIRSTI1_INT64
     GrB_Semiring GxB_MIN_FIRSTI_INT32
@@ -1834,174 +1834,174 @@ cdef extern from "GraphBLAS.h" nogil:
     GrB_Semiring GxB_MIN_FIRSTJ_INT64
     GrB_Semiring GxB_MIN_FIRST_FP32
     GrB_Semiring GxB_MIN_FIRST_FP64
+    GrB_Semiring GxB_MIN_FIRST_INT8
     GrB_Semiring GxB_MIN_FIRST_INT16
     GrB_Semiring GxB_MIN_FIRST_INT32
     GrB_Semiring GxB_MIN_FIRST_INT64
-    GrB_Semiring GxB_MIN_FIRST_INT8
+    GrB_Semiring GxB_MIN_FIRST_UINT8
     GrB_Semiring GxB_MIN_FIRST_UINT16
     GrB_Semiring GxB_MIN_FIRST_UINT32
     GrB_Semiring GxB_MIN_FIRST_UINT64
-    GrB_Semiring GxB_MIN_FIRST_UINT8
     GrB_Semiring GxB_MIN_ISEQ_FP32
     GrB_Semiring GxB_MIN_ISEQ_FP64
+    GrB_Semiring GxB_MIN_ISEQ_INT8
     GrB_Semiring GxB_MIN_ISEQ_INT16
     GrB_Semiring GxB_MIN_ISEQ_INT32
     GrB_Semiring GxB_MIN_ISEQ_INT64
-    GrB_Semiring GxB_MIN_ISEQ_INT8
+    GrB_Semiring GxB_MIN_ISEQ_UINT8
     GrB_Semiring GxB_MIN_ISEQ_UINT16
     GrB_Semiring GxB_MIN_ISEQ_UINT32
     GrB_Semiring GxB_MIN_ISEQ_UINT64
-    GrB_Semiring GxB_MIN_ISEQ_UINT8
     GrB_Semiring GxB_MIN_ISGE_FP32
     GrB_Semiring GxB_MIN_ISGE_FP64
+    GrB_Semiring GxB_MIN_ISGE_INT8
     GrB_Semiring GxB_MIN_ISGE_INT16
     GrB_Semiring GxB_MIN_ISGE_INT32
     GrB_Semiring GxB_MIN_ISGE_INT64
-    GrB_Semiring GxB_MIN_ISGE_INT8
+    GrB_Semiring GxB_MIN_ISGE_UINT8
     GrB_Semiring GxB_MIN_ISGE_UINT16
     GrB_Semiring GxB_MIN_ISGE_UINT32
     GrB_Semiring GxB_MIN_ISGE_UINT64
-    GrB_Semiring GxB_MIN_ISGE_UINT8
     GrB_Semiring GxB_MIN_ISGT_FP32
     GrB_Semiring GxB_MIN_ISGT_FP64
+    GrB_Semiring GxB_MIN_ISGT_INT8
     GrB_Semiring GxB_MIN_ISGT_INT16
     GrB_Semiring GxB_MIN_ISGT_INT32
     GrB_Semiring GxB_MIN_ISGT_INT64
-    GrB_Semiring GxB_MIN_ISGT_INT8
+    GrB_Semiring GxB_MIN_ISGT_UINT8
     GrB_Semiring GxB_MIN_ISGT_UINT16
     GrB_Semiring GxB_MIN_ISGT_UINT32
     GrB_Semiring GxB_MIN_ISGT_UINT64
-    GrB_Semiring GxB_MIN_ISGT_UINT8
     GrB_Semiring GxB_MIN_ISLE_FP32
     GrB_Semiring GxB_MIN_ISLE_FP64
+    GrB_Semiring GxB_MIN_ISLE_INT8
     GrB_Semiring GxB_MIN_ISLE_INT16
     GrB_Semiring GxB_MIN_ISLE_INT32
     GrB_Semiring GxB_MIN_ISLE_INT64
-    GrB_Semiring GxB_MIN_ISLE_INT8
+    GrB_Semiring GxB_MIN_ISLE_UINT8
     GrB_Semiring GxB_MIN_ISLE_UINT16
     GrB_Semiring GxB_MIN_ISLE_UINT32
     GrB_Semiring GxB_MIN_ISLE_UINT64
-    GrB_Semiring GxB_MIN_ISLE_UINT8
     GrB_Semiring GxB_MIN_ISLT_FP32
     GrB_Semiring GxB_MIN_ISLT_FP64
+    GrB_Semiring GxB_MIN_ISLT_INT8
     GrB_Semiring GxB_MIN_ISLT_INT16
     GrB_Semiring GxB_MIN_ISLT_INT32
     GrB_Semiring GxB_MIN_ISLT_INT64
-    GrB_Semiring GxB_MIN_ISLT_INT8
+    GrB_Semiring GxB_MIN_ISLT_UINT8
     GrB_Semiring GxB_MIN_ISLT_UINT16
     GrB_Semiring GxB_MIN_ISLT_UINT32
     GrB_Semiring GxB_MIN_ISLT_UINT64
-    GrB_Semiring GxB_MIN_ISLT_UINT8
     GrB_Semiring GxB_MIN_ISNE_FP32
     GrB_Semiring GxB_MIN_ISNE_FP64
+    GrB_Semiring GxB_MIN_ISNE_INT8
     GrB_Semiring GxB_MIN_ISNE_INT16
     GrB_Semiring GxB_MIN_ISNE_INT32
     GrB_Semiring GxB_MIN_ISNE_INT64
-    GrB_Semiring GxB_MIN_ISNE_INT8
+    GrB_Semiring GxB_MIN_ISNE_UINT8
     GrB_Semiring GxB_MIN_ISNE_UINT16
     GrB_Semiring GxB_MIN_ISNE_UINT32
     GrB_Semiring GxB_MIN_ISNE_UINT64
-    GrB_Semiring GxB_MIN_ISNE_UINT8
     GrB_Semiring GxB_MIN_LAND_FP32
     GrB_Semiring GxB_MIN_LAND_FP64
+    GrB_Semiring GxB_MIN_LAND_INT8
     GrB_Semiring GxB_MIN_LAND_INT16
     GrB_Semiring GxB_MIN_LAND_INT32
     GrB_Semiring GxB_MIN_LAND_INT64
-    GrB_Semiring GxB_MIN_LAND_INT8
+    GrB_Semiring GxB_MIN_LAND_UINT8
     GrB_Semiring GxB_MIN_LAND_UINT16
     GrB_Semiring GxB_MIN_LAND_UINT32
     GrB_Semiring GxB_MIN_LAND_UINT64
-    GrB_Semiring GxB_MIN_LAND_UINT8
     GrB_Semiring GxB_MIN_LOR_FP32
     GrB_Semiring GxB_MIN_LOR_FP64
+    GrB_Semiring GxB_MIN_LOR_INT8
     GrB_Semiring GxB_MIN_LOR_INT16
     GrB_Semiring GxB_MIN_LOR_INT32
     GrB_Semiring GxB_MIN_LOR_INT64
-    GrB_Semiring GxB_MIN_LOR_INT8
+    GrB_Semiring GxB_MIN_LOR_UINT8
     GrB_Semiring GxB_MIN_LOR_UINT16
     GrB_Semiring GxB_MIN_LOR_UINT32
     GrB_Semiring GxB_MIN_LOR_UINT64
-    GrB_Semiring GxB_MIN_LOR_UINT8
     GrB_Semiring GxB_MIN_LXOR_FP32
     GrB_Semiring GxB_MIN_LXOR_FP64
+    GrB_Semiring GxB_MIN_LXOR_INT8
     GrB_Semiring GxB_MIN_LXOR_INT16
     GrB_Semiring GxB_MIN_LXOR_INT32
     GrB_Semiring GxB_MIN_LXOR_INT64
-    GrB_Semiring GxB_MIN_LXOR_INT8
+    GrB_Semiring GxB_MIN_LXOR_UINT8
     GrB_Semiring GxB_MIN_LXOR_UINT16
     GrB_Semiring GxB_MIN_LXOR_UINT32
     GrB_Semiring GxB_MIN_LXOR_UINT64
-    GrB_Semiring GxB_MIN_LXOR_UINT8
     GrB_Semiring GxB_MIN_MAX_FP32
     GrB_Semiring GxB_MIN_MAX_FP64
+    GrB_Semiring GxB_MIN_MAX_INT8
     GrB_Semiring GxB_MIN_MAX_INT16
     GrB_Semiring GxB_MIN_MAX_INT32
     GrB_Semiring GxB_MIN_MAX_INT64
-    GrB_Semiring GxB_MIN_MAX_INT8
+    GrB_Semiring GxB_MIN_MAX_UINT8
     GrB_Semiring GxB_MIN_MAX_UINT16
     GrB_Semiring GxB_MIN_MAX_UINT32
     GrB_Semiring GxB_MIN_MAX_UINT64
-    GrB_Semiring GxB_MIN_MAX_UINT8
     GrB_Semiring GxB_MIN_MINUS_FP32
     GrB_Semiring GxB_MIN_MINUS_FP64
+    GrB_Semiring GxB_MIN_MINUS_INT8
     GrB_Semiring GxB_MIN_MINUS_INT16
     GrB_Semiring GxB_MIN_MINUS_INT32
     GrB_Semiring GxB_MIN_MINUS_INT64
-    GrB_Semiring GxB_MIN_MINUS_INT8
+    GrB_Semiring GxB_MIN_MINUS_UINT8
     GrB_Semiring GxB_MIN_MINUS_UINT16
     GrB_Semiring GxB_MIN_MINUS_UINT32
     GrB_Semiring GxB_MIN_MINUS_UINT64
-    GrB_Semiring GxB_MIN_MINUS_UINT8
     GrB_Semiring GxB_MIN_MIN_FP32
     GrB_Semiring GxB_MIN_MIN_FP64
+    GrB_Semiring GxB_MIN_MIN_INT8
     GrB_Semiring GxB_MIN_MIN_INT16
     GrB_Semiring GxB_MIN_MIN_INT32
     GrB_Semiring GxB_MIN_MIN_INT64
-    GrB_Semiring GxB_MIN_MIN_INT8
+    GrB_Semiring GxB_MIN_MIN_UINT8
     GrB_Semiring GxB_MIN_MIN_UINT16
     GrB_Semiring GxB_MIN_MIN_UINT32
     GrB_Semiring GxB_MIN_MIN_UINT64
-    GrB_Semiring GxB_MIN_MIN_UINT8
     GrB_Semiring GxB_MIN_PAIR_FP32
     GrB_Semiring GxB_MIN_PAIR_FP64
+    GrB_Semiring GxB_MIN_PAIR_INT8
     GrB_Semiring GxB_MIN_PAIR_INT16
     GrB_Semiring GxB_MIN_PAIR_INT32
     GrB_Semiring GxB_MIN_PAIR_INT64
-    GrB_Semiring GxB_MIN_PAIR_INT8
+    GrB_Semiring GxB_MIN_PAIR_UINT8
     GrB_Semiring GxB_MIN_PAIR_UINT16
     GrB_Semiring GxB_MIN_PAIR_UINT32
     GrB_Semiring GxB_MIN_PAIR_UINT64
-    GrB_Semiring GxB_MIN_PAIR_UINT8
     GrB_Semiring GxB_MIN_PLUS_FP32
     GrB_Semiring GxB_MIN_PLUS_FP64
+    GrB_Semiring GxB_MIN_PLUS_INT8
     GrB_Semiring GxB_MIN_PLUS_INT16
     GrB_Semiring GxB_MIN_PLUS_INT32
     GrB_Semiring GxB_MIN_PLUS_INT64
-    GrB_Semiring GxB_MIN_PLUS_INT8
+    GrB_Semiring GxB_MIN_PLUS_UINT8
     GrB_Semiring GxB_MIN_PLUS_UINT16
     GrB_Semiring GxB_MIN_PLUS_UINT32
     GrB_Semiring GxB_MIN_PLUS_UINT64
-    GrB_Semiring GxB_MIN_PLUS_UINT8
     GrB_Semiring GxB_MIN_RDIV_FP32
     GrB_Semiring GxB_MIN_RDIV_FP64
+    GrB_Semiring GxB_MIN_RDIV_INT8
     GrB_Semiring GxB_MIN_RDIV_INT16
     GrB_Semiring GxB_MIN_RDIV_INT32
     GrB_Semiring GxB_MIN_RDIV_INT64
-    GrB_Semiring GxB_MIN_RDIV_INT8
+    GrB_Semiring GxB_MIN_RDIV_UINT8
     GrB_Semiring GxB_MIN_RDIV_UINT16
     GrB_Semiring GxB_MIN_RDIV_UINT32
     GrB_Semiring GxB_MIN_RDIV_UINT64
-    GrB_Semiring GxB_MIN_RDIV_UINT8
     GrB_Semiring GxB_MIN_RMINUS_FP32
     GrB_Semiring GxB_MIN_RMINUS_FP64
+    GrB_Semiring GxB_MIN_RMINUS_INT8
     GrB_Semiring GxB_MIN_RMINUS_INT16
     GrB_Semiring GxB_MIN_RMINUS_INT32
     GrB_Semiring GxB_MIN_RMINUS_INT64
-    GrB_Semiring GxB_MIN_RMINUS_INT8
+    GrB_Semiring GxB_MIN_RMINUS_UINT8
     GrB_Semiring GxB_MIN_RMINUS_UINT16
     GrB_Semiring GxB_MIN_RMINUS_UINT32
     GrB_Semiring GxB_MIN_RMINUS_UINT64
-    GrB_Semiring GxB_MIN_RMINUS_UINT8
     GrB_Semiring GxB_MIN_SECONDI1_INT32
     GrB_Semiring GxB_MIN_SECONDI1_INT64
     GrB_Semiring GxB_MIN_SECONDI_INT32
@@ -2012,36 +2012,36 @@ cdef extern from "GraphBLAS.h" nogil:
     GrB_Semiring GxB_MIN_SECONDJ_INT64
     GrB_Semiring GxB_MIN_SECOND_FP32
     GrB_Semiring GxB_MIN_SECOND_FP64
+    GrB_Semiring GxB_MIN_SECOND_INT8
     GrB_Semiring GxB_MIN_SECOND_INT16
     GrB_Semiring GxB_MIN_SECOND_INT32
     GrB_Semiring GxB_MIN_SECOND_INT64
-    GrB_Semiring GxB_MIN_SECOND_INT8
+    GrB_Semiring GxB_MIN_SECOND_UINT8
     GrB_Semiring GxB_MIN_SECOND_UINT16
     GrB_Semiring GxB_MIN_SECOND_UINT32
     GrB_Semiring GxB_MIN_SECOND_UINT64
-    GrB_Semiring GxB_MIN_SECOND_UINT8
     GrB_Semiring GxB_MIN_TIMES_FP32
     GrB_Semiring GxB_MIN_TIMES_FP64
+    GrB_Semiring GxB_MIN_TIMES_INT8
     GrB_Semiring GxB_MIN_TIMES_INT16
     GrB_Semiring GxB_MIN_TIMES_INT32
     GrB_Semiring GxB_MIN_TIMES_INT64
-    GrB_Semiring GxB_MIN_TIMES_INT8
+    GrB_Semiring GxB_MIN_TIMES_UINT8
     GrB_Semiring GxB_MIN_TIMES_UINT16
     GrB_Semiring GxB_MIN_TIMES_UINT32
     GrB_Semiring GxB_MIN_TIMES_UINT64
-    GrB_Semiring GxB_MIN_TIMES_UINT8
     GrB_Semiring GxB_PLUS_DIV_FC32
     GrB_Semiring GxB_PLUS_DIV_FC64
     GrB_Semiring GxB_PLUS_DIV_FP32
     GrB_Semiring GxB_PLUS_DIV_FP64
+    GrB_Semiring GxB_PLUS_DIV_INT8
     GrB_Semiring GxB_PLUS_DIV_INT16
     GrB_Semiring GxB_PLUS_DIV_INT32
     GrB_Semiring GxB_PLUS_DIV_INT64
-    GrB_Semiring GxB_PLUS_DIV_INT8
+    GrB_Semiring GxB_PLUS_DIV_UINT8
     GrB_Semiring GxB_PLUS_DIV_UINT16
     GrB_Semiring GxB_PLUS_DIV_UINT32
     GrB_Semiring GxB_PLUS_DIV_UINT64
-    GrB_Semiring GxB_PLUS_DIV_UINT8
     GrB_Semiring GxB_PLUS_FIRSTI1_INT32
     GrB_Semiring GxB_PLUS_FIRSTI1_INT64
     GrB_Semiring GxB_PLUS_FIRSTI_INT32
@@ -2054,184 +2054,184 @@ cdef extern from "GraphBLAS.h" nogil:
     GrB_Semiring GxB_PLUS_FIRST_FC64
     GrB_Semiring GxB_PLUS_FIRST_FP32
     GrB_Semiring GxB_PLUS_FIRST_FP64
+    GrB_Semiring GxB_PLUS_FIRST_INT8
     GrB_Semiring GxB_PLUS_FIRST_INT16
     GrB_Semiring GxB_PLUS_FIRST_INT32
     GrB_Semiring GxB_PLUS_FIRST_INT64
-    GrB_Semiring GxB_PLUS_FIRST_INT8
+    GrB_Semiring GxB_PLUS_FIRST_UINT8
     GrB_Semiring GxB_PLUS_FIRST_UINT16
     GrB_Semiring GxB_PLUS_FIRST_UINT32
     GrB_Semiring GxB_PLUS_FIRST_UINT64
-    GrB_Semiring GxB_PLUS_FIRST_UINT8
     GrB_Semiring GxB_PLUS_ISEQ_FP32
     GrB_Semiring GxB_PLUS_ISEQ_FP64
+    GrB_Semiring GxB_PLUS_ISEQ_INT8
     GrB_Semiring GxB_PLUS_ISEQ_INT16
     GrB_Semiring GxB_PLUS_ISEQ_INT32
     GrB_Semiring GxB_PLUS_ISEQ_INT64
-    GrB_Semiring GxB_PLUS_ISEQ_INT8
+    GrB_Semiring GxB_PLUS_ISEQ_UINT8
     GrB_Semiring GxB_PLUS_ISEQ_UINT16
     GrB_Semiring GxB_PLUS_ISEQ_UINT32
     GrB_Semiring GxB_PLUS_ISEQ_UINT64
-    GrB_Semiring GxB_PLUS_ISEQ_UINT8
     GrB_Semiring GxB_PLUS_ISGE_FP32
     GrB_Semiring GxB_PLUS_ISGE_FP64
+    GrB_Semiring GxB_PLUS_ISGE_INT8
     GrB_Semiring GxB_PLUS_ISGE_INT16
     GrB_Semiring GxB_PLUS_ISGE_INT32
     GrB_Semiring GxB_PLUS_ISGE_INT64
-    GrB_Semiring GxB_PLUS_ISGE_INT8
+    GrB_Semiring GxB_PLUS_ISGE_UINT8
     GrB_Semiring GxB_PLUS_ISGE_UINT16
     GrB_Semiring GxB_PLUS_ISGE_UINT32
     GrB_Semiring GxB_PLUS_ISGE_UINT64
-    GrB_Semiring GxB_PLUS_ISGE_UINT8
     GrB_Semiring GxB_PLUS_ISGT_FP32
     GrB_Semiring GxB_PLUS_ISGT_FP64
+    GrB_Semiring GxB_PLUS_ISGT_INT8
     GrB_Semiring GxB_PLUS_ISGT_INT16
     GrB_Semiring GxB_PLUS_ISGT_INT32
     GrB_Semiring GxB_PLUS_ISGT_INT64
-    GrB_Semiring GxB_PLUS_ISGT_INT8
+    GrB_Semiring GxB_PLUS_ISGT_UINT8
     GrB_Semiring GxB_PLUS_ISGT_UINT16
     GrB_Semiring GxB_PLUS_ISGT_UINT32
     GrB_Semiring GxB_PLUS_ISGT_UINT64
-    GrB_Semiring GxB_PLUS_ISGT_UINT8
     GrB_Semiring GxB_PLUS_ISLE_FP32
     GrB_Semiring GxB_PLUS_ISLE_FP64
+    GrB_Semiring GxB_PLUS_ISLE_INT8
     GrB_Semiring GxB_PLUS_ISLE_INT16
     GrB_Semiring GxB_PLUS_ISLE_INT32
     GrB_Semiring GxB_PLUS_ISLE_INT64
-    GrB_Semiring GxB_PLUS_ISLE_INT8
+    GrB_Semiring GxB_PLUS_ISLE_UINT8
     GrB_Semiring GxB_PLUS_ISLE_UINT16
     GrB_Semiring GxB_PLUS_ISLE_UINT32
     GrB_Semiring GxB_PLUS_ISLE_UINT64
-    GrB_Semiring GxB_PLUS_ISLE_UINT8
     GrB_Semiring GxB_PLUS_ISLT_FP32
     GrB_Semiring GxB_PLUS_ISLT_FP64
+    GrB_Semiring GxB_PLUS_ISLT_INT8
     GrB_Semiring GxB_PLUS_ISLT_INT16
     GrB_Semiring GxB_PLUS_ISLT_INT32
     GrB_Semiring GxB_PLUS_ISLT_INT64
-    GrB_Semiring GxB_PLUS_ISLT_INT8
+    GrB_Semiring GxB_PLUS_ISLT_UINT8
     GrB_Semiring GxB_PLUS_ISLT_UINT16
     GrB_Semiring GxB_PLUS_ISLT_UINT32
     GrB_Semiring GxB_PLUS_ISLT_UINT64
-    GrB_Semiring GxB_PLUS_ISLT_UINT8
     GrB_Semiring GxB_PLUS_ISNE_FP32
     GrB_Semiring GxB_PLUS_ISNE_FP64
+    GrB_Semiring GxB_PLUS_ISNE_INT8
     GrB_Semiring GxB_PLUS_ISNE_INT16
     GrB_Semiring GxB_PLUS_ISNE_INT32
     GrB_Semiring GxB_PLUS_ISNE_INT64
-    GrB_Semiring GxB_PLUS_ISNE_INT8
+    GrB_Semiring GxB_PLUS_ISNE_UINT8
     GrB_Semiring GxB_PLUS_ISNE_UINT16
     GrB_Semiring GxB_PLUS_ISNE_UINT32
     GrB_Semiring GxB_PLUS_ISNE_UINT64
-    GrB_Semiring GxB_PLUS_ISNE_UINT8
     GrB_Semiring GxB_PLUS_LAND_FP32
     GrB_Semiring GxB_PLUS_LAND_FP64
+    GrB_Semiring GxB_PLUS_LAND_INT8
     GrB_Semiring GxB_PLUS_LAND_INT16
     GrB_Semiring GxB_PLUS_LAND_INT32
     GrB_Semiring GxB_PLUS_LAND_INT64
-    GrB_Semiring GxB_PLUS_LAND_INT8
+    GrB_Semiring GxB_PLUS_LAND_UINT8
     GrB_Semiring GxB_PLUS_LAND_UINT16
     GrB_Semiring GxB_PLUS_LAND_UINT32
     GrB_Semiring GxB_PLUS_LAND_UINT64
-    GrB_Semiring GxB_PLUS_LAND_UINT8
     GrB_Semiring GxB_PLUS_LOR_FP32
     GrB_Semiring GxB_PLUS_LOR_FP64
+    GrB_Semiring GxB_PLUS_LOR_INT8
     GrB_Semiring GxB_PLUS_LOR_INT16
     GrB_Semiring GxB_PLUS_LOR_INT32
     GrB_Semiring GxB_PLUS_LOR_INT64
-    GrB_Semiring GxB_PLUS_LOR_INT8
+    GrB_Semiring GxB_PLUS_LOR_UINT8
     GrB_Semiring GxB_PLUS_LOR_UINT16
     GrB_Semiring GxB_PLUS_LOR_UINT32
     GrB_Semiring GxB_PLUS_LOR_UINT64
-    GrB_Semiring GxB_PLUS_LOR_UINT8
     GrB_Semiring GxB_PLUS_LXOR_FP32
     GrB_Semiring GxB_PLUS_LXOR_FP64
+    GrB_Semiring GxB_PLUS_LXOR_INT8
     GrB_Semiring GxB_PLUS_LXOR_INT16
     GrB_Semiring GxB_PLUS_LXOR_INT32
     GrB_Semiring GxB_PLUS_LXOR_INT64
-    GrB_Semiring GxB_PLUS_LXOR_INT8
+    GrB_Semiring GxB_PLUS_LXOR_UINT8
     GrB_Semiring GxB_PLUS_LXOR_UINT16
     GrB_Semiring GxB_PLUS_LXOR_UINT32
     GrB_Semiring GxB_PLUS_LXOR_UINT64
-    GrB_Semiring GxB_PLUS_LXOR_UINT8
     GrB_Semiring GxB_PLUS_MAX_FP32
     GrB_Semiring GxB_PLUS_MAX_FP64
+    GrB_Semiring GxB_PLUS_MAX_INT8
     GrB_Semiring GxB_PLUS_MAX_INT16
     GrB_Semiring GxB_PLUS_MAX_INT32
     GrB_Semiring GxB_PLUS_MAX_INT64
-    GrB_Semiring GxB_PLUS_MAX_INT8
+    GrB_Semiring GxB_PLUS_MAX_UINT8
     GrB_Semiring GxB_PLUS_MAX_UINT16
     GrB_Semiring GxB_PLUS_MAX_UINT32
     GrB_Semiring GxB_PLUS_MAX_UINT64
-    GrB_Semiring GxB_PLUS_MAX_UINT8
     GrB_Semiring GxB_PLUS_MINUS_FC32
     GrB_Semiring GxB_PLUS_MINUS_FC64
     GrB_Semiring GxB_PLUS_MINUS_FP32
     GrB_Semiring GxB_PLUS_MINUS_FP64
+    GrB_Semiring GxB_PLUS_MINUS_INT8
     GrB_Semiring GxB_PLUS_MINUS_INT16
     GrB_Semiring GxB_PLUS_MINUS_INT32
     GrB_Semiring GxB_PLUS_MINUS_INT64
-    GrB_Semiring GxB_PLUS_MINUS_INT8
+    GrB_Semiring GxB_PLUS_MINUS_UINT8
     GrB_Semiring GxB_PLUS_MINUS_UINT16
     GrB_Semiring GxB_PLUS_MINUS_UINT32
     GrB_Semiring GxB_PLUS_MINUS_UINT64
-    GrB_Semiring GxB_PLUS_MINUS_UINT8
     GrB_Semiring GxB_PLUS_MIN_FP32
     GrB_Semiring GxB_PLUS_MIN_FP64
+    GrB_Semiring GxB_PLUS_MIN_INT8
     GrB_Semiring GxB_PLUS_MIN_INT16
     GrB_Semiring GxB_PLUS_MIN_INT32
     GrB_Semiring GxB_PLUS_MIN_INT64
-    GrB_Semiring GxB_PLUS_MIN_INT8
+    GrB_Semiring GxB_PLUS_MIN_UINT8
     GrB_Semiring GxB_PLUS_MIN_UINT16
     GrB_Semiring GxB_PLUS_MIN_UINT32
     GrB_Semiring GxB_PLUS_MIN_UINT64
-    GrB_Semiring GxB_PLUS_MIN_UINT8
     GrB_Semiring GxB_PLUS_PAIR_FC32
     GrB_Semiring GxB_PLUS_PAIR_FC64
     GrB_Semiring GxB_PLUS_PAIR_FP32
     GrB_Semiring GxB_PLUS_PAIR_FP64
+    GrB_Semiring GxB_PLUS_PAIR_INT8
     GrB_Semiring GxB_PLUS_PAIR_INT16
     GrB_Semiring GxB_PLUS_PAIR_INT32
     GrB_Semiring GxB_PLUS_PAIR_INT64
-    GrB_Semiring GxB_PLUS_PAIR_INT8
+    GrB_Semiring GxB_PLUS_PAIR_UINT8
     GrB_Semiring GxB_PLUS_PAIR_UINT16
     GrB_Semiring GxB_PLUS_PAIR_UINT32
     GrB_Semiring GxB_PLUS_PAIR_UINT64
-    GrB_Semiring GxB_PLUS_PAIR_UINT8
     GrB_Semiring GxB_PLUS_PLUS_FC32
     GrB_Semiring GxB_PLUS_PLUS_FC64
     GrB_Semiring GxB_PLUS_PLUS_FP32
     GrB_Semiring GxB_PLUS_PLUS_FP64
+    GrB_Semiring GxB_PLUS_PLUS_INT8
     GrB_Semiring GxB_PLUS_PLUS_INT16
     GrB_Semiring GxB_PLUS_PLUS_INT32
     GrB_Semiring GxB_PLUS_PLUS_INT64
-    GrB_Semiring GxB_PLUS_PLUS_INT8
+    GrB_Semiring GxB_PLUS_PLUS_UINT8
     GrB_Semiring GxB_PLUS_PLUS_UINT16
     GrB_Semiring GxB_PLUS_PLUS_UINT32
     GrB_Semiring GxB_PLUS_PLUS_UINT64
-    GrB_Semiring GxB_PLUS_PLUS_UINT8
     GrB_Semiring GxB_PLUS_RDIV_FC32
     GrB_Semiring GxB_PLUS_RDIV_FC64
     GrB_Semiring GxB_PLUS_RDIV_FP32
     GrB_Semiring GxB_PLUS_RDIV_FP64
+    GrB_Semiring GxB_PLUS_RDIV_INT8
     GrB_Semiring GxB_PLUS_RDIV_INT16
     GrB_Semiring GxB_PLUS_RDIV_INT32
     GrB_Semiring GxB_PLUS_RDIV_INT64
-    GrB_Semiring GxB_PLUS_RDIV_INT8
+    GrB_Semiring GxB_PLUS_RDIV_UINT8
     GrB_Semiring GxB_PLUS_RDIV_UINT16
     GrB_Semiring GxB_PLUS_RDIV_UINT32
     GrB_Semiring GxB_PLUS_RDIV_UINT64
-    GrB_Semiring GxB_PLUS_RDIV_UINT8
     GrB_Semiring GxB_PLUS_RMINUS_FC32
     GrB_Semiring GxB_PLUS_RMINUS_FC64
     GrB_Semiring GxB_PLUS_RMINUS_FP32
     GrB_Semiring GxB_PLUS_RMINUS_FP64
+    GrB_Semiring GxB_PLUS_RMINUS_INT8
     GrB_Semiring GxB_PLUS_RMINUS_INT16
     GrB_Semiring GxB_PLUS_RMINUS_INT32
     GrB_Semiring GxB_PLUS_RMINUS_INT64
-    GrB_Semiring GxB_PLUS_RMINUS_INT8
+    GrB_Semiring GxB_PLUS_RMINUS_UINT8
     GrB_Semiring GxB_PLUS_RMINUS_UINT16
     GrB_Semiring GxB_PLUS_RMINUS_UINT32
     GrB_Semiring GxB_PLUS_RMINUS_UINT64
-    GrB_Semiring GxB_PLUS_RMINUS_UINT8
     GrB_Semiring GxB_PLUS_SECONDI1_INT32
     GrB_Semiring GxB_PLUS_SECONDI1_INT64
     GrB_Semiring GxB_PLUS_SECONDI_INT32
@@ -2244,38 +2244,38 @@ cdef extern from "GraphBLAS.h" nogil:
     GrB_Semiring GxB_PLUS_SECOND_FC64
     GrB_Semiring GxB_PLUS_SECOND_FP32
     GrB_Semiring GxB_PLUS_SECOND_FP64
+    GrB_Semiring GxB_PLUS_SECOND_INT8
     GrB_Semiring GxB_PLUS_SECOND_INT16
     GrB_Semiring GxB_PLUS_SECOND_INT32
     GrB_Semiring GxB_PLUS_SECOND_INT64
-    GrB_Semiring GxB_PLUS_SECOND_INT8
+    GrB_Semiring GxB_PLUS_SECOND_UINT8
     GrB_Semiring GxB_PLUS_SECOND_UINT16
     GrB_Semiring GxB_PLUS_SECOND_UINT32
     GrB_Semiring GxB_PLUS_SECOND_UINT64
-    GrB_Semiring GxB_PLUS_SECOND_UINT8
     GrB_Semiring GxB_PLUS_TIMES_FC32
     GrB_Semiring GxB_PLUS_TIMES_FC64
     GrB_Semiring GxB_PLUS_TIMES_FP32
     GrB_Semiring GxB_PLUS_TIMES_FP64
+    GrB_Semiring GxB_PLUS_TIMES_INT8
     GrB_Semiring GxB_PLUS_TIMES_INT16
     GrB_Semiring GxB_PLUS_TIMES_INT32
     GrB_Semiring GxB_PLUS_TIMES_INT64
-    GrB_Semiring GxB_PLUS_TIMES_INT8
+    GrB_Semiring GxB_PLUS_TIMES_UINT8
     GrB_Semiring GxB_PLUS_TIMES_UINT16
     GrB_Semiring GxB_PLUS_TIMES_UINT32
     GrB_Semiring GxB_PLUS_TIMES_UINT64
-    GrB_Semiring GxB_PLUS_TIMES_UINT8
     GrB_Semiring GxB_TIMES_DIV_FC32
     GrB_Semiring GxB_TIMES_DIV_FC64
     GrB_Semiring GxB_TIMES_DIV_FP32
     GrB_Semiring GxB_TIMES_DIV_FP64
+    GrB_Semiring GxB_TIMES_DIV_INT8
     GrB_Semiring GxB_TIMES_DIV_INT16
     GrB_Semiring GxB_TIMES_DIV_INT32
     GrB_Semiring GxB_TIMES_DIV_INT64
-    GrB_Semiring GxB_TIMES_DIV_INT8
+    GrB_Semiring GxB_TIMES_DIV_UINT8
     GrB_Semiring GxB_TIMES_DIV_UINT16
     GrB_Semiring GxB_TIMES_DIV_UINT32
     GrB_Semiring GxB_TIMES_DIV_UINT64
-    GrB_Semiring GxB_TIMES_DIV_UINT8
     GrB_Semiring GxB_TIMES_FIRSTI1_INT32
     GrB_Semiring GxB_TIMES_FIRSTI1_INT64
     GrB_Semiring GxB_TIMES_FIRSTI_INT32
@@ -2288,184 +2288,184 @@ cdef extern from "GraphBLAS.h" nogil:
     GrB_Semiring GxB_TIMES_FIRST_FC64
     GrB_Semiring GxB_TIMES_FIRST_FP32
     GrB_Semiring GxB_TIMES_FIRST_FP64
+    GrB_Semiring GxB_TIMES_FIRST_INT8
     GrB_Semiring GxB_TIMES_FIRST_INT16
     GrB_Semiring GxB_TIMES_FIRST_INT32
     GrB_Semiring GxB_TIMES_FIRST_INT64
-    GrB_Semiring GxB_TIMES_FIRST_INT8
+    GrB_Semiring GxB_TIMES_FIRST_UINT8
     GrB_Semiring GxB_TIMES_FIRST_UINT16
     GrB_Semiring GxB_TIMES_FIRST_UINT32
     GrB_Semiring GxB_TIMES_FIRST_UINT64
-    GrB_Semiring GxB_TIMES_FIRST_UINT8
     GrB_Semiring GxB_TIMES_ISEQ_FP32
     GrB_Semiring GxB_TIMES_ISEQ_FP64
+    GrB_Semiring GxB_TIMES_ISEQ_INT8
     GrB_Semiring GxB_TIMES_ISEQ_INT16
     GrB_Semiring GxB_TIMES_ISEQ_INT32
     GrB_Semiring GxB_TIMES_ISEQ_INT64
-    GrB_Semiring GxB_TIMES_ISEQ_INT8
+    GrB_Semiring GxB_TIMES_ISEQ_UINT8
     GrB_Semiring GxB_TIMES_ISEQ_UINT16
     GrB_Semiring GxB_TIMES_ISEQ_UINT32
     GrB_Semiring GxB_TIMES_ISEQ_UINT64
-    GrB_Semiring GxB_TIMES_ISEQ_UINT8
     GrB_Semiring GxB_TIMES_ISGE_FP32
     GrB_Semiring GxB_TIMES_ISGE_FP64
+    GrB_Semiring GxB_TIMES_ISGE_INT8
     GrB_Semiring GxB_TIMES_ISGE_INT16
     GrB_Semiring GxB_TIMES_ISGE_INT32
     GrB_Semiring GxB_TIMES_ISGE_INT64
-    GrB_Semiring GxB_TIMES_ISGE_INT8
+    GrB_Semiring GxB_TIMES_ISGE_UINT8
     GrB_Semiring GxB_TIMES_ISGE_UINT16
     GrB_Semiring GxB_TIMES_ISGE_UINT32
     GrB_Semiring GxB_TIMES_ISGE_UINT64
-    GrB_Semiring GxB_TIMES_ISGE_UINT8
     GrB_Semiring GxB_TIMES_ISGT_FP32
     GrB_Semiring GxB_TIMES_ISGT_FP64
+    GrB_Semiring GxB_TIMES_ISGT_INT8
     GrB_Semiring GxB_TIMES_ISGT_INT16
     GrB_Semiring GxB_TIMES_ISGT_INT32
     GrB_Semiring GxB_TIMES_ISGT_INT64
-    GrB_Semiring GxB_TIMES_ISGT_INT8
+    GrB_Semiring GxB_TIMES_ISGT_UINT8
     GrB_Semiring GxB_TIMES_ISGT_UINT16
     GrB_Semiring GxB_TIMES_ISGT_UINT32
     GrB_Semiring GxB_TIMES_ISGT_UINT64
-    GrB_Semiring GxB_TIMES_ISGT_UINT8
     GrB_Semiring GxB_TIMES_ISLE_FP32
     GrB_Semiring GxB_TIMES_ISLE_FP64
+    GrB_Semiring GxB_TIMES_ISLE_INT8
     GrB_Semiring GxB_TIMES_ISLE_INT16
     GrB_Semiring GxB_TIMES_ISLE_INT32
     GrB_Semiring GxB_TIMES_ISLE_INT64
-    GrB_Semiring GxB_TIMES_ISLE_INT8
+    GrB_Semiring GxB_TIMES_ISLE_UINT8
     GrB_Semiring GxB_TIMES_ISLE_UINT16
     GrB_Semiring GxB_TIMES_ISLE_UINT32
     GrB_Semiring GxB_TIMES_ISLE_UINT64
-    GrB_Semiring GxB_TIMES_ISLE_UINT8
     GrB_Semiring GxB_TIMES_ISLT_FP32
     GrB_Semiring GxB_TIMES_ISLT_FP64
+    GrB_Semiring GxB_TIMES_ISLT_INT8
     GrB_Semiring GxB_TIMES_ISLT_INT16
     GrB_Semiring GxB_TIMES_ISLT_INT32
     GrB_Semiring GxB_TIMES_ISLT_INT64
-    GrB_Semiring GxB_TIMES_ISLT_INT8
+    GrB_Semiring GxB_TIMES_ISLT_UINT8
     GrB_Semiring GxB_TIMES_ISLT_UINT16
     GrB_Semiring GxB_TIMES_ISLT_UINT32
     GrB_Semiring GxB_TIMES_ISLT_UINT64
-    GrB_Semiring GxB_TIMES_ISLT_UINT8
     GrB_Semiring GxB_TIMES_ISNE_FP32
     GrB_Semiring GxB_TIMES_ISNE_FP64
+    GrB_Semiring GxB_TIMES_ISNE_INT8
     GrB_Semiring GxB_TIMES_ISNE_INT16
     GrB_Semiring GxB_TIMES_ISNE_INT32
     GrB_Semiring GxB_TIMES_ISNE_INT64
-    GrB_Semiring GxB_TIMES_ISNE_INT8
+    GrB_Semiring GxB_TIMES_ISNE_UINT8
     GrB_Semiring GxB_TIMES_ISNE_UINT16
     GrB_Semiring GxB_TIMES_ISNE_UINT32
     GrB_Semiring GxB_TIMES_ISNE_UINT64
-    GrB_Semiring GxB_TIMES_ISNE_UINT8
     GrB_Semiring GxB_TIMES_LAND_FP32
     GrB_Semiring GxB_TIMES_LAND_FP64
+    GrB_Semiring GxB_TIMES_LAND_INT8
     GrB_Semiring GxB_TIMES_LAND_INT16
     GrB_Semiring GxB_TIMES_LAND_INT32
     GrB_Semiring GxB_TIMES_LAND_INT64
-    GrB_Semiring GxB_TIMES_LAND_INT8
+    GrB_Semiring GxB_TIMES_LAND_UINT8
     GrB_Semiring GxB_TIMES_LAND_UINT16
     GrB_Semiring GxB_TIMES_LAND_UINT32
     GrB_Semiring GxB_TIMES_LAND_UINT64
-    GrB_Semiring GxB_TIMES_LAND_UINT8
     GrB_Semiring GxB_TIMES_LOR_FP32
     GrB_Semiring GxB_TIMES_LOR_FP64
+    GrB_Semiring GxB_TIMES_LOR_INT8
     GrB_Semiring GxB_TIMES_LOR_INT16
     GrB_Semiring GxB_TIMES_LOR_INT32
     GrB_Semiring GxB_TIMES_LOR_INT64
-    GrB_Semiring GxB_TIMES_LOR_INT8
+    GrB_Semiring GxB_TIMES_LOR_UINT8
     GrB_Semiring GxB_TIMES_LOR_UINT16
     GrB_Semiring GxB_TIMES_LOR_UINT32
     GrB_Semiring GxB_TIMES_LOR_UINT64
-    GrB_Semiring GxB_TIMES_LOR_UINT8
     GrB_Semiring GxB_TIMES_LXOR_FP32
     GrB_Semiring GxB_TIMES_LXOR_FP64
+    GrB_Semiring GxB_TIMES_LXOR_INT8
     GrB_Semiring GxB_TIMES_LXOR_INT16
     GrB_Semiring GxB_TIMES_LXOR_INT32
     GrB_Semiring GxB_TIMES_LXOR_INT64
-    GrB_Semiring GxB_TIMES_LXOR_INT8
+    GrB_Semiring GxB_TIMES_LXOR_UINT8
     GrB_Semiring GxB_TIMES_LXOR_UINT16
     GrB_Semiring GxB_TIMES_LXOR_UINT32
     GrB_Semiring GxB_TIMES_LXOR_UINT64
-    GrB_Semiring GxB_TIMES_LXOR_UINT8
     GrB_Semiring GxB_TIMES_MAX_FP32
     GrB_Semiring GxB_TIMES_MAX_FP64
+    GrB_Semiring GxB_TIMES_MAX_INT8
     GrB_Semiring GxB_TIMES_MAX_INT16
     GrB_Semiring GxB_TIMES_MAX_INT32
     GrB_Semiring GxB_TIMES_MAX_INT64
-    GrB_Semiring GxB_TIMES_MAX_INT8
+    GrB_Semiring GxB_TIMES_MAX_UINT8
     GrB_Semiring GxB_TIMES_MAX_UINT16
     GrB_Semiring GxB_TIMES_MAX_UINT32
     GrB_Semiring GxB_TIMES_MAX_UINT64
-    GrB_Semiring GxB_TIMES_MAX_UINT8
     GrB_Semiring GxB_TIMES_MINUS_FC32
     GrB_Semiring GxB_TIMES_MINUS_FC64
     GrB_Semiring GxB_TIMES_MINUS_FP32
     GrB_Semiring GxB_TIMES_MINUS_FP64
+    GrB_Semiring GxB_TIMES_MINUS_INT8
     GrB_Semiring GxB_TIMES_MINUS_INT16
     GrB_Semiring GxB_TIMES_MINUS_INT32
     GrB_Semiring GxB_TIMES_MINUS_INT64
-    GrB_Semiring GxB_TIMES_MINUS_INT8
+    GrB_Semiring GxB_TIMES_MINUS_UINT8
     GrB_Semiring GxB_TIMES_MINUS_UINT16
     GrB_Semiring GxB_TIMES_MINUS_UINT32
     GrB_Semiring GxB_TIMES_MINUS_UINT64
-    GrB_Semiring GxB_TIMES_MINUS_UINT8
     GrB_Semiring GxB_TIMES_MIN_FP32
     GrB_Semiring GxB_TIMES_MIN_FP64
+    GrB_Semiring GxB_TIMES_MIN_INT8
     GrB_Semiring GxB_TIMES_MIN_INT16
     GrB_Semiring GxB_TIMES_MIN_INT32
     GrB_Semiring GxB_TIMES_MIN_INT64
-    GrB_Semiring GxB_TIMES_MIN_INT8
+    GrB_Semiring GxB_TIMES_MIN_UINT8
     GrB_Semiring GxB_TIMES_MIN_UINT16
     GrB_Semiring GxB_TIMES_MIN_UINT32
     GrB_Semiring GxB_TIMES_MIN_UINT64
-    GrB_Semiring GxB_TIMES_MIN_UINT8
     GrB_Semiring GxB_TIMES_PAIR_FC32
     GrB_Semiring GxB_TIMES_PAIR_FC64
     GrB_Semiring GxB_TIMES_PAIR_FP32
     GrB_Semiring GxB_TIMES_PAIR_FP64
+    GrB_Semiring GxB_TIMES_PAIR_INT8
     GrB_Semiring GxB_TIMES_PAIR_INT16
     GrB_Semiring GxB_TIMES_PAIR_INT32
     GrB_Semiring GxB_TIMES_PAIR_INT64
-    GrB_Semiring GxB_TIMES_PAIR_INT8
+    GrB_Semiring GxB_TIMES_PAIR_UINT8
     GrB_Semiring GxB_TIMES_PAIR_UINT16
     GrB_Semiring GxB_TIMES_PAIR_UINT32
     GrB_Semiring GxB_TIMES_PAIR_UINT64
-    GrB_Semiring GxB_TIMES_PAIR_UINT8
     GrB_Semiring GxB_TIMES_PLUS_FC32
     GrB_Semiring GxB_TIMES_PLUS_FC64
     GrB_Semiring GxB_TIMES_PLUS_FP32
     GrB_Semiring GxB_TIMES_PLUS_FP64
+    GrB_Semiring GxB_TIMES_PLUS_INT8
     GrB_Semiring GxB_TIMES_PLUS_INT16
     GrB_Semiring GxB_TIMES_PLUS_INT32
     GrB_Semiring GxB_TIMES_PLUS_INT64
-    GrB_Semiring GxB_TIMES_PLUS_INT8
+    GrB_Semiring GxB_TIMES_PLUS_UINT8
     GrB_Semiring GxB_TIMES_PLUS_UINT16
     GrB_Semiring GxB_TIMES_PLUS_UINT32
     GrB_Semiring GxB_TIMES_PLUS_UINT64
-    GrB_Semiring GxB_TIMES_PLUS_UINT8
     GrB_Semiring GxB_TIMES_RDIV_FC32
     GrB_Semiring GxB_TIMES_RDIV_FC64
     GrB_Semiring GxB_TIMES_RDIV_FP32
     GrB_Semiring GxB_TIMES_RDIV_FP64
+    GrB_Semiring GxB_TIMES_RDIV_INT8
     GrB_Semiring GxB_TIMES_RDIV_INT16
     GrB_Semiring GxB_TIMES_RDIV_INT32
     GrB_Semiring GxB_TIMES_RDIV_INT64
-    GrB_Semiring GxB_TIMES_RDIV_INT8
+    GrB_Semiring GxB_TIMES_RDIV_UINT8
     GrB_Semiring GxB_TIMES_RDIV_UINT16
     GrB_Semiring GxB_TIMES_RDIV_UINT32
     GrB_Semiring GxB_TIMES_RDIV_UINT64
-    GrB_Semiring GxB_TIMES_RDIV_UINT8
     GrB_Semiring GxB_TIMES_RMINUS_FC32
     GrB_Semiring GxB_TIMES_RMINUS_FC64
     GrB_Semiring GxB_TIMES_RMINUS_FP32
     GrB_Semiring GxB_TIMES_RMINUS_FP64
+    GrB_Semiring GxB_TIMES_RMINUS_INT8
     GrB_Semiring GxB_TIMES_RMINUS_INT16
     GrB_Semiring GxB_TIMES_RMINUS_INT32
     GrB_Semiring GxB_TIMES_RMINUS_INT64
-    GrB_Semiring GxB_TIMES_RMINUS_INT8
+    GrB_Semiring GxB_TIMES_RMINUS_UINT8
     GrB_Semiring GxB_TIMES_RMINUS_UINT16
     GrB_Semiring GxB_TIMES_RMINUS_UINT32
     GrB_Semiring GxB_TIMES_RMINUS_UINT64
-    GrB_Semiring GxB_TIMES_RMINUS_UINT8
     GrB_Semiring GxB_TIMES_SECONDI1_INT32
     GrB_Semiring GxB_TIMES_SECONDI1_INT64
     GrB_Semiring GxB_TIMES_SECONDI_INT32
@@ -2478,26 +2478,26 @@ cdef extern from "GraphBLAS.h" nogil:
     GrB_Semiring GxB_TIMES_SECOND_FC64
     GrB_Semiring GxB_TIMES_SECOND_FP32
     GrB_Semiring GxB_TIMES_SECOND_FP64
+    GrB_Semiring GxB_TIMES_SECOND_INT8
     GrB_Semiring GxB_TIMES_SECOND_INT16
     GrB_Semiring GxB_TIMES_SECOND_INT32
     GrB_Semiring GxB_TIMES_SECOND_INT64
-    GrB_Semiring GxB_TIMES_SECOND_INT8
+    GrB_Semiring GxB_TIMES_SECOND_UINT8
     GrB_Semiring GxB_TIMES_SECOND_UINT16
     GrB_Semiring GxB_TIMES_SECOND_UINT32
     GrB_Semiring GxB_TIMES_SECOND_UINT64
-    GrB_Semiring GxB_TIMES_SECOND_UINT8
     GrB_Semiring GxB_TIMES_TIMES_FC32
     GrB_Semiring GxB_TIMES_TIMES_FC64
     GrB_Semiring GxB_TIMES_TIMES_FP32
     GrB_Semiring GxB_TIMES_TIMES_FP64
+    GrB_Semiring GxB_TIMES_TIMES_INT8
     GrB_Semiring GxB_TIMES_TIMES_INT16
     GrB_Semiring GxB_TIMES_TIMES_INT32
     GrB_Semiring GxB_TIMES_TIMES_INT64
-    GrB_Semiring GxB_TIMES_TIMES_INT8
+    GrB_Semiring GxB_TIMES_TIMES_UINT8
     GrB_Semiring GxB_TIMES_TIMES_UINT16
     GrB_Semiring GxB_TIMES_TIMES_UINT32
     GrB_Semiring GxB_TIMES_TIMES_UINT64
-    GrB_Semiring GxB_TIMES_TIMES_UINT8
     GrB_Type GxB_FC32
     GrB_Type GxB_FC64
     GrB_UnaryOp GxB_ABS_BOOL
@@ -2505,14 +2505,14 @@ cdef extern from "GraphBLAS.h" nogil:
     GrB_UnaryOp GxB_ABS_FC64
     GrB_UnaryOp GxB_ABS_FP32
     GrB_UnaryOp GxB_ABS_FP64
+    GrB_UnaryOp GxB_ABS_INT8
     GrB_UnaryOp GxB_ABS_INT16
     GrB_UnaryOp GxB_ABS_INT32
     GrB_UnaryOp GxB_ABS_INT64
-    GrB_UnaryOp GxB_ABS_INT8
+    GrB_UnaryOp GxB_ABS_UINT8
     GrB_UnaryOp GxB_ABS_UINT16
     GrB_UnaryOp GxB_ABS_UINT32
     GrB_UnaryOp GxB_ABS_UINT64
-    GrB_UnaryOp GxB_ABS_UINT8
     GrB_UnaryOp GxB_ACOSH_FC32
     GrB_UnaryOp GxB_ACOSH_FC64
     GrB_UnaryOp GxB_ACOSH_FP32
@@ -2602,14 +2602,14 @@ cdef extern from "GraphBLAS.h" nogil:
     GrB_UnaryOp GxB_LNOT_BOOL
     GrB_UnaryOp GxB_LNOT_FP32
     GrB_UnaryOp GxB_LNOT_FP64
+    GrB_UnaryOp GxB_LNOT_INT8
     GrB_UnaryOp GxB_LNOT_INT16
     GrB_UnaryOp GxB_LNOT_INT32
     GrB_UnaryOp GxB_LNOT_INT64
-    GrB_UnaryOp GxB_LNOT_INT8
+    GrB_UnaryOp GxB_LNOT_UINT8
     GrB_UnaryOp GxB_LNOT_UINT16
     GrB_UnaryOp GxB_LNOT_UINT32
     GrB_UnaryOp GxB_LNOT_UINT64
-    GrB_UnaryOp GxB_LNOT_UINT8
     GrB_UnaryOp GxB_LOG10_FC32
     GrB_UnaryOp GxB_LOG10_FC64
     GrB_UnaryOp GxB_LOG10_FP32
@@ -2633,14 +2633,14 @@ cdef extern from "GraphBLAS.h" nogil:
     GrB_UnaryOp GxB_ONE_FC64
     GrB_UnaryOp GxB_ONE_FP32
     GrB_UnaryOp GxB_ONE_FP64
+    GrB_UnaryOp GxB_ONE_INT8
     GrB_UnaryOp GxB_ONE_INT16
     GrB_UnaryOp GxB_ONE_INT32
     GrB_UnaryOp GxB_ONE_INT64
-    GrB_UnaryOp GxB_ONE_INT8
+    GrB_UnaryOp GxB_ONE_UINT8
     GrB_UnaryOp GxB_ONE_UINT16
     GrB_UnaryOp GxB_ONE_UINT32
     GrB_UnaryOp GxB_ONE_UINT64
-    GrB_UnaryOp GxB_ONE_UINT8
     GrB_UnaryOp GxB_POSITIONI1_INT32
     GrB_UnaryOp GxB_POSITIONI1_INT64
     GrB_UnaryOp GxB_POSITIONI_INT32
@@ -2737,52 +2737,52 @@ cdef extern from "GraphBLAS.h" nogil:
     GrB_Info GrB_Matrix_apply_BinaryOp1st_BOOL(GrB_Matrix, GrB_Matrix, GrB_BinaryOp, GrB_BinaryOp, bint, GrB_Matrix, GrB_Descriptor)
     GrB_Info GrB_Matrix_apply_BinaryOp1st_FP32(GrB_Matrix, GrB_Matrix, GrB_BinaryOp, GrB_BinaryOp, float, GrB_Matrix, GrB_Descriptor)
     GrB_Info GrB_Matrix_apply_BinaryOp1st_FP64(GrB_Matrix, GrB_Matrix, GrB_BinaryOp, GrB_BinaryOp, double, GrB_Matrix, GrB_Descriptor)
+    GrB_Info GrB_Matrix_apply_BinaryOp1st_INT8(GrB_Matrix, GrB_Matrix, GrB_BinaryOp, GrB_BinaryOp, int8_t, GrB_Matrix, GrB_Descriptor)
     GrB_Info GrB_Matrix_apply_BinaryOp1st_INT16(GrB_Matrix, GrB_Matrix, GrB_BinaryOp, GrB_BinaryOp, int16_t, GrB_Matrix, GrB_Descriptor)
     GrB_Info GrB_Matrix_apply_BinaryOp1st_INT32(GrB_Matrix, GrB_Matrix, GrB_BinaryOp, GrB_BinaryOp, int32_t, GrB_Matrix, GrB_Descriptor)
     GrB_Info GrB_Matrix_apply_BinaryOp1st_INT64(GrB_Matrix, GrB_Matrix, GrB_BinaryOp, GrB_BinaryOp, int64_t, GrB_Matrix, GrB_Descriptor)
-    GrB_Info GrB_Matrix_apply_BinaryOp1st_INT8(GrB_Matrix, GrB_Matrix, GrB_BinaryOp, GrB_BinaryOp, int8_t, GrB_Matrix, GrB_Descriptor)
     GrB_Info GrB_Matrix_apply_BinaryOp1st_UDT(GrB_Matrix, GrB_Matrix, GrB_BinaryOp, GrB_BinaryOp, void *, GrB_Matrix, GrB_Descriptor)
+    GrB_Info GrB_Matrix_apply_BinaryOp1st_UINT8(GrB_Matrix, GrB_Matrix, GrB_BinaryOp, GrB_BinaryOp, uint8_t, GrB_Matrix, GrB_Descriptor)
     GrB_Info GrB_Matrix_apply_BinaryOp1st_UINT16(GrB_Matrix, GrB_Matrix, GrB_BinaryOp, GrB_BinaryOp, uint16_t, GrB_Matrix, GrB_Descriptor)
     GrB_Info GrB_Matrix_apply_BinaryOp1st_UINT32(GrB_Matrix, GrB_Matrix, GrB_BinaryOp, GrB_BinaryOp, uint32_t, GrB_Matrix, GrB_Descriptor)
     GrB_Info GrB_Matrix_apply_BinaryOp1st_UINT64(GrB_Matrix, GrB_Matrix, GrB_BinaryOp, GrB_BinaryOp, uint64_t, GrB_Matrix, GrB_Descriptor)
-    GrB_Info GrB_Matrix_apply_BinaryOp1st_UINT8(GrB_Matrix, GrB_Matrix, GrB_BinaryOp, GrB_BinaryOp, uint8_t, GrB_Matrix, GrB_Descriptor)
     GrB_Info GrB_Matrix_apply_BinaryOp2nd_BOOL(GrB_Matrix, GrB_Matrix, GrB_BinaryOp, GrB_BinaryOp, GrB_Matrix, bint, GrB_Descriptor)
     GrB_Info GrB_Matrix_apply_BinaryOp2nd_FP32(GrB_Matrix, GrB_Matrix, GrB_BinaryOp, GrB_BinaryOp, GrB_Matrix, float, GrB_Descriptor)
     GrB_Info GrB_Matrix_apply_BinaryOp2nd_FP64(GrB_Matrix, GrB_Matrix, GrB_BinaryOp, GrB_BinaryOp, GrB_Matrix, double, GrB_Descriptor)
+    GrB_Info GrB_Matrix_apply_BinaryOp2nd_INT8(GrB_Matrix, GrB_Matrix, GrB_BinaryOp, GrB_BinaryOp, GrB_Matrix, int8_t, GrB_Descriptor)
     GrB_Info GrB_Matrix_apply_BinaryOp2nd_INT16(GrB_Matrix, GrB_Matrix, GrB_BinaryOp, GrB_BinaryOp, GrB_Matrix, int16_t, GrB_Descriptor)
     GrB_Info GrB_Matrix_apply_BinaryOp2nd_INT32(GrB_Matrix, GrB_Matrix, GrB_BinaryOp, GrB_BinaryOp, GrB_Matrix, int32_t, GrB_Descriptor)
     GrB_Info GrB_Matrix_apply_BinaryOp2nd_INT64(GrB_Matrix, GrB_Matrix, GrB_BinaryOp, GrB_BinaryOp, GrB_Matrix, int64_t, GrB_Descriptor)
-    GrB_Info GrB_Matrix_apply_BinaryOp2nd_INT8(GrB_Matrix, GrB_Matrix, GrB_BinaryOp, GrB_BinaryOp, GrB_Matrix, int8_t, GrB_Descriptor)
     GrB_Info GrB_Matrix_apply_BinaryOp2nd_UDT(GrB_Matrix, GrB_Matrix, GrB_BinaryOp, GrB_BinaryOp, GrB_Matrix, void *, GrB_Descriptor)
+    GrB_Info GrB_Matrix_apply_BinaryOp2nd_UINT8(GrB_Matrix, GrB_Matrix, GrB_BinaryOp, GrB_BinaryOp, GrB_Matrix, uint8_t, GrB_Descriptor)
     GrB_Info GrB_Matrix_apply_BinaryOp2nd_UINT16(GrB_Matrix, GrB_Matrix, GrB_BinaryOp, GrB_BinaryOp, GrB_Matrix, uint16_t, GrB_Descriptor)
     GrB_Info GrB_Matrix_apply_BinaryOp2nd_UINT32(GrB_Matrix, GrB_Matrix, GrB_BinaryOp, GrB_BinaryOp, GrB_Matrix, uint32_t, GrB_Descriptor)
     GrB_Info GrB_Matrix_apply_BinaryOp2nd_UINT64(GrB_Matrix, GrB_Matrix, GrB_BinaryOp, GrB_BinaryOp, GrB_Matrix, uint64_t, GrB_Descriptor)
-    GrB_Info GrB_Matrix_apply_BinaryOp2nd_UINT8(GrB_Matrix, GrB_Matrix, GrB_BinaryOp, GrB_BinaryOp, GrB_Matrix, uint8_t, GrB_Descriptor)
     GrB_Info GrB_Matrix_assign(GrB_Matrix, GrB_Matrix, GrB_BinaryOp, GrB_Matrix, GrB_Index *, GrB_Index, GrB_Index *, GrB_Index, GrB_Descriptor)
     GrB_Info GrB_Matrix_assign_BOOL(GrB_Matrix, GrB_Matrix, GrB_BinaryOp, bint, GrB_Index *, GrB_Index, GrB_Index *, GrB_Index, GrB_Descriptor)
     GrB_Info GrB_Matrix_assign_FP32(GrB_Matrix, GrB_Matrix, GrB_BinaryOp, float, GrB_Index *, GrB_Index, GrB_Index *, GrB_Index, GrB_Descriptor)
     GrB_Info GrB_Matrix_assign_FP64(GrB_Matrix, GrB_Matrix, GrB_BinaryOp, double, GrB_Index *, GrB_Index, GrB_Index *, GrB_Index, GrB_Descriptor)
+    GrB_Info GrB_Matrix_assign_INT8(GrB_Matrix, GrB_Matrix, GrB_BinaryOp, int8_t, GrB_Index *, GrB_Index, GrB_Index *, GrB_Index, GrB_Descriptor)
     GrB_Info GrB_Matrix_assign_INT16(GrB_Matrix, GrB_Matrix, GrB_BinaryOp, int16_t, GrB_Index *, GrB_Index, GrB_Index *, GrB_Index, GrB_Descriptor)
     GrB_Info GrB_Matrix_assign_INT32(GrB_Matrix, GrB_Matrix, GrB_BinaryOp, int32_t, GrB_Index *, GrB_Index, GrB_Index *, GrB_Index, GrB_Descriptor)
     GrB_Info GrB_Matrix_assign_INT64(GrB_Matrix, GrB_Matrix, GrB_BinaryOp, int64_t, GrB_Index *, GrB_Index, GrB_Index *, GrB_Index, GrB_Descriptor)
-    GrB_Info GrB_Matrix_assign_INT8(GrB_Matrix, GrB_Matrix, GrB_BinaryOp, int8_t, GrB_Index *, GrB_Index, GrB_Index *, GrB_Index, GrB_Descriptor)
     GrB_Info GrB_Matrix_assign_UDT(GrB_Matrix, GrB_Matrix, GrB_BinaryOp, void *, GrB_Index *, GrB_Index, GrB_Index *, GrB_Index, GrB_Descriptor)
+    GrB_Info GrB_Matrix_assign_UINT8(GrB_Matrix, GrB_Matrix, GrB_BinaryOp, uint8_t, GrB_Index *, GrB_Index, GrB_Index *, GrB_Index, GrB_Descriptor)
     GrB_Info GrB_Matrix_assign_UINT16(GrB_Matrix, GrB_Matrix, GrB_BinaryOp, uint16_t, GrB_Index *, GrB_Index, GrB_Index *, GrB_Index, GrB_Descriptor)
     GrB_Info GrB_Matrix_assign_UINT32(GrB_Matrix, GrB_Matrix, GrB_BinaryOp, uint32_t, GrB_Index *, GrB_Index, GrB_Index *, GrB_Index, GrB_Descriptor)
     GrB_Info GrB_Matrix_assign_UINT64(GrB_Matrix, GrB_Matrix, GrB_BinaryOp, uint64_t, GrB_Index *, GrB_Index, GrB_Index *, GrB_Index, GrB_Descriptor)
-    GrB_Info GrB_Matrix_assign_UINT8(GrB_Matrix, GrB_Matrix, GrB_BinaryOp, uint8_t, GrB_Index *, GrB_Index, GrB_Index *, GrB_Index, GrB_Descriptor)
     GrB_Info GrB_Matrix_build_BOOL(GrB_Matrix, GrB_Index *, GrB_Index *, bint *, GrB_Index, GrB_BinaryOp)
     GrB_Info GrB_Matrix_build_FP32(GrB_Matrix, GrB_Index *, GrB_Index *, float *, GrB_Index, GrB_BinaryOp)
     GrB_Info GrB_Matrix_build_FP64(GrB_Matrix, GrB_Index *, GrB_Index *, double *, GrB_Index, GrB_BinaryOp)
+    GrB_Info GrB_Matrix_build_INT8(GrB_Matrix, GrB_Index *, GrB_Index *, int8_t *, GrB_Index, GrB_BinaryOp)
     GrB_Info GrB_Matrix_build_INT16(GrB_Matrix, GrB_Index *, GrB_Index *, int16_t *, GrB_Index, GrB_BinaryOp)
     GrB_Info GrB_Matrix_build_INT32(GrB_Matrix, GrB_Index *, GrB_Index *, int32_t *, GrB_Index, GrB_BinaryOp)
     GrB_Info GrB_Matrix_build_INT64(GrB_Matrix, GrB_Index *, GrB_Index *, int64_t *, GrB_Index, GrB_BinaryOp)
-    GrB_Info GrB_Matrix_build_INT8(GrB_Matrix, GrB_Index *, GrB_Index *, int8_t *, GrB_Index, GrB_BinaryOp)
     GrB_Info GrB_Matrix_build_UDT(GrB_Matrix, GrB_Index *, GrB_Index *, void *, GrB_Index, GrB_BinaryOp)
+    GrB_Info GrB_Matrix_build_UINT8(GrB_Matrix, GrB_Index *, GrB_Index *, uint8_t *, GrB_Index, GrB_BinaryOp)
     GrB_Info GrB_Matrix_build_UINT16(GrB_Matrix, GrB_Index *, GrB_Index *, uint16_t *, GrB_Index, GrB_BinaryOp)
     GrB_Info GrB_Matrix_build_UINT32(GrB_Matrix, GrB_Index *, GrB_Index *, uint32_t *, GrB_Index, GrB_BinaryOp)
     GrB_Info GrB_Matrix_build_UINT64(GrB_Matrix, GrB_Index *, GrB_Index *, uint64_t *, GrB_Index, GrB_BinaryOp)
-    GrB_Info GrB_Matrix_build_UINT8(GrB_Matrix, GrB_Index *, GrB_Index *, uint8_t *, GrB_Index, GrB_BinaryOp)
     GrB_Info GrB_Matrix_clear(GrB_Matrix)
     GrB_Info GrB_Matrix_dup(GrB_Matrix *, GrB_Matrix)
     GrB_Info GrB_Matrix_eWiseAdd_BinaryOp(GrB_Matrix, GrB_Matrix, GrB_BinaryOp, GrB_BinaryOp, GrB_Matrix, GrB_Matrix, GrB_Descriptor)
@@ -2796,27 +2796,27 @@ cdef extern from "GraphBLAS.h" nogil:
     GrB_Info GrB_Matrix_extractElement_BOOL(bint *, GrB_Matrix, GrB_Index, GrB_Index)
     GrB_Info GrB_Matrix_extractElement_FP32(float *, GrB_Matrix, GrB_Index, GrB_Index)
     GrB_Info GrB_Matrix_extractElement_FP64(double *, GrB_Matrix, GrB_Index, GrB_Index)
+    GrB_Info GrB_Matrix_extractElement_INT8(int8_t *, GrB_Matrix, GrB_Index, GrB_Index)
     GrB_Info GrB_Matrix_extractElement_INT16(int16_t *, GrB_Matrix, GrB_Index, GrB_Index)
     GrB_Info GrB_Matrix_extractElement_INT32(int32_t *, GrB_Matrix, GrB_Index, GrB_Index)
     GrB_Info GrB_Matrix_extractElement_INT64(int64_t *, GrB_Matrix, GrB_Index, GrB_Index)
-    GrB_Info GrB_Matrix_extractElement_INT8(int8_t *, GrB_Matrix, GrB_Index, GrB_Index)
     GrB_Info GrB_Matrix_extractElement_UDT(void *, GrB_Matrix, GrB_Index, GrB_Index)
+    GrB_Info GrB_Matrix_extractElement_UINT8(uint8_t *, GrB_Matrix, GrB_Index, GrB_Index)
     GrB_Info GrB_Matrix_extractElement_UINT16(uint16_t *, GrB_Matrix, GrB_Index, GrB_Index)
     GrB_Info GrB_Matrix_extractElement_UINT32(uint32_t *, GrB_Matrix, GrB_Index, GrB_Index)
     GrB_Info GrB_Matrix_extractElement_UINT64(uint64_t *, GrB_Matrix, GrB_Index, GrB_Index)
-    GrB_Info GrB_Matrix_extractElement_UINT8(uint8_t *, GrB_Matrix, GrB_Index, GrB_Index)
     GrB_Info GrB_Matrix_extractTuples_BOOL(GrB_Index *, GrB_Index *, bint *, GrB_Index *, GrB_Matrix)
     GrB_Info GrB_Matrix_extractTuples_FP32(GrB_Index *, GrB_Index *, float *, GrB_Index *, GrB_Matrix)
     GrB_Info GrB_Matrix_extractTuples_FP64(GrB_Index *, GrB_Index *, double *, GrB_Index *, GrB_Matrix)
+    GrB_Info GrB_Matrix_extractTuples_INT8(GrB_Index *, GrB_Index *, int8_t *, GrB_Index *, GrB_Matrix)
     GrB_Info GrB_Matrix_extractTuples_INT16(GrB_Index *, GrB_Index *, int16_t *, GrB_Index *, GrB_Matrix)
     GrB_Info GrB_Matrix_extractTuples_INT32(GrB_Index *, GrB_Index *, int32_t *, GrB_Index *, GrB_Matrix)
     GrB_Info GrB_Matrix_extractTuples_INT64(GrB_Index *, GrB_Index *, int64_t *, GrB_Index *, GrB_Matrix)
-    GrB_Info GrB_Matrix_extractTuples_INT8(GrB_Index *, GrB_Index *, int8_t *, GrB_Index *, GrB_Matrix)
     GrB_Info GrB_Matrix_extractTuples_UDT(GrB_Index *, GrB_Index *, void *, GrB_Index *, GrB_Matrix)
+    GrB_Info GrB_Matrix_extractTuples_UINT8(GrB_Index *, GrB_Index *, uint8_t *, GrB_Index *, GrB_Matrix)
     GrB_Info GrB_Matrix_extractTuples_UINT16(GrB_Index *, GrB_Index *, uint16_t *, GrB_Index *, GrB_Matrix)
     GrB_Info GrB_Matrix_extractTuples_UINT32(GrB_Index *, GrB_Index *, uint32_t *, GrB_Index *, GrB_Matrix)
     GrB_Info GrB_Matrix_extractTuples_UINT64(GrB_Index *, GrB_Index *, uint64_t *, GrB_Index *, GrB_Matrix)
-    GrB_Info GrB_Matrix_extractTuples_UINT8(GrB_Index *, GrB_Index *, uint8_t *, GrB_Index *, GrB_Matrix)
     GrB_Info GrB_Matrix_free(GrB_Matrix *)
     GrB_Info GrB_Matrix_kronecker_BinaryOp(GrB_Matrix, GrB_Matrix, GrB_BinaryOp, GrB_BinaryOp, GrB_Matrix, GrB_Matrix, GrB_Descriptor)
     GrB_Info GrB_Matrix_kronecker_Monoid(GrB_Matrix, GrB_Matrix, GrB_BinaryOp, GrB_Monoid, GrB_Matrix, GrB_Matrix, GrB_Descriptor)
@@ -2829,30 +2829,30 @@ cdef extern from "GraphBLAS.h" nogil:
     GrB_Info GrB_Matrix_reduce_BinaryOp(GrB_Vector, GrB_Vector, GrB_BinaryOp, GrB_BinaryOp, GrB_Matrix, GrB_Descriptor)
     GrB_Info GrB_Matrix_reduce_FP32(float *, GrB_BinaryOp, GrB_Monoid, GrB_Matrix, GrB_Descriptor)
     GrB_Info GrB_Matrix_reduce_FP64(double *, GrB_BinaryOp, GrB_Monoid, GrB_Matrix, GrB_Descriptor)
+    GrB_Info GrB_Matrix_reduce_INT8(int8_t *, GrB_BinaryOp, GrB_Monoid, GrB_Matrix, GrB_Descriptor)
     GrB_Info GrB_Matrix_reduce_INT16(int16_t *, GrB_BinaryOp, GrB_Monoid, GrB_Matrix, GrB_Descriptor)
     GrB_Info GrB_Matrix_reduce_INT32(int32_t *, GrB_BinaryOp, GrB_Monoid, GrB_Matrix, GrB_Descriptor)
     GrB_Info GrB_Matrix_reduce_INT64(int64_t *, GrB_BinaryOp, GrB_Monoid, GrB_Matrix, GrB_Descriptor)
-    GrB_Info GrB_Matrix_reduce_INT8(int8_t *, GrB_BinaryOp, GrB_Monoid, GrB_Matrix, GrB_Descriptor)
     GrB_Info GrB_Matrix_reduce_Monoid(GrB_Vector, GrB_Vector, GrB_BinaryOp, GrB_Monoid, GrB_Matrix, GrB_Descriptor)
     GrB_Info GrB_Matrix_reduce_UDT(void *, GrB_BinaryOp, GrB_Monoid, GrB_Matrix, GrB_Descriptor)
+    GrB_Info GrB_Matrix_reduce_UINT8(uint8_t *, GrB_BinaryOp, GrB_Monoid, GrB_Matrix, GrB_Descriptor)
     GrB_Info GrB_Matrix_reduce_UINT16(uint16_t *, GrB_BinaryOp, GrB_Monoid, GrB_Matrix, GrB_Descriptor)
     GrB_Info GrB_Matrix_reduce_UINT32(uint32_t *, GrB_BinaryOp, GrB_Monoid, GrB_Matrix, GrB_Descriptor)
     GrB_Info GrB_Matrix_reduce_UINT64(uint64_t *, GrB_BinaryOp, GrB_Monoid, GrB_Matrix, GrB_Descriptor)
-    GrB_Info GrB_Matrix_reduce_UINT8(uint8_t *, GrB_BinaryOp, GrB_Monoid, GrB_Matrix, GrB_Descriptor)
     GrB_Info GrB_Matrix_removeElement(GrB_Matrix, GrB_Index, GrB_Index)
     GrB_Info GrB_Matrix_resize(GrB_Matrix, GrB_Index, GrB_Index)
     GrB_Info GrB_Matrix_setElement_BOOL(GrB_Matrix, bint, GrB_Index, GrB_Index)
     GrB_Info GrB_Matrix_setElement_FP32(GrB_Matrix, float, GrB_Index, GrB_Index)
     GrB_Info GrB_Matrix_setElement_FP64(GrB_Matrix, double, GrB_Index, GrB_Index)
+    GrB_Info GrB_Matrix_setElement_INT8(GrB_Matrix, int8_t, GrB_Index, GrB_Index)
     GrB_Info GrB_Matrix_setElement_INT16(GrB_Matrix, int16_t, GrB_Index, GrB_Index)
     GrB_Info GrB_Matrix_setElement_INT32(GrB_Matrix, int32_t, GrB_Index, GrB_Index)
     GrB_Info GrB_Matrix_setElement_INT64(GrB_Matrix, int64_t, GrB_Index, GrB_Index)
-    GrB_Info GrB_Matrix_setElement_INT8(GrB_Matrix, int8_t, GrB_Index, GrB_Index)
     GrB_Info GrB_Matrix_setElement_UDT(GrB_Matrix, void *, GrB_Index, GrB_Index)
+    GrB_Info GrB_Matrix_setElement_UINT8(GrB_Matrix, uint8_t, GrB_Index, GrB_Index)
     GrB_Info GrB_Matrix_setElement_UINT16(GrB_Matrix, uint16_t, GrB_Index, GrB_Index)
     GrB_Info GrB_Matrix_setElement_UINT32(GrB_Matrix, uint32_t, GrB_Index, GrB_Index)
     GrB_Info GrB_Matrix_setElement_UINT64(GrB_Matrix, uint64_t, GrB_Index, GrB_Index)
-    GrB_Info GrB_Matrix_setElement_UINT8(GrB_Matrix, uint8_t, GrB_Index, GrB_Index)
     GrB_Info GrB_Matrix_wait(GrB_Matrix *)
     GrB_Info GrB_Row_assign(GrB_Matrix, GrB_Vector, GrB_BinaryOp, GrB_Vector, GrB_Index, GrB_Index *, GrB_Index, GrB_Descriptor)
     GrB_Info GrB_mxm(GrB_Matrix, GrB_Matrix, GrB_BinaryOp, GrB_Semiring, GrB_Matrix, GrB_Matrix, GrB_Descriptor)
@@ -2866,15 +2866,15 @@ cdef extern from "GraphBLAS.h" nogil:
     GrB_Info GrB_Monoid_new_BOOL(GrB_Monoid *, GrB_BinaryOp, bint)
     GrB_Info GrB_Monoid_new_FP32(GrB_Monoid *, GrB_BinaryOp, float)
     GrB_Info GrB_Monoid_new_FP64(GrB_Monoid *, GrB_BinaryOp, double)
+    GrB_Info GrB_Monoid_new_INT8(GrB_Monoid *, GrB_BinaryOp, int8_t)
     GrB_Info GrB_Monoid_new_INT16(GrB_Monoid *, GrB_BinaryOp, int16_t)
     GrB_Info GrB_Monoid_new_INT32(GrB_Monoid *, GrB_BinaryOp, int32_t)
     GrB_Info GrB_Monoid_new_INT64(GrB_Monoid *, GrB_BinaryOp, int64_t)
-    GrB_Info GrB_Monoid_new_INT8(GrB_Monoid *, GrB_BinaryOp, int8_t)
     GrB_Info GrB_Monoid_new_UDT(GrB_Monoid *, GrB_BinaryOp, void *)
+    GrB_Info GrB_Monoid_new_UINT8(GrB_Monoid *, GrB_BinaryOp, uint8_t)
     GrB_Info GrB_Monoid_new_UINT16(GrB_Monoid *, GrB_BinaryOp, uint16_t)
     GrB_Info GrB_Monoid_new_UINT32(GrB_Monoid *, GrB_BinaryOp, uint32_t)
     GrB_Info GrB_Monoid_new_UINT64(GrB_Monoid *, GrB_BinaryOp, uint64_t)
-    GrB_Info GrB_Monoid_new_UINT8(GrB_Monoid *, GrB_BinaryOp, uint8_t)
     GrB_Info GrB_Monoid_wait(GrB_Monoid *)
 
     # semiring
@@ -2894,52 +2894,52 @@ cdef extern from "GraphBLAS.h" nogil:
     GrB_Info GrB_Vector_apply_BinaryOp1st_BOOL(GrB_Vector, GrB_Vector, GrB_BinaryOp, GrB_BinaryOp, bint, GrB_Vector, GrB_Descriptor)
     GrB_Info GrB_Vector_apply_BinaryOp1st_FP32(GrB_Vector, GrB_Vector, GrB_BinaryOp, GrB_BinaryOp, float, GrB_Vector, GrB_Descriptor)
     GrB_Info GrB_Vector_apply_BinaryOp1st_FP64(GrB_Vector, GrB_Vector, GrB_BinaryOp, GrB_BinaryOp, double, GrB_Vector, GrB_Descriptor)
+    GrB_Info GrB_Vector_apply_BinaryOp1st_INT8(GrB_Vector, GrB_Vector, GrB_BinaryOp, GrB_BinaryOp, int8_t, GrB_Vector, GrB_Descriptor)
     GrB_Info GrB_Vector_apply_BinaryOp1st_INT16(GrB_Vector, GrB_Vector, GrB_BinaryOp, GrB_BinaryOp, int16_t, GrB_Vector, GrB_Descriptor)
     GrB_Info GrB_Vector_apply_BinaryOp1st_INT32(GrB_Vector, GrB_Vector, GrB_BinaryOp, GrB_BinaryOp, int32_t, GrB_Vector, GrB_Descriptor)
     GrB_Info GrB_Vector_apply_BinaryOp1st_INT64(GrB_Vector, GrB_Vector, GrB_BinaryOp, GrB_BinaryOp, int64_t, GrB_Vector, GrB_Descriptor)
-    GrB_Info GrB_Vector_apply_BinaryOp1st_INT8(GrB_Vector, GrB_Vector, GrB_BinaryOp, GrB_BinaryOp, int8_t, GrB_Vector, GrB_Descriptor)
     GrB_Info GrB_Vector_apply_BinaryOp1st_UDT(GrB_Vector, GrB_Vector, GrB_BinaryOp, GrB_BinaryOp, void *, GrB_Vector, GrB_Descriptor)
+    GrB_Info GrB_Vector_apply_BinaryOp1st_UINT8(GrB_Vector, GrB_Vector, GrB_BinaryOp, GrB_BinaryOp, uint8_t, GrB_Vector, GrB_Descriptor)
     GrB_Info GrB_Vector_apply_BinaryOp1st_UINT16(GrB_Vector, GrB_Vector, GrB_BinaryOp, GrB_BinaryOp, uint16_t, GrB_Vector, GrB_Descriptor)
     GrB_Info GrB_Vector_apply_BinaryOp1st_UINT32(GrB_Vector, GrB_Vector, GrB_BinaryOp, GrB_BinaryOp, uint32_t, GrB_Vector, GrB_Descriptor)
     GrB_Info GrB_Vector_apply_BinaryOp1st_UINT64(GrB_Vector, GrB_Vector, GrB_BinaryOp, GrB_BinaryOp, uint64_t, GrB_Vector, GrB_Descriptor)
-    GrB_Info GrB_Vector_apply_BinaryOp1st_UINT8(GrB_Vector, GrB_Vector, GrB_BinaryOp, GrB_BinaryOp, uint8_t, GrB_Vector, GrB_Descriptor)
     GrB_Info GrB_Vector_apply_BinaryOp2nd_BOOL(GrB_Vector, GrB_Vector, GrB_BinaryOp, GrB_BinaryOp, GrB_Vector, bint, GrB_Descriptor)
     GrB_Info GrB_Vector_apply_BinaryOp2nd_FP32(GrB_Vector, GrB_Vector, GrB_BinaryOp, GrB_BinaryOp, GrB_Vector, float, GrB_Descriptor)
     GrB_Info GrB_Vector_apply_BinaryOp2nd_FP64(GrB_Vector, GrB_Vector, GrB_BinaryOp, GrB_BinaryOp, GrB_Vector, double, GrB_Descriptor)
+    GrB_Info GrB_Vector_apply_BinaryOp2nd_INT8(GrB_Vector, GrB_Vector, GrB_BinaryOp, GrB_BinaryOp, GrB_Vector, int8_t, GrB_Descriptor)
     GrB_Info GrB_Vector_apply_BinaryOp2nd_INT16(GrB_Vector, GrB_Vector, GrB_BinaryOp, GrB_BinaryOp, GrB_Vector, int16_t, GrB_Descriptor)
     GrB_Info GrB_Vector_apply_BinaryOp2nd_INT32(GrB_Vector, GrB_Vector, GrB_BinaryOp, GrB_BinaryOp, GrB_Vector, int32_t, GrB_Descriptor)
     GrB_Info GrB_Vector_apply_BinaryOp2nd_INT64(GrB_Vector, GrB_Vector, GrB_BinaryOp, GrB_BinaryOp, GrB_Vector, int64_t, GrB_Descriptor)
-    GrB_Info GrB_Vector_apply_BinaryOp2nd_INT8(GrB_Vector, GrB_Vector, GrB_BinaryOp, GrB_BinaryOp, GrB_Vector, int8_t, GrB_Descriptor)
     GrB_Info GrB_Vector_apply_BinaryOp2nd_UDT(GrB_Vector, GrB_Vector, GrB_BinaryOp, GrB_BinaryOp, GrB_Vector, void *, GrB_Descriptor)
+    GrB_Info GrB_Vector_apply_BinaryOp2nd_UINT8(GrB_Vector, GrB_Vector, GrB_BinaryOp, GrB_BinaryOp, GrB_Vector, uint8_t, GrB_Descriptor)
     GrB_Info GrB_Vector_apply_BinaryOp2nd_UINT16(GrB_Vector, GrB_Vector, GrB_BinaryOp, GrB_BinaryOp, GrB_Vector, uint16_t, GrB_Descriptor)
     GrB_Info GrB_Vector_apply_BinaryOp2nd_UINT32(GrB_Vector, GrB_Vector, GrB_BinaryOp, GrB_BinaryOp, GrB_Vector, uint32_t, GrB_Descriptor)
     GrB_Info GrB_Vector_apply_BinaryOp2nd_UINT64(GrB_Vector, GrB_Vector, GrB_BinaryOp, GrB_BinaryOp, GrB_Vector, uint64_t, GrB_Descriptor)
-    GrB_Info GrB_Vector_apply_BinaryOp2nd_UINT8(GrB_Vector, GrB_Vector, GrB_BinaryOp, GrB_BinaryOp, GrB_Vector, uint8_t, GrB_Descriptor)
     GrB_Info GrB_Vector_assign(GrB_Vector, GrB_Vector, GrB_BinaryOp, GrB_Vector, GrB_Index *, GrB_Index, GrB_Descriptor)
     GrB_Info GrB_Vector_assign_BOOL(GrB_Vector, GrB_Vector, GrB_BinaryOp, bint, GrB_Index *, GrB_Index, GrB_Descriptor)
     GrB_Info GrB_Vector_assign_FP32(GrB_Vector, GrB_Vector, GrB_BinaryOp, float, GrB_Index *, GrB_Index, GrB_Descriptor)
     GrB_Info GrB_Vector_assign_FP64(GrB_Vector, GrB_Vector, GrB_BinaryOp, double, GrB_Index *, GrB_Index, GrB_Descriptor)
+    GrB_Info GrB_Vector_assign_INT8(GrB_Vector, GrB_Vector, GrB_BinaryOp, int8_t, GrB_Index *, GrB_Index, GrB_Descriptor)
     GrB_Info GrB_Vector_assign_INT16(GrB_Vector, GrB_Vector, GrB_BinaryOp, int16_t, GrB_Index *, GrB_Index, GrB_Descriptor)
     GrB_Info GrB_Vector_assign_INT32(GrB_Vector, GrB_Vector, GrB_BinaryOp, int32_t, GrB_Index *, GrB_Index, GrB_Descriptor)
     GrB_Info GrB_Vector_assign_INT64(GrB_Vector, GrB_Vector, GrB_BinaryOp, int64_t, GrB_Index *, GrB_Index, GrB_Descriptor)
-    GrB_Info GrB_Vector_assign_INT8(GrB_Vector, GrB_Vector, GrB_BinaryOp, int8_t, GrB_Index *, GrB_Index, GrB_Descriptor)
     GrB_Info GrB_Vector_assign_UDT(GrB_Vector, GrB_Vector, GrB_BinaryOp, void *, GrB_Index *, GrB_Index, GrB_Descriptor)
+    GrB_Info GrB_Vector_assign_UINT8(GrB_Vector, GrB_Vector, GrB_BinaryOp, uint8_t, GrB_Index *, GrB_Index, GrB_Descriptor)
     GrB_Info GrB_Vector_assign_UINT16(GrB_Vector, GrB_Vector, GrB_BinaryOp, uint16_t, GrB_Index *, GrB_Index, GrB_Descriptor)
     GrB_Info GrB_Vector_assign_UINT32(GrB_Vector, GrB_Vector, GrB_BinaryOp, uint32_t, GrB_Index *, GrB_Index, GrB_Descriptor)
     GrB_Info GrB_Vector_assign_UINT64(GrB_Vector, GrB_Vector, GrB_BinaryOp, uint64_t, GrB_Index *, GrB_Index, GrB_Descriptor)
-    GrB_Info GrB_Vector_assign_UINT8(GrB_Vector, GrB_Vector, GrB_BinaryOp, uint8_t, GrB_Index *, GrB_Index, GrB_Descriptor)
     GrB_Info GrB_Vector_build_BOOL(GrB_Vector, GrB_Index *, bint *, GrB_Index, GrB_BinaryOp)
     GrB_Info GrB_Vector_build_FP32(GrB_Vector, GrB_Index *, float *, GrB_Index, GrB_BinaryOp)
     GrB_Info GrB_Vector_build_FP64(GrB_Vector, GrB_Index *, double *, GrB_Index, GrB_BinaryOp)
+    GrB_Info GrB_Vector_build_INT8(GrB_Vector, GrB_Index *, int8_t *, GrB_Index, GrB_BinaryOp)
     GrB_Info GrB_Vector_build_INT16(GrB_Vector, GrB_Index *, int16_t *, GrB_Index, GrB_BinaryOp)
     GrB_Info GrB_Vector_build_INT32(GrB_Vector, GrB_Index *, int32_t *, GrB_Index, GrB_BinaryOp)
     GrB_Info GrB_Vector_build_INT64(GrB_Vector, GrB_Index *, int64_t *, GrB_Index, GrB_BinaryOp)
-    GrB_Info GrB_Vector_build_INT8(GrB_Vector, GrB_Index *, int8_t *, GrB_Index, GrB_BinaryOp)
     GrB_Info GrB_Vector_build_UDT(GrB_Vector, GrB_Index *, void *, GrB_Index, GrB_BinaryOp)
+    GrB_Info GrB_Vector_build_UINT8(GrB_Vector, GrB_Index *, uint8_t *, GrB_Index, GrB_BinaryOp)
     GrB_Info GrB_Vector_build_UINT16(GrB_Vector, GrB_Index *, uint16_t *, GrB_Index, GrB_BinaryOp)
     GrB_Info GrB_Vector_build_UINT32(GrB_Vector, GrB_Index *, uint32_t *, GrB_Index, GrB_BinaryOp)
     GrB_Info GrB_Vector_build_UINT64(GrB_Vector, GrB_Index *, uint64_t *, GrB_Index, GrB_BinaryOp)
-    GrB_Info GrB_Vector_build_UINT8(GrB_Vector, GrB_Index *, uint8_t *, GrB_Index, GrB_BinaryOp)
     GrB_Info GrB_Vector_clear(GrB_Vector)
     GrB_Info GrB_Vector_dup(GrB_Vector *, GrB_Vector)
     GrB_Info GrB_Vector_eWiseAdd_BinaryOp(GrB_Vector, GrB_Vector, GrB_BinaryOp, GrB_BinaryOp, GrB_Vector, GrB_Vector, GrB_Descriptor)
@@ -2953,56 +2953,56 @@ cdef extern from "GraphBLAS.h" nogil:
     GrB_Info GrB_Vector_extractElement_BOOL(bint *, GrB_Vector, GrB_Index)
     GrB_Info GrB_Vector_extractElement_FP32(float *, GrB_Vector, GrB_Index)
     GrB_Info GrB_Vector_extractElement_FP64(double *, GrB_Vector, GrB_Index)
+    GrB_Info GrB_Vector_extractElement_INT8(int8_t *, GrB_Vector, GrB_Index)
     GrB_Info GrB_Vector_extractElement_INT16(int16_t *, GrB_Vector, GrB_Index)
     GrB_Info GrB_Vector_extractElement_INT32(int32_t *, GrB_Vector, GrB_Index)
     GrB_Info GrB_Vector_extractElement_INT64(int64_t *, GrB_Vector, GrB_Index)
-    GrB_Info GrB_Vector_extractElement_INT8(int8_t *, GrB_Vector, GrB_Index)
     GrB_Info GrB_Vector_extractElement_UDT(void *, GrB_Vector, GrB_Index)
+    GrB_Info GrB_Vector_extractElement_UINT8(uint8_t *, GrB_Vector, GrB_Index)
     GrB_Info GrB_Vector_extractElement_UINT16(uint16_t *, GrB_Vector, GrB_Index)
     GrB_Info GrB_Vector_extractElement_UINT32(uint32_t *, GrB_Vector, GrB_Index)
     GrB_Info GrB_Vector_extractElement_UINT64(uint64_t *, GrB_Vector, GrB_Index)
-    GrB_Info GrB_Vector_extractElement_UINT8(uint8_t *, GrB_Vector, GrB_Index)
     GrB_Info GrB_Vector_extractTuples_BOOL(GrB_Index *, bint *, GrB_Index *, GrB_Vector)
     GrB_Info GrB_Vector_extractTuples_FP32(GrB_Index *, float *, GrB_Index *, GrB_Vector)
     GrB_Info GrB_Vector_extractTuples_FP64(GrB_Index *, double *, GrB_Index *, GrB_Vector)
+    GrB_Info GrB_Vector_extractTuples_INT8(GrB_Index *, int8_t *, GrB_Index *, GrB_Vector)
     GrB_Info GrB_Vector_extractTuples_INT16(GrB_Index *, int16_t *, GrB_Index *, GrB_Vector)
     GrB_Info GrB_Vector_extractTuples_INT32(GrB_Index *, int32_t *, GrB_Index *, GrB_Vector)
     GrB_Info GrB_Vector_extractTuples_INT64(GrB_Index *, int64_t *, GrB_Index *, GrB_Vector)
-    GrB_Info GrB_Vector_extractTuples_INT8(GrB_Index *, int8_t *, GrB_Index *, GrB_Vector)
     GrB_Info GrB_Vector_extractTuples_UDT(GrB_Index *, void *, GrB_Index *, GrB_Vector)
+    GrB_Info GrB_Vector_extractTuples_UINT8(GrB_Index *, uint8_t *, GrB_Index *, GrB_Vector)
     GrB_Info GrB_Vector_extractTuples_UINT16(GrB_Index *, uint16_t *, GrB_Index *, GrB_Vector)
     GrB_Info GrB_Vector_extractTuples_UINT32(GrB_Index *, uint32_t *, GrB_Index *, GrB_Vector)
     GrB_Info GrB_Vector_extractTuples_UINT64(GrB_Index *, uint64_t *, GrB_Index *, GrB_Vector)
-    GrB_Info GrB_Vector_extractTuples_UINT8(GrB_Index *, uint8_t *, GrB_Index *, GrB_Vector)
     GrB_Info GrB_Vector_free(GrB_Vector *)
     GrB_Info GrB_Vector_new(GrB_Vector *, GrB_Type, GrB_Index)
     GrB_Info GrB_Vector_nvals(GrB_Index *, GrB_Vector)
     GrB_Info GrB_Vector_reduce_BOOL(bint *, GrB_BinaryOp, GrB_Monoid, GrB_Vector, GrB_Descriptor)
     GrB_Info GrB_Vector_reduce_FP32(float *, GrB_BinaryOp, GrB_Monoid, GrB_Vector, GrB_Descriptor)
     GrB_Info GrB_Vector_reduce_FP64(double *, GrB_BinaryOp, GrB_Monoid, GrB_Vector, GrB_Descriptor)
+    GrB_Info GrB_Vector_reduce_INT8(int8_t *, GrB_BinaryOp, GrB_Monoid, GrB_Vector, GrB_Descriptor)
     GrB_Info GrB_Vector_reduce_INT16(int16_t *, GrB_BinaryOp, GrB_Monoid, GrB_Vector, GrB_Descriptor)
     GrB_Info GrB_Vector_reduce_INT32(int32_t *, GrB_BinaryOp, GrB_Monoid, GrB_Vector, GrB_Descriptor)
     GrB_Info GrB_Vector_reduce_INT64(int64_t *, GrB_BinaryOp, GrB_Monoid, GrB_Vector, GrB_Descriptor)
-    GrB_Info GrB_Vector_reduce_INT8(int8_t *, GrB_BinaryOp, GrB_Monoid, GrB_Vector, GrB_Descriptor)
     GrB_Info GrB_Vector_reduce_UDT(void *, GrB_BinaryOp, GrB_Monoid, GrB_Vector, GrB_Descriptor)
+    GrB_Info GrB_Vector_reduce_UINT8(uint8_t *, GrB_BinaryOp, GrB_Monoid, GrB_Vector, GrB_Descriptor)
     GrB_Info GrB_Vector_reduce_UINT16(uint16_t *, GrB_BinaryOp, GrB_Monoid, GrB_Vector, GrB_Descriptor)
     GrB_Info GrB_Vector_reduce_UINT32(uint32_t *, GrB_BinaryOp, GrB_Monoid, GrB_Vector, GrB_Descriptor)
     GrB_Info GrB_Vector_reduce_UINT64(uint64_t *, GrB_BinaryOp, GrB_Monoid, GrB_Vector, GrB_Descriptor)
-    GrB_Info GrB_Vector_reduce_UINT8(uint8_t *, GrB_BinaryOp, GrB_Monoid, GrB_Vector, GrB_Descriptor)
     GrB_Info GrB_Vector_removeElement(GrB_Vector, GrB_Index)
     GrB_Info GrB_Vector_resize(GrB_Vector, GrB_Index)
     GrB_Info GrB_Vector_setElement_BOOL(GrB_Vector, bint, GrB_Index)
     GrB_Info GrB_Vector_setElement_FP32(GrB_Vector, float, GrB_Index)
     GrB_Info GrB_Vector_setElement_FP64(GrB_Vector, double, GrB_Index)
+    GrB_Info GrB_Vector_setElement_INT8(GrB_Vector, int8_t, GrB_Index)
     GrB_Info GrB_Vector_setElement_INT16(GrB_Vector, int16_t, GrB_Index)
     GrB_Info GrB_Vector_setElement_INT32(GrB_Vector, int32_t, GrB_Index)
     GrB_Info GrB_Vector_setElement_INT64(GrB_Vector, int64_t, GrB_Index)
-    GrB_Info GrB_Vector_setElement_INT8(GrB_Vector, int8_t, GrB_Index)
     GrB_Info GrB_Vector_setElement_UDT(GrB_Vector, void *, GrB_Index)
+    GrB_Info GrB_Vector_setElement_UINT8(GrB_Vector, uint8_t, GrB_Index)
     GrB_Info GrB_Vector_setElement_UINT16(GrB_Vector, uint16_t, GrB_Index)
     GrB_Info GrB_Vector_setElement_UINT32(GrB_Vector, uint32_t, GrB_Index)
     GrB_Info GrB_Vector_setElement_UINT64(GrB_Vector, uint64_t, GrB_Index)
-    GrB_Info GrB_Vector_setElement_UINT8(GrB_Vector, uint8_t, GrB_Index)
     GrB_Info GrB_Vector_size(GrB_Index *, GrB_Vector)
     GrB_Info GrB_Vector_wait(GrB_Vector *)
 
@@ -3095,15 +3095,15 @@ cdef extern from "GraphBLAS.h" nogil:
     GrB_Info GxB_Matrix_subassign_FC64(GrB_Matrix, GrB_Matrix, GrB_BinaryOp, double complex, GrB_Index *, GrB_Index, GrB_Index *, GrB_Index, GrB_Descriptor)
     GrB_Info GxB_Matrix_subassign_FP32(GrB_Matrix, GrB_Matrix, GrB_BinaryOp, float, GrB_Index *, GrB_Index, GrB_Index *, GrB_Index, GrB_Descriptor)
     GrB_Info GxB_Matrix_subassign_FP64(GrB_Matrix, GrB_Matrix, GrB_BinaryOp, double, GrB_Index *, GrB_Index, GrB_Index *, GrB_Index, GrB_Descriptor)
+    GrB_Info GxB_Matrix_subassign_INT8(GrB_Matrix, GrB_Matrix, GrB_BinaryOp, int8_t, GrB_Index *, GrB_Index, GrB_Index *, GrB_Index, GrB_Descriptor)
     GrB_Info GxB_Matrix_subassign_INT16(GrB_Matrix, GrB_Matrix, GrB_BinaryOp, int16_t, GrB_Index *, GrB_Index, GrB_Index *, GrB_Index, GrB_Descriptor)
     GrB_Info GxB_Matrix_subassign_INT32(GrB_Matrix, GrB_Matrix, GrB_BinaryOp, int32_t, GrB_Index *, GrB_Index, GrB_Index *, GrB_Index, GrB_Descriptor)
     GrB_Info GxB_Matrix_subassign_INT64(GrB_Matrix, GrB_Matrix, GrB_BinaryOp, int64_t, GrB_Index *, GrB_Index, GrB_Index *, GrB_Index, GrB_Descriptor)
-    GrB_Info GxB_Matrix_subassign_INT8(GrB_Matrix, GrB_Matrix, GrB_BinaryOp, int8_t, GrB_Index *, GrB_Index, GrB_Index *, GrB_Index, GrB_Descriptor)
     GrB_Info GxB_Matrix_subassign_UDT(GrB_Matrix, GrB_Matrix, GrB_BinaryOp, void *, GrB_Index *, GrB_Index, GrB_Index *, GrB_Index, GrB_Descriptor)
+    GrB_Info GxB_Matrix_subassign_UINT8(GrB_Matrix, GrB_Matrix, GrB_BinaryOp, uint8_t, GrB_Index *, GrB_Index, GrB_Index *, GrB_Index, GrB_Descriptor)
     GrB_Info GxB_Matrix_subassign_UINT16(GrB_Matrix, GrB_Matrix, GrB_BinaryOp, uint16_t, GrB_Index *, GrB_Index, GrB_Index *, GrB_Index, GrB_Descriptor)
     GrB_Info GxB_Matrix_subassign_UINT32(GrB_Matrix, GrB_Matrix, GrB_BinaryOp, uint32_t, GrB_Index *, GrB_Index, GrB_Index *, GrB_Index, GrB_Descriptor)
     GrB_Info GxB_Matrix_subassign_UINT64(GrB_Matrix, GrB_Matrix, GrB_BinaryOp, uint64_t, GrB_Index *, GrB_Index, GrB_Index *, GrB_Index, GrB_Descriptor)
-    GrB_Info GxB_Matrix_subassign_UINT8(GrB_Matrix, GrB_Matrix, GrB_BinaryOp, uint8_t, GrB_Index *, GrB_Index, GrB_Index *, GrB_Index, GrB_Descriptor)
     GrB_Info GxB_Matrix_type(GrB_Type *, GrB_Matrix)
     GrB_Info GxB_Row_subassign(GrB_Matrix, GrB_Vector, GrB_BinaryOp, GrB_Vector, GrB_Index, GrB_Index *, GrB_Index, GrB_Descriptor)
     GrB_Info GxB_kron(GrB_Matrix, GrB_Matrix, GrB_BinaryOp, GrB_BinaryOp, GrB_Matrix, GrB_Matrix, GrB_Descriptor)
@@ -3120,15 +3120,15 @@ cdef extern from "GraphBLAS.h" nogil:
     GrB_Info GxB_Monoid_terminal_new_FC64(GrB_Monoid *, GrB_BinaryOp, double complex, double complex)
     GrB_Info GxB_Monoid_terminal_new_FP32(GrB_Monoid *, GrB_BinaryOp, float, float)
     GrB_Info GxB_Monoid_terminal_new_FP64(GrB_Monoid *, GrB_BinaryOp, double, double)
+    GrB_Info GxB_Monoid_terminal_new_INT8(GrB_Monoid *, GrB_BinaryOp, int8_t, int8_t)
     GrB_Info GxB_Monoid_terminal_new_INT16(GrB_Monoid *, GrB_BinaryOp, int16_t, int16_t)
     GrB_Info GxB_Monoid_terminal_new_INT32(GrB_Monoid *, GrB_BinaryOp, int32_t, int32_t)
     GrB_Info GxB_Monoid_terminal_new_INT64(GrB_Monoid *, GrB_BinaryOp, int64_t, int64_t)
-    GrB_Info GxB_Monoid_terminal_new_INT8(GrB_Monoid *, GrB_BinaryOp, int8_t, int8_t)
     GrB_Info GxB_Monoid_terminal_new_UDT(GrB_Monoid *, GrB_BinaryOp, void *, void *)
+    GrB_Info GxB_Monoid_terminal_new_UINT8(GrB_Monoid *, GrB_BinaryOp, uint8_t, uint8_t)
     GrB_Info GxB_Monoid_terminal_new_UINT16(GrB_Monoid *, GrB_BinaryOp, uint16_t, uint16_t)
     GrB_Info GxB_Monoid_terminal_new_UINT32(GrB_Monoid *, GrB_BinaryOp, uint32_t, uint32_t)
     GrB_Info GxB_Monoid_terminal_new_UINT64(GrB_Monoid *, GrB_BinaryOp, uint64_t, uint64_t)
-    GrB_Info GxB_Monoid_terminal_new_UINT8(GrB_Monoid *, GrB_BinaryOp, uint8_t, uint8_t)
 
     # scalar
     GrB_Info GxB_Scalar_clear(GxB_Scalar)
@@ -3139,15 +3139,15 @@ cdef extern from "GraphBLAS.h" nogil:
     GrB_Info GxB_Scalar_extractElement_FC64(double complex *, GxB_Scalar)
     GrB_Info GxB_Scalar_extractElement_FP32(float *, GxB_Scalar)
     GrB_Info GxB_Scalar_extractElement_FP64(double *, GxB_Scalar)
+    GrB_Info GxB_Scalar_extractElement_INT8(int8_t *, GxB_Scalar)
     GrB_Info GxB_Scalar_extractElement_INT16(int16_t *, GxB_Scalar)
     GrB_Info GxB_Scalar_extractElement_INT32(int32_t *, GxB_Scalar)
     GrB_Info GxB_Scalar_extractElement_INT64(int64_t *, GxB_Scalar)
-    GrB_Info GxB_Scalar_extractElement_INT8(int8_t *, GxB_Scalar)
     GrB_Info GxB_Scalar_extractElement_UDT(void *, GxB_Scalar)
+    GrB_Info GxB_Scalar_extractElement_UINT8(uint8_t *, GxB_Scalar)
     GrB_Info GxB_Scalar_extractElement_UINT16(uint16_t *, GxB_Scalar)
     GrB_Info GxB_Scalar_extractElement_UINT32(uint32_t *, GxB_Scalar)
     GrB_Info GxB_Scalar_extractElement_UINT64(uint64_t *, GxB_Scalar)
-    GrB_Info GxB_Scalar_extractElement_UINT8(uint8_t *, GxB_Scalar)
     GrB_Info GxB_Scalar_fprint(GxB_Scalar, char *, GxB_Print_Level, FILE *)
     GrB_Info GxB_Scalar_free(GxB_Scalar *)
     GrB_Info GxB_Scalar_new(GxB_Scalar *, GrB_Type)
@@ -3157,15 +3157,15 @@ cdef extern from "GraphBLAS.h" nogil:
     GrB_Info GxB_Scalar_setElement_FC64(GxB_Scalar, double complex)
     GrB_Info GxB_Scalar_setElement_FP32(GxB_Scalar, float)
     GrB_Info GxB_Scalar_setElement_FP64(GxB_Scalar, double)
+    GrB_Info GxB_Scalar_setElement_INT8(GxB_Scalar, int8_t)
     GrB_Info GxB_Scalar_setElement_INT16(GxB_Scalar, int16_t)
     GrB_Info GxB_Scalar_setElement_INT32(GxB_Scalar, int32_t)
     GrB_Info GxB_Scalar_setElement_INT64(GxB_Scalar, int64_t)
-    GrB_Info GxB_Scalar_setElement_INT8(GxB_Scalar, int8_t)
     GrB_Info GxB_Scalar_setElement_UDT(GxB_Scalar, void *)
+    GrB_Info GxB_Scalar_setElement_UINT8(GxB_Scalar, uint8_t)
     GrB_Info GxB_Scalar_setElement_UINT16(GxB_Scalar, uint16_t)
     GrB_Info GxB_Scalar_setElement_UINT32(GxB_Scalar, uint32_t)
     GrB_Info GxB_Scalar_setElement_UINT64(GxB_Scalar, uint64_t)
-    GrB_Info GxB_Scalar_setElement_UINT8(GxB_Scalar, uint8_t)
     GrB_Info GxB_Scalar_type(GrB_Type *, GxB_Scalar)
     GrB_Info GxB_Scalar_wait(GxB_Scalar *)
 
@@ -3224,13 +3224,13 @@ cdef extern from "GraphBLAS.h" nogil:
     GrB_Info GxB_Vector_subassign_FC64(GrB_Vector, GrB_Vector, GrB_BinaryOp, double complex, GrB_Index *, GrB_Index, GrB_Descriptor)
     GrB_Info GxB_Vector_subassign_FP32(GrB_Vector, GrB_Vector, GrB_BinaryOp, float, GrB_Index *, GrB_Index, GrB_Descriptor)
     GrB_Info GxB_Vector_subassign_FP64(GrB_Vector, GrB_Vector, GrB_BinaryOp, double, GrB_Index *, GrB_Index, GrB_Descriptor)
+    GrB_Info GxB_Vector_subassign_INT8(GrB_Vector, GrB_Vector, GrB_BinaryOp, int8_t, GrB_Index *, GrB_Index, GrB_Descriptor)
     GrB_Info GxB_Vector_subassign_INT16(GrB_Vector, GrB_Vector, GrB_BinaryOp, int16_t, GrB_Index *, GrB_Index, GrB_Descriptor)
     GrB_Info GxB_Vector_subassign_INT32(GrB_Vector, GrB_Vector, GrB_BinaryOp, int32_t, GrB_Index *, GrB_Index, GrB_Descriptor)
     GrB_Info GxB_Vector_subassign_INT64(GrB_Vector, GrB_Vector, GrB_BinaryOp, int64_t, GrB_Index *, GrB_Index, GrB_Descriptor)
-    GrB_Info GxB_Vector_subassign_INT8(GrB_Vector, GrB_Vector, GrB_BinaryOp, int8_t, GrB_Index *, GrB_Index, GrB_Descriptor)
     GrB_Info GxB_Vector_subassign_UDT(GrB_Vector, GrB_Vector, GrB_BinaryOp, void *, GrB_Index *, GrB_Index, GrB_Descriptor)
+    GrB_Info GxB_Vector_subassign_UINT8(GrB_Vector, GrB_Vector, GrB_BinaryOp, uint8_t, GrB_Index *, GrB_Index, GrB_Descriptor)
     GrB_Info GxB_Vector_subassign_UINT16(GrB_Vector, GrB_Vector, GrB_BinaryOp, uint16_t, GrB_Index *, GrB_Index, GrB_Descriptor)
     GrB_Info GxB_Vector_subassign_UINT32(GrB_Vector, GrB_Vector, GrB_BinaryOp, uint32_t, GrB_Index *, GrB_Index, GrB_Descriptor)
     GrB_Info GxB_Vector_subassign_UINT64(GrB_Vector, GrB_Vector, GrB_BinaryOp, uint64_t, GrB_Index *, GrB_Index, GrB_Descriptor)
-    GrB_Info GxB_Vector_subassign_UINT8(GrB_Vector, GrB_Vector, GrB_BinaryOp, uint8_t, GrB_Index *, GrB_Index, GrB_Descriptor)
     GrB_Info GxB_Vector_type(GrB_Type *, GrB_Vector)

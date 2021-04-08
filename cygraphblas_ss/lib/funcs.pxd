@@ -189,6 +189,18 @@ cpdef Matrix_subassign_FP64(
     Descriptor desc=*,
 )
 
+cpdef Matrix_subassign_INT8(
+    Matrix C,
+    Matrix Mask=*,
+    BinaryOp accum=*,
+    x=*,
+    Index[::1] I=*,
+    ni=*,
+    Index[::1] J=*,
+    nj=*,
+    Descriptor desc=*,
+)
+
 cpdef Matrix_subassign_INT16(
     Matrix C,
     Matrix Mask=*,
@@ -225,7 +237,7 @@ cpdef Matrix_subassign_INT64(
     Descriptor desc=*,
 )
 
-cpdef Matrix_subassign_INT8(
+cpdef Matrix_subassign_UINT8(
     Matrix C,
     Matrix Mask=*,
     BinaryOp accum=*,
@@ -262,18 +274,6 @@ cpdef Matrix_subassign_UINT32(
 )
 
 cpdef Matrix_subassign_UINT64(
-    Matrix C,
-    Matrix Mask=*,
-    BinaryOp accum=*,
-    x=*,
-    Index[::1] I=*,
-    ni=*,
-    Index[::1] J=*,
-    nj=*,
-    Descriptor desc=*,
-)
-
-cpdef Matrix_subassign_UINT8(
     Matrix C,
     Matrix Mask=*,
     BinaryOp accum=*,
@@ -449,6 +449,16 @@ cpdef Vector_subassign_FP64(
     Descriptor desc=*,
 )
 
+cpdef Vector_subassign_INT8(
+    Vector w,
+    Vector mask=*,
+    BinaryOp accum=*,
+    x=*,
+    Index[::1] I=*,
+    ni=*,
+    Descriptor desc=*,
+)
+
 cpdef Vector_subassign_INT16(
     Vector w,
     Vector mask=*,
@@ -479,7 +489,7 @@ cpdef Vector_subassign_INT64(
     Descriptor desc=*,
 )
 
-cpdef Vector_subassign_INT8(
+cpdef Vector_subassign_UINT8(
     Vector w,
     Vector mask=*,
     BinaryOp accum=*,
@@ -510,16 +520,6 @@ cpdef Vector_subassign_UINT32(
 )
 
 cpdef Vector_subassign_UINT64(
-    Vector w,
-    Vector mask=*,
-    BinaryOp accum=*,
-    x=*,
-    Index[::1] I=*,
-    ni=*,
-    Descriptor desc=*,
-)
-
-cpdef Vector_subassign_UINT8(
     Vector w,
     Vector mask=*,
     BinaryOp accum=*,

@@ -4,11 +4,11 @@ from cygraphblas cimport _clib as clib
 BOOL = clib.BOOL
 FP32 = clib.FP32
 FP64 = clib.FP64
+INT8 = clib.INT8
 INT16 = clib.INT16
 INT32 = clib.INT32
 INT64 = clib.INT64
-INT8 = clib.INT8
+UINT8 = clib.UINT8
 UINT16 = clib.UINT16
 UINT32 = clib.UINT32
 UINT64 = clib.UINT64
-UINT8 = clib.UINT8

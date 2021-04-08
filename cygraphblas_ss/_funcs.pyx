@@ -11,10 +11,10 @@ cdef Col_assign_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GrB_Col_assign(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if mask is None else <GrB_Vector>(mask.obj),
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if mask is None else <GrB_Vector>mask.obj,
         NULL if accum is None else accum.ss_obj,
-        NULL if u is None else <GrB_Vector>(u.obj),
+        NULL if u is None else <GrB_Vector>u.obj,
         I,
         ni,
         j,
@@ -34,10 +34,10 @@ cdef Col_extract_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GrB_Col_extract(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        NULL if mask is None else <GrB_Vector>(mask.obj),
+        NULL if w is None else <GrB_Vector>w.obj,
+        NULL if mask is None else <GrB_Vector>mask.obj,
         NULL if accum is None else accum.ss_obj,
-        NULL if A is None else <GrB_Matrix>(A.obj),
+        NULL if A is None else <GrB_Matrix>A.obj,
         I,
         ni,
         j,
@@ -53,8 +53,8 @@ cdef Descriptor_set_SS(
 ):
     cdef GrB_Info result = GrB_Descriptor_set(
         NULL if desc is None else desc.ss_obj,
-        <GrB_Desc_Field>(field.obj),
-        <GrB_Desc_Value>(val.obj),
+        <GrB_Desc_Field>field.ss_obj,
+        <GrB_Desc_Value>val.ss_obj,
     )
     if result != GrB_SUCCESS:
         raise ValueError(result)
@@ -68,11 +68,11 @@ cdef Matrix_apply_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GrB_Matrix_apply(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if Mask is None else <GrB_Matrix>(Mask.obj),
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if Mask is None else <GrB_Matrix>Mask.obj,
         NULL if accum is None else accum.ss_obj,
         NULL if op is None else op.ss_obj,
-        NULL if A is None else <GrB_Matrix>(A.obj),
+        NULL if A is None else <GrB_Matrix>A.obj,
         NULL if desc is None else desc.ss_obj,
     )
     if result != GrB_SUCCESS:
@@ -88,12 +88,12 @@ cdef Matrix_apply_BinaryOp1st_BOOL_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GrB_Matrix_apply_BinaryOp1st_BOOL(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if Mask is None else <GrB_Matrix>(Mask.obj),
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if Mask is None else <GrB_Matrix>Mask.obj,
         NULL if accum is None else accum.ss_obj,
         NULL if op is None else op.ss_obj,
         x,
-        NULL if A is None else <GrB_Matrix>(A.obj),
+        NULL if A is None else <GrB_Matrix>A.obj,
         NULL if desc is None else desc.ss_obj,
     )
     if result != GrB_SUCCESS:
@@ -109,12 +109,12 @@ cdef Matrix_apply_BinaryOp1st_FP32_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GrB_Matrix_apply_BinaryOp1st_FP32(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if Mask is None else <GrB_Matrix>(Mask.obj),
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if Mask is None else <GrB_Matrix>Mask.obj,
         NULL if accum is None else accum.ss_obj,
         NULL if op is None else op.ss_obj,
         x,
-        NULL if A is None else <GrB_Matrix>(A.obj),
+        NULL if A is None else <GrB_Matrix>A.obj,
         NULL if desc is None else desc.ss_obj,
     )
     if result != GrB_SUCCESS:
@@ -130,75 +130,12 @@ cdef Matrix_apply_BinaryOp1st_FP64_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GrB_Matrix_apply_BinaryOp1st_FP64(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if Mask is None else <GrB_Matrix>(Mask.obj),
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if Mask is None else <GrB_Matrix>Mask.obj,
         NULL if accum is None else accum.ss_obj,
         NULL if op is None else op.ss_obj,
         x,
-        NULL if A is None else <GrB_Matrix>(A.obj),
-        NULL if desc is None else desc.ss_obj,
-    )
-    if result != GrB_SUCCESS:
-        raise ValueError(result)
-
-cdef Matrix_apply_BinaryOp1st_INT16_SS(
-    Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    BinaryOp op,
-    int16_t x,
-    Matrix A,
-    Descriptor desc,
-):
-    cdef GrB_Info result = GrB_Matrix_apply_BinaryOp1st_INT16(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if Mask is None else <GrB_Matrix>(Mask.obj),
-        NULL if accum is None else accum.ss_obj,
-        NULL if op is None else op.ss_obj,
-        x,
-        NULL if A is None else <GrB_Matrix>(A.obj),
-        NULL if desc is None else desc.ss_obj,
-    )
-    if result != GrB_SUCCESS:
-        raise ValueError(result)
-
-cdef Matrix_apply_BinaryOp1st_INT32_SS(
-    Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    BinaryOp op,
-    int32_t x,
-    Matrix A,
-    Descriptor desc,
-):
-    cdef GrB_Info result = GrB_Matrix_apply_BinaryOp1st_INT32(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if Mask is None else <GrB_Matrix>(Mask.obj),
-        NULL if accum is None else accum.ss_obj,
-        NULL if op is None else op.ss_obj,
-        x,
-        NULL if A is None else <GrB_Matrix>(A.obj),
-        NULL if desc is None else desc.ss_obj,
-    )
-    if result != GrB_SUCCESS:
-        raise ValueError(result)
-
-cdef Matrix_apply_BinaryOp1st_INT64_SS(
-    Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    BinaryOp op,
-    int64_t x,
-    Matrix A,
-    Descriptor desc,
-):
-    cdef GrB_Info result = GrB_Matrix_apply_BinaryOp1st_INT64(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if Mask is None else <GrB_Matrix>(Mask.obj),
-        NULL if accum is None else accum.ss_obj,
-        NULL if op is None else op.ss_obj,
-        x,
-        NULL if A is None else <GrB_Matrix>(A.obj),
+        NULL if A is None else <GrB_Matrix>A.obj,
         NULL if desc is None else desc.ss_obj,
     )
     if result != GrB_SUCCESS:
@@ -214,75 +151,75 @@ cdef Matrix_apply_BinaryOp1st_INT8_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GrB_Matrix_apply_BinaryOp1st_INT8(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if Mask is None else <GrB_Matrix>(Mask.obj),
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if Mask is None else <GrB_Matrix>Mask.obj,
         NULL if accum is None else accum.ss_obj,
         NULL if op is None else op.ss_obj,
         x,
-        NULL if A is None else <GrB_Matrix>(A.obj),
+        NULL if A is None else <GrB_Matrix>A.obj,
         NULL if desc is None else desc.ss_obj,
     )
     if result != GrB_SUCCESS:
         raise ValueError(result)
 
-cdef Matrix_apply_BinaryOp1st_UINT16_SS(
+cdef Matrix_apply_BinaryOp1st_INT16_SS(
     Matrix C,
     Matrix Mask,
     BinaryOp accum,
     BinaryOp op,
-    uint16_t x,
+    int16_t x,
     Matrix A,
     Descriptor desc,
 ):
-    cdef GrB_Info result = GrB_Matrix_apply_BinaryOp1st_UINT16(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if Mask is None else <GrB_Matrix>(Mask.obj),
+    cdef GrB_Info result = GrB_Matrix_apply_BinaryOp1st_INT16(
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if Mask is None else <GrB_Matrix>Mask.obj,
         NULL if accum is None else accum.ss_obj,
         NULL if op is None else op.ss_obj,
         x,
-        NULL if A is None else <GrB_Matrix>(A.obj),
+        NULL if A is None else <GrB_Matrix>A.obj,
         NULL if desc is None else desc.ss_obj,
     )
     if result != GrB_SUCCESS:
         raise ValueError(result)
 
-cdef Matrix_apply_BinaryOp1st_UINT32_SS(
+cdef Matrix_apply_BinaryOp1st_INT32_SS(
     Matrix C,
     Matrix Mask,
     BinaryOp accum,
     BinaryOp op,
-    uint32_t x,
+    int32_t x,
     Matrix A,
     Descriptor desc,
 ):
-    cdef GrB_Info result = GrB_Matrix_apply_BinaryOp1st_UINT32(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if Mask is None else <GrB_Matrix>(Mask.obj),
+    cdef GrB_Info result = GrB_Matrix_apply_BinaryOp1st_INT32(
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if Mask is None else <GrB_Matrix>Mask.obj,
         NULL if accum is None else accum.ss_obj,
         NULL if op is None else op.ss_obj,
         x,
-        NULL if A is None else <GrB_Matrix>(A.obj),
+        NULL if A is None else <GrB_Matrix>A.obj,
         NULL if desc is None else desc.ss_obj,
     )
     if result != GrB_SUCCESS:
         raise ValueError(result)
 
-cdef Matrix_apply_BinaryOp1st_UINT64_SS(
+cdef Matrix_apply_BinaryOp1st_INT64_SS(
     Matrix C,
     Matrix Mask,
     BinaryOp accum,
     BinaryOp op,
-    uint64_t x,
+    int64_t x,
     Matrix A,
     Descriptor desc,
 ):
-    cdef GrB_Info result = GrB_Matrix_apply_BinaryOp1st_UINT64(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if Mask is None else <GrB_Matrix>(Mask.obj),
+    cdef GrB_Info result = GrB_Matrix_apply_BinaryOp1st_INT64(
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if Mask is None else <GrB_Matrix>Mask.obj,
         NULL if accum is None else accum.ss_obj,
         NULL if op is None else op.ss_obj,
         x,
-        NULL if A is None else <GrB_Matrix>(A.obj),
+        NULL if A is None else <GrB_Matrix>A.obj,
         NULL if desc is None else desc.ss_obj,
     )
     if result != GrB_SUCCESS:
@@ -298,12 +235,75 @@ cdef Matrix_apply_BinaryOp1st_UINT8_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GrB_Matrix_apply_BinaryOp1st_UINT8(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if Mask is None else <GrB_Matrix>(Mask.obj),
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if Mask is None else <GrB_Matrix>Mask.obj,
         NULL if accum is None else accum.ss_obj,
         NULL if op is None else op.ss_obj,
         x,
-        NULL if A is None else <GrB_Matrix>(A.obj),
+        NULL if A is None else <GrB_Matrix>A.obj,
+        NULL if desc is None else desc.ss_obj,
+    )
+    if result != GrB_SUCCESS:
+        raise ValueError(result)
+
+cdef Matrix_apply_BinaryOp1st_UINT16_SS(
+    Matrix C,
+    Matrix Mask,
+    BinaryOp accum,
+    BinaryOp op,
+    uint16_t x,
+    Matrix A,
+    Descriptor desc,
+):
+    cdef GrB_Info result = GrB_Matrix_apply_BinaryOp1st_UINT16(
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if Mask is None else <GrB_Matrix>Mask.obj,
+        NULL if accum is None else accum.ss_obj,
+        NULL if op is None else op.ss_obj,
+        x,
+        NULL if A is None else <GrB_Matrix>A.obj,
+        NULL if desc is None else desc.ss_obj,
+    )
+    if result != GrB_SUCCESS:
+        raise ValueError(result)
+
+cdef Matrix_apply_BinaryOp1st_UINT32_SS(
+    Matrix C,
+    Matrix Mask,
+    BinaryOp accum,
+    BinaryOp op,
+    uint32_t x,
+    Matrix A,
+    Descriptor desc,
+):
+    cdef GrB_Info result = GrB_Matrix_apply_BinaryOp1st_UINT32(
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if Mask is None else <GrB_Matrix>Mask.obj,
+        NULL if accum is None else accum.ss_obj,
+        NULL if op is None else op.ss_obj,
+        x,
+        NULL if A is None else <GrB_Matrix>A.obj,
+        NULL if desc is None else desc.ss_obj,
+    )
+    if result != GrB_SUCCESS:
+        raise ValueError(result)
+
+cdef Matrix_apply_BinaryOp1st_UINT64_SS(
+    Matrix C,
+    Matrix Mask,
+    BinaryOp accum,
+    BinaryOp op,
+    uint64_t x,
+    Matrix A,
+    Descriptor desc,
+):
+    cdef GrB_Info result = GrB_Matrix_apply_BinaryOp1st_UINT64(
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if Mask is None else <GrB_Matrix>Mask.obj,
+        NULL if accum is None else accum.ss_obj,
+        NULL if op is None else op.ss_obj,
+        x,
+        NULL if A is None else <GrB_Matrix>A.obj,
         NULL if desc is None else desc.ss_obj,
     )
     if result != GrB_SUCCESS:
@@ -319,11 +319,11 @@ cdef Matrix_apply_BinaryOp2nd_BOOL_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GrB_Matrix_apply_BinaryOp2nd_BOOL(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if Mask is None else <GrB_Matrix>(Mask.obj),
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if Mask is None else <GrB_Matrix>Mask.obj,
         NULL if accum is None else accum.ss_obj,
         NULL if op is None else op.ss_obj,
-        NULL if A is None else <GrB_Matrix>(A.obj),
+        NULL if A is None else <GrB_Matrix>A.obj,
         y,
         NULL if desc is None else desc.ss_obj,
     )
@@ -340,11 +340,11 @@ cdef Matrix_apply_BinaryOp2nd_FP32_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GrB_Matrix_apply_BinaryOp2nd_FP32(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if Mask is None else <GrB_Matrix>(Mask.obj),
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if Mask is None else <GrB_Matrix>Mask.obj,
         NULL if accum is None else accum.ss_obj,
         NULL if op is None else op.ss_obj,
-        NULL if A is None else <GrB_Matrix>(A.obj),
+        NULL if A is None else <GrB_Matrix>A.obj,
         y,
         NULL if desc is None else desc.ss_obj,
     )
@@ -361,74 +361,11 @@ cdef Matrix_apply_BinaryOp2nd_FP64_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GrB_Matrix_apply_BinaryOp2nd_FP64(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if Mask is None else <GrB_Matrix>(Mask.obj),
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if Mask is None else <GrB_Matrix>Mask.obj,
         NULL if accum is None else accum.ss_obj,
         NULL if op is None else op.ss_obj,
-        NULL if A is None else <GrB_Matrix>(A.obj),
-        y,
-        NULL if desc is None else desc.ss_obj,
-    )
-    if result != GrB_SUCCESS:
-        raise ValueError(result)
-
-cdef Matrix_apply_BinaryOp2nd_INT16_SS(
-    Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    BinaryOp op,
-    Matrix A,
-    int16_t y,
-    Descriptor desc,
-):
-    cdef GrB_Info result = GrB_Matrix_apply_BinaryOp2nd_INT16(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if Mask is None else <GrB_Matrix>(Mask.obj),
-        NULL if accum is None else accum.ss_obj,
-        NULL if op is None else op.ss_obj,
-        NULL if A is None else <GrB_Matrix>(A.obj),
-        y,
-        NULL if desc is None else desc.ss_obj,
-    )
-    if result != GrB_SUCCESS:
-        raise ValueError(result)
-
-cdef Matrix_apply_BinaryOp2nd_INT32_SS(
-    Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    BinaryOp op,
-    Matrix A,
-    int32_t y,
-    Descriptor desc,
-):
-    cdef GrB_Info result = GrB_Matrix_apply_BinaryOp2nd_INT32(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if Mask is None else <GrB_Matrix>(Mask.obj),
-        NULL if accum is None else accum.ss_obj,
-        NULL if op is None else op.ss_obj,
-        NULL if A is None else <GrB_Matrix>(A.obj),
-        y,
-        NULL if desc is None else desc.ss_obj,
-    )
-    if result != GrB_SUCCESS:
-        raise ValueError(result)
-
-cdef Matrix_apply_BinaryOp2nd_INT64_SS(
-    Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    BinaryOp op,
-    Matrix A,
-    int64_t y,
-    Descriptor desc,
-):
-    cdef GrB_Info result = GrB_Matrix_apply_BinaryOp2nd_INT64(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if Mask is None else <GrB_Matrix>(Mask.obj),
-        NULL if accum is None else accum.ss_obj,
-        NULL if op is None else op.ss_obj,
-        NULL if A is None else <GrB_Matrix>(A.obj),
+        NULL if A is None else <GrB_Matrix>A.obj,
         y,
         NULL if desc is None else desc.ss_obj,
     )
@@ -445,74 +382,74 @@ cdef Matrix_apply_BinaryOp2nd_INT8_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GrB_Matrix_apply_BinaryOp2nd_INT8(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if Mask is None else <GrB_Matrix>(Mask.obj),
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if Mask is None else <GrB_Matrix>Mask.obj,
         NULL if accum is None else accum.ss_obj,
         NULL if op is None else op.ss_obj,
-        NULL if A is None else <GrB_Matrix>(A.obj),
+        NULL if A is None else <GrB_Matrix>A.obj,
         y,
         NULL if desc is None else desc.ss_obj,
     )
     if result != GrB_SUCCESS:
         raise ValueError(result)
 
-cdef Matrix_apply_BinaryOp2nd_UINT16_SS(
+cdef Matrix_apply_BinaryOp2nd_INT16_SS(
     Matrix C,
     Matrix Mask,
     BinaryOp accum,
     BinaryOp op,
     Matrix A,
-    uint16_t y,
+    int16_t y,
     Descriptor desc,
 ):
-    cdef GrB_Info result = GrB_Matrix_apply_BinaryOp2nd_UINT16(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if Mask is None else <GrB_Matrix>(Mask.obj),
+    cdef GrB_Info result = GrB_Matrix_apply_BinaryOp2nd_INT16(
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if Mask is None else <GrB_Matrix>Mask.obj,
         NULL if accum is None else accum.ss_obj,
         NULL if op is None else op.ss_obj,
-        NULL if A is None else <GrB_Matrix>(A.obj),
+        NULL if A is None else <GrB_Matrix>A.obj,
         y,
         NULL if desc is None else desc.ss_obj,
     )
     if result != GrB_SUCCESS:
         raise ValueError(result)
 
-cdef Matrix_apply_BinaryOp2nd_UINT32_SS(
+cdef Matrix_apply_BinaryOp2nd_INT32_SS(
     Matrix C,
     Matrix Mask,
     BinaryOp accum,
     BinaryOp op,
     Matrix A,
-    uint32_t y,
+    int32_t y,
     Descriptor desc,
 ):
-    cdef GrB_Info result = GrB_Matrix_apply_BinaryOp2nd_UINT32(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if Mask is None else <GrB_Matrix>(Mask.obj),
+    cdef GrB_Info result = GrB_Matrix_apply_BinaryOp2nd_INT32(
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if Mask is None else <GrB_Matrix>Mask.obj,
         NULL if accum is None else accum.ss_obj,
         NULL if op is None else op.ss_obj,
-        NULL if A is None else <GrB_Matrix>(A.obj),
+        NULL if A is None else <GrB_Matrix>A.obj,
         y,
         NULL if desc is None else desc.ss_obj,
     )
     if result != GrB_SUCCESS:
         raise ValueError(result)
 
-cdef Matrix_apply_BinaryOp2nd_UINT64_SS(
+cdef Matrix_apply_BinaryOp2nd_INT64_SS(
     Matrix C,
     Matrix Mask,
     BinaryOp accum,
     BinaryOp op,
     Matrix A,
-    uint64_t y,
+    int64_t y,
     Descriptor desc,
 ):
-    cdef GrB_Info result = GrB_Matrix_apply_BinaryOp2nd_UINT64(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if Mask is None else <GrB_Matrix>(Mask.obj),
+    cdef GrB_Info result = GrB_Matrix_apply_BinaryOp2nd_INT64(
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if Mask is None else <GrB_Matrix>Mask.obj,
         NULL if accum is None else accum.ss_obj,
         NULL if op is None else op.ss_obj,
-        NULL if A is None else <GrB_Matrix>(A.obj),
+        NULL if A is None else <GrB_Matrix>A.obj,
         y,
         NULL if desc is None else desc.ss_obj,
     )
@@ -529,11 +466,74 @@ cdef Matrix_apply_BinaryOp2nd_UINT8_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GrB_Matrix_apply_BinaryOp2nd_UINT8(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if Mask is None else <GrB_Matrix>(Mask.obj),
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if Mask is None else <GrB_Matrix>Mask.obj,
         NULL if accum is None else accum.ss_obj,
         NULL if op is None else op.ss_obj,
-        NULL if A is None else <GrB_Matrix>(A.obj),
+        NULL if A is None else <GrB_Matrix>A.obj,
+        y,
+        NULL if desc is None else desc.ss_obj,
+    )
+    if result != GrB_SUCCESS:
+        raise ValueError(result)
+
+cdef Matrix_apply_BinaryOp2nd_UINT16_SS(
+    Matrix C,
+    Matrix Mask,
+    BinaryOp accum,
+    BinaryOp op,
+    Matrix A,
+    uint16_t y,
+    Descriptor desc,
+):
+    cdef GrB_Info result = GrB_Matrix_apply_BinaryOp2nd_UINT16(
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if Mask is None else <GrB_Matrix>Mask.obj,
+        NULL if accum is None else accum.ss_obj,
+        NULL if op is None else op.ss_obj,
+        NULL if A is None else <GrB_Matrix>A.obj,
+        y,
+        NULL if desc is None else desc.ss_obj,
+    )
+    if result != GrB_SUCCESS:
+        raise ValueError(result)
+
+cdef Matrix_apply_BinaryOp2nd_UINT32_SS(
+    Matrix C,
+    Matrix Mask,
+    BinaryOp accum,
+    BinaryOp op,
+    Matrix A,
+    uint32_t y,
+    Descriptor desc,
+):
+    cdef GrB_Info result = GrB_Matrix_apply_BinaryOp2nd_UINT32(
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if Mask is None else <GrB_Matrix>Mask.obj,
+        NULL if accum is None else accum.ss_obj,
+        NULL if op is None else op.ss_obj,
+        NULL if A is None else <GrB_Matrix>A.obj,
+        y,
+        NULL if desc is None else desc.ss_obj,
+    )
+    if result != GrB_SUCCESS:
+        raise ValueError(result)
+
+cdef Matrix_apply_BinaryOp2nd_UINT64_SS(
+    Matrix C,
+    Matrix Mask,
+    BinaryOp accum,
+    BinaryOp op,
+    Matrix A,
+    uint64_t y,
+    Descriptor desc,
+):
+    cdef GrB_Info result = GrB_Matrix_apply_BinaryOp2nd_UINT64(
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if Mask is None else <GrB_Matrix>Mask.obj,
+        NULL if accum is None else accum.ss_obj,
+        NULL if op is None else op.ss_obj,
+        NULL if A is None else <GrB_Matrix>A.obj,
         y,
         NULL if desc is None else desc.ss_obj,
     )
@@ -552,10 +552,10 @@ cdef Matrix_assign_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GrB_Matrix_assign(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if Mask is None else <GrB_Matrix>(Mask.obj),
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if Mask is None else <GrB_Matrix>Mask.obj,
         NULL if accum is None else accum.ss_obj,
-        NULL if A is None else <GrB_Matrix>(A.obj),
+        NULL if A is None else <GrB_Matrix>A.obj,
         I,
         ni,
         J,
@@ -577,8 +577,8 @@ cdef Matrix_assign_BOOL_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GrB_Matrix_assign_BOOL(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if Mask is None else <GrB_Matrix>(Mask.obj),
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if Mask is None else <GrB_Matrix>Mask.obj,
         NULL if accum is None else accum.ss_obj,
         x,
         I,
@@ -602,8 +602,8 @@ cdef Matrix_assign_FP32_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GrB_Matrix_assign_FP32(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if Mask is None else <GrB_Matrix>(Mask.obj),
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if Mask is None else <GrB_Matrix>Mask.obj,
         NULL if accum is None else accum.ss_obj,
         x,
         I,
@@ -627,83 +627,8 @@ cdef Matrix_assign_FP64_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GrB_Matrix_assign_FP64(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if Mask is None else <GrB_Matrix>(Mask.obj),
-        NULL if accum is None else accum.ss_obj,
-        x,
-        I,
-        ni,
-        J,
-        nj,
-        NULL if desc is None else desc.ss_obj,
-    )
-    if result != GrB_SUCCESS:
-        raise ValueError(result)
-
-cdef Matrix_assign_INT16_SS(
-    Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    int16_t x,
-    Index *I,
-    Index ni,
-    Index *J,
-    Index nj,
-    Descriptor desc,
-):
-    cdef GrB_Info result = GrB_Matrix_assign_INT16(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if Mask is None else <GrB_Matrix>(Mask.obj),
-        NULL if accum is None else accum.ss_obj,
-        x,
-        I,
-        ni,
-        J,
-        nj,
-        NULL if desc is None else desc.ss_obj,
-    )
-    if result != GrB_SUCCESS:
-        raise ValueError(result)
-
-cdef Matrix_assign_INT32_SS(
-    Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    int32_t x,
-    Index *I,
-    Index ni,
-    Index *J,
-    Index nj,
-    Descriptor desc,
-):
-    cdef GrB_Info result = GrB_Matrix_assign_INT32(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if Mask is None else <GrB_Matrix>(Mask.obj),
-        NULL if accum is None else accum.ss_obj,
-        x,
-        I,
-        ni,
-        J,
-        nj,
-        NULL if desc is None else desc.ss_obj,
-    )
-    if result != GrB_SUCCESS:
-        raise ValueError(result)
-
-cdef Matrix_assign_INT64_SS(
-    Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    int64_t x,
-    Index *I,
-    Index ni,
-    Index *J,
-    Index nj,
-    Descriptor desc,
-):
-    cdef GrB_Info result = GrB_Matrix_assign_INT64(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if Mask is None else <GrB_Matrix>(Mask.obj),
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if Mask is None else <GrB_Matrix>Mask.obj,
         NULL if accum is None else accum.ss_obj,
         x,
         I,
@@ -727,8 +652,8 @@ cdef Matrix_assign_INT8_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GrB_Matrix_assign_INT8(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if Mask is None else <GrB_Matrix>(Mask.obj),
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if Mask is None else <GrB_Matrix>Mask.obj,
         NULL if accum is None else accum.ss_obj,
         x,
         I,
@@ -740,20 +665,20 @@ cdef Matrix_assign_INT8_SS(
     if result != GrB_SUCCESS:
         raise ValueError(result)
 
-cdef Matrix_assign_UINT16_SS(
+cdef Matrix_assign_INT16_SS(
     Matrix C,
     Matrix Mask,
     BinaryOp accum,
-    uint16_t x,
+    int16_t x,
     Index *I,
     Index ni,
     Index *J,
     Index nj,
     Descriptor desc,
 ):
-    cdef GrB_Info result = GrB_Matrix_assign_UINT16(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if Mask is None else <GrB_Matrix>(Mask.obj),
+    cdef GrB_Info result = GrB_Matrix_assign_INT16(
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if Mask is None else <GrB_Matrix>Mask.obj,
         NULL if accum is None else accum.ss_obj,
         x,
         I,
@@ -765,20 +690,20 @@ cdef Matrix_assign_UINT16_SS(
     if result != GrB_SUCCESS:
         raise ValueError(result)
 
-cdef Matrix_assign_UINT32_SS(
+cdef Matrix_assign_INT32_SS(
     Matrix C,
     Matrix Mask,
     BinaryOp accum,
-    uint32_t x,
+    int32_t x,
     Index *I,
     Index ni,
     Index *J,
     Index nj,
     Descriptor desc,
 ):
-    cdef GrB_Info result = GrB_Matrix_assign_UINT32(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if Mask is None else <GrB_Matrix>(Mask.obj),
+    cdef GrB_Info result = GrB_Matrix_assign_INT32(
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if Mask is None else <GrB_Matrix>Mask.obj,
         NULL if accum is None else accum.ss_obj,
         x,
         I,
@@ -790,20 +715,20 @@ cdef Matrix_assign_UINT32_SS(
     if result != GrB_SUCCESS:
         raise ValueError(result)
 
-cdef Matrix_assign_UINT64_SS(
+cdef Matrix_assign_INT64_SS(
     Matrix C,
     Matrix Mask,
     BinaryOp accum,
-    uint64_t x,
+    int64_t x,
     Index *I,
     Index ni,
     Index *J,
     Index nj,
     Descriptor desc,
 ):
-    cdef GrB_Info result = GrB_Matrix_assign_UINT64(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if Mask is None else <GrB_Matrix>(Mask.obj),
+    cdef GrB_Info result = GrB_Matrix_assign_INT64(
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if Mask is None else <GrB_Matrix>Mask.obj,
         NULL if accum is None else accum.ss_obj,
         x,
         I,
@@ -827,8 +752,83 @@ cdef Matrix_assign_UINT8_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GrB_Matrix_assign_UINT8(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if Mask is None else <GrB_Matrix>(Mask.obj),
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if Mask is None else <GrB_Matrix>Mask.obj,
+        NULL if accum is None else accum.ss_obj,
+        x,
+        I,
+        ni,
+        J,
+        nj,
+        NULL if desc is None else desc.ss_obj,
+    )
+    if result != GrB_SUCCESS:
+        raise ValueError(result)
+
+cdef Matrix_assign_UINT16_SS(
+    Matrix C,
+    Matrix Mask,
+    BinaryOp accum,
+    uint16_t x,
+    Index *I,
+    Index ni,
+    Index *J,
+    Index nj,
+    Descriptor desc,
+):
+    cdef GrB_Info result = GrB_Matrix_assign_UINT16(
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if Mask is None else <GrB_Matrix>Mask.obj,
+        NULL if accum is None else accum.ss_obj,
+        x,
+        I,
+        ni,
+        J,
+        nj,
+        NULL if desc is None else desc.ss_obj,
+    )
+    if result != GrB_SUCCESS:
+        raise ValueError(result)
+
+cdef Matrix_assign_UINT32_SS(
+    Matrix C,
+    Matrix Mask,
+    BinaryOp accum,
+    uint32_t x,
+    Index *I,
+    Index ni,
+    Index *J,
+    Index nj,
+    Descriptor desc,
+):
+    cdef GrB_Info result = GrB_Matrix_assign_UINT32(
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if Mask is None else <GrB_Matrix>Mask.obj,
+        NULL if accum is None else accum.ss_obj,
+        x,
+        I,
+        ni,
+        J,
+        nj,
+        NULL if desc is None else desc.ss_obj,
+    )
+    if result != GrB_SUCCESS:
+        raise ValueError(result)
+
+cdef Matrix_assign_UINT64_SS(
+    Matrix C,
+    Matrix Mask,
+    BinaryOp accum,
+    uint64_t x,
+    Index *I,
+    Index ni,
+    Index *J,
+    Index nj,
+    Descriptor desc,
+):
+    cdef GrB_Info result = GrB_Matrix_assign_UINT64(
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if Mask is None else <GrB_Matrix>Mask.obj,
         NULL if accum is None else accum.ss_obj,
         x,
         I,
@@ -849,7 +849,7 @@ cdef Matrix_build_BOOL_SS(
     BinaryOp dup,
 ):
     cdef GrB_Info result = GrB_Matrix_build_BOOL(
-        NULL if C is None else <GrB_Matrix>(C.obj),
+        NULL if C is None else <GrB_Matrix>C.obj,
         I,
         J,
         X,
@@ -868,7 +868,7 @@ cdef Matrix_build_FP32_SS(
     BinaryOp dup,
 ):
     cdef GrB_Info result = GrB_Matrix_build_FP32(
-        NULL if C is None else <GrB_Matrix>(C.obj),
+        NULL if C is None else <GrB_Matrix>C.obj,
         I,
         J,
         X,
@@ -887,64 +887,7 @@ cdef Matrix_build_FP64_SS(
     BinaryOp dup,
 ):
     cdef GrB_Info result = GrB_Matrix_build_FP64(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        I,
-        J,
-        X,
-        nvals,
-        NULL if dup is None else dup.ss_obj,
-    )
-    if result != GrB_SUCCESS:
-        raise ValueError(result)
-
-cdef Matrix_build_INT16_SS(
-    Matrix C,
-    Index *I,
-    Index *J,
-    int16_t *X,
-    Index nvals,
-    BinaryOp dup,
-):
-    cdef GrB_Info result = GrB_Matrix_build_INT16(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        I,
-        J,
-        X,
-        nvals,
-        NULL if dup is None else dup.ss_obj,
-    )
-    if result != GrB_SUCCESS:
-        raise ValueError(result)
-
-cdef Matrix_build_INT32_SS(
-    Matrix C,
-    Index *I,
-    Index *J,
-    int32_t *X,
-    Index nvals,
-    BinaryOp dup,
-):
-    cdef GrB_Info result = GrB_Matrix_build_INT32(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        I,
-        J,
-        X,
-        nvals,
-        NULL if dup is None else dup.ss_obj,
-    )
-    if result != GrB_SUCCESS:
-        raise ValueError(result)
-
-cdef Matrix_build_INT64_SS(
-    Matrix C,
-    Index *I,
-    Index *J,
-    int64_t *X,
-    Index nvals,
-    BinaryOp dup,
-):
-    cdef GrB_Info result = GrB_Matrix_build_INT64(
-        NULL if C is None else <GrB_Matrix>(C.obj),
+        NULL if C is None else <GrB_Matrix>C.obj,
         I,
         J,
         X,
@@ -963,7 +906,7 @@ cdef Matrix_build_INT8_SS(
     BinaryOp dup,
 ):
     cdef GrB_Info result = GrB_Matrix_build_INT8(
-        NULL if C is None else <GrB_Matrix>(C.obj),
+        NULL if C is None else <GrB_Matrix>C.obj,
         I,
         J,
         X,
@@ -973,16 +916,16 @@ cdef Matrix_build_INT8_SS(
     if result != GrB_SUCCESS:
         raise ValueError(result)
 
-cdef Matrix_build_UINT16_SS(
+cdef Matrix_build_INT16_SS(
     Matrix C,
     Index *I,
     Index *J,
-    uint16_t *X,
+    int16_t *X,
     Index nvals,
     BinaryOp dup,
 ):
-    cdef GrB_Info result = GrB_Matrix_build_UINT16(
-        NULL if C is None else <GrB_Matrix>(C.obj),
+    cdef GrB_Info result = GrB_Matrix_build_INT16(
+        NULL if C is None else <GrB_Matrix>C.obj,
         I,
         J,
         X,
@@ -992,16 +935,16 @@ cdef Matrix_build_UINT16_SS(
     if result != GrB_SUCCESS:
         raise ValueError(result)
 
-cdef Matrix_build_UINT32_SS(
+cdef Matrix_build_INT32_SS(
     Matrix C,
     Index *I,
     Index *J,
-    uint32_t *X,
+    int32_t *X,
     Index nvals,
     BinaryOp dup,
 ):
-    cdef GrB_Info result = GrB_Matrix_build_UINT32(
-        NULL if C is None else <GrB_Matrix>(C.obj),
+    cdef GrB_Info result = GrB_Matrix_build_INT32(
+        NULL if C is None else <GrB_Matrix>C.obj,
         I,
         J,
         X,
@@ -1011,16 +954,16 @@ cdef Matrix_build_UINT32_SS(
     if result != GrB_SUCCESS:
         raise ValueError(result)
 
-cdef Matrix_build_UINT64_SS(
+cdef Matrix_build_INT64_SS(
     Matrix C,
     Index *I,
     Index *J,
-    uint64_t *X,
+    int64_t *X,
     Index nvals,
     BinaryOp dup,
 ):
-    cdef GrB_Info result = GrB_Matrix_build_UINT64(
-        NULL if C is None else <GrB_Matrix>(C.obj),
+    cdef GrB_Info result = GrB_Matrix_build_INT64(
+        NULL if C is None else <GrB_Matrix>C.obj,
         I,
         J,
         X,
@@ -1039,7 +982,64 @@ cdef Matrix_build_UINT8_SS(
     BinaryOp dup,
 ):
     cdef GrB_Info result = GrB_Matrix_build_UINT8(
-        NULL if C is None else <GrB_Matrix>(C.obj),
+        NULL if C is None else <GrB_Matrix>C.obj,
+        I,
+        J,
+        X,
+        nvals,
+        NULL if dup is None else dup.ss_obj,
+    )
+    if result != GrB_SUCCESS:
+        raise ValueError(result)
+
+cdef Matrix_build_UINT16_SS(
+    Matrix C,
+    Index *I,
+    Index *J,
+    uint16_t *X,
+    Index nvals,
+    BinaryOp dup,
+):
+    cdef GrB_Info result = GrB_Matrix_build_UINT16(
+        NULL if C is None else <GrB_Matrix>C.obj,
+        I,
+        J,
+        X,
+        nvals,
+        NULL if dup is None else dup.ss_obj,
+    )
+    if result != GrB_SUCCESS:
+        raise ValueError(result)
+
+cdef Matrix_build_UINT32_SS(
+    Matrix C,
+    Index *I,
+    Index *J,
+    uint32_t *X,
+    Index nvals,
+    BinaryOp dup,
+):
+    cdef GrB_Info result = GrB_Matrix_build_UINT32(
+        NULL if C is None else <GrB_Matrix>C.obj,
+        I,
+        J,
+        X,
+        nvals,
+        NULL if dup is None else dup.ss_obj,
+    )
+    if result != GrB_SUCCESS:
+        raise ValueError(result)
+
+cdef Matrix_build_UINT64_SS(
+    Matrix C,
+    Index *I,
+    Index *J,
+    uint64_t *X,
+    Index nvals,
+    BinaryOp dup,
+):
+    cdef GrB_Info result = GrB_Matrix_build_UINT64(
+        NULL if C is None else <GrB_Matrix>C.obj,
         I,
         J,
         X,
@@ -1053,7 +1053,7 @@ cdef Matrix_clear_SS(
     Matrix A,
 ):
     cdef GrB_Info result = GrB_Matrix_clear(
-        NULL if A is None else <GrB_Matrix>(A.obj),
+        NULL if A is None else <GrB_Matrix>A.obj,
     )
     if result != GrB_SUCCESS:
         raise ValueError(result)
@@ -1063,8 +1063,8 @@ cdef Matrix_dup_SS(
     Matrix A,
 ):
     cdef GrB_Info result = GrB_Matrix_dup(
-        NULL if C is None else <GrB_Matrix*>(C.obj),
-        NULL if A is None else <GrB_Matrix>(A.obj),
+        NULL if C is None else <GrB_Matrix*>&C.obj,
+        NULL if A is None else <GrB_Matrix>A.obj,
     )
     if result != GrB_SUCCESS:
         raise ValueError(result)
@@ -1079,12 +1079,12 @@ cdef Matrix_eWiseAdd_BinaryOp_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GrB_Matrix_eWiseAdd_BinaryOp(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if Mask is None else <GrB_Matrix>(Mask.obj),
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if Mask is None else <GrB_Matrix>Mask.obj,
         NULL if accum is None else accum.ss_obj,
         NULL if add is None else add.ss_obj,
-        NULL if A is None else <GrB_Matrix>(A.obj),
-        NULL if B is None else <GrB_Matrix>(B.obj),
+        NULL if A is None else <GrB_Matrix>A.obj,
+        NULL if B is None else <GrB_Matrix>B.obj,
         NULL if desc is None else desc.ss_obj,
     )
     if result != GrB_SUCCESS:
@@ -1100,12 +1100,12 @@ cdef Matrix_eWiseAdd_Monoid_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GrB_Matrix_eWiseAdd_Monoid(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if Mask is None else <GrB_Matrix>(Mask.obj),
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if Mask is None else <GrB_Matrix>Mask.obj,
         NULL if accum is None else accum.ss_obj,
         NULL if monoid is None else monoid.ss_obj,
-        NULL if A is None else <GrB_Matrix>(A.obj),
-        NULL if B is None else <GrB_Matrix>(B.obj),
+        NULL if A is None else <GrB_Matrix>A.obj,
+        NULL if B is None else <GrB_Matrix>B.obj,
         NULL if desc is None else desc.ss_obj,
     )
     if result != GrB_SUCCESS:
@@ -1121,12 +1121,12 @@ cdef Matrix_eWiseAdd_Semiring_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GrB_Matrix_eWiseAdd_Semiring(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if Mask is None else <GrB_Matrix>(Mask.obj),
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if Mask is None else <GrB_Matrix>Mask.obj,
         NULL if accum is None else accum.ss_obj,
         NULL if semiring is None else semiring.ss_obj,
-        NULL if A is None else <GrB_Matrix>(A.obj),
-        NULL if B is None else <GrB_Matrix>(B.obj),
+        NULL if A is None else <GrB_Matrix>A.obj,
+        NULL if B is None else <GrB_Matrix>B.obj,
         NULL if desc is None else desc.ss_obj,
     )
     if result != GrB_SUCCESS:
@@ -1142,12 +1142,12 @@ cdef Matrix_eWiseMult_BinaryOp_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GrB_Matrix_eWiseMult_BinaryOp(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if Mask is None else <GrB_Matrix>(Mask.obj),
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if Mask is None else <GrB_Matrix>Mask.obj,
         NULL if accum is None else accum.ss_obj,
         NULL if mult is None else mult.ss_obj,
-        NULL if A is None else <GrB_Matrix>(A.obj),
-        NULL if B is None else <GrB_Matrix>(B.obj),
+        NULL if A is None else <GrB_Matrix>A.obj,
+        NULL if B is None else <GrB_Matrix>B.obj,
         NULL if desc is None else desc.ss_obj,
     )
     if result != GrB_SUCCESS:
@@ -1163,12 +1163,12 @@ cdef Matrix_eWiseMult_Monoid_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GrB_Matrix_eWiseMult_Monoid(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if Mask is None else <GrB_Matrix>(Mask.obj),
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if Mask is None else <GrB_Matrix>Mask.obj,
         NULL if accum is None else accum.ss_obj,
         NULL if monoid is None else monoid.ss_obj,
-        NULL if A is None else <GrB_Matrix>(A.obj),
-        NULL if B is None else <GrB_Matrix>(B.obj),
+        NULL if A is None else <GrB_Matrix>A.obj,
+        NULL if B is None else <GrB_Matrix>B.obj,
         NULL if desc is None else desc.ss_obj,
     )
     if result != GrB_SUCCESS:
@@ -1184,12 +1184,12 @@ cdef Matrix_eWiseMult_Semiring_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GrB_Matrix_eWiseMult_Semiring(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if Mask is None else <GrB_Matrix>(Mask.obj),
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if Mask is None else <GrB_Matrix>Mask.obj,
         NULL if accum is None else accum.ss_obj,
         NULL if semiring is None else semiring.ss_obj,
-        NULL if A is None else <GrB_Matrix>(A.obj),
-        NULL if B is None else <GrB_Matrix>(B.obj),
+        NULL if A is None else <GrB_Matrix>A.obj,
+        NULL if B is None else <GrB_Matrix>B.obj,
         NULL if desc is None else desc.ss_obj,
     )
     if result != GrB_SUCCESS:
@@ -1207,10 +1207,10 @@ cdef Matrix_extract_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GrB_Matrix_extract(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if Mask is None else <GrB_Matrix>(Mask.obj),
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if Mask is None else <GrB_Matrix>Mask.obj,
         NULL if accum is None else accum.ss_obj,
-        NULL if A is None else <GrB_Matrix>(A.obj),
+        NULL if A is None else <GrB_Matrix>A.obj,
         I,
         ni,
         J,
@@ -1224,7 +1224,7 @@ cdef Matrix_free_SS(
     Matrix A,
 ):
     cdef GrB_Info result = GrB_Matrix_free(
-        NULL if A is None else <GrB_Matrix*>(A.obj),
+        NULL if A is None else <GrB_Matrix*>&A.obj,
     )
     if result != GrB_SUCCESS:
         raise ValueError(result)
@@ -1239,12 +1239,12 @@ cdef Matrix_kronecker_BinaryOp_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GrB_Matrix_kronecker_BinaryOp(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if M is None else <GrB_Matrix>(M.obj),
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if M is None else <GrB_Matrix>M.obj,
         NULL if accum is None else accum.ss_obj,
         NULL if op is None else op.ss_obj,
-        NULL if A is None else <GrB_Matrix>(A.obj),
-        NULL if B is None else <GrB_Matrix>(B.obj),
+        NULL if A is None else <GrB_Matrix>A.obj,
+        NULL if B is None else <GrB_Matrix>B.obj,
         NULL if desc is None else desc.ss_obj,
     )
     if result != GrB_SUCCESS:
@@ -1260,12 +1260,12 @@ cdef Matrix_kronecker_Monoid_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GrB_Matrix_kronecker_Monoid(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if M is None else <GrB_Matrix>(M.obj),
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if M is None else <GrB_Matrix>M.obj,
         NULL if accum is None else accum.ss_obj,
         NULL if monoid is None else monoid.ss_obj,
-        NULL if A is None else <GrB_Matrix>(A.obj),
-        NULL if B is None else <GrB_Matrix>(B.obj),
+        NULL if A is None else <GrB_Matrix>A.obj,
+        NULL if B is None else <GrB_Matrix>B.obj,
         NULL if desc is None else desc.ss_obj,
     )
     if result != GrB_SUCCESS:
@@ -1281,12 +1281,12 @@ cdef Matrix_kronecker_Semiring_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GrB_Matrix_kronecker_Semiring(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if M is None else <GrB_Matrix>(M.obj),
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if M is None else <GrB_Matrix>M.obj,
         NULL if accum is None else accum.ss_obj,
         NULL if semiring is None else semiring.ss_obj,
-        NULL if A is None else <GrB_Matrix>(A.obj),
-        NULL if B is None else <GrB_Matrix>(B.obj),
+        NULL if A is None else <GrB_Matrix>A.obj,
+        NULL if B is None else <GrB_Matrix>B.obj,
         NULL if desc is None else desc.ss_obj,
     )
     if result != GrB_SUCCESS:
@@ -1299,7 +1299,7 @@ cdef Matrix_new_SS(
     Index ncols,
 ):
     cdef GrB_Info result = GrB_Matrix_new(
-        NULL if A is None else <GrB_Matrix*>(A.obj),
+        NULL if A is None else <GrB_Matrix*>&A.obj,
         NULL if type is None else type.ss_obj,
         nrows,
         ncols,
@@ -1316,11 +1316,11 @@ cdef Matrix_reduce_BinaryOp_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GrB_Matrix_reduce_BinaryOp(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        NULL if mask is None else <GrB_Vector>(mask.obj),
+        NULL if w is None else <GrB_Vector>w.obj,
+        NULL if mask is None else <GrB_Vector>mask.obj,
         NULL if accum is None else accum.ss_obj,
         NULL if op is None else op.ss_obj,
-        NULL if A is None else <GrB_Matrix>(A.obj),
+        NULL if A is None else <GrB_Matrix>A.obj,
         NULL if desc is None else desc.ss_obj,
     )
     if result != GrB_SUCCESS:
@@ -1335,11 +1335,11 @@ cdef Matrix_reduce_Monoid_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GrB_Matrix_reduce_Monoid(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        NULL if mask is None else <GrB_Vector>(mask.obj),
+        NULL if w is None else <GrB_Vector>w.obj,
+        NULL if mask is None else <GrB_Vector>mask.obj,
         NULL if accum is None else accum.ss_obj,
         NULL if monoid is None else monoid.ss_obj,
-        NULL if A is None else <GrB_Matrix>(A.obj),
+        NULL if A is None else <GrB_Matrix>A.obj,
         NULL if desc is None else desc.ss_obj,
     )
     if result != GrB_SUCCESS:
@@ -1351,7 +1351,7 @@ cdef Matrix_removeElement_SS(
     Index j,
 ):
     cdef GrB_Info result = GrB_Matrix_removeElement(
-        NULL if C is None else <GrB_Matrix>(C.obj),
+        NULL if C is None else <GrB_Matrix>C.obj,
         i,
         j,
     )
@@ -1364,7 +1364,7 @@ cdef Matrix_resize_SS(
     Index ncols_new,
 ):
     cdef GrB_Info result = GrB_Matrix_resize(
-        NULL if C is None else <GrB_Matrix>(C.obj),
+        NULL if C is None else <GrB_Matrix>C.obj,
         nrows_new,
         ncols_new,
     )
@@ -1378,7 +1378,7 @@ cdef Matrix_setElement_BOOL_SS(
     Index j,
 ):
     cdef GrB_Info result = GrB_Matrix_setElement_BOOL(
-        NULL if C is None else <GrB_Matrix>(C.obj),
+        NULL if C is None else <GrB_Matrix>C.obj,
         x,
         i,
         j,
@@ -1393,7 +1393,7 @@ cdef Matrix_setElement_FP32_SS(
     Index j,
 ):
     cdef GrB_Info result = GrB_Matrix_setElement_FP32(
-        NULL if C is None else <GrB_Matrix>(C.obj),
+        NULL if C is None else <GrB_Matrix>C.obj,
         x,
         i,
         j,
@@ -1408,52 +1408,7 @@ cdef Matrix_setElement_FP64_SS(
     Index j,
 ):
     cdef GrB_Info result = GrB_Matrix_setElement_FP64(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        x,
-        i,
-        j,
-    )
-    if result != GrB_SUCCESS:
-        raise ValueError(result)
-
-cdef Matrix_setElement_INT16_SS(
-    Matrix C,
-    int16_t x,
-    Index i,
-    Index j,
-):
-    cdef GrB_Info result = GrB_Matrix_setElement_INT16(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        x,
-        i,
-        j,
-    )
-    if result != GrB_SUCCESS:
-        raise ValueError(result)
-
-cdef Matrix_setElement_INT32_SS(
-    Matrix C,
-    int32_t x,
-    Index i,
-    Index j,
-):
-    cdef GrB_Info result = GrB_Matrix_setElement_INT32(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        x,
-        i,
-        j,
-    )
-    if result != GrB_SUCCESS:
-        raise ValueError(result)
-
-cdef Matrix_setElement_INT64_SS(
-    Matrix C,
-    int64_t x,
-    Index i,
-    Index j,
-):
-    cdef GrB_Info result = GrB_Matrix_setElement_INT64(
-        NULL if C is None else <GrB_Matrix>(C.obj),
+        NULL if C is None else <GrB_Matrix>C.obj,
         x,
         i,
         j,
@@ -1468,7 +1423,7 @@ cdef Matrix_setElement_INT8_SS(
     Index j,
 ):
     cdef GrB_Info result = GrB_Matrix_setElement_INT8(
-        NULL if C is None else <GrB_Matrix>(C.obj),
+        NULL if C is None else <GrB_Matrix>C.obj,
         x,
         i,
         j,
@@ -1476,14 +1431,14 @@ cdef Matrix_setElement_INT8_SS(
     if result != GrB_SUCCESS:
         raise ValueError(result)
 
-cdef Matrix_setElement_UINT16_SS(
+cdef Matrix_setElement_INT16_SS(
     Matrix C,
-    uint16_t x,
+    int16_t x,
     Index i,
     Index j,
 ):
-    cdef GrB_Info result = GrB_Matrix_setElement_UINT16(
-        NULL if C is None else <GrB_Matrix>(C.obj),
+    cdef GrB_Info result = GrB_Matrix_setElement_INT16(
+        NULL if C is None else <GrB_Matrix>C.obj,
         x,
         i,
         j,
@@ -1491,14 +1446,14 @@ cdef Matrix_setElement_UINT16_SS(
     if result != GrB_SUCCESS:
         raise ValueError(result)
 
-cdef Matrix_setElement_UINT32_SS(
+cdef Matrix_setElement_INT32_SS(
     Matrix C,
-    uint32_t x,
+    int32_t x,
     Index i,
     Index j,
 ):
-    cdef GrB_Info result = GrB_Matrix_setElement_UINT32(
-        NULL if C is None else <GrB_Matrix>(C.obj),
+    cdef GrB_Info result = GrB_Matrix_setElement_INT32(
+        NULL if C is None else <GrB_Matrix>C.obj,
         x,
         i,
         j,
@@ -1506,14 +1461,14 @@ cdef Matrix_setElement_UINT32_SS(
     if result != GrB_SUCCESS:
         raise ValueError(result)
 
-cdef Matrix_setElement_UINT64_SS(
+cdef Matrix_setElement_INT64_SS(
     Matrix C,
-    uint64_t x,
+    int64_t x,
     Index i,
     Index j,
 ):
-    cdef GrB_Info result = GrB_Matrix_setElement_UINT64(
-        NULL if C is None else <GrB_Matrix>(C.obj),
+    cdef GrB_Info result = GrB_Matrix_setElement_INT64(
+        NULL if C is None else <GrB_Matrix>C.obj,
         x,
         i,
         j,
@@ -1528,7 +1483,52 @@ cdef Matrix_setElement_UINT8_SS(
     Index j,
 ):
     cdef GrB_Info result = GrB_Matrix_setElement_UINT8(
-        NULL if C is None else <GrB_Matrix>(C.obj),
+        NULL if C is None else <GrB_Matrix>C.obj,
+        x,
+        i,
+        j,
+    )
+    if result != GrB_SUCCESS:
+        raise ValueError(result)
+
+cdef Matrix_setElement_UINT16_SS(
+    Matrix C,
+    uint16_t x,
+    Index i,
+    Index j,
+):
+    cdef GrB_Info result = GrB_Matrix_setElement_UINT16(
+        NULL if C is None else <GrB_Matrix>C.obj,
+        x,
+        i,
+        j,
+    )
+    if result != GrB_SUCCESS:
+        raise ValueError(result)
+
+cdef Matrix_setElement_UINT32_SS(
+    Matrix C,
+    uint32_t x,
+    Index i,
+    Index j,
+):
+    cdef GrB_Info result = GrB_Matrix_setElement_UINT32(
+        NULL if C is None else <GrB_Matrix>C.obj,
+        x,
+        i,
+        j,
+    )
+    if result != GrB_SUCCESS:
+        raise ValueError(result)
+
+cdef Matrix_setElement_UINT64_SS(
+    Matrix C,
+    uint64_t x,
+    Index i,
+    Index j,
+):
+    cdef GrB_Info result = GrB_Matrix_setElement_UINT64(
+        NULL if C is None else <GrB_Matrix>C.obj,
         x,
         i,
         j,
@@ -1540,7 +1540,7 @@ cdef Matrix_wait_SS(
     Matrix A,
 ):
     cdef GrB_Info result = GrB_Matrix_wait(
-        NULL if A is None else <GrB_Matrix*>(A.obj),
+        NULL if A is None else <GrB_Matrix*>&A.obj,
     )
     if result != GrB_SUCCESS:
         raise ValueError(result)
@@ -1556,10 +1556,10 @@ cdef Row_assign_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GrB_Row_assign(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if mask is None else <GrB_Vector>(mask.obj),
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if mask is None else <GrB_Vector>mask.obj,
         NULL if accum is None else accum.ss_obj,
-        NULL if u is None else <GrB_Vector>(u.obj),
+        NULL if u is None else <GrB_Vector>u.obj,
         i,
         J,
         nj,
@@ -1577,11 +1577,11 @@ cdef Vector_apply_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GrB_Vector_apply(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        NULL if mask is None else <GrB_Vector>(mask.obj),
+        NULL if w is None else <GrB_Vector>w.obj,
+        NULL if mask is None else <GrB_Vector>mask.obj,
         NULL if accum is None else accum.ss_obj,
         NULL if op is None else op.ss_obj,
-        NULL if u is None else <GrB_Vector>(u.obj),
+        NULL if u is None else <GrB_Vector>u.obj,
         NULL if desc is None else desc.ss_obj,
     )
     if result != GrB_SUCCESS:
@@ -1597,12 +1597,12 @@ cdef Vector_apply_BinaryOp1st_BOOL_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GrB_Vector_apply_BinaryOp1st_BOOL(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        NULL if mask is None else <GrB_Vector>(mask.obj),
+        NULL if w is None else <GrB_Vector>w.obj,
+        NULL if mask is None else <GrB_Vector>mask.obj,
         NULL if accum is None else accum.ss_obj,
         NULL if op is None else op.ss_obj,
         x,
-        NULL if u is None else <GrB_Vector>(u.obj),
+        NULL if u is None else <GrB_Vector>u.obj,
         NULL if desc is None else desc.ss_obj,
     )
     if result != GrB_SUCCESS:
@@ -1618,12 +1618,12 @@ cdef Vector_apply_BinaryOp1st_FP32_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GrB_Vector_apply_BinaryOp1st_FP32(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        NULL if mask is None else <GrB_Vector>(mask.obj),
+        NULL if w is None else <GrB_Vector>w.obj,
+        NULL if mask is None else <GrB_Vector>mask.obj,
         NULL if accum is None else accum.ss_obj,
         NULL if op is None else op.ss_obj,
         x,
-        NULL if u is None else <GrB_Vector>(u.obj),
+        NULL if u is None else <GrB_Vector>u.obj,
         NULL if desc is None else desc.ss_obj,
     )
     if result != GrB_SUCCESS:
@@ -1639,75 +1639,12 @@ cdef Vector_apply_BinaryOp1st_FP64_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GrB_Vector_apply_BinaryOp1st_FP64(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        NULL if mask is None else <GrB_Vector>(mask.obj),
+        NULL if w is None else <GrB_Vector>w.obj,
+        NULL if mask is None else <GrB_Vector>mask.obj,
         NULL if accum is None else accum.ss_obj,
         NULL if op is None else op.ss_obj,
         x,
-        NULL if u is None else <GrB_Vector>(u.obj),
-        NULL if desc is None else desc.ss_obj,
-    )
-    if result != GrB_SUCCESS:
-        raise ValueError(result)
-
-cdef Vector_apply_BinaryOp1st_INT16_SS(
-    Vector w,
-    Vector mask,
-    BinaryOp accum,
-    BinaryOp op,
-    int16_t x,
-    Vector u,
-    Descriptor desc,
-):
-    cdef GrB_Info result = GrB_Vector_apply_BinaryOp1st_INT16(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        NULL if mask is None else <GrB_Vector>(mask.obj),
-        NULL if accum is None else accum.ss_obj,
-        NULL if op is None else op.ss_obj,
-        x,
-        NULL if u is None else <GrB_Vector>(u.obj),
-        NULL if desc is None else desc.ss_obj,
-    )
-    if result != GrB_SUCCESS:
-        raise ValueError(result)
-
-cdef Vector_apply_BinaryOp1st_INT32_SS(
-    Vector w,
-    Vector mask,
-    BinaryOp accum,
-    BinaryOp op,
-    int32_t x,
-    Vector u,
-    Descriptor desc,
-):
-    cdef GrB_Info result = GrB_Vector_apply_BinaryOp1st_INT32(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        NULL if mask is None else <GrB_Vector>(mask.obj),
-        NULL if accum is None else accum.ss_obj,
-        NULL if op is None else op.ss_obj,
-        x,
-        NULL if u is None else <GrB_Vector>(u.obj),
-        NULL if desc is None else desc.ss_obj,
-    )
-    if result != GrB_SUCCESS:
-        raise ValueError(result)
-
-cdef Vector_apply_BinaryOp1st_INT64_SS(
-    Vector w,
-    Vector mask,
-    BinaryOp accum,
-    BinaryOp op,
-    int64_t x,
-    Vector u,
-    Descriptor desc,
-):
-    cdef GrB_Info result = GrB_Vector_apply_BinaryOp1st_INT64(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        NULL if mask is None else <GrB_Vector>(mask.obj),
-        NULL if accum is None else accum.ss_obj,
-        NULL if op is None else op.ss_obj,
-        x,
-        NULL if u is None else <GrB_Vector>(u.obj),
+        NULL if u is None else <GrB_Vector>u.obj,
         NULL if desc is None else desc.ss_obj,
     )
     if result != GrB_SUCCESS:
@@ -1723,75 +1660,75 @@ cdef Vector_apply_BinaryOp1st_INT8_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GrB_Vector_apply_BinaryOp1st_INT8(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        NULL if mask is None else <GrB_Vector>(mask.obj),
+        NULL if w is None else <GrB_Vector>w.obj,
+        NULL if mask is None else <GrB_Vector>mask.obj,
         NULL if accum is None else accum.ss_obj,
         NULL if op is None else op.ss_obj,
         x,
-        NULL if u is None else <GrB_Vector>(u.obj),
+        NULL if u is None else <GrB_Vector>u.obj,
         NULL if desc is None else desc.ss_obj,
     )
     if result != GrB_SUCCESS:
         raise ValueError(result)
 
-cdef Vector_apply_BinaryOp1st_UINT16_SS(
+cdef Vector_apply_BinaryOp1st_INT16_SS(
     Vector w,
     Vector mask,
     BinaryOp accum,
     BinaryOp op,
-    uint16_t x,
+    int16_t x,
     Vector u,
     Descriptor desc,
 ):
-    cdef GrB_Info result = GrB_Vector_apply_BinaryOp1st_UINT16(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        NULL if mask is None else <GrB_Vector>(mask.obj),
+    cdef GrB_Info result = GrB_Vector_apply_BinaryOp1st_INT16(
+        NULL if w is None else <GrB_Vector>w.obj,
+        NULL if mask is None else <GrB_Vector>mask.obj,
         NULL if accum is None else accum.ss_obj,
         NULL if op is None else op.ss_obj,
         x,
-        NULL if u is None else <GrB_Vector>(u.obj),
+        NULL if u is None else <GrB_Vector>u.obj,
         NULL if desc is None else desc.ss_obj,
     )
     if result != GrB_SUCCESS:
         raise ValueError(result)
 
-cdef Vector_apply_BinaryOp1st_UINT32_SS(
+cdef Vector_apply_BinaryOp1st_INT32_SS(
     Vector w,
     Vector mask,
     BinaryOp accum,
     BinaryOp op,
-    uint32_t x,
+    int32_t x,
     Vector u,
     Descriptor desc,
 ):
-    cdef GrB_Info result = GrB_Vector_apply_BinaryOp1st_UINT32(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        NULL if mask is None else <GrB_Vector>(mask.obj),
+    cdef GrB_Info result = GrB_Vector_apply_BinaryOp1st_INT32(
+        NULL if w is None else <GrB_Vector>w.obj,
+        NULL if mask is None else <GrB_Vector>mask.obj,
         NULL if accum is None else accum.ss_obj,
         NULL if op is None else op.ss_obj,
         x,
-        NULL if u is None else <GrB_Vector>(u.obj),
+        NULL if u is None else <GrB_Vector>u.obj,
         NULL if desc is None else desc.ss_obj,
     )
     if result != GrB_SUCCESS:
         raise ValueError(result)
 
-cdef Vector_apply_BinaryOp1st_UINT64_SS(
+cdef Vector_apply_BinaryOp1st_INT64_SS(
     Vector w,
     Vector mask,
     BinaryOp accum,
     BinaryOp op,
-    uint64_t x,
+    int64_t x,
     Vector u,
     Descriptor desc,
 ):
-    cdef GrB_Info result = GrB_Vector_apply_BinaryOp1st_UINT64(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        NULL if mask is None else <GrB_Vector>(mask.obj),
+    cdef GrB_Info result = GrB_Vector_apply_BinaryOp1st_INT64(
+        NULL if w is None else <GrB_Vector>w.obj,
+        NULL if mask is None else <GrB_Vector>mask.obj,
         NULL if accum is None else accum.ss_obj,
         NULL if op is None else op.ss_obj,
         x,
-        NULL if u is None else <GrB_Vector>(u.obj),
+        NULL if u is None else <GrB_Vector>u.obj,
         NULL if desc is None else desc.ss_obj,
     )
     if result != GrB_SUCCESS:
@@ -1807,12 +1744,75 @@ cdef Vector_apply_BinaryOp1st_UINT8_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GrB_Vector_apply_BinaryOp1st_UINT8(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        NULL if mask is None else <GrB_Vector>(mask.obj),
+        NULL if w is None else <GrB_Vector>w.obj,
+        NULL if mask is None else <GrB_Vector>mask.obj,
         NULL if accum is None else accum.ss_obj,
         NULL if op is None else op.ss_obj,
         x,
-        NULL if u is None else <GrB_Vector>(u.obj),
+        NULL if u is None else <GrB_Vector>u.obj,
+        NULL if desc is None else desc.ss_obj,
+    )
+    if result != GrB_SUCCESS:
+        raise ValueError(result)
+
+cdef Vector_apply_BinaryOp1st_UINT16_SS(
+    Vector w,
+    Vector mask,
+    BinaryOp accum,
+    BinaryOp op,
+    uint16_t x,
+    Vector u,
+    Descriptor desc,
+):
+    cdef GrB_Info result = GrB_Vector_apply_BinaryOp1st_UINT16(
+        NULL if w is None else <GrB_Vector>w.obj,
+        NULL if mask is None else <GrB_Vector>mask.obj,
+        NULL if accum is None else accum.ss_obj,
+        NULL if op is None else op.ss_obj,
+        x,
+        NULL if u is None else <GrB_Vector>u.obj,
+        NULL if desc is None else desc.ss_obj,
+    )
+    if result != GrB_SUCCESS:
+        raise ValueError(result)
+
+cdef Vector_apply_BinaryOp1st_UINT32_SS(
+    Vector w,
+    Vector mask,
+    BinaryOp accum,
+    BinaryOp op,
+    uint32_t x,
+    Vector u,
+    Descriptor desc,
+):
+    cdef GrB_Info result = GrB_Vector_apply_BinaryOp1st_UINT32(
+        NULL if w is None else <GrB_Vector>w.obj,
+        NULL if mask is None else <GrB_Vector>mask.obj,
+        NULL if accum is None else accum.ss_obj,
+        NULL if op is None else op.ss_obj,
+        x,
+        NULL if u is None else <GrB_Vector>u.obj,
+        NULL if desc is None else desc.ss_obj,
+    )
+    if result != GrB_SUCCESS:
+        raise ValueError(result)
+
+cdef Vector_apply_BinaryOp1st_UINT64_SS(
+    Vector w,
+    Vector mask,
+    BinaryOp accum,
+    BinaryOp op,
+    uint64_t x,
+    Vector u,
+    Descriptor desc,
+):
+    cdef GrB_Info result = GrB_Vector_apply_BinaryOp1st_UINT64(
+        NULL if w is None else <GrB_Vector>w.obj,
+        NULL if mask is None else <GrB_Vector>mask.obj,
+        NULL if accum is None else accum.ss_obj,
+        NULL if op is None else op.ss_obj,
+        x,
+        NULL if u is None else <GrB_Vector>u.obj,
         NULL if desc is None else desc.ss_obj,
     )
     if result != GrB_SUCCESS:
@@ -1828,11 +1828,11 @@ cdef Vector_apply_BinaryOp2nd_BOOL_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GrB_Vector_apply_BinaryOp2nd_BOOL(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        NULL if mask is None else <GrB_Vector>(mask.obj),
+        NULL if w is None else <GrB_Vector>w.obj,
+        NULL if mask is None else <GrB_Vector>mask.obj,
         NULL if accum is None else accum.ss_obj,
         NULL if op is None else op.ss_obj,
-        NULL if u is None else <GrB_Vector>(u.obj),
+        NULL if u is None else <GrB_Vector>u.obj,
         y,
         NULL if desc is None else desc.ss_obj,
     )
@@ -1849,11 +1849,11 @@ cdef Vector_apply_BinaryOp2nd_FP32_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GrB_Vector_apply_BinaryOp2nd_FP32(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        NULL if mask is None else <GrB_Vector>(mask.obj),
+        NULL if w is None else <GrB_Vector>w.obj,
+        NULL if mask is None else <GrB_Vector>mask.obj,
         NULL if accum is None else accum.ss_obj,
         NULL if op is None else op.ss_obj,
-        NULL if u is None else <GrB_Vector>(u.obj),
+        NULL if u is None else <GrB_Vector>u.obj,
         y,
         NULL if desc is None else desc.ss_obj,
     )
@@ -1870,74 +1870,11 @@ cdef Vector_apply_BinaryOp2nd_FP64_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GrB_Vector_apply_BinaryOp2nd_FP64(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        NULL if mask is None else <GrB_Vector>(mask.obj),
+        NULL if w is None else <GrB_Vector>w.obj,
+        NULL if mask is None else <GrB_Vector>mask.obj,
         NULL if accum is None else accum.ss_obj,
         NULL if op is None else op.ss_obj,
-        NULL if u is None else <GrB_Vector>(u.obj),
-        y,
-        NULL if desc is None else desc.ss_obj,
-    )
-    if result != GrB_SUCCESS:
-        raise ValueError(result)
-
-cdef Vector_apply_BinaryOp2nd_INT16_SS(
-    Vector w,
-    Vector mask,
-    BinaryOp accum,
-    BinaryOp op,
-    Vector u,
-    int16_t y,
-    Descriptor desc,
-):
-    cdef GrB_Info result = GrB_Vector_apply_BinaryOp2nd_INT16(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        NULL if mask is None else <GrB_Vector>(mask.obj),
-        NULL if accum is None else accum.ss_obj,
-        NULL if op is None else op.ss_obj,
-        NULL if u is None else <GrB_Vector>(u.obj),
-        y,
-        NULL if desc is None else desc.ss_obj,
-    )
-    if result != GrB_SUCCESS:
-        raise ValueError(result)
-
-cdef Vector_apply_BinaryOp2nd_INT32_SS(
-    Vector w,
-    Vector mask,
-    BinaryOp accum,
-    BinaryOp op,
-    Vector u,
-    int32_t y,
-    Descriptor desc,
-):
-    cdef GrB_Info result = GrB_Vector_apply_BinaryOp2nd_INT32(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        NULL if mask is None else <GrB_Vector>(mask.obj),
-        NULL if accum is None else accum.ss_obj,
-        NULL if op is None else op.ss_obj,
-        NULL if u is None else <GrB_Vector>(u.obj),
-        y,
-        NULL if desc is None else desc.ss_obj,
-    )
-    if result != GrB_SUCCESS:
-        raise ValueError(result)
-
-cdef Vector_apply_BinaryOp2nd_INT64_SS(
-    Vector w,
-    Vector mask,
-    BinaryOp accum,
-    BinaryOp op,
-    Vector u,
-    int64_t y,
-    Descriptor desc,
-):
-    cdef GrB_Info result = GrB_Vector_apply_BinaryOp2nd_INT64(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        NULL if mask is None else <GrB_Vector>(mask.obj),
-        NULL if accum is None else accum.ss_obj,
-        NULL if op is None else op.ss_obj,
-        NULL if u is None else <GrB_Vector>(u.obj),
+        NULL if u is None else <GrB_Vector>u.obj,
         y,
         NULL if desc is None else desc.ss_obj,
     )
@@ -1954,74 +1891,74 @@ cdef Vector_apply_BinaryOp2nd_INT8_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GrB_Vector_apply_BinaryOp2nd_INT8(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        NULL if mask is None else <GrB_Vector>(mask.obj),
+        NULL if w is None else <GrB_Vector>w.obj,
+        NULL if mask is None else <GrB_Vector>mask.obj,
         NULL if accum is None else accum.ss_obj,
         NULL if op is None else op.ss_obj,
-        NULL if u is None else <GrB_Vector>(u.obj),
+        NULL if u is None else <GrB_Vector>u.obj,
         y,
         NULL if desc is None else desc.ss_obj,
     )
     if result != GrB_SUCCESS:
         raise ValueError(result)
 
-cdef Vector_apply_BinaryOp2nd_UINT16_SS(
+cdef Vector_apply_BinaryOp2nd_INT16_SS(
     Vector w,
     Vector mask,
     BinaryOp accum,
     BinaryOp op,
     Vector u,
-    uint16_t y,
+    int16_t y,
     Descriptor desc,
 ):
-    cdef GrB_Info result = GrB_Vector_apply_BinaryOp2nd_UINT16(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        NULL if mask is None else <GrB_Vector>(mask.obj),
+    cdef GrB_Info result = GrB_Vector_apply_BinaryOp2nd_INT16(
+        NULL if w is None else <GrB_Vector>w.obj,
+        NULL if mask is None else <GrB_Vector>mask.obj,
         NULL if accum is None else accum.ss_obj,
         NULL if op is None else op.ss_obj,
-        NULL if u is None else <GrB_Vector>(u.obj),
+        NULL if u is None else <GrB_Vector>u.obj,
         y,
         NULL if desc is None else desc.ss_obj,
     )
     if result != GrB_SUCCESS:
         raise ValueError(result)
 
-cdef Vector_apply_BinaryOp2nd_UINT32_SS(
+cdef Vector_apply_BinaryOp2nd_INT32_SS(
     Vector w,
     Vector mask,
     BinaryOp accum,
     BinaryOp op,
     Vector u,
-    uint32_t y,
+    int32_t y,
     Descriptor desc,
 ):
-    cdef GrB_Info result = GrB_Vector_apply_BinaryOp2nd_UINT32(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        NULL if mask is None else <GrB_Vector>(mask.obj),
+    cdef GrB_Info result = GrB_Vector_apply_BinaryOp2nd_INT32(
+        NULL if w is None else <GrB_Vector>w.obj,
+        NULL if mask is None else <GrB_Vector>mask.obj,
         NULL if accum is None else accum.ss_obj,
         NULL if op is None else op.ss_obj,
-        NULL if u is None else <GrB_Vector>(u.obj),
+        NULL if u is None else <GrB_Vector>u.obj,
         y,
         NULL if desc is None else desc.ss_obj,
     )
     if result != GrB_SUCCESS:
         raise ValueError(result)
 
-cdef Vector_apply_BinaryOp2nd_UINT64_SS(
+cdef Vector_apply_BinaryOp2nd_INT64_SS(
     Vector w,
     Vector mask,
     BinaryOp accum,
     BinaryOp op,
     Vector u,
-    uint64_t y,
+    int64_t y,
     Descriptor desc,
 ):
-    cdef GrB_Info result = GrB_Vector_apply_BinaryOp2nd_UINT64(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        NULL if mask is None else <GrB_Vector>(mask.obj),
+    cdef GrB_Info result = GrB_Vector_apply_BinaryOp2nd_INT64(
+        NULL if w is None else <GrB_Vector>w.obj,
+        NULL if mask is None else <GrB_Vector>mask.obj,
         NULL if accum is None else accum.ss_obj,
         NULL if op is None else op.ss_obj,
-        NULL if u is None else <GrB_Vector>(u.obj),
+        NULL if u is None else <GrB_Vector>u.obj,
         y,
         NULL if desc is None else desc.ss_obj,
     )
@@ -2038,11 +1975,74 @@ cdef Vector_apply_BinaryOp2nd_UINT8_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GrB_Vector_apply_BinaryOp2nd_UINT8(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        NULL if mask is None else <GrB_Vector>(mask.obj),
+        NULL if w is None else <GrB_Vector>w.obj,
+        NULL if mask is None else <GrB_Vector>mask.obj,
         NULL if accum is None else accum.ss_obj,
         NULL if op is None else op.ss_obj,
-        NULL if u is None else <GrB_Vector>(u.obj),
+        NULL if u is None else <GrB_Vector>u.obj,
+        y,
+        NULL if desc is None else desc.ss_obj,
+    )
+    if result != GrB_SUCCESS:
+        raise ValueError(result)
+
+cdef Vector_apply_BinaryOp2nd_UINT16_SS(
+    Vector w,
+    Vector mask,
+    BinaryOp accum,
+    BinaryOp op,
+    Vector u,
+    uint16_t y,
+    Descriptor desc,
+):
+    cdef GrB_Info result = GrB_Vector_apply_BinaryOp2nd_UINT16(
+        NULL if w is None else <GrB_Vector>w.obj,
+        NULL if mask is None else <GrB_Vector>mask.obj,
+        NULL if accum is None else accum.ss_obj,
+        NULL if op is None else op.ss_obj,
+        NULL if u is None else <GrB_Vector>u.obj,
+        y,
+        NULL if desc is None else desc.ss_obj,
+    )
+    if result != GrB_SUCCESS:
+        raise ValueError(result)
+
+cdef Vector_apply_BinaryOp2nd_UINT32_SS(
+    Vector w,
+    Vector mask,
+    BinaryOp accum,
+    BinaryOp op,
+    Vector u,
+    uint32_t y,
+    Descriptor desc,
+):
+    cdef GrB_Info result = GrB_Vector_apply_BinaryOp2nd_UINT32(
+        NULL if w is None else <GrB_Vector>w.obj,
+        NULL if mask is None else <GrB_Vector>mask.obj,
+        NULL if accum is None else accum.ss_obj,
+        NULL if op is None else op.ss_obj,
+        NULL if u is None else <GrB_Vector>u.obj,
+        y,
+        NULL if desc is None else desc.ss_obj,
+    )
+    if result != GrB_SUCCESS:
+        raise ValueError(result)
+
+cdef Vector_apply_BinaryOp2nd_UINT64_SS(
+    Vector w,
+    Vector mask,
+    BinaryOp accum,
+    BinaryOp op,
+    Vector u,
+    uint64_t y,
+    Descriptor desc,
+):
+    cdef GrB_Info result = GrB_Vector_apply_BinaryOp2nd_UINT64(
+        NULL if w is None else <GrB_Vector>w.obj,
+        NULL if mask is None else <GrB_Vector>mask.obj,
+        NULL if accum is None else accum.ss_obj,
+        NULL if op is None else op.ss_obj,
+        NULL if u is None else <GrB_Vector>u.obj,
         y,
         NULL if desc is None else desc.ss_obj,
     )
@@ -2059,10 +2059,10 @@ cdef Vector_assign_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GrB_Vector_assign(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        NULL if mask is None else <GrB_Vector>(mask.obj),
+        NULL if w is None else <GrB_Vector>w.obj,
+        NULL if mask is None else <GrB_Vector>mask.obj,
         NULL if accum is None else accum.ss_obj,
-        NULL if u is None else <GrB_Vector>(u.obj),
+        NULL if u is None else <GrB_Vector>u.obj,
         I,
         ni,
         NULL if desc is None else desc.ss_obj,
@@ -2080,8 +2080,8 @@ cdef Vector_assign_BOOL_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GrB_Vector_assign_BOOL(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        NULL if mask is None else <GrB_Vector>(mask.obj),
+        NULL if w is None else <GrB_Vector>w.obj,
+        NULL if mask is None else <GrB_Vector>mask.obj,
         NULL if accum is None else accum.ss_obj,
         x,
         I,
@@ -2101,8 +2101,8 @@ cdef Vector_assign_FP32_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GrB_Vector_assign_FP32(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        NULL if mask is None else <GrB_Vector>(mask.obj),
+        NULL if w is None else <GrB_Vector>w.obj,
+        NULL if mask is None else <GrB_Vector>mask.obj,
         NULL if accum is None else accum.ss_obj,
         x,
         I,
@@ -2122,71 +2122,8 @@ cdef Vector_assign_FP64_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GrB_Vector_assign_FP64(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        NULL if mask is None else <GrB_Vector>(mask.obj),
-        NULL if accum is None else accum.ss_obj,
-        x,
-        I,
-        ni,
-        NULL if desc is None else desc.ss_obj,
-    )
-    if result != GrB_SUCCESS:
-        raise ValueError(result)
-
-cdef Vector_assign_INT16_SS(
-    Vector w,
-    Vector mask,
-    BinaryOp accum,
-    int16_t x,
-    Index *I,
-    Index ni,
-    Descriptor desc,
-):
-    cdef GrB_Info result = GrB_Vector_assign_INT16(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        NULL if mask is None else <GrB_Vector>(mask.obj),
-        NULL if accum is None else accum.ss_obj,
-        x,
-        I,
-        ni,
-        NULL if desc is None else desc.ss_obj,
-    )
-    if result != GrB_SUCCESS:
-        raise ValueError(result)
-
-cdef Vector_assign_INT32_SS(
-    Vector w,
-    Vector mask,
-    BinaryOp accum,
-    int32_t x,
-    Index *I,
-    Index ni,
-    Descriptor desc,
-):
-    cdef GrB_Info result = GrB_Vector_assign_INT32(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        NULL if mask is None else <GrB_Vector>(mask.obj),
-        NULL if accum is None else accum.ss_obj,
-        x,
-        I,
-        ni,
-        NULL if desc is None else desc.ss_obj,
-    )
-    if result != GrB_SUCCESS:
-        raise ValueError(result)
-
-cdef Vector_assign_INT64_SS(
-    Vector w,
-    Vector mask,
-    BinaryOp accum,
-    int64_t x,
-    Index *I,
-    Index ni,
-    Descriptor desc,
-):
-    cdef GrB_Info result = GrB_Vector_assign_INT64(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        NULL if mask is None else <GrB_Vector>(mask.obj),
+        NULL if w is None else <GrB_Vector>w.obj,
+        NULL if mask is None else <GrB_Vector>mask.obj,
         NULL if accum is None else accum.ss_obj,
         x,
         I,
@@ -2206,8 +2143,8 @@ cdef Vector_assign_INT8_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GrB_Vector_assign_INT8(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        NULL if mask is None else <GrB_Vector>(mask.obj),
+        NULL if w is None else <GrB_Vector>w.obj,
+        NULL if mask is None else <GrB_Vector>mask.obj,
         NULL if accum is None else accum.ss_obj,
         x,
         I,
@@ -2217,18 +2154,18 @@ cdef Vector_assign_INT8_SS(
     if result != GrB_SUCCESS:
         raise ValueError(result)
 
-cdef Vector_assign_UINT16_SS(
+cdef Vector_assign_INT16_SS(
     Vector w,
     Vector mask,
     BinaryOp accum,
-    uint16_t x,
+    int16_t x,
     Index *I,
     Index ni,
     Descriptor desc,
 ):
-    cdef GrB_Info result = GrB_Vector_assign_UINT16(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        NULL if mask is None else <GrB_Vector>(mask.obj),
+    cdef GrB_Info result = GrB_Vector_assign_INT16(
+        NULL if w is None else <GrB_Vector>w.obj,
+        NULL if mask is None else <GrB_Vector>mask.obj,
         NULL if accum is None else accum.ss_obj,
         x,
         I,
@@ -2238,18 +2175,18 @@ cdef Vector_assign_UINT16_SS(
     if result != GrB_SUCCESS:
         raise ValueError(result)
 
-cdef Vector_assign_UINT32_SS(
+cdef Vector_assign_INT32_SS(
     Vector w,
     Vector mask,
     BinaryOp accum,
-    uint32_t x,
+    int32_t x,
     Index *I,
     Index ni,
     Descriptor desc,
 ):
-    cdef GrB_Info result = GrB_Vector_assign_UINT32(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        NULL if mask is None else <GrB_Vector>(mask.obj),
+    cdef GrB_Info result = GrB_Vector_assign_INT32(
+        NULL if w is None else <GrB_Vector>w.obj,
+        NULL if mask is None else <GrB_Vector>mask.obj,
         NULL if accum is None else accum.ss_obj,
         x,
         I,
@@ -2259,18 +2196,18 @@ cdef Vector_assign_UINT32_SS(
     if result != GrB_SUCCESS:
         raise ValueError(result)
 
-cdef Vector_assign_UINT64_SS(
+cdef Vector_assign_INT64_SS(
     Vector w,
     Vector mask,
     BinaryOp accum,
-    uint64_t x,
+    int64_t x,
     Index *I,
     Index ni,
     Descriptor desc,
 ):
-    cdef GrB_Info result = GrB_Vector_assign_UINT64(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        NULL if mask is None else <GrB_Vector>(mask.obj),
+    cdef GrB_Info result = GrB_Vector_assign_INT64(
+        NULL if w is None else <GrB_Vector>w.obj,
+        NULL if mask is None else <GrB_Vector>mask.obj,
         NULL if accum is None else accum.ss_obj,
         x,
         I,
@@ -2290,8 +2227,71 @@ cdef Vector_assign_UINT8_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GrB_Vector_assign_UINT8(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        NULL if mask is None else <GrB_Vector>(mask.obj),
+        NULL if w is None else <GrB_Vector>w.obj,
+        NULL if mask is None else <GrB_Vector>mask.obj,
+        NULL if accum is None else accum.ss_obj,
+        x,
+        I,
+        ni,
+        NULL if desc is None else desc.ss_obj,
+    )
+    if result != GrB_SUCCESS:
+        raise ValueError(result)
+
+cdef Vector_assign_UINT16_SS(
+    Vector w,
+    Vector mask,
+    BinaryOp accum,
+    uint16_t x,
+    Index *I,
+    Index ni,
+    Descriptor desc,
+):
+    cdef GrB_Info result = GrB_Vector_assign_UINT16(
+        NULL if w is None else <GrB_Vector>w.obj,
+        NULL if mask is None else <GrB_Vector>mask.obj,
+        NULL if accum is None else accum.ss_obj,
+        x,
+        I,
+        ni,
+        NULL if desc is None else desc.ss_obj,
+    )
+    if result != GrB_SUCCESS:
+        raise ValueError(result)
+
+cdef Vector_assign_UINT32_SS(
+    Vector w,
+    Vector mask,
+    BinaryOp accum,
+    uint32_t x,
+    Index *I,
+    Index ni,
+    Descriptor desc,
+):
+    cdef GrB_Info result = GrB_Vector_assign_UINT32(
+        NULL if w is None else <GrB_Vector>w.obj,
+        NULL if mask is None else <GrB_Vector>mask.obj,
+        NULL if accum is None else accum.ss_obj,
+        x,
+        I,
+        ni,
+        NULL if desc is None else desc.ss_obj,
+    )
+    if result != GrB_SUCCESS:
+        raise ValueError(result)
+
+cdef Vector_assign_UINT64_SS(
+    Vector w,
+    Vector mask,
+    BinaryOp accum,
+    uint64_t x,
+    Index *I,
+    Index ni,
+    Descriptor desc,
+):
+    cdef GrB_Info result = GrB_Vector_assign_UINT64(
+        NULL if w is None else <GrB_Vector>w.obj,
+        NULL if mask is None else <GrB_Vector>mask.obj,
         NULL if accum is None else accum.ss_obj,
         x,
         I,
@@ -2309,7 +2309,7 @@ cdef Vector_build_BOOL_SS(
     BinaryOp dup,
 ):
     cdef GrB_Info result = GrB_Vector_build_BOOL(
-        NULL if w is None else <GrB_Vector>(w.obj),
+        NULL if w is None else <GrB_Vector>w.obj,
         I,
         X,
         nvals,
@@ -2326,7 +2326,7 @@ cdef Vector_build_FP32_SS(
     BinaryOp dup,
 ):
     cdef GrB_Info result = GrB_Vector_build_FP32(
-        NULL if w is None else <GrB_Vector>(w.obj),
+        NULL if w is None else <GrB_Vector>w.obj,
         I,
         X,
         nvals,
@@ -2343,58 +2343,7 @@ cdef Vector_build_FP64_SS(
     BinaryOp dup,
 ):
     cdef GrB_Info result = GrB_Vector_build_FP64(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        I,
-        X,
-        nvals,
-        NULL if dup is None else dup.ss_obj,
-    )
-    if result != GrB_SUCCESS:
-        raise ValueError(result)
-
-cdef Vector_build_INT16_SS(
-    Vector w,
-    Index *I,
-    int16_t *X,
-    Index nvals,
-    BinaryOp dup,
-):
-    cdef GrB_Info result = GrB_Vector_build_INT16(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        I,
-        X,
-        nvals,
-        NULL if dup is None else dup.ss_obj,
-    )
-    if result != GrB_SUCCESS:
-        raise ValueError(result)
-
-cdef Vector_build_INT32_SS(
-    Vector w,
-    Index *I,
-    int32_t *X,
-    Index nvals,
-    BinaryOp dup,
-):
-    cdef GrB_Info result = GrB_Vector_build_INT32(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        I,
-        X,
-        nvals,
-        NULL if dup is None else dup.ss_obj,
-    )
-    if result != GrB_SUCCESS:
-        raise ValueError(result)
-
-cdef Vector_build_INT64_SS(
-    Vector w,
-    Index *I,
-    int64_t *X,
-    Index nvals,
-    BinaryOp dup,
-):
-    cdef GrB_Info result = GrB_Vector_build_INT64(
-        NULL if w is None else <GrB_Vector>(w.obj),
+        NULL if w is None else <GrB_Vector>w.obj,
         I,
         X,
         nvals,
@@ -2411,7 +2360,7 @@ cdef Vector_build_INT8_SS(
     BinaryOp dup,
 ):
     cdef GrB_Info result = GrB_Vector_build_INT8(
-        NULL if w is None else <GrB_Vector>(w.obj),
+        NULL if w is None else <GrB_Vector>w.obj,
         I,
         X,
         nvals,
@@ -2420,15 +2369,15 @@ cdef Vector_build_INT8_SS(
     if result != GrB_SUCCESS:
         raise ValueError(result)
 
-cdef Vector_build_UINT16_SS(
+cdef Vector_build_INT16_SS(
     Vector w,
     Index *I,
-    uint16_t *X,
+    int16_t *X,
     Index nvals,
     BinaryOp dup,
 ):
-    cdef GrB_Info result = GrB_Vector_build_UINT16(
-        NULL if w is None else <GrB_Vector>(w.obj),
+    cdef GrB_Info result = GrB_Vector_build_INT16(
+        NULL if w is None else <GrB_Vector>w.obj,
         I,
         X,
         nvals,
@@ -2437,15 +2386,15 @@ cdef Vector_build_UINT16_SS(
     if result != GrB_SUCCESS:
         raise ValueError(result)
 
-cdef Vector_build_UINT32_SS(
+cdef Vector_build_INT32_SS(
     Vector w,
     Index *I,
-    uint32_t *X,
+    int32_t *X,
     Index nvals,
     BinaryOp dup,
 ):
-    cdef GrB_Info result = GrB_Vector_build_UINT32(
-        NULL if w is None else <GrB_Vector>(w.obj),
+    cdef GrB_Info result = GrB_Vector_build_INT32(
+        NULL if w is None else <GrB_Vector>w.obj,
         I,
         X,
         nvals,
@@ -2454,15 +2403,15 @@ cdef Vector_build_UINT32_SS(
     if result != GrB_SUCCESS:
         raise ValueError(result)
 
-cdef Vector_build_UINT64_SS(
+cdef Vector_build_INT64_SS(
     Vector w,
     Index *I,
-    uint64_t *X,
+    int64_t *X,
     Index nvals,
     BinaryOp dup,
 ):
-    cdef GrB_Info result = GrB_Vector_build_UINT64(
-        NULL if w is None else <GrB_Vector>(w.obj),
+    cdef GrB_Info result = GrB_Vector_build_INT64(
+        NULL if w is None else <GrB_Vector>w.obj,
         I,
         X,
         nvals,
@@ -2479,7 +2428,58 @@ cdef Vector_build_UINT8_SS(
     BinaryOp dup,
 ):
     cdef GrB_Info result = GrB_Vector_build_UINT8(
-        NULL if w is None else <GrB_Vector>(w.obj),
+        NULL if w is None else <GrB_Vector>w.obj,
+        I,
+        X,
+        nvals,
+        NULL if dup is None else dup.ss_obj,
+    )
+    if result != GrB_SUCCESS:
+        raise ValueError(result)
+
+cdef Vector_build_UINT16_SS(
+    Vector w,
+    Index *I,
+    uint16_t *X,
+    Index nvals,
+    BinaryOp dup,
+):
+    cdef GrB_Info result = GrB_Vector_build_UINT16(
+        NULL if w is None else <GrB_Vector>w.obj,
+        I,
+        X,
+        nvals,
+        NULL if dup is None else dup.ss_obj,
+    )
+    if result != GrB_SUCCESS:
+        raise ValueError(result)
+
+cdef Vector_build_UINT32_SS(
+    Vector w,
+    Index *I,
+    uint32_t *X,
+    Index nvals,
+    BinaryOp dup,
+):
+    cdef GrB_Info result = GrB_Vector_build_UINT32(
+        NULL if w is None else <GrB_Vector>w.obj,
+        I,
+        X,
+        nvals,
+        NULL if dup is None else dup.ss_obj,
+    )
+    if result != GrB_SUCCESS:
+        raise ValueError(result)
+
+cdef Vector_build_UINT64_SS(
+    Vector w,
+    Index *I,
+    uint64_t *X,
+    Index nvals,
+    BinaryOp dup,
+):
+    cdef GrB_Info result = GrB_Vector_build_UINT64(
+        NULL if w is None else <GrB_Vector>w.obj,
         I,
         X,
         nvals,
@@ -2492,7 +2492,7 @@ cdef Vector_clear_SS(
     Vector v,
 ):
     cdef GrB_Info result = GrB_Vector_clear(
-        NULL if v is None else <GrB_Vector>(v.obj),
+        NULL if v is None else <GrB_Vector>v.obj,
     )
     if result != GrB_SUCCESS:
         raise ValueError(result)
@@ -2502,8 +2502,8 @@ cdef Vector_dup_SS(
     Vector u,
 ):
     cdef GrB_Info result = GrB_Vector_dup(
-        NULL if w is None else <GrB_Vector*>(w.obj),
-        NULL if u is None else <GrB_Vector>(u.obj),
+        NULL if w is None else <GrB_Vector*>&w.obj,
+        NULL if u is None else <GrB_Vector>u.obj,
     )
     if result != GrB_SUCCESS:
         raise ValueError(result)
@@ -2518,12 +2518,12 @@ cdef Vector_eWiseAdd_BinaryOp_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GrB_Vector_eWiseAdd_BinaryOp(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        NULL if mask is None else <GrB_Vector>(mask.obj),
+        NULL if w is None else <GrB_Vector>w.obj,
+        NULL if mask is None else <GrB_Vector>mask.obj,
         NULL if accum is None else accum.ss_obj,
         NULL if add is None else add.ss_obj,
-        NULL if u is None else <GrB_Vector>(u.obj),
-        NULL if v is None else <GrB_Vector>(v.obj),
+        NULL if u is None else <GrB_Vector>u.obj,
+        NULL if v is None else <GrB_Vector>v.obj,
         NULL if desc is None else desc.ss_obj,
     )
     if result != GrB_SUCCESS:
@@ -2539,12 +2539,12 @@ cdef Vector_eWiseAdd_Monoid_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GrB_Vector_eWiseAdd_Monoid(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        NULL if mask is None else <GrB_Vector>(mask.obj),
+        NULL if w is None else <GrB_Vector>w.obj,
+        NULL if mask is None else <GrB_Vector>mask.obj,
         NULL if accum is None else accum.ss_obj,
         NULL if monoid is None else monoid.ss_obj,
-        NULL if u is None else <GrB_Vector>(u.obj),
-        NULL if v is None else <GrB_Vector>(v.obj),
+        NULL if u is None else <GrB_Vector>u.obj,
+        NULL if v is None else <GrB_Vector>v.obj,
         NULL if desc is None else desc.ss_obj,
     )
     if result != GrB_SUCCESS:
@@ -2560,12 +2560,12 @@ cdef Vector_eWiseAdd_Semiring_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GrB_Vector_eWiseAdd_Semiring(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        NULL if mask is None else <GrB_Vector>(mask.obj),
+        NULL if w is None else <GrB_Vector>w.obj,
+        NULL if mask is None else <GrB_Vector>mask.obj,
         NULL if accum is None else accum.ss_obj,
         NULL if semiring is None else semiring.ss_obj,
-        NULL if u is None else <GrB_Vector>(u.obj),
-        NULL if v is None else <GrB_Vector>(v.obj),
+        NULL if u is None else <GrB_Vector>u.obj,
+        NULL if v is None else <GrB_Vector>v.obj,
         NULL if desc is None else desc.ss_obj,
     )
     if result != GrB_SUCCESS:
@@ -2581,12 +2581,12 @@ cdef Vector_eWiseMult_BinaryOp_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GrB_Vector_eWiseMult_BinaryOp(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        NULL if mask is None else <GrB_Vector>(mask.obj),
+        NULL if w is None else <GrB_Vector>w.obj,
+        NULL if mask is None else <GrB_Vector>mask.obj,
         NULL if accum is None else accum.ss_obj,
         NULL if mult is None else mult.ss_obj,
-        NULL if u is None else <GrB_Vector>(u.obj),
-        NULL if v is None else <GrB_Vector>(v.obj),
+        NULL if u is None else <GrB_Vector>u.obj,
+        NULL if v is None else <GrB_Vector>v.obj,
         NULL if desc is None else desc.ss_obj,
     )
     if result != GrB_SUCCESS:
@@ -2602,12 +2602,12 @@ cdef Vector_eWiseMult_Monoid_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GrB_Vector_eWiseMult_Monoid(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        NULL if mask is None else <GrB_Vector>(mask.obj),
+        NULL if w is None else <GrB_Vector>w.obj,
+        NULL if mask is None else <GrB_Vector>mask.obj,
         NULL if accum is None else accum.ss_obj,
         NULL if monoid is None else monoid.ss_obj,
-        NULL if u is None else <GrB_Vector>(u.obj),
-        NULL if v is None else <GrB_Vector>(v.obj),
+        NULL if u is None else <GrB_Vector>u.obj,
+        NULL if v is None else <GrB_Vector>v.obj,
         NULL if desc is None else desc.ss_obj,
     )
     if result != GrB_SUCCESS:
@@ -2623,12 +2623,12 @@ cdef Vector_eWiseMult_Semiring_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GrB_Vector_eWiseMult_Semiring(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        NULL if mask is None else <GrB_Vector>(mask.obj),
+        NULL if w is None else <GrB_Vector>w.obj,
+        NULL if mask is None else <GrB_Vector>mask.obj,
         NULL if accum is None else accum.ss_obj,
         NULL if semiring is None else semiring.ss_obj,
-        NULL if u is None else <GrB_Vector>(u.obj),
-        NULL if v is None else <GrB_Vector>(v.obj),
+        NULL if u is None else <GrB_Vector>u.obj,
+        NULL if v is None else <GrB_Vector>v.obj,
         NULL if desc is None else desc.ss_obj,
     )
     if result != GrB_SUCCESS:
@@ -2644,10 +2644,10 @@ cdef Vector_extract_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GrB_Vector_extract(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        NULL if mask is None else <GrB_Vector>(mask.obj),
+        NULL if w is None else <GrB_Vector>w.obj,
+        NULL if mask is None else <GrB_Vector>mask.obj,
         NULL if accum is None else accum.ss_obj,
-        NULL if u is None else <GrB_Vector>(u.obj),
+        NULL if u is None else <GrB_Vector>u.obj,
         I,
         ni,
         NULL if desc is None else desc.ss_obj,
@@ -2659,7 +2659,7 @@ cdef Vector_free_SS(
     Vector v,
 ):
     cdef GrB_Info result = GrB_Vector_free(
-        NULL if v is None else <GrB_Vector*>(v.obj),
+        NULL if v is None else <GrB_Vector*>&v.obj,
     )
     if result != GrB_SUCCESS:
         raise ValueError(result)
@@ -2670,7 +2670,7 @@ cdef Vector_new_SS(
     Index n,
 ):
     cdef GrB_Info result = GrB_Vector_new(
-        NULL if v is None else <GrB_Vector*>(v.obj),
+        NULL if v is None else <GrB_Vector*>&v.obj,
         NULL if type is None else type.ss_obj,
         n,
     )
@@ -2682,7 +2682,7 @@ cdef Vector_removeElement_SS(
     Index i,
 ):
     cdef GrB_Info result = GrB_Vector_removeElement(
-        NULL if v is None else <GrB_Vector>(v.obj),
+        NULL if v is None else <GrB_Vector>v.obj,
         i,
     )
     if result != GrB_SUCCESS:
@@ -2693,7 +2693,7 @@ cdef Vector_resize_SS(
     Index nrows_new,
 ):
     cdef GrB_Info result = GrB_Vector_resize(
-        NULL if w is None else <GrB_Vector>(w.obj),
+        NULL if w is None else <GrB_Vector>w.obj,
         nrows_new,
     )
     if result != GrB_SUCCESS:
@@ -2705,7 +2705,7 @@ cdef Vector_setElement_BOOL_SS(
     Index i,
 ):
     cdef GrB_Info result = GrB_Vector_setElement_BOOL(
-        NULL if w is None else <GrB_Vector>(w.obj),
+        NULL if w is None else <GrB_Vector>w.obj,
         x,
         i,
     )
@@ -2718,7 +2718,7 @@ cdef Vector_setElement_FP32_SS(
     Index i,
 ):
     cdef GrB_Info result = GrB_Vector_setElement_FP32(
-        NULL if w is None else <GrB_Vector>(w.obj),
+        NULL if w is None else <GrB_Vector>w.obj,
         x,
         i,
     )
@@ -2731,46 +2731,7 @@ cdef Vector_setElement_FP64_SS(
     Index i,
 ):
     cdef GrB_Info result = GrB_Vector_setElement_FP64(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        x,
-        i,
-    )
-    if result != GrB_SUCCESS:
-        raise ValueError(result)
-
-cdef Vector_setElement_INT16_SS(
-    Vector w,
-    int16_t x,
-    Index i,
-):
-    cdef GrB_Info result = GrB_Vector_setElement_INT16(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        x,
-        i,
-    )
-    if result != GrB_SUCCESS:
-        raise ValueError(result)
-
-cdef Vector_setElement_INT32_SS(
-    Vector w,
-    int32_t x,
-    Index i,
-):
-    cdef GrB_Info result = GrB_Vector_setElement_INT32(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        x,
-        i,
-    )
-    if result != GrB_SUCCESS:
-        raise ValueError(result)
-
-cdef Vector_setElement_INT64_SS(
-    Vector w,
-    int64_t x,
-    Index i,
-):
-    cdef GrB_Info result = GrB_Vector_setElement_INT64(
-        NULL if w is None else <GrB_Vector>(w.obj),
+        NULL if w is None else <GrB_Vector>w.obj,
         x,
         i,
     )
@@ -2783,46 +2744,46 @@ cdef Vector_setElement_INT8_SS(
     Index i,
 ):
     cdef GrB_Info result = GrB_Vector_setElement_INT8(
-        NULL if w is None else <GrB_Vector>(w.obj),
+        NULL if w is None else <GrB_Vector>w.obj,
         x,
         i,
     )
     if result != GrB_SUCCESS:
         raise ValueError(result)
 
-cdef Vector_setElement_UINT16_SS(
+cdef Vector_setElement_INT16_SS(
     Vector w,
-    uint16_t x,
+    int16_t x,
     Index i,
 ):
-    cdef GrB_Info result = GrB_Vector_setElement_UINT16(
-        NULL if w is None else <GrB_Vector>(w.obj),
+    cdef GrB_Info result = GrB_Vector_setElement_INT16(
+        NULL if w is None else <GrB_Vector>w.obj,
         x,
         i,
     )
     if result != GrB_SUCCESS:
         raise ValueError(result)
 
-cdef Vector_setElement_UINT32_SS(
+cdef Vector_setElement_INT32_SS(
     Vector w,
-    uint32_t x,
+    int32_t x,
     Index i,
 ):
-    cdef GrB_Info result = GrB_Vector_setElement_UINT32(
-        NULL if w is None else <GrB_Vector>(w.obj),
+    cdef GrB_Info result = GrB_Vector_setElement_INT32(
+        NULL if w is None else <GrB_Vector>w.obj,
         x,
         i,
     )
     if result != GrB_SUCCESS:
         raise ValueError(result)
 
-cdef Vector_setElement_UINT64_SS(
+cdef Vector_setElement_INT64_SS(
     Vector w,
-    uint64_t x,
+    int64_t x,
     Index i,
 ):
-    cdef GrB_Info result = GrB_Vector_setElement_UINT64(
-        NULL if w is None else <GrB_Vector>(w.obj),
+    cdef GrB_Info result = GrB_Vector_setElement_INT64(
+        NULL if w is None else <GrB_Vector>w.obj,
         x,
         i,
     )
@@ -2835,7 +2796,46 @@ cdef Vector_setElement_UINT8_SS(
     Index i,
 ):
     cdef GrB_Info result = GrB_Vector_setElement_UINT8(
-        NULL if w is None else <GrB_Vector>(w.obj),
+        NULL if w is None else <GrB_Vector>w.obj,
+        x,
+        i,
+    )
+    if result != GrB_SUCCESS:
+        raise ValueError(result)
+
+cdef Vector_setElement_UINT16_SS(
+    Vector w,
+    uint16_t x,
+    Index i,
+):
+    cdef GrB_Info result = GrB_Vector_setElement_UINT16(
+        NULL if w is None else <GrB_Vector>w.obj,
+        x,
+        i,
+    )
+    if result != GrB_SUCCESS:
+        raise ValueError(result)
+
+cdef Vector_setElement_UINT32_SS(
+    Vector w,
+    uint32_t x,
+    Index i,
+):
+    cdef GrB_Info result = GrB_Vector_setElement_UINT32(
+        NULL if w is None else <GrB_Vector>w.obj,
+        x,
+        i,
+    )
+    if result != GrB_SUCCESS:
+        raise ValueError(result)
+
+cdef Vector_setElement_UINT64_SS(
+    Vector w,
+    uint64_t x,
+    Index i,
+):
+    cdef GrB_Info result = GrB_Vector_setElement_UINT64(
+        NULL if w is None else <GrB_Vector>w.obj,
         x,
         i,
     )
@@ -2846,7 +2846,7 @@ cdef Vector_wait_SS(
     Vector v,
 ):
     cdef GrB_Info result = GrB_Vector_wait(
-        NULL if v is None else <GrB_Vector*>(v.obj),
+        NULL if v is None else <GrB_Vector*>&v.obj,
     )
     if result != GrB_SUCCESS:
         raise ValueError(result)
@@ -2855,7 +2855,7 @@ cdef init_SS(
     Mode mode,
 ):
     cdef GrB_Info result = GrB_init(
-        <GrB_Mode>(mode.obj),
+        <GrB_Mode>mode.ss_obj,
     )
     if result != GrB_SUCCESS:
         raise ValueError(result)
@@ -2870,12 +2870,12 @@ cdef mxm_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GrB_mxm(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if Mask is None else <GrB_Matrix>(Mask.obj),
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if Mask is None else <GrB_Matrix>Mask.obj,
         NULL if accum is None else accum.ss_obj,
         NULL if semiring is None else semiring.ss_obj,
-        NULL if A is None else <GrB_Matrix>(A.obj),
-        NULL if B is None else <GrB_Matrix>(B.obj),
+        NULL if A is None else <GrB_Matrix>A.obj,
+        NULL if B is None else <GrB_Matrix>B.obj,
         NULL if desc is None else desc.ss_obj,
     )
     if result != GrB_SUCCESS:
@@ -2891,12 +2891,12 @@ cdef mxv_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GrB_mxv(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        NULL if mask is None else <GrB_Vector>(mask.obj),
+        NULL if w is None else <GrB_Vector>w.obj,
+        NULL if mask is None else <GrB_Vector>mask.obj,
         NULL if accum is None else accum.ss_obj,
         NULL if semiring is None else semiring.ss_obj,
-        NULL if A is None else <GrB_Matrix>(A.obj),
-        NULL if u is None else <GrB_Vector>(u.obj),
+        NULL if A is None else <GrB_Matrix>A.obj,
+        NULL if u is None else <GrB_Vector>u.obj,
         NULL if desc is None else desc.ss_obj,
     )
     if result != GrB_SUCCESS:
@@ -2910,10 +2910,10 @@ cdef transpose_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GrB_transpose(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if Mask is None else <GrB_Matrix>(Mask.obj),
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if Mask is None else <GrB_Matrix>Mask.obj,
         NULL if accum is None else accum.ss_obj,
-        NULL if A is None else <GrB_Matrix>(A.obj),
+        NULL if A is None else <GrB_Matrix>A.obj,
         NULL if desc is None else desc.ss_obj,
     )
     if result != GrB_SUCCESS:
@@ -2929,12 +2929,12 @@ cdef vxm_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GrB_vxm(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        NULL if mask is None else <GrB_Vector>(mask.obj),
+        NULL if w is None else <GrB_Vector>w.obj,
+        NULL if mask is None else <GrB_Vector>mask.obj,
         NULL if accum is None else accum.ss_obj,
         NULL if semiring is None else semiring.ss_obj,
-        NULL if u is None else <GrB_Vector>(u.obj),
-        NULL if A is None else <GrB_Matrix>(A.obj),
+        NULL if u is None else <GrB_Vector>u.obj,
+        NULL if A is None else <GrB_Matrix>A.obj,
         NULL if desc is None else desc.ss_obj,
     )
     if result != GrB_SUCCESS:
@@ -2952,10 +2952,10 @@ cdef Col_subassign_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GxB_Col_subassign(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if mask is None else <GrB_Vector>(mask.obj),
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if mask is None else <GrB_Vector>mask.obj,
         NULL if accum is None else accum.ss_obj,
-        NULL if u is None else <GrB_Vector>(u.obj),
+        NULL if u is None else <GrB_Vector>u.obj,
         I,
         ni,
         j,
@@ -2974,12 +2974,12 @@ cdef Matrix_apply_BinaryOp1st_FC32_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GxB_Matrix_apply_BinaryOp1st_FC32(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if Mask is None else <GrB_Matrix>(Mask.obj),
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if Mask is None else <GrB_Matrix>Mask.obj,
         NULL if accum is None else accum.ss_obj,
         NULL if op is None else op.ss_obj,
         x,
-        NULL if A is None else <GrB_Matrix>(A.obj),
+        NULL if A is None else <GrB_Matrix>A.obj,
         NULL if desc is None else desc.ss_obj,
     )
     if result != GrB_SUCCESS:
@@ -2995,12 +2995,12 @@ cdef Matrix_apply_BinaryOp1st_FC64_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GxB_Matrix_apply_BinaryOp1st_FC64(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if Mask is None else <GrB_Matrix>(Mask.obj),
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if Mask is None else <GrB_Matrix>Mask.obj,
         NULL if accum is None else accum.ss_obj,
         NULL if op is None else op.ss_obj,
         x,
-        NULL if A is None else <GrB_Matrix>(A.obj),
+        NULL if A is None else <GrB_Matrix>A.obj,
         NULL if desc is None else desc.ss_obj,
     )
     if result != GrB_SUCCESS:
@@ -3016,11 +3016,11 @@ cdef Matrix_apply_BinaryOp2nd_FC32_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GxB_Matrix_apply_BinaryOp2nd_FC32(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if Mask is None else <GrB_Matrix>(Mask.obj),
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if Mask is None else <GrB_Matrix>Mask.obj,
         NULL if accum is None else accum.ss_obj,
         NULL if op is None else op.ss_obj,
-        NULL if A is None else <GrB_Matrix>(A.obj),
+        NULL if A is None else <GrB_Matrix>A.obj,
         y,
         NULL if desc is None else desc.ss_obj,
     )
@@ -3037,11 +3037,11 @@ cdef Matrix_apply_BinaryOp2nd_FC64_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GxB_Matrix_apply_BinaryOp2nd_FC64(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if Mask is None else <GrB_Matrix>(Mask.obj),
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if Mask is None else <GrB_Matrix>Mask.obj,
         NULL if accum is None else accum.ss_obj,
         NULL if op is None else op.ss_obj,
-        NULL if A is None else <GrB_Matrix>(A.obj),
+        NULL if A is None else <GrB_Matrix>A.obj,
         y,
         NULL if desc is None else desc.ss_obj,
     )
@@ -3060,8 +3060,8 @@ cdef Matrix_assign_FC32_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GxB_Matrix_assign_FC32(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if Mask is None else <GrB_Matrix>(Mask.obj),
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if Mask is None else <GrB_Matrix>Mask.obj,
         NULL if accum is None else accum.ss_obj,
         x,
         I,
@@ -3085,8 +3085,8 @@ cdef Matrix_assign_FC64_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GxB_Matrix_assign_FC64(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if Mask is None else <GrB_Matrix>(Mask.obj),
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if Mask is None else <GrB_Matrix>Mask.obj,
         NULL if accum is None else accum.ss_obj,
         x,
         I,
@@ -3107,7 +3107,7 @@ cdef Matrix_build_FC32_SS(
     BinaryOp dup,
 ):
     cdef GrB_Info result = GxB_Matrix_build_FC32(
-        NULL if C is None else <GrB_Matrix>(C.obj),
+        NULL if C is None else <GrB_Matrix>C.obj,
         I,
         J,
         X,
@@ -3126,7 +3126,7 @@ cdef Matrix_build_FC64_SS(
     BinaryOp dup,
 ):
     cdef GrB_Info result = GxB_Matrix_build_FC64(
-        NULL if C is None else <GrB_Matrix>(C.obj),
+        NULL if C is None else <GrB_Matrix>C.obj,
         I,
         J,
         X,
@@ -3143,7 +3143,7 @@ cdef Matrix_setElement_FC32_SS(
     Index j,
 ):
     cdef GrB_Info result = GxB_Matrix_setElement_FC32(
-        NULL if C is None else <GrB_Matrix>(C.obj),
+        NULL if C is None else <GrB_Matrix>C.obj,
         x,
         i,
         j,
@@ -3158,7 +3158,7 @@ cdef Matrix_setElement_FC64_SS(
     Index j,
 ):
     cdef GrB_Info result = GxB_Matrix_setElement_FC64(
-        NULL if C is None else <GrB_Matrix>(C.obj),
+        NULL if C is None else <GrB_Matrix>C.obj,
         x,
         i,
         j,
@@ -3178,10 +3178,10 @@ cdef Matrix_subassign_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GxB_Matrix_subassign(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if Mask is None else <GrB_Matrix>(Mask.obj),
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if Mask is None else <GrB_Matrix>Mask.obj,
         NULL if accum is None else accum.ss_obj,
-        NULL if A is None else <GrB_Matrix>(A.obj),
+        NULL if A is None else <GrB_Matrix>A.obj,
         I,
         ni,
         J,
@@ -3203,8 +3203,8 @@ cdef Matrix_subassign_BOOL_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GxB_Matrix_subassign_BOOL(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if Mask is None else <GrB_Matrix>(Mask.obj),
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if Mask is None else <GrB_Matrix>Mask.obj,
         NULL if accum is None else accum.ss_obj,
         x,
         I,
@@ -3228,8 +3228,8 @@ cdef Matrix_subassign_FC32_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GxB_Matrix_subassign_FC32(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if Mask is None else <GrB_Matrix>(Mask.obj),
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if Mask is None else <GrB_Matrix>Mask.obj,
         NULL if accum is None else accum.ss_obj,
         x,
         I,
@@ -3253,8 +3253,8 @@ cdef Matrix_subassign_FC64_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GxB_Matrix_subassign_FC64(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if Mask is None else <GrB_Matrix>(Mask.obj),
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if Mask is None else <GrB_Matrix>Mask.obj,
         NULL if accum is None else accum.ss_obj,
         x,
         I,
@@ -3278,8 +3278,8 @@ cdef Matrix_subassign_FP32_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GxB_Matrix_subassign_FP32(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if Mask is None else <GrB_Matrix>(Mask.obj),
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if Mask is None else <GrB_Matrix>Mask.obj,
         NULL if accum is None else accum.ss_obj,
         x,
         I,
@@ -3303,83 +3303,8 @@ cdef Matrix_subassign_FP64_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GxB_Matrix_subassign_FP64(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if Mask is None else <GrB_Matrix>(Mask.obj),
-        NULL if accum is None else accum.ss_obj,
-        x,
-        I,
-        ni,
-        J,
-        nj,
-        NULL if desc is None else desc.ss_obj,
-    )
-    if result != GrB_SUCCESS:
-        raise ValueError(result)
-
-cdef Matrix_subassign_INT16_SS(
-    Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    int16_t x,
-    Index *I,
-    Index ni,
-    Index *J,
-    Index nj,
-    Descriptor desc,
-):
-    cdef GrB_Info result = GxB_Matrix_subassign_INT16(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if Mask is None else <GrB_Matrix>(Mask.obj),
-        NULL if accum is None else accum.ss_obj,
-        x,
-        I,
-        ni,
-        J,
-        nj,
-        NULL if desc is None else desc.ss_obj,
-    )
-    if result != GrB_SUCCESS:
-        raise ValueError(result)
-
-cdef Matrix_subassign_INT32_SS(
-    Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    int32_t x,
-    Index *I,
-    Index ni,
-    Index *J,
-    Index nj,
-    Descriptor desc,
-):
-    cdef GrB_Info result = GxB_Matrix_subassign_INT32(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if Mask is None else <GrB_Matrix>(Mask.obj),
-        NULL if accum is None else accum.ss_obj,
-        x,
-        I,
-        ni,
-        J,
-        nj,
-        NULL if desc is None else desc.ss_obj,
-    )
-    if result != GrB_SUCCESS:
-        raise ValueError(result)
-
-cdef Matrix_subassign_INT64_SS(
-    Matrix C,
-    Matrix Mask,
-    BinaryOp accum,
-    int64_t x,
-    Index *I,
-    Index ni,
-    Index *J,
-    Index nj,
-    Descriptor desc,
-):
-    cdef GrB_Info result = GxB_Matrix_subassign_INT64(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if Mask is None else <GrB_Matrix>(Mask.obj),
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if Mask is None else <GrB_Matrix>Mask.obj,
         NULL if accum is None else accum.ss_obj,
         x,
         I,
@@ -3403,8 +3328,8 @@ cdef Matrix_subassign_INT8_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GxB_Matrix_subassign_INT8(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if Mask is None else <GrB_Matrix>(Mask.obj),
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if Mask is None else <GrB_Matrix>Mask.obj,
         NULL if accum is None else accum.ss_obj,
         x,
         I,
@@ -3416,20 +3341,20 @@ cdef Matrix_subassign_INT8_SS(
     if result != GrB_SUCCESS:
         raise ValueError(result)
 
-cdef Matrix_subassign_UINT16_SS(
+cdef Matrix_subassign_INT16_SS(
     Matrix C,
     Matrix Mask,
     BinaryOp accum,
-    uint16_t x,
+    int16_t x,
     Index *I,
     Index ni,
     Index *J,
     Index nj,
     Descriptor desc,
 ):
-    cdef GrB_Info result = GxB_Matrix_subassign_UINT16(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if Mask is None else <GrB_Matrix>(Mask.obj),
+    cdef GrB_Info result = GxB_Matrix_subassign_INT16(
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if Mask is None else <GrB_Matrix>Mask.obj,
         NULL if accum is None else accum.ss_obj,
         x,
         I,
@@ -3441,20 +3366,20 @@ cdef Matrix_subassign_UINT16_SS(
     if result != GrB_SUCCESS:
         raise ValueError(result)
 
-cdef Matrix_subassign_UINT32_SS(
+cdef Matrix_subassign_INT32_SS(
     Matrix C,
     Matrix Mask,
     BinaryOp accum,
-    uint32_t x,
+    int32_t x,
     Index *I,
     Index ni,
     Index *J,
     Index nj,
     Descriptor desc,
 ):
-    cdef GrB_Info result = GxB_Matrix_subassign_UINT32(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if Mask is None else <GrB_Matrix>(Mask.obj),
+    cdef GrB_Info result = GxB_Matrix_subassign_INT32(
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if Mask is None else <GrB_Matrix>Mask.obj,
         NULL if accum is None else accum.ss_obj,
         x,
         I,
@@ -3466,20 +3391,20 @@ cdef Matrix_subassign_UINT32_SS(
     if result != GrB_SUCCESS:
         raise ValueError(result)
 
-cdef Matrix_subassign_UINT64_SS(
+cdef Matrix_subassign_INT64_SS(
     Matrix C,
     Matrix Mask,
     BinaryOp accum,
-    uint64_t x,
+    int64_t x,
     Index *I,
     Index ni,
     Index *J,
     Index nj,
     Descriptor desc,
 ):
-    cdef GrB_Info result = GxB_Matrix_subassign_UINT64(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if Mask is None else <GrB_Matrix>(Mask.obj),
+    cdef GrB_Info result = GxB_Matrix_subassign_INT64(
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if Mask is None else <GrB_Matrix>Mask.obj,
         NULL if accum is None else accum.ss_obj,
         x,
         I,
@@ -3503,8 +3428,83 @@ cdef Matrix_subassign_UINT8_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GxB_Matrix_subassign_UINT8(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if Mask is None else <GrB_Matrix>(Mask.obj),
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if Mask is None else <GrB_Matrix>Mask.obj,
+        NULL if accum is None else accum.ss_obj,
+        x,
+        I,
+        ni,
+        J,
+        nj,
+        NULL if desc is None else desc.ss_obj,
+    )
+    if result != GrB_SUCCESS:
+        raise ValueError(result)
+
+cdef Matrix_subassign_UINT16_SS(
+    Matrix C,
+    Matrix Mask,
+    BinaryOp accum,
+    uint16_t x,
+    Index *I,
+    Index ni,
+    Index *J,
+    Index nj,
+    Descriptor desc,
+):
+    cdef GrB_Info result = GxB_Matrix_subassign_UINT16(
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if Mask is None else <GrB_Matrix>Mask.obj,
+        NULL if accum is None else accum.ss_obj,
+        x,
+        I,
+        ni,
+        J,
+        nj,
+        NULL if desc is None else desc.ss_obj,
+    )
+    if result != GrB_SUCCESS:
+        raise ValueError(result)
+
+cdef Matrix_subassign_UINT32_SS(
+    Matrix C,
+    Matrix Mask,
+    BinaryOp accum,
+    uint32_t x,
+    Index *I,
+    Index ni,
+    Index *J,
+    Index nj,
+    Descriptor desc,
+):
+    cdef GrB_Info result = GxB_Matrix_subassign_UINT32(
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if Mask is None else <GrB_Matrix>Mask.obj,
+        NULL if accum is None else accum.ss_obj,
+        x,
+        I,
+        ni,
+        J,
+        nj,
+        NULL if desc is None else desc.ss_obj,
+    )
+    if result != GrB_SUCCESS:
+        raise ValueError(result)
+
+cdef Matrix_subassign_UINT64_SS(
+    Matrix C,
+    Matrix Mask,
+    BinaryOp accum,
+    uint64_t x,
+    Index *I,
+    Index ni,
+    Index *J,
+    Index nj,
+    Descriptor desc,
+):
+    cdef GrB_Info result = GxB_Matrix_subassign_UINT64(
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if Mask is None else <GrB_Matrix>Mask.obj,
         NULL if accum is None else accum.ss_obj,
         x,
         I,
@@ -3527,10 +3527,10 @@ cdef Row_subassign_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GxB_Row_subassign(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if mask is None else <GrB_Vector>(mask.obj),
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if mask is None else <GrB_Vector>mask.obj,
         NULL if accum is None else accum.ss_obj,
-        NULL if u is None else <GrB_Vector>(u.obj),
+        NULL if u is None else <GrB_Vector>u.obj,
         i,
         J,
         nj,
@@ -3549,12 +3549,12 @@ cdef Vector_apply_BinaryOp1st_FC32_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GxB_Vector_apply_BinaryOp1st_FC32(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        NULL if mask is None else <GrB_Vector>(mask.obj),
+        NULL if w is None else <GrB_Vector>w.obj,
+        NULL if mask is None else <GrB_Vector>mask.obj,
         NULL if accum is None else accum.ss_obj,
         NULL if op is None else op.ss_obj,
         x,
-        NULL if u is None else <GrB_Vector>(u.obj),
+        NULL if u is None else <GrB_Vector>u.obj,
         NULL if desc is None else desc.ss_obj,
     )
     if result != GrB_SUCCESS:
@@ -3570,12 +3570,12 @@ cdef Vector_apply_BinaryOp1st_FC64_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GxB_Vector_apply_BinaryOp1st_FC64(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        NULL if mask is None else <GrB_Vector>(mask.obj),
+        NULL if w is None else <GrB_Vector>w.obj,
+        NULL if mask is None else <GrB_Vector>mask.obj,
         NULL if accum is None else accum.ss_obj,
         NULL if op is None else op.ss_obj,
         x,
-        NULL if u is None else <GrB_Vector>(u.obj),
+        NULL if u is None else <GrB_Vector>u.obj,
         NULL if desc is None else desc.ss_obj,
     )
     if result != GrB_SUCCESS:
@@ -3591,11 +3591,11 @@ cdef Vector_apply_BinaryOp2nd_FC32_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GxB_Vector_apply_BinaryOp2nd_FC32(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        NULL if mask is None else <GrB_Vector>(mask.obj),
+        NULL if w is None else <GrB_Vector>w.obj,
+        NULL if mask is None else <GrB_Vector>mask.obj,
         NULL if accum is None else accum.ss_obj,
         NULL if op is None else op.ss_obj,
-        NULL if u is None else <GrB_Vector>(u.obj),
+        NULL if u is None else <GrB_Vector>u.obj,
         y,
         NULL if desc is None else desc.ss_obj,
     )
@@ -3612,11 +3612,11 @@ cdef Vector_apply_BinaryOp2nd_FC64_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GxB_Vector_apply_BinaryOp2nd_FC64(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        NULL if mask is None else <GrB_Vector>(mask.obj),
+        NULL if w is None else <GrB_Vector>w.obj,
+        NULL if mask is None else <GrB_Vector>mask.obj,
         NULL if accum is None else accum.ss_obj,
         NULL if op is None else op.ss_obj,
-        NULL if u is None else <GrB_Vector>(u.obj),
+        NULL if u is None else <GrB_Vector>u.obj,
         y,
         NULL if desc is None else desc.ss_obj,
     )
@@ -3633,8 +3633,8 @@ cdef Vector_assign_FC32_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GxB_Vector_assign_FC32(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        NULL if mask is None else <GrB_Vector>(mask.obj),
+        NULL if w is None else <GrB_Vector>w.obj,
+        NULL if mask is None else <GrB_Vector>mask.obj,
         NULL if accum is None else accum.ss_obj,
         x,
         I,
@@ -3654,8 +3654,8 @@ cdef Vector_assign_FC64_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GxB_Vector_assign_FC64(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        NULL if mask is None else <GrB_Vector>(mask.obj),
+        NULL if w is None else <GrB_Vector>w.obj,
+        NULL if mask is None else <GrB_Vector>mask.obj,
         NULL if accum is None else accum.ss_obj,
         x,
         I,
@@ -3673,7 +3673,7 @@ cdef Vector_build_FC32_SS(
     BinaryOp dup,
 ):
     cdef GrB_Info result = GxB_Vector_build_FC32(
-        NULL if w is None else <GrB_Vector>(w.obj),
+        NULL if w is None else <GrB_Vector>w.obj,
         I,
         X,
         nvals,
@@ -3690,7 +3690,7 @@ cdef Vector_build_FC64_SS(
     BinaryOp dup,
 ):
     cdef GrB_Info result = GxB_Vector_build_FC64(
-        NULL if w is None else <GrB_Vector>(w.obj),
+        NULL if w is None else <GrB_Vector>w.obj,
         I,
         X,
         nvals,
@@ -3705,7 +3705,7 @@ cdef Vector_setElement_FC32_SS(
     Index i,
 ):
     cdef GrB_Info result = GxB_Vector_setElement_FC32(
-        NULL if w is None else <GrB_Vector>(w.obj),
+        NULL if w is None else <GrB_Vector>w.obj,
         x,
         i,
     )
@@ -3718,7 +3718,7 @@ cdef Vector_setElement_FC64_SS(
     Index i,
 ):
     cdef GrB_Info result = GxB_Vector_setElement_FC64(
-        NULL if w is None else <GrB_Vector>(w.obj),
+        NULL if w is None else <GrB_Vector>w.obj,
         x,
         i,
     )
@@ -3735,10 +3735,10 @@ cdef Vector_subassign_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GxB_Vector_subassign(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        NULL if mask is None else <GrB_Vector>(mask.obj),
+        NULL if w is None else <GrB_Vector>w.obj,
+        NULL if mask is None else <GrB_Vector>mask.obj,
         NULL if accum is None else accum.ss_obj,
-        NULL if u is None else <GrB_Vector>(u.obj),
+        NULL if u is None else <GrB_Vector>u.obj,
         I,
         ni,
         NULL if desc is None else desc.ss_obj,
@@ -3756,8 +3756,8 @@ cdef Vector_subassign_BOOL_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GxB_Vector_subassign_BOOL(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        NULL if mask is None else <GrB_Vector>(mask.obj),
+        NULL if w is None else <GrB_Vector>w.obj,
+        NULL if mask is None else <GrB_Vector>mask.obj,
         NULL if accum is None else accum.ss_obj,
         x,
         I,
@@ -3777,8 +3777,8 @@ cdef Vector_subassign_FC32_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GxB_Vector_subassign_FC32(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        NULL if mask is None else <GrB_Vector>(mask.obj),
+        NULL if w is None else <GrB_Vector>w.obj,
+        NULL if mask is None else <GrB_Vector>mask.obj,
         NULL if accum is None else accum.ss_obj,
         x,
         I,
@@ -3798,8 +3798,8 @@ cdef Vector_subassign_FC64_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GxB_Vector_subassign_FC64(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        NULL if mask is None else <GrB_Vector>(mask.obj),
+        NULL if w is None else <GrB_Vector>w.obj,
+        NULL if mask is None else <GrB_Vector>mask.obj,
         NULL if accum is None else accum.ss_obj,
         x,
         I,
@@ -3819,8 +3819,8 @@ cdef Vector_subassign_FP32_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GxB_Vector_subassign_FP32(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        NULL if mask is None else <GrB_Vector>(mask.obj),
+        NULL if w is None else <GrB_Vector>w.obj,
+        NULL if mask is None else <GrB_Vector>mask.obj,
         NULL if accum is None else accum.ss_obj,
         x,
         I,
@@ -3840,71 +3840,8 @@ cdef Vector_subassign_FP64_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GxB_Vector_subassign_FP64(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        NULL if mask is None else <GrB_Vector>(mask.obj),
-        NULL if accum is None else accum.ss_obj,
-        x,
-        I,
-        ni,
-        NULL if desc is None else desc.ss_obj,
-    )
-    if result != GrB_SUCCESS:
-        raise ValueError(result)
-
-cdef Vector_subassign_INT16_SS(
-    Vector w,
-    Vector mask,
-    BinaryOp accum,
-    int16_t x,
-    Index *I,
-    Index ni,
-    Descriptor desc,
-):
-    cdef GrB_Info result = GxB_Vector_subassign_INT16(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        NULL if mask is None else <GrB_Vector>(mask.obj),
-        NULL if accum is None else accum.ss_obj,
-        x,
-        I,
-        ni,
-        NULL if desc is None else desc.ss_obj,
-    )
-    if result != GrB_SUCCESS:
-        raise ValueError(result)
-
-cdef Vector_subassign_INT32_SS(
-    Vector w,
-    Vector mask,
-    BinaryOp accum,
-    int32_t x,
-    Index *I,
-    Index ni,
-    Descriptor desc,
-):
-    cdef GrB_Info result = GxB_Vector_subassign_INT32(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        NULL if mask is None else <GrB_Vector>(mask.obj),
-        NULL if accum is None else accum.ss_obj,
-        x,
-        I,
-        ni,
-        NULL if desc is None else desc.ss_obj,
-    )
-    if result != GrB_SUCCESS:
-        raise ValueError(result)
-
-cdef Vector_subassign_INT64_SS(
-    Vector w,
-    Vector mask,
-    BinaryOp accum,
-    int64_t x,
-    Index *I,
-    Index ni,
-    Descriptor desc,
-):
-    cdef GrB_Info result = GxB_Vector_subassign_INT64(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        NULL if mask is None else <GrB_Vector>(mask.obj),
+        NULL if w is None else <GrB_Vector>w.obj,
+        NULL if mask is None else <GrB_Vector>mask.obj,
         NULL if accum is None else accum.ss_obj,
         x,
         I,
@@ -3924,8 +3861,8 @@ cdef Vector_subassign_INT8_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GxB_Vector_subassign_INT8(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        NULL if mask is None else <GrB_Vector>(mask.obj),
+        NULL if w is None else <GrB_Vector>w.obj,
+        NULL if mask is None else <GrB_Vector>mask.obj,
         NULL if accum is None else accum.ss_obj,
         x,
         I,
@@ -3935,18 +3872,18 @@ cdef Vector_subassign_INT8_SS(
     if result != GrB_SUCCESS:
         raise ValueError(result)
 
-cdef Vector_subassign_UINT16_SS(
+cdef Vector_subassign_INT16_SS(
     Vector w,
     Vector mask,
     BinaryOp accum,
-    uint16_t x,
+    int16_t x,
     Index *I,
     Index ni,
     Descriptor desc,
 ):
-    cdef GrB_Info result = GxB_Vector_subassign_UINT16(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        NULL if mask is None else <GrB_Vector>(mask.obj),
+    cdef GrB_Info result = GxB_Vector_subassign_INT16(
+        NULL if w is None else <GrB_Vector>w.obj,
+        NULL if mask is None else <GrB_Vector>mask.obj,
         NULL if accum is None else accum.ss_obj,
         x,
         I,
@@ -3956,18 +3893,18 @@ cdef Vector_subassign_UINT16_SS(
     if result != GrB_SUCCESS:
         raise ValueError(result)
 
-cdef Vector_subassign_UINT32_SS(
+cdef Vector_subassign_INT32_SS(
     Vector w,
     Vector mask,
     BinaryOp accum,
-    uint32_t x,
+    int32_t x,
     Index *I,
     Index ni,
     Descriptor desc,
 ):
-    cdef GrB_Info result = GxB_Vector_subassign_UINT32(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        NULL if mask is None else <GrB_Vector>(mask.obj),
+    cdef GrB_Info result = GxB_Vector_subassign_INT32(
+        NULL if w is None else <GrB_Vector>w.obj,
+        NULL if mask is None else <GrB_Vector>mask.obj,
         NULL if accum is None else accum.ss_obj,
         x,
         I,
@@ -3977,18 +3914,18 @@ cdef Vector_subassign_UINT32_SS(
     if result != GrB_SUCCESS:
         raise ValueError(result)
 
-cdef Vector_subassign_UINT64_SS(
+cdef Vector_subassign_INT64_SS(
     Vector w,
     Vector mask,
     BinaryOp accum,
-    uint64_t x,
+    int64_t x,
     Index *I,
     Index ni,
     Descriptor desc,
 ):
-    cdef GrB_Info result = GxB_Vector_subassign_UINT64(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        NULL if mask is None else <GrB_Vector>(mask.obj),
+    cdef GrB_Info result = GxB_Vector_subassign_INT64(
+        NULL if w is None else <GrB_Vector>w.obj,
+        NULL if mask is None else <GrB_Vector>mask.obj,
         NULL if accum is None else accum.ss_obj,
         x,
         I,
@@ -4008,8 +3945,71 @@ cdef Vector_subassign_UINT8_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GxB_Vector_subassign_UINT8(
-        NULL if w is None else <GrB_Vector>(w.obj),
-        NULL if mask is None else <GrB_Vector>(mask.obj),
+        NULL if w is None else <GrB_Vector>w.obj,
+        NULL if mask is None else <GrB_Vector>mask.obj,
+        NULL if accum is None else accum.ss_obj,
+        x,
+        I,
+        ni,
+        NULL if desc is None else desc.ss_obj,
+    )
+    if result != GrB_SUCCESS:
+        raise ValueError(result)
+
+cdef Vector_subassign_UINT16_SS(
+    Vector w,
+    Vector mask,
+    BinaryOp accum,
+    uint16_t x,
+    Index *I,
+    Index ni,
+    Descriptor desc,
+):
+    cdef GrB_Info result = GxB_Vector_subassign_UINT16(
+        NULL if w is None else <GrB_Vector>w.obj,
+        NULL if mask is None else <GrB_Vector>mask.obj,
+        NULL if accum is None else accum.ss_obj,
+        x,
+        I,
+        ni,
+        NULL if desc is None else desc.ss_obj,
+    )
+    if result != GrB_SUCCESS:
+        raise ValueError(result)
+
+cdef Vector_subassign_UINT32_SS(
+    Vector w,
+    Vector mask,
+    BinaryOp accum,
+    uint32_t x,
+    Index *I,
+    Index ni,
+    Descriptor desc,
+):
+    cdef GrB_Info result = GxB_Vector_subassign_UINT32(
+        NULL if w is None else <GrB_Vector>w.obj,
+        NULL if mask is None else <GrB_Vector>mask.obj,
+        NULL if accum is None else accum.ss_obj,
+        x,
+        I,
+        ni,
+        NULL if desc is None else desc.ss_obj,
+    )
+    if result != GrB_SUCCESS:
+        raise ValueError(result)
+
+cdef Vector_subassign_UINT64_SS(
+    Vector w,
+    Vector mask,
+    BinaryOp accum,
+    uint64_t x,
+    Index *I,
+    Index ni,
+    Descriptor desc,
+):
+    cdef GrB_Info result = GxB_Vector_subassign_UINT64(
+        NULL if w is None else <GrB_Vector>w.obj,
+        NULL if mask is None else <GrB_Vector>mask.obj,
         NULL if accum is None else accum.ss_obj,
         x,
         I,
@@ -4023,7 +4023,7 @@ cdef cuda_init_SS(
     Mode mode,
 ):
     cdef GrB_Info result = GxB_cuda_init(
-        <GrB_Mode>(mode.obj),
+        <GrB_Mode>mode.ss_obj,
     )
     if result != GrB_SUCCESS:
         raise ValueError(result)
@@ -4038,12 +4038,12 @@ cdef kron_SS(
     Descriptor desc,
 ):
     cdef GrB_Info result = GxB_kron(
-        NULL if C is None else <GrB_Matrix>(C.obj),
-        NULL if Mask is None else <GrB_Matrix>(Mask.obj),
+        NULL if C is None else <GrB_Matrix>C.obj,
+        NULL if Mask is None else <GrB_Matrix>Mask.obj,
         NULL if accum is None else accum.ss_obj,
         NULL if op is None else op.ss_obj,
-        NULL if A is None else <GrB_Matrix>(A.obj),
-        NULL if B is None else <GrB_Matrix>(B.obj),
+        NULL if A is None else <GrB_Matrix>A.obj,
+        NULL if B is None else <GrB_Matrix>B.obj,
         NULL if desc is None else desc.ss_obj,
     )
     if result != GrB_SUCCESS:
@@ -4058,48 +4058,48 @@ Matrix_apply_ptrs[BACKEND_SS] = Matrix_apply_SS
 Matrix_apply_BinaryOp1st_BOOL_ptrs[BACKEND_SS] = Matrix_apply_BinaryOp1st_BOOL_SS
 Matrix_apply_BinaryOp1st_FP32_ptrs[BACKEND_SS] = Matrix_apply_BinaryOp1st_FP32_SS
 Matrix_apply_BinaryOp1st_FP64_ptrs[BACKEND_SS] = Matrix_apply_BinaryOp1st_FP64_SS
+Matrix_apply_BinaryOp1st_INT8_ptrs[BACKEND_SS] = Matrix_apply_BinaryOp1st_INT8_SS
 Matrix_apply_BinaryOp1st_INT16_ptrs[BACKEND_SS] = Matrix_apply_BinaryOp1st_INT16_SS
 Matrix_apply_BinaryOp1st_INT32_ptrs[BACKEND_SS] = Matrix_apply_BinaryOp1st_INT32_SS
 Matrix_apply_BinaryOp1st_INT64_ptrs[BACKEND_SS] = Matrix_apply_BinaryOp1st_INT64_SS
-Matrix_apply_BinaryOp1st_INT8_ptrs[BACKEND_SS] = Matrix_apply_BinaryOp1st_INT8_SS
+Matrix_apply_BinaryOp1st_UINT8_ptrs[BACKEND_SS] = Matrix_apply_BinaryOp1st_UINT8_SS
 Matrix_apply_BinaryOp1st_UINT16_ptrs[BACKEND_SS] = Matrix_apply_BinaryOp1st_UINT16_SS
 Matrix_apply_BinaryOp1st_UINT32_ptrs[BACKEND_SS] = Matrix_apply_BinaryOp1st_UINT32_SS
 Matrix_apply_BinaryOp1st_UINT64_ptrs[BACKEND_SS] = Matrix_apply_BinaryOp1st_UINT64_SS
-Matrix_apply_BinaryOp1st_UINT8_ptrs[BACKEND_SS] = Matrix_apply_BinaryOp1st_UINT8_SS
 Matrix_apply_BinaryOp2nd_BOOL_ptrs[BACKEND_SS] = Matrix_apply_BinaryOp2nd_BOOL_SS
 Matrix_apply_BinaryOp2nd_FP32_ptrs[BACKEND_SS] = Matrix_apply_BinaryOp2nd_FP32_SS
 Matrix_apply_BinaryOp2nd_FP64_ptrs[BACKEND_SS] = Matrix_apply_BinaryOp2nd_FP64_SS
+Matrix_apply_BinaryOp2nd_INT8_ptrs[BACKEND_SS] = Matrix_apply_BinaryOp2nd_INT8_SS
 Matrix_apply_BinaryOp2nd_INT16_ptrs[BACKEND_SS] = Matrix_apply_BinaryOp2nd_INT16_SS
 Matrix_apply_BinaryOp2nd_INT32_ptrs[BACKEND_SS] = Matrix_apply_BinaryOp2nd_INT32_SS
 Matrix_apply_BinaryOp2nd_INT64_ptrs[BACKEND_SS] = Matrix_apply_BinaryOp2nd_INT64_SS
-Matrix_apply_BinaryOp2nd_INT8_ptrs[BACKEND_SS] = Matrix_apply_BinaryOp2nd_INT8_SS
+Matrix_apply_BinaryOp2nd_UINT8_ptrs[BACKEND_SS] = Matrix_apply_BinaryOp2nd_UINT8_SS
 Matrix_apply_BinaryOp2nd_UINT16_ptrs[BACKEND_SS] = Matrix_apply_BinaryOp2nd_UINT16_SS
 Matrix_apply_BinaryOp2nd_UINT32_ptrs[BACKEND_SS] = Matrix_apply_BinaryOp2nd_UINT32_SS
 Matrix_apply_BinaryOp2nd_UINT64_ptrs[BACKEND_SS] = Matrix_apply_BinaryOp2nd_UINT64_SS
-Matrix_apply_BinaryOp2nd_UINT8_ptrs[BACKEND_SS] = Matrix_apply_BinaryOp2nd_UINT8_SS
 Matrix_assign_ptrs[BACKEND_SS] = Matrix_assign_SS
 Matrix_assign_BOOL_ptrs[BACKEND_SS] = Matrix_assign_BOOL_SS
 Matrix_assign_FP32_ptrs[BACKEND_SS] = Matrix_assign_FP32_SS
 Matrix_assign_FP64_ptrs[BACKEND_SS] = Matrix_assign_FP64_SS
+Matrix_assign_INT8_ptrs[BACKEND_SS] = Matrix_assign_INT8_SS
 Matrix_assign_INT16_ptrs[BACKEND_SS] = Matrix_assign_INT16_SS
 Matrix_assign_INT32_ptrs[BACKEND_SS] = Matrix_assign_INT32_SS
 Matrix_assign_INT64_ptrs[BACKEND_SS] = Matrix_assign_INT64_SS
-Matrix_assign_INT8_ptrs[BACKEND_SS] = Matrix_assign_INT8_SS
+Matrix_assign_UINT8_ptrs[BACKEND_SS] = Matrix_assign_UINT8_SS
 Matrix_assign_UINT16_ptrs[BACKEND_SS] = Matrix_assign_UINT16_SS
 Matrix_assign_UINT32_ptrs[BACKEND_SS] = Matrix_assign_UINT32_SS
 Matrix_assign_UINT64_ptrs[BACKEND_SS] = Matrix_assign_UINT64_SS
-Matrix_assign_UINT8_ptrs[BACKEND_SS] = Matrix_assign_UINT8_SS
 Matrix_build_BOOL_ptrs[BACKEND_SS] = Matrix_build_BOOL_SS
 Matrix_build_FP32_ptrs[BACKEND_SS] = Matrix_build_FP32_SS
 Matrix_build_FP64_ptrs[BACKEND_SS] = Matrix_build_FP64_SS
+Matrix_build_INT8_ptrs[BACKEND_SS] = Matrix_build_INT8_SS
 Matrix_build_INT16_ptrs[BACKEND_SS] = Matrix_build_INT16_SS
 Matrix_build_INT32_ptrs[BACKEND_SS] = Matrix_build_INT32_SS
 Matrix_build_INT64_ptrs[BACKEND_SS] = Matrix_build_INT64_SS
-Matrix_build_INT8_ptrs[BACKEND_SS] = Matrix_build_INT8_SS
+Matrix_build_UINT8_ptrs[BACKEND_SS] = Matrix_build_UINT8_SS
 Matrix_build_UINT16_ptrs[BACKEND_SS] = Matrix_build_UINT16_SS
 Matrix_build_UINT32_ptrs[BACKEND_SS] = Matrix_build_UINT32_SS
 Matrix_build_UINT64_ptrs[BACKEND_SS] = Matrix_build_UINT64_SS
-Matrix_build_UINT8_ptrs[BACKEND_SS] = Matrix_build_UINT8_SS
 Matrix_clear_ptrs[BACKEND_SS] = Matrix_clear_SS
 Matrix_dup_ptrs[BACKEND_SS] = Matrix_dup_SS
 Matrix_eWiseAdd_BinaryOp_ptrs[BACKEND_SS] = Matrix_eWiseAdd_BinaryOp_SS
@@ -4121,62 +4121,62 @@ Matrix_resize_ptrs[BACKEND_SS] = Matrix_resize_SS
 Matrix_setElement_BOOL_ptrs[BACKEND_SS] = Matrix_setElement_BOOL_SS
 Matrix_setElement_FP32_ptrs[BACKEND_SS] = Matrix_setElement_FP32_SS
 Matrix_setElement_FP64_ptrs[BACKEND_SS] = Matrix_setElement_FP64_SS
+Matrix_setElement_INT8_ptrs[BACKEND_SS] = Matrix_setElement_INT8_SS
 Matrix_setElement_INT16_ptrs[BACKEND_SS] = Matrix_setElement_INT16_SS
 Matrix_setElement_INT32_ptrs[BACKEND_SS] = Matrix_setElement_INT32_SS
 Matrix_setElement_INT64_ptrs[BACKEND_SS] = Matrix_setElement_INT64_SS
-Matrix_setElement_INT8_ptrs[BACKEND_SS] = Matrix_setElement_INT8_SS
+Matrix_setElement_UINT8_ptrs[BACKEND_SS] = Matrix_setElement_UINT8_SS
 Matrix_setElement_UINT16_ptrs[BACKEND_SS] = Matrix_setElement_UINT16_SS
 Matrix_setElement_UINT32_ptrs[BACKEND_SS] = Matrix_setElement_UINT32_SS
 Matrix_setElement_UINT64_ptrs[BACKEND_SS] = Matrix_setElement_UINT64_SS
-Matrix_setElement_UINT8_ptrs[BACKEND_SS] = Matrix_setElement_UINT8_SS
 Matrix_wait_ptrs[BACKEND_SS] = Matrix_wait_SS
 Row_assign_ptrs[BACKEND_SS] = Row_assign_SS
 Vector_apply_ptrs[BACKEND_SS] = Vector_apply_SS
 Vector_apply_BinaryOp1st_BOOL_ptrs[BACKEND_SS] = Vector_apply_BinaryOp1st_BOOL_SS
 Vector_apply_BinaryOp1st_FP32_ptrs[BACKEND_SS] = Vector_apply_BinaryOp1st_FP32_SS
 Vector_apply_BinaryOp1st_FP64_ptrs[BACKEND_SS] = Vector_apply_BinaryOp1st_FP64_SS
+Vector_apply_BinaryOp1st_INT8_ptrs[BACKEND_SS] = Vector_apply_BinaryOp1st_INT8_SS
 Vector_apply_BinaryOp1st_INT16_ptrs[BACKEND_SS] = Vector_apply_BinaryOp1st_INT16_SS
 Vector_apply_BinaryOp1st_INT32_ptrs[BACKEND_SS] = Vector_apply_BinaryOp1st_INT32_SS
 Vector_apply_BinaryOp1st_INT64_ptrs[BACKEND_SS] = Vector_apply_BinaryOp1st_INT64_SS
-Vector_apply_BinaryOp1st_INT8_ptrs[BACKEND_SS] = Vector_apply_BinaryOp1st_INT8_SS
+Vector_apply_BinaryOp1st_UINT8_ptrs[BACKEND_SS] = Vector_apply_BinaryOp1st_UINT8_SS
 Vector_apply_BinaryOp1st_UINT16_ptrs[BACKEND_SS] = Vector_apply_BinaryOp1st_UINT16_SS
 Vector_apply_BinaryOp1st_UINT32_ptrs[BACKEND_SS] = Vector_apply_BinaryOp1st_UINT32_SS
 Vector_apply_BinaryOp1st_UINT64_ptrs[BACKEND_SS] = Vector_apply_BinaryOp1st_UINT64_SS
-Vector_apply_BinaryOp1st_UINT8_ptrs[BACKEND_SS] = Vector_apply_BinaryOp1st_UINT8_SS
 Vector_apply_BinaryOp2nd_BOOL_ptrs[BACKEND_SS] = Vector_apply_BinaryOp2nd_BOOL_SS
 Vector_apply_BinaryOp2nd_FP32_ptrs[BACKEND_SS] = Vector_apply_BinaryOp2nd_FP32_SS
 Vector_apply_BinaryOp2nd_FP64_ptrs[BACKEND_SS] = Vector_apply_BinaryOp2nd_FP64_SS
+Vector_apply_BinaryOp2nd_INT8_ptrs[BACKEND_SS] = Vector_apply_BinaryOp2nd_INT8_SS
 Vector_apply_BinaryOp2nd_INT16_ptrs[BACKEND_SS] = Vector_apply_BinaryOp2nd_INT16_SS
 Vector_apply_BinaryOp2nd_INT32_ptrs[BACKEND_SS] = Vector_apply_BinaryOp2nd_INT32_SS
 Vector_apply_BinaryOp2nd_INT64_ptrs[BACKEND_SS] = Vector_apply_BinaryOp2nd_INT64_SS
-Vector_apply_BinaryOp2nd_INT8_ptrs[BACKEND_SS] = Vector_apply_BinaryOp2nd_INT8_SS
+Vector_apply_BinaryOp2nd_UINT8_ptrs[BACKEND_SS] = Vector_apply_BinaryOp2nd_UINT8_SS
 Vector_apply_BinaryOp2nd_UINT16_ptrs[BACKEND_SS] = Vector_apply_BinaryOp2nd_UINT16_SS
 Vector_apply_BinaryOp2nd_UINT32_ptrs[BACKEND_SS] = Vector_apply_BinaryOp2nd_UINT32_SS
 Vector_apply_BinaryOp2nd_UINT64_ptrs[BACKEND_SS] = Vector_apply_BinaryOp2nd_UINT64_SS
-Vector_apply_BinaryOp2nd_UINT8_ptrs[BACKEND_SS] = Vector_apply_BinaryOp2nd_UINT8_SS
 Vector_assign_ptrs[BACKEND_SS] = Vector_assign_SS
 Vector_assign_BOOL_ptrs[BACKEND_SS] = Vector_assign_BOOL_SS
 Vector_assign_FP32_ptrs[BACKEND_SS] = Vector_assign_FP32_SS
 Vector_assign_FP64_ptrs[BACKEND_SS] = Vector_assign_FP64_SS
+Vector_assign_INT8_ptrs[BACKEND_SS] = Vector_assign_INT8_SS
 Vector_assign_INT16_ptrs[BACKEND_SS] = Vector_assign_INT16_SS
 Vector_assign_INT32_ptrs[BACKEND_SS] = Vector_assign_INT32_SS
 Vector_assign_INT64_ptrs[BACKEND_SS] = Vector_assign_INT64_SS
-Vector_assign_INT8_ptrs[BACKEND_SS] = Vector_assign_INT8_SS
+Vector_assign_UINT8_ptrs[BACKEND_SS] = Vector_assign_UINT8_SS
 Vector_assign_UINT16_ptrs[BACKEND_SS] = Vector_assign_UINT16_SS
 Vector_assign_UINT32_ptrs[BACKEND_SS] = Vector_assign_UINT32_SS
 Vector_assign_UINT64_ptrs[BACKEND_SS] = Vector_assign_UINT64_SS
-Vector_assign_UINT8_ptrs[BACKEND_SS] = Vector_assign_UINT8_SS
 Vector_build_BOOL_ptrs[BACKEND_SS] = Vector_build_BOOL_SS
 Vector_build_FP32_ptrs[BACKEND_SS] = Vector_build_FP32_SS
 Vector_build_FP64_ptrs[BACKEND_SS] = Vector_build_FP64_SS
+Vector_build_INT8_ptrs[BACKEND_SS] = Vector_build_INT8_SS
 Vector_build_INT16_ptrs[BACKEND_SS] = Vector_build_INT16_SS
 Vector_build_INT32_ptrs[BACKEND_SS] = Vector_build_INT32_SS
 Vector_build_INT64_ptrs[BACKEND_SS] = Vector_build_INT64_SS
-Vector_build_INT8_ptrs[BACKEND_SS] = Vector_build_INT8_SS
+Vector_build_UINT8_ptrs[BACKEND_SS] = Vector_build_UINT8_SS
 Vector_build_UINT16_ptrs[BACKEND_SS] = Vector_build_UINT16_SS
 Vector_build_UINT32_ptrs[BACKEND_SS] = Vector_build_UINT32_SS
 Vector_build_UINT64_ptrs[BACKEND_SS] = Vector_build_UINT64_SS
-Vector_build_UINT8_ptrs[BACKEND_SS] = Vector_build_UINT8_SS
 Vector_clear_ptrs[BACKEND_SS] = Vector_clear_SS
 Vector_dup_ptrs[BACKEND_SS] = Vector_dup_SS
 Vector_eWiseAdd_BinaryOp_ptrs[BACKEND_SS] = Vector_eWiseAdd_BinaryOp_SS
@@ -4193,14 +4193,14 @@ Vector_resize_ptrs[BACKEND_SS] = Vector_resize_SS
 Vector_setElement_BOOL_ptrs[BACKEND_SS] = Vector_setElement_BOOL_SS
 Vector_setElement_FP32_ptrs[BACKEND_SS] = Vector_setElement_FP32_SS
 Vector_setElement_FP64_ptrs[BACKEND_SS] = Vector_setElement_FP64_SS
+Vector_setElement_INT8_ptrs[BACKEND_SS] = Vector_setElement_INT8_SS
 Vector_setElement_INT16_ptrs[BACKEND_SS] = Vector_setElement_INT16_SS
 Vector_setElement_INT32_ptrs[BACKEND_SS] = Vector_setElement_INT32_SS
 Vector_setElement_INT64_ptrs[BACKEND_SS] = Vector_setElement_INT64_SS
-Vector_setElement_INT8_ptrs[BACKEND_SS] = Vector_setElement_INT8_SS
+Vector_setElement_UINT8_ptrs[BACKEND_SS] = Vector_setElement_UINT8_SS
 Vector_setElement_UINT16_ptrs[BACKEND_SS] = Vector_setElement_UINT16_SS
 Vector_setElement_UINT32_ptrs[BACKEND_SS] = Vector_setElement_UINT32_SS
 Vector_setElement_UINT64_ptrs[BACKEND_SS] = Vector_setElement_UINT64_SS
-Vector_setElement_UINT8_ptrs[BACKEND_SS] = Vector_setElement_UINT8_SS
 Vector_wait_ptrs[BACKEND_SS] = Vector_wait_SS
 init_ptrs[BACKEND_SS] = init_SS
 mxm_ptrs[BACKEND_SS] = mxm_SS
@@ -4226,14 +4226,14 @@ Matrix_subassign_FC32_ptrs[BACKEND_SS] = Matrix_subassign_FC32_SS
 Matrix_subassign_FC64_ptrs[BACKEND_SS] = Matrix_subassign_FC64_SS
 Matrix_subassign_FP32_ptrs[BACKEND_SS] = Matrix_subassign_FP32_SS
 Matrix_subassign_FP64_ptrs[BACKEND_SS] = Matrix_subassign_FP64_SS
+Matrix_subassign_INT8_ptrs[BACKEND_SS] = <Matrix_subassign_INT8_ptr>Matrix_subassign_INT8_SS
 Matrix_subassign_INT16_ptrs[BACKEND_SS] = <Matrix_subassign_INT16_ptr>Matrix_subassign_INT16_SS
 Matrix_subassign_INT32_ptrs[BACKEND_SS] = <Matrix_subassign_INT32_ptr>Matrix_subassign_INT32_SS
 Matrix_subassign_INT64_ptrs[BACKEND_SS] = <Matrix_subassign_INT64_ptr>Matrix_subassign_INT64_SS
-Matrix_subassign_INT8_ptrs[BACKEND_SS] = <Matrix_subassign_INT8_ptr>Matrix_subassign_INT8_SS
+Matrix_subassign_UINT8_ptrs[BACKEND_SS] = <Matrix_subassign_UINT8_ptr>Matrix_subassign_UINT8_SS
 Matrix_subassign_UINT16_ptrs[BACKEND_SS] = <Matrix_subassign_UINT16_ptr>Matrix_subassign_UINT16_SS
 Matrix_subassign_UINT32_ptrs[BACKEND_SS] = <Matrix_subassign_UINT32_ptr>Matrix_subassign_UINT32_SS
 Matrix_subassign_UINT64_ptrs[BACKEND_SS] = <Matrix_subassign_UINT64_ptr>Matrix_subassign_UINT64_SS
-Matrix_subassign_UINT8_ptrs[BACKEND_SS] = <Matrix_subassign_UINT8_ptr>Matrix_subassign_UINT8_SS
 Row_subassign_ptrs[BACKEND_SS] = Row_subassign_SS
 Vector_apply_BinaryOp1st_FC32_ptrs[BACKEND_SS] = Vector_apply_BinaryOp1st_FC32_SS
 Vector_apply_BinaryOp1st_FC64_ptrs[BACKEND_SS] = Vector_apply_BinaryOp1st_FC64_SS
@@ -4251,13 +4251,13 @@ Vector_subassign_FC32_ptrs[BACKEND_SS] = Vector_subassign_FC32_SS
 Vector_subassign_FC64_ptrs[BACKEND_SS] = Vector_subassign_FC64_SS
 Vector_subassign_FP32_ptrs[BACKEND_SS] = Vector_subassign_FP32_SS
 Vector_subassign_FP64_ptrs[BACKEND_SS] = Vector_subassign_FP64_SS
+Vector_subassign_INT8_ptrs[BACKEND_SS] = <Vector_subassign_INT8_ptr>Vector_subassign_INT8_SS
 Vector_subassign_INT16_ptrs[BACKEND_SS] = <Vector_subassign_INT16_ptr>Vector_subassign_INT16_SS
 Vector_subassign_INT32_ptrs[BACKEND_SS] = <Vector_subassign_INT32_ptr>Vector_subassign_INT32_SS
 Vector_subassign_INT64_ptrs[BACKEND_SS] = <Vector_subassign_INT64_ptr>Vector_subassign_INT64_SS
-Vector_subassign_INT8_ptrs[BACKEND_SS] = <Vector_subassign_INT8_ptr>Vector_subassign_INT8_SS
+Vector_subassign_UINT8_ptrs[BACKEND_SS] = <Vector_subassign_UINT8_ptr>Vector_subassign_UINT8_SS
 Vector_subassign_UINT16_ptrs[BACKEND_SS] = <Vector_subassign_UINT16_ptr>Vector_subassign_UINT16_SS
 Vector_subassign_UINT32_ptrs[BACKEND_SS] = <Vector_subassign_UINT32_ptr>Vector_subassign_UINT32_SS
 Vector_subassign_UINT64_ptrs[BACKEND_SS] = <Vector_subassign_UINT64_ptr>Vector_subassign_UINT64_SS
-Vector_subassign_UINT8_ptrs[BACKEND_SS] = <Vector_subassign_UINT8_ptr>Vector_subassign_UINT8_SS
 cuda_init_ptrs[BACKEND_SS] = cuda_init_SS
 kron_ptrs[BACKEND_SS] = kron_SS

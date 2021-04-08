@@ -115,6 +115,23 @@ cpdef Matrix_apply_BinaryOp1st_FP64(
         raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Matrix_apply_BinaryOp1st_FP64')
     func(C, Mask, accum, op, x, A, desc)
 
+cpdef Matrix_apply_BinaryOp1st_INT8(
+    Matrix C,
+    Matrix Mask=None,
+    BinaryOp accum=None,
+    BinaryOp op=None,
+    x=None,
+    Matrix A=None,
+    Descriptor desc=None,
+):
+    if C is None:
+        raise TypeError("C argument of Matrix_apply_BinaryOp1st_INT8 must not be None.")
+    cdef backend_id_t backend_id = C.backend_id
+    cdef Matrix_apply_BinaryOp1st_INT8_ptr func = Matrix_apply_BinaryOp1st_INT8_ptrs[backend_id]
+    if func is NULL:
+        raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Matrix_apply_BinaryOp1st_INT8')
+    func(C, Mask, accum, op, x, A, desc)
+
 cpdef Matrix_apply_BinaryOp1st_INT16(
     Matrix C,
     Matrix Mask=None,
@@ -166,7 +183,7 @@ cpdef Matrix_apply_BinaryOp1st_INT64(
         raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Matrix_apply_BinaryOp1st_INT64')
     func(C, Mask, accum, op, x, A, desc)
 
-cpdef Matrix_apply_BinaryOp1st_INT8(
+cpdef Matrix_apply_BinaryOp1st_UINT8(
     Matrix C,
     Matrix Mask=None,
     BinaryOp accum=None,
@@ -176,11 +193,11 @@ cpdef Matrix_apply_BinaryOp1st_INT8(
     Descriptor desc=None,
 ):
     if C is None:
-        raise TypeError("C argument of Matrix_apply_BinaryOp1st_INT8 must not be None.")
+        raise TypeError("C argument of Matrix_apply_BinaryOp1st_UINT8 must not be None.")
     cdef backend_id_t backend_id = C.backend_id
-    cdef Matrix_apply_BinaryOp1st_INT8_ptr func = Matrix_apply_BinaryOp1st_INT8_ptrs[backend_id]
+    cdef Matrix_apply_BinaryOp1st_UINT8_ptr func = Matrix_apply_BinaryOp1st_UINT8_ptrs[backend_id]
     if func is NULL:
-        raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Matrix_apply_BinaryOp1st_INT8')
+        raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Matrix_apply_BinaryOp1st_UINT8')
     func(C, Mask, accum, op, x, A, desc)
 
 cpdef Matrix_apply_BinaryOp1st_UINT16(
@@ -234,23 +251,6 @@ cpdef Matrix_apply_BinaryOp1st_UINT64(
         raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Matrix_apply_BinaryOp1st_UINT64')
     func(C, Mask, accum, op, x, A, desc)
 
-cpdef Matrix_apply_BinaryOp1st_UINT8(
-    Matrix C,
-    Matrix Mask=None,
-    BinaryOp accum=None,
-    BinaryOp op=None,
-    x=None,
-    Matrix A=None,
-    Descriptor desc=None,
-):
-    if C is None:
-        raise TypeError("C argument of Matrix_apply_BinaryOp1st_UINT8 must not be None.")
-    cdef backend_id_t backend_id = C.backend_id
-    cdef Matrix_apply_BinaryOp1st_UINT8_ptr func = Matrix_apply_BinaryOp1st_UINT8_ptrs[backend_id]
-    if func is NULL:
-        raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Matrix_apply_BinaryOp1st_UINT8')
-    func(C, Mask, accum, op, x, A, desc)
-
 cpdef Matrix_apply_BinaryOp2nd_BOOL(
     Matrix C,
     Matrix Mask=None,
@@ -300,6 +300,23 @@ cpdef Matrix_apply_BinaryOp2nd_FP64(
     cdef Matrix_apply_BinaryOp2nd_FP64_ptr func = Matrix_apply_BinaryOp2nd_FP64_ptrs[backend_id]
     if func is NULL:
         raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Matrix_apply_BinaryOp2nd_FP64')
+    func(C, Mask, accum, op, A, y, desc)
+
+cpdef Matrix_apply_BinaryOp2nd_INT8(
+    Matrix C,
+    Matrix Mask=None,
+    BinaryOp accum=None,
+    BinaryOp op=None,
+    Matrix A=None,
+    y=None,
+    Descriptor desc=None,
+):
+    if C is None:
+        raise TypeError("C argument of Matrix_apply_BinaryOp2nd_INT8 must not be None.")
+    cdef backend_id_t backend_id = C.backend_id
+    cdef Matrix_apply_BinaryOp2nd_INT8_ptr func = Matrix_apply_BinaryOp2nd_INT8_ptrs[backend_id]
+    if func is NULL:
+        raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Matrix_apply_BinaryOp2nd_INT8')
     func(C, Mask, accum, op, A, y, desc)
 
 cpdef Matrix_apply_BinaryOp2nd_INT16(
@@ -353,7 +370,7 @@ cpdef Matrix_apply_BinaryOp2nd_INT64(
         raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Matrix_apply_BinaryOp2nd_INT64')
     func(C, Mask, accum, op, A, y, desc)
 
-cpdef Matrix_apply_BinaryOp2nd_INT8(
+cpdef Matrix_apply_BinaryOp2nd_UINT8(
     Matrix C,
     Matrix Mask=None,
     BinaryOp accum=None,
@@ -363,11 +380,11 @@ cpdef Matrix_apply_BinaryOp2nd_INT8(
     Descriptor desc=None,
 ):
     if C is None:
-        raise TypeError("C argument of Matrix_apply_BinaryOp2nd_INT8 must not be None.")
+        raise TypeError("C argument of Matrix_apply_BinaryOp2nd_UINT8 must not be None.")
     cdef backend_id_t backend_id = C.backend_id
-    cdef Matrix_apply_BinaryOp2nd_INT8_ptr func = Matrix_apply_BinaryOp2nd_INT8_ptrs[backend_id]
+    cdef Matrix_apply_BinaryOp2nd_UINT8_ptr func = Matrix_apply_BinaryOp2nd_UINT8_ptrs[backend_id]
     if func is NULL:
-        raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Matrix_apply_BinaryOp2nd_INT8')
+        raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Matrix_apply_BinaryOp2nd_UINT8')
     func(C, Mask, accum, op, A, y, desc)
 
 cpdef Matrix_apply_BinaryOp2nd_UINT16(
@@ -419,23 +436,6 @@ cpdef Matrix_apply_BinaryOp2nd_UINT64(
     cdef Matrix_apply_BinaryOp2nd_UINT64_ptr func = Matrix_apply_BinaryOp2nd_UINT64_ptrs[backend_id]
     if func is NULL:
         raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Matrix_apply_BinaryOp2nd_UINT64')
-    func(C, Mask, accum, op, A, y, desc)
-
-cpdef Matrix_apply_BinaryOp2nd_UINT8(
-    Matrix C,
-    Matrix Mask=None,
-    BinaryOp accum=None,
-    BinaryOp op=None,
-    Matrix A=None,
-    y=None,
-    Descriptor desc=None,
-):
-    if C is None:
-        raise TypeError("C argument of Matrix_apply_BinaryOp2nd_UINT8 must not be None.")
-    cdef backend_id_t backend_id = C.backend_id
-    cdef Matrix_apply_BinaryOp2nd_UINT8_ptr func = Matrix_apply_BinaryOp2nd_UINT8_ptrs[backend_id]
-    if func is NULL:
-        raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Matrix_apply_BinaryOp2nd_UINT8')
     func(C, Mask, accum, op, A, y, desc)
 
 cpdef Matrix_assign(
@@ -514,6 +514,25 @@ cpdef Matrix_assign_FP64(
         raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Matrix_assign_FP64')
     func(C, Mask, accum, x, &I[0], ni, &J[0], nj, desc)
 
+cpdef Matrix_assign_INT8(
+    Matrix C,
+    Matrix Mask=None,
+    BinaryOp accum=None,
+    x=None,
+    Index[::1] I=None,
+    ni=None,
+    Index[::1] J=None,
+    nj=None,
+    Descriptor desc=None,
+):
+    if C is None:
+        raise TypeError("C argument of Matrix_assign_INT8 must not be None.")
+    cdef backend_id_t backend_id = C.backend_id
+    cdef Matrix_assign_INT8_ptr func = Matrix_assign_INT8_ptrs[backend_id]
+    if func is NULL:
+        raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Matrix_assign_INT8')
+    func(C, Mask, accum, x, &I[0], ni, &J[0], nj, desc)
+
 cpdef Matrix_assign_INT16(
     Matrix C,
     Matrix Mask=None,
@@ -571,7 +590,7 @@ cpdef Matrix_assign_INT64(
         raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Matrix_assign_INT64')
     func(C, Mask, accum, x, &I[0], ni, &J[0], nj, desc)
 
-cpdef Matrix_assign_INT8(
+cpdef Matrix_assign_UINT8(
     Matrix C,
     Matrix Mask=None,
     BinaryOp accum=None,
@@ -583,11 +602,11 @@ cpdef Matrix_assign_INT8(
     Descriptor desc=None,
 ):
     if C is None:
-        raise TypeError("C argument of Matrix_assign_INT8 must not be None.")
+        raise TypeError("C argument of Matrix_assign_UINT8 must not be None.")
     cdef backend_id_t backend_id = C.backend_id
-    cdef Matrix_assign_INT8_ptr func = Matrix_assign_INT8_ptrs[backend_id]
+    cdef Matrix_assign_UINT8_ptr func = Matrix_assign_UINT8_ptrs[backend_id]
     if func is NULL:
-        raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Matrix_assign_INT8')
+        raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Matrix_assign_UINT8')
     func(C, Mask, accum, x, &I[0], ni, &J[0], nj, desc)
 
 cpdef Matrix_assign_UINT16(
@@ -647,25 +666,6 @@ cpdef Matrix_assign_UINT64(
         raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Matrix_assign_UINT64')
     func(C, Mask, accum, x, &I[0], ni, &J[0], nj, desc)
 
-cpdef Matrix_assign_UINT8(
-    Matrix C,
-    Matrix Mask=None,
-    BinaryOp accum=None,
-    x=None,
-    Index[::1] I=None,
-    ni=None,
-    Index[::1] J=None,
-    nj=None,
-    Descriptor desc=None,
-):
-    if C is None:
-        raise TypeError("C argument of Matrix_assign_UINT8 must not be None.")
-    cdef backend_id_t backend_id = C.backend_id
-    cdef Matrix_assign_UINT8_ptr func = Matrix_assign_UINT8_ptrs[backend_id]
-    if func is NULL:
-        raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Matrix_assign_UINT8')
-    func(C, Mask, accum, x, &I[0], ni, &J[0], nj, desc)
-
 cpdef Matrix_build_BOOL(
     Matrix C,
     Index[::1] I=None,
@@ -712,6 +712,22 @@ cpdef Matrix_build_FP64(
     cdef Matrix_build_FP64_ptr func = Matrix_build_FP64_ptrs[backend_id]
     if func is NULL:
         raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Matrix_build_FP64')
+    func(C, &I[0], &J[0], &X[0], nvals, dup)
+
+cpdef Matrix_build_INT8(
+    Matrix C,
+    Index[::1] I=None,
+    Index[::1] J=None,
+    int8_t[::1] X=None,
+    nvals=None,
+    BinaryOp dup=None,
+):
+    if C is None:
+        raise TypeError("C argument of Matrix_build_INT8 must not be None.")
+    cdef backend_id_t backend_id = C.backend_id
+    cdef Matrix_build_INT8_ptr func = Matrix_build_INT8_ptrs[backend_id]
+    if func is NULL:
+        raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Matrix_build_INT8')
     func(C, &I[0], &J[0], &X[0], nvals, dup)
 
 cpdef Matrix_build_INT16(
@@ -762,20 +778,20 @@ cpdef Matrix_build_INT64(
         raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Matrix_build_INT64')
     func(C, &I[0], &J[0], &X[0], nvals, dup)
 
-cpdef Matrix_build_INT8(
+cpdef Matrix_build_UINT8(
     Matrix C,
     Index[::1] I=None,
     Index[::1] J=None,
-    int8_t[::1] X=None,
+    uint8_t[::1] X=None,
     nvals=None,
     BinaryOp dup=None,
 ):
     if C is None:
-        raise TypeError("C argument of Matrix_build_INT8 must not be None.")
+        raise TypeError("C argument of Matrix_build_UINT8 must not be None.")
     cdef backend_id_t backend_id = C.backend_id
-    cdef Matrix_build_INT8_ptr func = Matrix_build_INT8_ptrs[backend_id]
+    cdef Matrix_build_UINT8_ptr func = Matrix_build_UINT8_ptrs[backend_id]
     if func is NULL:
-        raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Matrix_build_INT8')
+        raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Matrix_build_UINT8')
     func(C, &I[0], &J[0], &X[0], nvals, dup)
 
 cpdef Matrix_build_UINT16(
@@ -824,22 +840,6 @@ cpdef Matrix_build_UINT64(
     cdef Matrix_build_UINT64_ptr func = Matrix_build_UINT64_ptrs[backend_id]
     if func is NULL:
         raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Matrix_build_UINT64')
-    func(C, &I[0], &J[0], &X[0], nvals, dup)
-
-cpdef Matrix_build_UINT8(
-    Matrix C,
-    Index[::1] I=None,
-    Index[::1] J=None,
-    uint8_t[::1] X=None,
-    nvals=None,
-    BinaryOp dup=None,
-):
-    if C is None:
-        raise TypeError("C argument of Matrix_build_UINT8 must not be None.")
-    cdef backend_id_t backend_id = C.backend_id
-    cdef Matrix_build_UINT8_ptr func = Matrix_build_UINT8_ptrs[backend_id]
-    if func is NULL:
-        raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Matrix_build_UINT8')
     func(C, &I[0], &J[0], &X[0], nvals, dup)
 
 cpdef Matrix_clear(
@@ -1162,6 +1162,20 @@ cpdef Matrix_setElement_FP64(
         raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Matrix_setElement_FP64')
     func(C, x, i, j)
 
+cpdef Matrix_setElement_INT8(
+    Matrix C,
+    x=None,
+    i=None,
+    j=None,
+):
+    if C is None:
+        raise TypeError("C argument of Matrix_setElement_INT8 must not be None.")
+    cdef backend_id_t backend_id = C.backend_id
+    cdef Matrix_setElement_INT8_ptr func = Matrix_setElement_INT8_ptrs[backend_id]
+    if func is NULL:
+        raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Matrix_setElement_INT8')
+    func(C, x, i, j)
+
 cpdef Matrix_setElement_INT16(
     Matrix C,
     x=None,
@@ -1204,18 +1218,18 @@ cpdef Matrix_setElement_INT64(
         raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Matrix_setElement_INT64')
     func(C, x, i, j)
 
-cpdef Matrix_setElement_INT8(
+cpdef Matrix_setElement_UINT8(
     Matrix C,
     x=None,
     i=None,
     j=None,
 ):
     if C is None:
-        raise TypeError("C argument of Matrix_setElement_INT8 must not be None.")
+        raise TypeError("C argument of Matrix_setElement_UINT8 must not be None.")
     cdef backend_id_t backend_id = C.backend_id
-    cdef Matrix_setElement_INT8_ptr func = Matrix_setElement_INT8_ptrs[backend_id]
+    cdef Matrix_setElement_UINT8_ptr func = Matrix_setElement_UINT8_ptrs[backend_id]
     if func is NULL:
-        raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Matrix_setElement_INT8')
+        raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Matrix_setElement_UINT8')
     func(C, x, i, j)
 
 cpdef Matrix_setElement_UINT16(
@@ -1258,20 +1272,6 @@ cpdef Matrix_setElement_UINT64(
     cdef Matrix_setElement_UINT64_ptr func = Matrix_setElement_UINT64_ptrs[backend_id]
     if func is NULL:
         raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Matrix_setElement_UINT64')
-    func(C, x, i, j)
-
-cpdef Matrix_setElement_UINT8(
-    Matrix C,
-    x=None,
-    i=None,
-    j=None,
-):
-    if C is None:
-        raise TypeError("C argument of Matrix_setElement_UINT8 must not be None.")
-    cdef backend_id_t backend_id = C.backend_id
-    cdef Matrix_setElement_UINT8_ptr func = Matrix_setElement_UINT8_ptrs[backend_id]
-    if func is NULL:
-        raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Matrix_setElement_UINT8')
     func(C, x, i, j)
 
 cpdef Matrix_wait(
@@ -1370,6 +1370,23 @@ cpdef Vector_apply_BinaryOp1st_FP64(
         raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Vector_apply_BinaryOp1st_FP64')
     func(w, mask, accum, op, x, u, desc)
 
+cpdef Vector_apply_BinaryOp1st_INT8(
+    Vector w,
+    Vector mask=None,
+    BinaryOp accum=None,
+    BinaryOp op=None,
+    x=None,
+    Vector u=None,
+    Descriptor desc=None,
+):
+    if w is None:
+        raise TypeError("w argument of Vector_apply_BinaryOp1st_INT8 must not be None.")
+    cdef backend_id_t backend_id = w.backend_id
+    cdef Vector_apply_BinaryOp1st_INT8_ptr func = Vector_apply_BinaryOp1st_INT8_ptrs[backend_id]
+    if func is NULL:
+        raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Vector_apply_BinaryOp1st_INT8')
+    func(w, mask, accum, op, x, u, desc)
+
 cpdef Vector_apply_BinaryOp1st_INT16(
     Vector w,
     Vector mask=None,
@@ -1421,7 +1438,7 @@ cpdef Vector_apply_BinaryOp1st_INT64(
         raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Vector_apply_BinaryOp1st_INT64')
     func(w, mask, accum, op, x, u, desc)
 
-cpdef Vector_apply_BinaryOp1st_INT8(
+cpdef Vector_apply_BinaryOp1st_UINT8(
     Vector w,
     Vector mask=None,
     BinaryOp accum=None,
@@ -1431,11 +1448,11 @@ cpdef Vector_apply_BinaryOp1st_INT8(
     Descriptor desc=None,
 ):
     if w is None:
-        raise TypeError("w argument of Vector_apply_BinaryOp1st_INT8 must not be None.")
+        raise TypeError("w argument of Vector_apply_BinaryOp1st_UINT8 must not be None.")
     cdef backend_id_t backend_id = w.backend_id
-    cdef Vector_apply_BinaryOp1st_INT8_ptr func = Vector_apply_BinaryOp1st_INT8_ptrs[backend_id]
+    cdef Vector_apply_BinaryOp1st_UINT8_ptr func = Vector_apply_BinaryOp1st_UINT8_ptrs[backend_id]
     if func is NULL:
-        raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Vector_apply_BinaryOp1st_INT8')
+        raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Vector_apply_BinaryOp1st_UINT8')
     func(w, mask, accum, op, x, u, desc)
 
 cpdef Vector_apply_BinaryOp1st_UINT16(
@@ -1489,23 +1506,6 @@ cpdef Vector_apply_BinaryOp1st_UINT64(
         raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Vector_apply_BinaryOp1st_UINT64')
     func(w, mask, accum, op, x, u, desc)
 
-cpdef Vector_apply_BinaryOp1st_UINT8(
-    Vector w,
-    Vector mask=None,
-    BinaryOp accum=None,
-    BinaryOp op=None,
-    x=None,
-    Vector u=None,
-    Descriptor desc=None,
-):
-    if w is None:
-        raise TypeError("w argument of Vector_apply_BinaryOp1st_UINT8 must not be None.")
-    cdef backend_id_t backend_id = w.backend_id
-    cdef Vector_apply_BinaryOp1st_UINT8_ptr func = Vector_apply_BinaryOp1st_UINT8_ptrs[backend_id]
-    if func is NULL:
-        raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Vector_apply_BinaryOp1st_UINT8')
-    func(w, mask, accum, op, x, u, desc)
-
 cpdef Vector_apply_BinaryOp2nd_BOOL(
     Vector w,
     Vector mask=None,
@@ -1555,6 +1555,23 @@ cpdef Vector_apply_BinaryOp2nd_FP64(
     cdef Vector_apply_BinaryOp2nd_FP64_ptr func = Vector_apply_BinaryOp2nd_FP64_ptrs[backend_id]
     if func is NULL:
         raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Vector_apply_BinaryOp2nd_FP64')
+    func(w, mask, accum, op, u, y, desc)
+
+cpdef Vector_apply_BinaryOp2nd_INT8(
+    Vector w,
+    Vector mask=None,
+    BinaryOp accum=None,
+    BinaryOp op=None,
+    Vector u=None,
+    y=None,
+    Descriptor desc=None,
+):
+    if w is None:
+        raise TypeError("w argument of Vector_apply_BinaryOp2nd_INT8 must not be None.")
+    cdef backend_id_t backend_id = w.backend_id
+    cdef Vector_apply_BinaryOp2nd_INT8_ptr func = Vector_apply_BinaryOp2nd_INT8_ptrs[backend_id]
+    if func is NULL:
+        raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Vector_apply_BinaryOp2nd_INT8')
     func(w, mask, accum, op, u, y, desc)
 
 cpdef Vector_apply_BinaryOp2nd_INT16(
@@ -1608,7 +1625,7 @@ cpdef Vector_apply_BinaryOp2nd_INT64(
         raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Vector_apply_BinaryOp2nd_INT64')
     func(w, mask, accum, op, u, y, desc)
 
-cpdef Vector_apply_BinaryOp2nd_INT8(
+cpdef Vector_apply_BinaryOp2nd_UINT8(
     Vector w,
     Vector mask=None,
     BinaryOp accum=None,
@@ -1618,11 +1635,11 @@ cpdef Vector_apply_BinaryOp2nd_INT8(
     Descriptor desc=None,
 ):
     if w is None:
-        raise TypeError("w argument of Vector_apply_BinaryOp2nd_INT8 must not be None.")
+        raise TypeError("w argument of Vector_apply_BinaryOp2nd_UINT8 must not be None.")
     cdef backend_id_t backend_id = w.backend_id
-    cdef Vector_apply_BinaryOp2nd_INT8_ptr func = Vector_apply_BinaryOp2nd_INT8_ptrs[backend_id]
+    cdef Vector_apply_BinaryOp2nd_UINT8_ptr func = Vector_apply_BinaryOp2nd_UINT8_ptrs[backend_id]
     if func is NULL:
-        raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Vector_apply_BinaryOp2nd_INT8')
+        raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Vector_apply_BinaryOp2nd_UINT8')
     func(w, mask, accum, op, u, y, desc)
 
 cpdef Vector_apply_BinaryOp2nd_UINT16(
@@ -1674,23 +1691,6 @@ cpdef Vector_apply_BinaryOp2nd_UINT64(
     cdef Vector_apply_BinaryOp2nd_UINT64_ptr func = Vector_apply_BinaryOp2nd_UINT64_ptrs[backend_id]
     if func is NULL:
         raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Vector_apply_BinaryOp2nd_UINT64')
-    func(w, mask, accum, op, u, y, desc)
-
-cpdef Vector_apply_BinaryOp2nd_UINT8(
-    Vector w,
-    Vector mask=None,
-    BinaryOp accum=None,
-    BinaryOp op=None,
-    Vector u=None,
-    y=None,
-    Descriptor desc=None,
-):
-    if w is None:
-        raise TypeError("w argument of Vector_apply_BinaryOp2nd_UINT8 must not be None.")
-    cdef backend_id_t backend_id = w.backend_id
-    cdef Vector_apply_BinaryOp2nd_UINT8_ptr func = Vector_apply_BinaryOp2nd_UINT8_ptrs[backend_id]
-    if func is NULL:
-        raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Vector_apply_BinaryOp2nd_UINT8')
     func(w, mask, accum, op, u, y, desc)
 
 cpdef Vector_assign(
@@ -1761,6 +1761,23 @@ cpdef Vector_assign_FP64(
         raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Vector_assign_FP64')
     func(w, mask, accum, x, &I[0], ni, desc)
 
+cpdef Vector_assign_INT8(
+    Vector w,
+    Vector mask=None,
+    BinaryOp accum=None,
+    x=None,
+    Index[::1] I=None,
+    ni=None,
+    Descriptor desc=None,
+):
+    if w is None:
+        raise TypeError("w argument of Vector_assign_INT8 must not be None.")
+    cdef backend_id_t backend_id = w.backend_id
+    cdef Vector_assign_INT8_ptr func = Vector_assign_INT8_ptrs[backend_id]
+    if func is NULL:
+        raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Vector_assign_INT8')
+    func(w, mask, accum, x, &I[0], ni, desc)
+
 cpdef Vector_assign_INT16(
     Vector w,
     Vector mask=None,
@@ -1812,7 +1829,7 @@ cpdef Vector_assign_INT64(
         raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Vector_assign_INT64')
     func(w, mask, accum, x, &I[0], ni, desc)
 
-cpdef Vector_assign_INT8(
+cpdef Vector_assign_UINT8(
     Vector w,
     Vector mask=None,
     BinaryOp accum=None,
@@ -1822,11 +1839,11 @@ cpdef Vector_assign_INT8(
     Descriptor desc=None,
 ):
     if w is None:
-        raise TypeError("w argument of Vector_assign_INT8 must not be None.")
+        raise TypeError("w argument of Vector_assign_UINT8 must not be None.")
     cdef backend_id_t backend_id = w.backend_id
-    cdef Vector_assign_INT8_ptr func = Vector_assign_INT8_ptrs[backend_id]
+    cdef Vector_assign_UINT8_ptr func = Vector_assign_UINT8_ptrs[backend_id]
     if func is NULL:
-        raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Vector_assign_INT8')
+        raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Vector_assign_UINT8')
     func(w, mask, accum, x, &I[0], ni, desc)
 
 cpdef Vector_assign_UINT16(
@@ -1880,23 +1897,6 @@ cpdef Vector_assign_UINT64(
         raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Vector_assign_UINT64')
     func(w, mask, accum, x, &I[0], ni, desc)
 
-cpdef Vector_assign_UINT8(
-    Vector w,
-    Vector mask=None,
-    BinaryOp accum=None,
-    x=None,
-    Index[::1] I=None,
-    ni=None,
-    Descriptor desc=None,
-):
-    if w is None:
-        raise TypeError("w argument of Vector_assign_UINT8 must not be None.")
-    cdef backend_id_t backend_id = w.backend_id
-    cdef Vector_assign_UINT8_ptr func = Vector_assign_UINT8_ptrs[backend_id]
-    if func is NULL:
-        raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Vector_assign_UINT8')
-    func(w, mask, accum, x, &I[0], ni, desc)
-
 cpdef Vector_build_BOOL(
     Vector w,
     Index[::1] I=None,
@@ -1940,6 +1940,21 @@ cpdef Vector_build_FP64(
     cdef Vector_build_FP64_ptr func = Vector_build_FP64_ptrs[backend_id]
     if func is NULL:
         raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Vector_build_FP64')
+    func(w, &I[0], &X[0], nvals, dup)
+
+cpdef Vector_build_INT8(
+    Vector w,
+    Index[::1] I=None,
+    int8_t[::1] X=None,
+    nvals=None,
+    BinaryOp dup=None,
+):
+    if w is None:
+        raise TypeError("w argument of Vector_build_INT8 must not be None.")
+    cdef backend_id_t backend_id = w.backend_id
+    cdef Vector_build_INT8_ptr func = Vector_build_INT8_ptrs[backend_id]
+    if func is NULL:
+        raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Vector_build_INT8')
     func(w, &I[0], &X[0], nvals, dup)
 
 cpdef Vector_build_INT16(
@@ -1987,19 +2002,19 @@ cpdef Vector_build_INT64(
         raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Vector_build_INT64')
     func(w, &I[0], &X[0], nvals, dup)
 
-cpdef Vector_build_INT8(
+cpdef Vector_build_UINT8(
     Vector w,
     Index[::1] I=None,
-    int8_t[::1] X=None,
+    uint8_t[::1] X=None,
     nvals=None,
     BinaryOp dup=None,
 ):
     if w is None:
-        raise TypeError("w argument of Vector_build_INT8 must not be None.")
+        raise TypeError("w argument of Vector_build_UINT8 must not be None.")
     cdef backend_id_t backend_id = w.backend_id
-    cdef Vector_build_INT8_ptr func = Vector_build_INT8_ptrs[backend_id]
+    cdef Vector_build_UINT8_ptr func = Vector_build_UINT8_ptrs[backend_id]
     if func is NULL:
-        raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Vector_build_INT8')
+        raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Vector_build_UINT8')
     func(w, &I[0], &X[0], nvals, dup)
 
 cpdef Vector_build_UINT16(
@@ -2045,21 +2060,6 @@ cpdef Vector_build_UINT64(
     cdef Vector_build_UINT64_ptr func = Vector_build_UINT64_ptrs[backend_id]
     if func is NULL:
         raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Vector_build_UINT64')
-    func(w, &I[0], &X[0], nvals, dup)
-
-cpdef Vector_build_UINT8(
-    Vector w,
-    Index[::1] I=None,
-    uint8_t[::1] X=None,
-    nvals=None,
-    BinaryOp dup=None,
-):
-    if w is None:
-        raise TypeError("w argument of Vector_build_UINT8 must not be None.")
-    cdef backend_id_t backend_id = w.backend_id
-    cdef Vector_build_UINT8_ptr func = Vector_build_UINT8_ptrs[backend_id]
-    if func is NULL:
-        raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Vector_build_UINT8')
     func(w, &I[0], &X[0], nvals, dup)
 
 cpdef Vector_clear(
@@ -2291,6 +2291,19 @@ cpdef Vector_setElement_FP64(
         raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Vector_setElement_FP64')
     func(w, x, i)
 
+cpdef Vector_setElement_INT8(
+    Vector w,
+    x=None,
+    i=None,
+):
+    if w is None:
+        raise TypeError("w argument of Vector_setElement_INT8 must not be None.")
+    cdef backend_id_t backend_id = w.backend_id
+    cdef Vector_setElement_INT8_ptr func = Vector_setElement_INT8_ptrs[backend_id]
+    if func is NULL:
+        raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Vector_setElement_INT8')
+    func(w, x, i)
+
 cpdef Vector_setElement_INT16(
     Vector w,
     x=None,
@@ -2330,17 +2343,17 @@ cpdef Vector_setElement_INT64(
         raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Vector_setElement_INT64')
     func(w, x, i)
 
-cpdef Vector_setElement_INT8(
+cpdef Vector_setElement_UINT8(
     Vector w,
     x=None,
     i=None,
 ):
     if w is None:
-        raise TypeError("w argument of Vector_setElement_INT8 must not be None.")
+        raise TypeError("w argument of Vector_setElement_UINT8 must not be None.")
     cdef backend_id_t backend_id = w.backend_id
-    cdef Vector_setElement_INT8_ptr func = Vector_setElement_INT8_ptrs[backend_id]
+    cdef Vector_setElement_UINT8_ptr func = Vector_setElement_UINT8_ptrs[backend_id]
     if func is NULL:
-        raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Vector_setElement_INT8')
+        raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Vector_setElement_UINT8')
     func(w, x, i)
 
 cpdef Vector_setElement_UINT16(
@@ -2380,19 +2393,6 @@ cpdef Vector_setElement_UINT64(
     cdef Vector_setElement_UINT64_ptr func = Vector_setElement_UINT64_ptrs[backend_id]
     if func is NULL:
         raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Vector_setElement_UINT64')
-    func(w, x, i)
-
-cpdef Vector_setElement_UINT8(
-    Vector w,
-    x=None,
-    i=None,
-):
-    if w is None:
-        raise TypeError("w argument of Vector_setElement_UINT8 must not be None.")
-    cdef backend_id_t backend_id = w.backend_id
-    cdef Vector_setElement_UINT8_ptr func = Vector_setElement_UINT8_ptrs[backend_id]
-    if func is NULL:
-        raise ValueError(f'{BACKEND_NAMES[backend_id].decode()} backend does not have Vector_setElement_UINT8')
     func(w, x, i)
 
 cpdef Vector_wait(

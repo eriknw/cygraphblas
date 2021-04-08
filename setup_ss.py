@@ -6,7 +6,7 @@ if __name__ == '__main__':
     from cygraphblas.lib.constants import COMPILE_TIME_ENV
 
     directive_defaults = get_directive_defaults()
-    # directive_defaults['embedsignature'] = True
+    directive_defaults['embedsignature'] = True
     directive_defaults['binding'] = True
     directive_defaults['language_level'] = 3
 

@@ -10,6 +10,11 @@ from pycparser import c_ast, c_generator, parse_file
 #    'size_t', 'uint16_t', 'uint32_t', 'uint64_t', 'uint8_t', 'unsigned', 'void',
 #}
 
+
+def sort_key(x):
+    return x.replace('8', '08')
+
+
 simple_types = {
     # 'FILE',
     'Index',
@@ -156,45 +161,45 @@ def get_groups(ast):
     groups = {}
     vals = {x for x in lines if 'extern GrB_Info GxB' in x} - seen
     seen.update(vals)
-    groups['GxB methods'] = sorted(vals)
+    groups['GxB methods'] = sorted(vals, key=sort_key)
 
     vals = {x for x in lines if 'extern GrB_Info GrB' in x} - seen
     seen.update(vals)
-    groups['GrB methods'] = sorted(vals)
+    groups['GrB methods'] = sorted(vals, key=sort_key)
 
     vals = {x for x in lines if 'extern GrB_Info GB' in x} - seen
     seen.update(vals)
-    groups['GB methods'] = sorted(vals)
+    groups['GB methods'] = sorted(vals, key=sort_key)
 
     missing_methods = {x for x in lines if 'extern GrB_Info ' in x} - seen
     assert not missing_methods
 
     vals = {x for x in lines if 'extern GrB' in x} - seen
     seen.update(vals)
-    groups['GrB objects'] = sorted(vals)
+    groups['GrB objects'] = sorted(vals, key=sort_key)
 
     vals = {x for x in lines if 'extern GxB' in x} - seen
     seen.update(vals)
-    groups['GxB objects'] = sorted(vals)
+    groups['GxB objects'] = sorted(vals, key=sort_key)
 
     vals = {x for x in lines if 'extern const' in x and 'GxB' in x} - seen
     seen.update(vals)
-    groups['GxB const'] = sorted(vals)
+    groups['GxB const'] = sorted(vals, key=sort_key)
 
     vals = {x for x in lines if 'extern const' in x and 'GrB' in x} - seen
     seen.update(vals)
-    groups['GrB const'] = sorted(vals)
+    groups['GrB const'] = sorted(vals, key=sort_key)
 
     missing_const = {x for x in lines if 'extern const' in x} - seen
     assert not missing_const
 
     vals = {x for x in lines if 'typedef' in x and 'GxB' in x and '(' not in x} - seen
     seen.update(vals)
-    groups['GxB typedef'] = sorted(vals)
+    groups['GxB typedef'] = sorted(vals, key=sort_key)
 
     vals = {x for x in lines if 'typedef' in x and 'GrB' in x and '(' not in x} - seen
     seen.update(vals)
-    groups['GrB typedef'] = sorted(vals)
+    groups['GrB typedef'] = sorted(vals, key=sort_key)
 
     missing_typedefs = {x for x in lines if 'typedef' in x and 'GB' in x and '(' not in x} - seen
     assert not missing_typedefs
@@ -207,23 +212,23 @@ def get_groups(ast):
     vals = {x for x in enums if '} GrB' in x}
     for val in vals:
         seen.update(val.splitlines())
-    groups['GrB typedef enums'] = sorted(vals, key=lambda x: x.rsplit('}', 1)[-1])
+    groups['GrB typedef enums'] = sorted(vals, key=lambda x: sort_key(x.rsplit('}', 1)[-1]))
 
     vals = {x for x in enums if '} GxB' in x}
     for val in vals:
         seen.update(val.splitlines())
-    groups['GxB typedef enums'] = sorted(vals, key=lambda x: x.rsplit('}', 1)[-1])
+    groups['GxB typedef enums'] = sorted(vals, key=lambda x: sort_key(x.rsplit('}', 1)[-1]))
 
     missing_enums = set(enums) - set(groups['GrB typedef enums']) - set(groups['GxB typedef enums'])
     assert not missing_enums
 
     vals = {x for x in lines if 'typedef' in x and 'GxB' in x} - seen
     seen.update(vals)
-    groups['GxB typedef funcs'] = sorted(vals)
+    groups['GxB typedef funcs'] = sorted(vals, key=sort_key)
 
     vals = {x for x in lines if 'typedef' in x and 'GrB' in x} - seen
     assert not vals
-    groups['not seen'] = sorted(set(lines) - seen)
+    groups['not seen'] = sorted(set(lines) - seen, key=sort_key)
     print('Not seen')
     print('\n'.join(groups['not seen']))
     print()
@@ -523,7 +528,7 @@ def get_group_info(groups, ast):
             for name, pytype, ctype, num_ptr in zip(arg_names, arg_pytypes, arg_ctypes, arg_num_pointers)
         ]
         for arg in args:
-            arg['has_obj'] = arg['pytype'] in {'Vector', 'Matrix'} or arg['pytype'] in enum_types  # has `.obj`
+            arg['has_obj'] = arg['pytype'] in {'Vector', 'Matrix'} # or arg['pytype'] in enum_types  # has `.obj`
             arg['has_objs'] = not arg['has_obj'] and arg['pytype'] not in simple_types  # has `.ss_obj`
         return {
             # names
@@ -565,9 +570,9 @@ def get_group_info(groups, ast):
     gxb_funcs = [x for x in gxb_funcs if x is not None]
     gb_funcs = [x for x in gb_funcs if x is not None]
 
-    rv['GrB methods'] = sorted(grb_funcs, key=lambda x: generator.visit(x['cnode']))
-    rv['GxB methods'] = sorted(gxb_funcs, key=lambda x: generator.visit(x['cnode']))
-    rv['GB methods'] = sorted(gb_funcs, key=lambda x: generator.visit(x['cnode']))
+    rv['GrB methods'] = sorted(grb_funcs, key=lambda x: sort_key(generator.visit(x['cnode'])))
+    rv['GxB methods'] = sorted(gxb_funcs, key=lambda x: sort_key(generator.visit(x['cnode'])))
+    rv['GB methods'] = sorted(gb_funcs, key=lambda x: sort_key(generator.visit(x['cnode'])))
     #print('\n'.join(x['pytext'] for x in rv['GrB methods']))
     #1/0
 
@@ -661,7 +666,7 @@ def get_suitesparse_pxd(groups):
 
     def handle_funcs(group):
         groups = tlz.groupby('group', group)
-        for name in sorted(groups):
+        for name in sorted(groups, key=sort_key):
             yield ''
             yield f'    # {name}'
             for info in groups[name]:
@@ -741,7 +746,7 @@ def main(basedir):
 
         text.append('')
         text.append('# Enums')
-        for info in sorted(enums, key=lambda x: x['pyname']):
+        for info in sorted(enums, key=lambda x: sort_key(x['pyname'])):
             for field in info['fields']:
                 if is_pyx:
                     text.append(f'cdef {field["pytype"]} {field["pyname"]} = {field["pytype"]}._new("{field["cname"]}")')
@@ -782,7 +787,7 @@ def main(basedir):
         rv = []
         for info in group:
             val = dict(info)
-            val['fields'] = sorted((val for val in info['fields'] if val['cname'].startswith(field_filter)), key=lambda x: x['pyname'])
+            val['fields'] = sorted((val for val in info['fields'] if val['cname'].startswith(field_filter)), key=lambda x: sort_key(x['pyname']))
             rv.append(val)
         return rv
 
@@ -1006,7 +1011,7 @@ def main(basedir):
         f.write('\n'.join(text))
 
     group = [info for info in groups['GrB objects'] if 'GxB' in info['text']]
-    gxb_group = sorted(group + groups['GxB objects'], key=lambda info: info['pytype'])
+    gxb_group = sorted(group + groups['GxB objects'], key=lambda info: sort_key(info['pytype']))
     extra = [
         'from cygraphblas._clib cimport Index, Matrix, Vector',
         'from cygraphblas_ss.wrappertypes cimport SelectOp',
@@ -1085,10 +1090,12 @@ def main(basedir):
         def to_extfunc(arg):
             name = arg['name']
             if arg['pytype'] in enum_types:
-                return f'        <{arg["ctype"]}>({name}.obj),'  # TODO: raise if None
+                # TODO: raise if None.  Even better: use a void pointer and check if NULL
+                return f'        <{arg["ctype"]}>{name}.{backend_obj},'
             elif arg['has_obj']:
                 ptr = '*' * arg['num_pointers']
-                return f'        NULL if {name} is None else <{arg["ctype"]}{ptr}>({name}.obj),'
+                addr = '&' * arg['num_pointers']
+                return f'        NULL if {name} is None else <{arg["ctype"]}{ptr}>{addr}{name}.obj,'
             elif arg['has_objs']:
                 return f'        NULL if {name} is None else {name}.{backend_obj},'
             return f'        {name},'

@@ -8,9 +8,23 @@ if __name__ == '__main__':
     # import sys
 
     directive_defaults = get_directive_defaults()
-    # directive_defaults['embedsignature'] = True
+    directive_defaults['embedsignature'] = True
     directive_defaults['binding'] = True
     directive_defaults['language_level'] = 3
+    directive_defaults['boundscheck'] = False
+    directive_defaults['wraparound'] = False
+    directive_defaults['c_api_binop_methods'] = True
+    directive_defaults['annotation_typing'] = False
+
+    compiler_directives = {
+        'embedsignature': True,
+        'binding': True,
+        'language_level': 3,
+        'boundscheck': False,
+        'wraparound': False,
+        'c_api_binop_methods': True,
+        'annotation_typing': False,
+    }
 
     support_ss = True
     support_gbtl = False
@@ -45,6 +59,7 @@ if __name__ == '__main__':
             # include_path=include_dirs,
             annotate=True,
             nthreads=8,
+            compiler_directives=compiler_directives,
         )
 
     setup(
